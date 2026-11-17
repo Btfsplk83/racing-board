@@ -1,18 +1,18 @@
 {
  "version": 2,
- "updated": "2026-11-17T19:00:51Z",
+ "updated": "2026-11-17T19:10:57Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T19:00:51Z",
-   "lastOk": "2026-11-17T19:00:51Z",
+   "checked": "2026-11-17T19:10:57Z",
+   "lastOk": "2026-11-17T19:10:57Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T19:00:51Z",
-   "lastOk": "2026-11-17T19:00:51Z",
-   "found": 4
+   "checked": "2026-11-17T19:10:57Z",
+   "lastOk": "2026-11-17T19:10:57Z",
+   "found": 3
   }
  },
  "packs": {
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -258,7 +258,7 @@
     "2026-11-17T21:25:00Z",
     "2026-11-17T22:55:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "lmu",
@@ -559,7 +559,7 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "rr",
@@ -699,59 +699,7 @@
     "2026-11-17T18:00:00Z",
     "2026-11-17T19:00:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
-   "title": "DTM 2025 + DTM 2026 + GTR 3",
-   "track": "Circuit Zandvoort - Modern - Grand Prix",
-   "durationMin": 15,
-   "classes": [
-    "DTM 2025",
-    "DTM 2026",
-    "GTR 3"
-   ],
-   "cars": [
-    "Aston Martin Vantage AMR GT3 EVO DTM",
-    "BMW M4 GT3",
-    "BMW M4 GT3 EVO DTM",
-    "Ford Mustang GT3 EVO DTM",
-    "Lamborghini Hurac\u00e1n GT3 EVO II",
-    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
-    "Lamborghini Temerario GT3 DTM",
-    "McLaren 720S GT3 EVO DTM",
-    "Mercedes-AMG GT3 2020 DTM"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "Circuit Zandvoort - Modern",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "alpine-sim-racing-pack-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "dtm-2026-car-pack",
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "DTM 2025",
-      "DTM 2026",
-      "GTR 3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T11:00:00Z"
-   ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "rr",
@@ -991,7 +939,7 @@
     "2026-11-17T17:00:00Z",
     "2026-11-17T19:00:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "rr",
@@ -1041,7 +989,7 @@
    "starts": [
     "2026-11-17T19:00:00Z"
    ],
-   "lastSeen": "2026-11-17T19:00:51Z"
+   "lastSeen": "2026-11-17T19:10:57Z"
   },
   {
    "game": "rr",
