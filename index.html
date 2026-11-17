@@ -8,16 +8,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap">
 <style>
 :root{
-  --bg:#0a0f1a; --surface:#131c2f; --surface2:#1d2942; --fg:#f4f6fa; --muted:#9fb0c8; --line:#26334f; --white:#fff;
+  --bg:#0a0f1a; --surface:#131c2f; --surface2:#1d2942; --surface3:#2a3a5c; --fg:#f4f6fa; --muted:#9fb0c8; --line:#26334f; --white:#fff;
   --lmu:#f0405a; --lmu-dk:#c4122f; --lmu-wash:#4a1422; --rrred:#e0262f; --rr-dk:#a81820; --blue:#2f6bd8;
-  --ok:#5fd08f; --warn:#ffb547; --warn-ink:#1a1204; --fav:#ffc83d; --fav-dk:#8a6200;
+  --ok:#5fd08f; --ok-dk:#17703f; --warn:#ffb547; --warn-ink:#1a1204; --fav:#ffc83d; --fav-dk:#8a6200;
   --plate:#f2f4f7; --ink:#12161f; --ink2:#4a5568; --plate-line:#c7ccd6; --tile:rgba(128,140,160,.2);
   --hatch-lmu:rgba(255,255,255,.5); --hatch-rr:rgba(18,22,31,.65); --shadow:rgba(0,0,0,.7);
   --sr-bronze:#cd8a4b; --sr-silver:#c3cad6; --sr-gold:#e6b422;
   --c-hy:#c4122f; --c-p2:#2f6bd8; --c-p3:#7a3fc4; --c-gt3:#1a7a42; --c-gte:#ee7d22; --c-x:#46526d;
   --ang:130deg;
   --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
-  --t-xs:11px; --t-sm:13px; --t-md:16px; --t-lg:22px; --t-xl:30px; --t-hero:46px;
+  --t-xs:13px; --t-sm:13px; --t-md:16px; --t-lg:22px; --t-xl:30px; --t-hero:46px;
   --f-head:"Barlow Condensed","Arial Narrow",system-ui,sans-serif; --f-body:"Barlow",system-ui,sans-serif;
   color-scheme:dark;
 }
@@ -41,7 +41,7 @@ h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;li
 .dot[data-s="ok"]{background:var(--ok)}
 .dot[data-s="warn"]{background:var(--warn)}
 .statusbtn .warnmsg{color:var(--warn);font-weight:600}
-.statusdetail{margin:0;padding:0 var(--s1);font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.statusdetail{margin:0;padding:0 var(--s1);font-size:var(--t-sm);color:var(--muted);display:flex;flex-direction:column;gap:2px}
 .statusdetail .bad{color:var(--warn)}
 /* View tabs: text tabs, active one underlined in red */
 .tabs{display:flex;gap:var(--s1);border-bottom:1px solid var(--line)}
@@ -72,7 +72,7 @@ h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;li
 .chip:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible,.head:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 4px var(--white)}
 details{background:var(--surface);padding:var(--s3);scroll-margin-top:120px}
 summary{cursor:pointer;min-height:36px;display:flex;align-items:center;font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.08em;text-transform:uppercase}
-.note{font-size:12px;color:var(--muted);margin:0}
+.note{font-size:var(--t-sm);color:var(--muted);margin:0}
 .sec{display:flex;flex-direction:column;gap:var(--s2);margin-top:14px}
 /* Section headings: small red bar plus caps label */
 .seclbl{display:flex;align-items:center;font-family:var(--f-head);font-style:italic;font-size:var(--t-md);text-transform:uppercase;letter-spacing:.1em;color:var(--fg);font-weight:700}
@@ -99,10 +99,10 @@ h2.seclbl::before{height:22px}
 .star[aria-pressed="true"],[data-fav="1"] .star{color:var(--fav)}
 .favedge{position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--fav);z-index:2;pointer-events:none}
 .track{font-size:14px;margin-top:2px;overflow-wrap:anywhere}
-.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center;font-size:12px;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center;font-size:var(--t-sm);color:var(--muted)}
 /* LMU badge row: square badges, safety rank first, then class tags */
 .badges{display:flex;flex-wrap:wrap;gap:var(--s1);margin-bottom:6px}
-.badge{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;line-height:1;
+.badge{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-sm);letter-spacing:.06em;text-transform:uppercase;line-height:1;
   padding:4px 6px;min-width:26px;text-align:center;color:var(--white);background:var(--c-x)}
 .badge[data-r="bronze"]{background:var(--sr-bronze);color:var(--ink)}
 .badge[data-r="silver"]{background:var(--sr-silver);color:var(--ink)}
@@ -116,11 +116,11 @@ h2.seclbl::before{height:22px}
 .pill{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-sm);padding:2px 14px 2px var(--s2);text-transform:uppercase;letter-spacing:.06em;line-height:1.2}
 .pill.ribbon{background:var(--rrred);color:var(--white);clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%)}
 .pill.free.ribbon{background:var(--rr-dk)}
-.then{font-size:12px;color:var(--muted);margin-top:var(--s1)}
+.then{font-size:var(--t-sm);color:var(--muted);margin-top:var(--s1)}
 .when{text-align:right;white-space:nowrap}
 .cdlbl{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;line-height:1.2;color:var(--muted)}
 .cd{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-xl);letter-spacing:.02em;line-height:1.1}
-.at{font-size:12px;color:var(--muted);margin-top:var(--s1)}
+.at{font-size:var(--t-sm);color:var(--muted);margin-top:var(--s1)}
 /* LMU card: dark card, red wash on the diagonal, blue hatched edge */
 .row.lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
 .row.lmu,.sblock.lmu{--tk:var(--white)}
@@ -139,6 +139,7 @@ h2.seclbl::before{height:22px}
 .row.lmu.open .title,.row.lmu.open .cd{color:var(--lmu-dk)}
 .row.lmu.open .cdbox{border-color:var(--lmu-dk)}
 .row.lmu.open .star[aria-pressed="true"],.row.lmu.open[data-fav="1"] .star{color:var(--fav-dk)}
+.row.lmu.open .livetag{color:var(--ok-dk)}
 /* RaceRoom card: white plate, slanted left edge, red round end cap */
 .row.rr{background:var(--plate);color:var(--ink);border-radius:0 30px 30px 0;clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
 .row.rr .stripe{background:linear-gradient(90deg,var(--rrred) 0 55%,var(--ink) 55% 75%,var(--rrred) 75%);clip-path:polygon(0 0,60% 0,100% 100%,0 100%)}
@@ -162,7 +163,7 @@ h2.seclbl::before{height:22px}
 .row.rr.hero .pill.ribbon{background:var(--white);color:var(--rr-dk)}
 .row.rr.hero .detail{background:var(--plate);color:var(--ink)}
 /* Locked race: body dimmed and hatched corner, reason in a solid strip at the bottom */
-.row.locked .head{opacity:.6}
+.row.locked .head{opacity:.75}
 .row.locked::before{content:"";position:absolute;top:0;right:0;z-index:3;width:34px;height:34px;pointer-events:none;
   background:repeating-linear-gradient(135deg,var(--hatch) 0 2px,transparent 2px 7px);clip-path:polygon(0 0,100% 0,100% 100%)}
 .row.lmu.locked{--hatch:var(--hatch-lmu)}
@@ -171,7 +172,7 @@ h2.seclbl::before{height:22px}
 .reason{margin:0;padding:var(--s2) var(--s4) var(--s2) var(--s5);background:var(--warn);color:var(--warn-ink);font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.06em;text-transform:uppercase;line-height:1.2;overflow-wrap:anywhere}
 .row.rr .reason{background:var(--ink);color:var(--warn)}
 .sblock .reason{margin:var(--s2) -14px -10px -18px}
-.reason .tag{display:inline-block;font-size:10px;letter-spacing:.05em;border:1px solid currentColor;padding:0 5px;margin-left:6px;white-space:nowrap}
+.reason .tag{display:inline-block;font-size:var(--t-xs);letter-spacing:.05em;border:1px solid currentColor;padding:0 5px;margin-left:6px;white-space:nowrap}
 /* Expanded detail */
 .detail{padding:10px 18px 18px 24px;border-top:1px solid var(--line)}
 .row.rr .detail{border-top-color:var(--plate-line)}
@@ -194,7 +195,7 @@ h2.seclbl::before{height:22px}
 .sblock{position:relative;background:var(--surface);padding:var(--s3) 14px 10px 18px;border-left:6px solid var(--lmu)}
 .sblock.lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
 .sblock.rr{border-left-color:var(--rrred)}
-.sblock.locked .track,.sblock.locked .meta,.sblock.locked .badges,.sblock.locked .tgrid{opacity:.6}
+.sblock.locked .track,.sblock.locked .meta,.sblock.locked .badges,.sblock.locked .tgrid{opacity:.75}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:var(--t-sm)}
 a{color:var(--fg)}
@@ -248,7 +249,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 @keyframes swA{0%{transform:translateX(-120%)}42%,58%{transform:translateX(0)}100%{transform:translateX(120%)}}
 @keyframes swB{0%{transform:translateX(-120%)}35%,65%{transform:translateX(0)}100%{transform:translateX(120%)}}
 .row.unlock .head{animation:unHead var(--d-fx) var(--ease) backwards}
-@keyframes unHead{from{opacity:.6}}
+@keyframes unHead{from{opacity:.75}}
 .row.lmu.unlock{--hatch:var(--hatch-lmu)}
 .row.rr.unlock{--hatch:var(--hatch-rr)}
 .row.unlock::before{content:"";position:absolute;top:0;right:0;z-index:3;width:34px;height:34px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--hatch) 0 2px,transparent 2px 7px);clip-path:polygon(0 0,100% 0,100% 100%);animation:hatchOff var(--d-fx) var(--ease) forwards}
@@ -259,8 +260,29 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 .cdbox.pulse::after{content:"";position:absolute;inset:-2px;border:2px solid var(--lmu);pointer-events:none;animation:pulse 900ms var(--ease) both}
 .row.rr .cdbox.pulse::after{border-color:var(--white)}
 @keyframes pulse{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.3,1.7)}}
+/* Touch screens: 44px tap targets, 8px apart */
+@media (pointer:coarse){
+  .chip,.bar .chip,.chip.cls,.chip.mine,.chip.favchip,.linkbtn,summary,.statusbtn{min-height:44px}
+  .frow{gap:var(--s2)}
+  .bar .chip.cls{padding:4px var(--s2)}
+  .links a{display:inline-flex;align-items:center;min-height:44px}
+}
+/* Hover and press, mouse only: 150ms in, 120ms out, 90ms press */
+@media (hover:hover) and (pointer:fine){
+  .chip,.linkbtn,.tab,.star,.statusbtn,.row,a{transition:transform 120ms var(--ease),background-color 120ms var(--ease),color 120ms var(--ease),border-color 120ms var(--ease)}
+  .chip:hover,.linkbtn:hover{transform:translateY(-1px);transition-duration:150ms}
+  .chip:active,.linkbtn:active{transform:translateY(1px) scale(.985);transition-duration:90ms}
+  .chip[aria-disabled="true"]:hover,.chip[aria-disabled="true"]:active{transform:none}
+  .chip:not([aria-pressed="true"]):not(.cls):not(.mine):not([aria-disabled="true"]):hover{background-color:var(--surface3);color:var(--fg)}
+  .chip.cls:not([aria-pressed="true"]):hover,.chip.mine:hover,.linkbtn:hover{border-color:var(--fg)}
+  .tab:not([aria-selected="true"]):hover,.statusbtn:hover,a:hover{color:var(--white)}
+  .star:not([aria-pressed="true"]):hover{color:var(--fg)}
+  .row.rr .star:not([aria-pressed="true"]):hover,.row.lmu.open .star:not([aria-pressed="true"]):hover{color:var(--ink)}
+  .row:hover{transform:translateX(2px);transition-duration:150ms}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
+  .chip:hover,.chip:active,.linkbtn:hover,.linkbtn:active,.row:hover{transform:none!important}
   .row.in,.sblock.in{animation:fadeIn 200ms linear backwards!important}
   @keyframes fadeIn{from{opacity:0}}
   #wipe{display:none}
@@ -279,7 +301,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   <div class="infoline">
     <button class="statusbtn" id="statusBtn" type="button" aria-expanded="false" aria-controls="statusDetail">
       <span class="dot" id="statusDot" data-s="idle"></span>
-      <span id="statusText" class="num">Loading...</span><span id="statusWarn" class="warnmsg" role="status"></span>
+      <span id="statusText" class="num">Loading…</span><span id="statusWarn" class="warnmsg" role="status"></span>
     </button>
     <p class="sub">Times in <span id="tz"></span></p>
   </div>
@@ -547,7 +569,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     var txt=$("statusText"),warn=$("statusWarn"),dot=$("statusDot"),det=$("statusDetail"),btn=$("statusBtn");
     det.textContent="";warn.textContent="";
     if(!data){
-      txt.textContent=loadErr||"Loading...";
+      txt.textContent=loadErr||"Loading…";
       dot.setAttribute("data-s",loadErr?"warn":"idle");
       det.hidden=true;btn.setAttribute("aria-expanded","false");
       return;
@@ -556,7 +578,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     var bad=[],msgs=[];
     [["lmu","LMU"],["rr","RaceRoom"]].forEach(function(g){
       var s=(data.sources||{})[g[0]];if(!s)return;
-      if(s.ok)det.appendChild(el("span","",g[1]+" ok"));
+      if(s.ok)det.appendChild(el("span","",g[1]+" checked "+ago(s.checked||s.lastOk||data.updated)));
       else{
         bad.push(g[1]);
         det.appendChild(el("span","bad",g[1]+" check failed, last good "+(s.lastOk?ago(s.lastOk):"never")));
@@ -945,7 +967,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   function renderNext(){
     beginRender();
     var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};detSeq=0;
-    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
+    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule…"));return}
     var items=collect(now,false);
     if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
     var hero=null;
@@ -957,7 +979,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   function renderSchedule(){
     beginRender();
     var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};
-    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
+    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule…"));return}
     var items=collect(now,true);
     if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
     items.forEach(function(x){list.appendChild(buildBlock(x))});
