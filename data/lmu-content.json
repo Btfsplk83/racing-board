@@ -1,0 +1,667 @@
+{
+ "version": 1,
+ "game": "lmu",
+ "researched": "2026-11-17",
+ "packs": [
+  {
+   "id": "2024-pack-1",
+   "name": "Le Mans Ultimate - 2024 Pack 1",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/2973290/"
+  },
+  {
+   "id": "2024-pack-2",
+   "name": "Le Mans Ultimate - 2024 Pack 2",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3151390/"
+  },
+  {
+   "id": "2024-pack-3",
+   "name": "Le Mans Ultimate - 2024 Pack 3",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3260810/"
+  },
+  {
+   "id": "2024-pack-4",
+   "name": "Le Mans Ultimate - 2024 Pack 4",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3260820/"
+  },
+  {
+   "id": "2024-pack-5",
+   "name": "Le Mans Ultimate - 2024 Pack 5",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3511300/"
+  },
+  {
+   "id": "2024-season-pass",
+   "name": "Le Mans Ultimate - 2024 Season Pass",
+   "type": "pass",
+   "includes": [
+    "2024-pack-1",
+    "2024-pack-2",
+    "2024-pack-3",
+    "2024-pack-4",
+    "2024-pack-5"
+   ],
+   "url": "https://store.steampowered.com/app/2997280/",
+   "check": true
+  },
+  {
+   "id": "wec-full-access-bundle",
+   "name": "Le Mans Ultimate WEC Full Access Bundle",
+   "type": "bundle",
+   "includes": [
+    "2024-pack-1",
+    "2024-pack-2",
+    "2024-pack-3",
+    "2024-pack-4",
+    "2024-pack-5"
+   ],
+   "url": "https://store.steampowered.com/bundle/56301/Le_Mans_Ultimate_WEC_Full_Access_Bundle/"
+  },
+  {
+   "id": "elms-pack-1",
+   "name": "Le Mans Ultimate - ELMS Pack 1",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3954000/"
+  },
+  {
+   "id": "elms-pack-2",
+   "name": "Le Mans Ultimate - ELMS Pack 2",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3954010/"
+  },
+  {
+   "id": "elms-pack-3",
+   "name": "Le Mans Ultimate - ELMS Pack 3",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/3954020/"
+  },
+  {
+   "id": "elms-season-pass",
+   "name": "Le Mans Ultimate - ELMS Season Pass",
+   "type": "pass",
+   "includes": [
+    "elms-pack-1",
+    "elms-pack-2",
+    "elms-pack-3"
+   ],
+   "url": "https://store.steampowered.com/app/3948300/"
+  },
+  {
+   "id": "us-pack-1",
+   "name": "Le Mans Ultimate - US Track Pack 1",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/4694190/"
+  },
+  {
+   "id": "us-pack-2",
+   "name": "Le Mans Ultimate - US Track Pack 2",
+   "type": "pack",
+   "url": "https://store.steampowered.com/app/4694200/"
+  },
+  {
+   "id": "us-track-pass",
+   "name": "Le Mans Ultimate - US Track Pass",
+   "type": "pass",
+   "includes": [
+    "us-pack-1",
+    "us-pack-2"
+   ],
+   "url": "https://store.steampowered.com/app/4906890/",
+   "check": true
+  },
+  {
+   "id": "racecontrol-pro-plus",
+   "name": "RaceControl Pro+",
+   "type": "subscription",
+   "includes": [
+    "2024-pack-1",
+    "2024-pack-2",
+    "2024-pack-3",
+    "2024-pack-4",
+    "2024-pack-5",
+    "elms-pack-1",
+    "elms-pack-2",
+    "elms-pack-3",
+    "us-pack-1",
+    "us-pack-2"
+   ],
+   "url": "https://racecontrol.gg/pro"
+  }
+ ],
+ "tracks": [
+  {
+   "name": "Circuit de la Sarthe (Le Mans)",
+   "aliases": [
+    "le mans",
+    "circuit de la sarthe"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Spa-Francorchamps",
+   "aliases": [
+    "spa francorchamps",
+    "spa-francorchamps",
+    "spa"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Autodromo Nazionale Monza",
+   "aliases": [
+    "monza"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Sebring International Raceway",
+   "aliases": [
+    "sebring"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Bahrain International Circuit",
+   "aliases": [
+    "bahrain wec 2023",
+    "bahrain"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Algarve International Circuit (Portimao)",
+   "aliases": [
+    "algarve",
+    "portimao"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Fuji Speedway",
+   "aliases": [
+    "fuji",
+    "fuji speedway"
+   ],
+   "packs": []
+  },
+  {
+   "name": "Imola (Autodromo Enzo e Dino Ferrari)",
+   "aliases": [
+    "imola"
+   ],
+   "packs": [
+    "2024-pack-1"
+   ]
+  },
+  {
+   "name": "Circuit of the Americas",
+   "aliases": [
+    "cota",
+    "circuit of the americas"
+   ],
+   "packs": [
+    "2024-pack-2"
+   ]
+  },
+  {
+   "name": "Interlagos (Autodromo Jose Carlos Pace)",
+   "aliases": [
+    "interlagos"
+   ],
+   "packs": [
+    "2024-pack-3"
+   ]
+  },
+  {
+   "name": "Lusail International Circuit (Qatar)",
+   "aliases": [
+    "lusail",
+    "qatar",
+    "losail"
+   ],
+   "packs": [
+    "2024-pack-5"
+   ]
+  },
+  {
+   "name": "Silverstone Circuit",
+   "aliases": [
+    "silverstone 2025",
+    "silverstone"
+   ],
+   "packs": [
+    "elms-pack-1"
+   ]
+  },
+  {
+   "name": "Circuit Paul Ricard",
+   "aliases": [
+    "paul ricard 2025",
+    "paul ricard"
+   ],
+   "packs": [
+    "elms-pack-2"
+   ]
+  },
+  {
+   "name": "Circuit de Barcelona-Catalunya",
+   "aliases": [
+    "circuit de barcelona catalunya",
+    "barcelona"
+   ],
+   "packs": [
+    "elms-pack-3"
+   ]
+  },
+  {
+   "name": "Daytona International Speedway",
+   "aliases": [
+    "daytona"
+   ],
+   "packs": [
+    "us-pack-1"
+   ]
+  },
+  {
+   "name": "WeatherTech Raceway Laguna Seca",
+   "aliases": [
+    "laguna seca"
+   ],
+   "packs": [
+    "us-pack-1"
+   ]
+  },
+  {
+   "name": "Michelin Raceway Road Atlanta",
+   "aliases": [
+    "road atlanta"
+   ],
+   "packs": [
+    "us-pack-2"
+   ]
+  },
+  {
+   "name": "Streets of Long Beach",
+   "aliases": [
+    "long beach",
+    "grand prix of long beach"
+   ],
+   "packs": [
+    "us-pack-2"
+   ]
+  }
+ ],
+ "classes": [
+  {
+   "name": "Hypercar",
+   "cars": [
+    {
+     "name": "Toyota GR010 Hybrid",
+     "packs": []
+    },
+    {
+     "name": "Toyota TR010 Hybrid (2026)",
+     "packs": []
+    },
+    {
+     "name": "Ferrari 499P",
+     "packs": []
+    },
+    {
+     "name": "Porsche 963",
+     "packs": []
+    },
+    {
+     "name": "Cadillac V-Series.R",
+     "packs": []
+    },
+    {
+     "name": "Cadillac V-Series.R Evo (2026)",
+     "packs": [],
+     "check": true
+    },
+    {
+     "name": "Peugeot 9X8 (2023)",
+     "packs": []
+    },
+    {
+     "name": "Glickenhaus SCG 007",
+     "packs": []
+    },
+    {
+     "name": "Vanwall Vandervell 680",
+     "packs": []
+    },
+    {
+     "name": "Aston Martin Valkyrie AMR LMH",
+     "packs": []
+    },
+    {
+     "name": "BMW M Hybrid V8",
+     "packs": []
+    },
+    {
+     "name": "BMW M Hybrid V8 Evo (2026)",
+     "packs": []
+    },
+    {
+     "name": "Genesis GMR-001",
+     "packs": []
+    },
+    {
+     "name": "Peugeot 9X8 (2024)",
+     "packs": [
+      "2024-pack-1"
+     ]
+    },
+    {
+     "name": "Lamborghini SC63",
+     "packs": [
+      "2024-pack-1"
+     ]
+    },
+    {
+     "name": "Alpine A424",
+     "packs": [
+      "2024-pack-2"
+     ]
+    },
+    {
+     "name": "Isotta Fraschini Tipo 6-C",
+     "packs": [
+      "2024-pack-2"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LMP2",
+   "cars": [
+    {
+     "name": "Oreca 07 Gibson",
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "LMP2 ELMS",
+   "cars": [
+    {
+     "name": "Oreca 07 Gibson ELMS",
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "LMGTE AM",
+   "cars": [
+    {
+     "name": "Aston Martin Vantage GTE",
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette C8.R",
+     "packs": []
+    },
+    {
+     "name": "Ferrari 488 GTE Evo",
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 RSR-19",
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "LMGT3",
+   "cars": [
+    {
+     "name": "Mercedes-AMG LMGT3 Evo",
+     "packs": []
+    },
+    {
+     "name": "Ford Mustang LMGT3",
+     "packs": [],
+     "check": true
+    },
+    {
+     "name": "McLaren 720S LMGT3 Evo",
+     "packs": [],
+     "check": true
+    },
+    {
+     "name": "BMW M4 LMGT3",
+     "packs": [
+      "2024-pack-3"
+     ]
+    },
+    {
+     "name": "Chevrolet Corvette Z06 LMGT3.R",
+     "packs": [
+      "2024-pack-3"
+     ]
+    },
+    {
+     "name": "Ferrari 296 LMGT3",
+     "packs": [
+      "2024-pack-3"
+     ]
+    },
+    {
+     "name": "Aston Martin Vantage AMR LMGT3 Evo",
+     "packs": [
+      "2024-pack-4"
+     ]
+    },
+    {
+     "name": "Porsche 911 GT3 R LMGT3 (992)",
+     "packs": [
+      "2024-pack-4"
+     ]
+    },
+    {
+     "name": "Lexus RC F LMGT3",
+     "packs": [
+      "2024-pack-5"
+     ]
+    },
+    {
+     "name": "Lamborghini Huracan LMGT3 Evo2",
+     "packs": [
+      "2024-pack-5"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "LMP3",
+   "cars": [
+    {
+     "name": "Adess AD25",
+     "packs": []
+    },
+    {
+     "name": "Ligier JS P325",
+     "packs": [
+      "elms-pack-1"
+     ]
+    },
+    {
+     "name": "Ginetta G61-LT-P325 Evo",
+     "packs": [
+      "elms-pack-2"
+     ]
+    },
+    {
+     "name": "Duqueine D09",
+     "packs": [
+      "elms-pack-3"
+     ]
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "match": "lmgt3 fixed",
+   "classes": [
+    "LMGT3"
+   ]
+  },
+  {
+   "match": "lmp3 fixed",
+   "classes": [
+    "LMP3"
+   ]
+  },
+  {
+   "match": "logitech mclaren",
+   "classes": [
+    "LMGT3"
+   ],
+   "cars": [
+    "McLaren 720S LMGT3 Evo"
+   ],
+   "check": true
+  },
+  {
+   "match": "elms sprint trophy",
+   "classes": [
+    "LMP2 ELMS",
+    "LMP3",
+    "LMGT3"
+   ],
+   "check": true
+  },
+  {
+   "match": "lmgt3 sprint cup",
+   "classes": [
+    "LMGT3"
+   ]
+  },
+  {
+   "match": "prototype fixed",
+   "classes": [
+    "LMP2 ELMS",
+    "LMP3"
+   ],
+   "check": true
+  },
+  {
+   "match": "elms super 60",
+   "classes": [
+    "LMP2 ELMS",
+    "LMP3",
+    "LMGT3"
+   ],
+   "check": true
+  },
+  {
+   "match": "one stint sprint",
+   "classes": [
+    "Hypercar",
+    "LMGT3"
+   ],
+   "check": true
+  },
+  {
+   "match": "wec-xperience",
+   "classes": [
+    "Hypercar",
+    "LMGT3"
+   ],
+   "check": true
+  }
+ ],
+ "rules": {
+  "needsTrack": true,
+  "needsOneCar": true,
+  "notes": "No official page was found that states the entry rule for daily races; treat both flags as probable, not confirmed. Track: a 2024 Traxion guide says you need to own DLC tracks to race them online, and a Dec 2024 Steam forum thread had a player unable to join a beginner daily until they had the new content. Car: at least one car of an eligible class must logically be owned; a forum reply says adding the free McLaren car let a player join beginner races and base-game LMP2 and GTE cars worked for beginners, so owning the track plus any free eligible car should be enough. Free cars (no purchase) include Oreca 07, the GTE cars, Mercedes LMGT3, Mustang LMGT3, McLaren LMGT3 Evo, most Hypercars and the Adess AD25 LMP3 (since v1.3.3, June 2026), which is why LMP3 Fixed is a beginner race. RaceControl Pro+ unlocks all LMU DLC while the subscription is active. Beginner, Intermediate and Advanced are RaceControl safety-rank gates, not ownership gates: Beginner is open to all, Intermediate needs Silver safety rank, Advanced needs Gold. Everyone starts at Bronze for both safety and driver rank. For multi-class series it is not known whether a player needs a car in every class or just one eligible class; assume one. The US Track Pass is meant to include a third US pack (due December 2026, not yet released), and the 2024 Season Pass is no longer sold on Steam."
+ },
+ "sources": [
+  {
+   "url": "https://store.steampowered.com/api/appdetails?appids=2399420",
+   "what": "Steam DLC list (12 appids) and base-game description (free cars, 7 base tracks)"
+  },
+  {
+   "url": "https://store.steampowered.com/app/2973290/",
+   "what": "2024 Pack 1 contents and prices; the other 11 DLC pages were read the same way via appdetails"
+  },
+  {
+   "url": "https://store.steampowered.com/app/2997280/",
+   "what": "2024 Season Pass, delisted, five packs"
+  },
+  {
+   "url": "https://store.steampowered.com/bundle/56301/Le_Mans_Ultimate_WEC_Full_Access_Bundle/",
+   "what": "Only Steam bundle: base game plus 2024 Packs 1-5"
+  },
+  {
+   "url": "https://racecontrol.gg/pro",
+   "what": "RaceControl Free/Pro/Pro+ tiers; Pro+ unlocks all LMU DLC"
+  },
+  {
+   "url": "https://news.racecontrol.gg/competition/le-mans-ultimate-understand-the-online-competition-system",
+   "what": "Bronze/Silver/Gold/Platinum ranks; daily tiers gated by safety rank"
+  },
+  {
+   "url": "https://traxion.gg/le-mans-ultimates-online-subscriptions-explained/",
+   "what": "Pro and Pro+ subscriptions"
+  },
+  {
+   "url": "https://traxion.gg/le-mans-ultimate-dlc-and-season-pass-guide/",
+   "what": "Statement that DLC tracks must be owned to race online (July 2024)"
+  },
+  {
+   "url": "https://steamcommunity.com/app/2399420/discussions/0/583876502953681367/",
+   "what": "Forum evidence on DLC needed for daily races (Dec 2024)"
+  },
+  {
+   "url": "https://traxion.gg/le-mans-ultimate-complete-car-list/",
+   "what": "Car list and pack mapping (27 Jul 2026)"
+  },
+  {
+   "url": "https://traxion.gg/le-mans-ultimate-complete-track-list/",
+   "what": "Track list and layouts (1 Apr 2026)"
+  },
+  {
+   "url": "https://traxion.gg/le-mans-ultimate-adds-2026-spec-cars-and-free-lmp3/",
+   "what": "v1.3.3: free Adess AD25, BMW Evo, Toyota TR010"
+  },
+  {
+   "url": "https://news.racecontrol.gg/?p=1566",
+   "what": "Adess AD25 free for all"
+  },
+  {
+   "url": "https://news.racecontrol.gg/?p=1522",
+   "what": "Genesis GMR-001 free"
+  },
+  {
+   "url": "https://news.racecontrol.gg/news/the-definitive-le-mans-ultimate-dlc-guide-2025/",
+   "what": "Free cars and 2024 pack contents"
+  },
+  {
+   "url": "https://www.mclaren.com/racing/endurance/2026/logitech-mclaren-g-challenge-returns-for-2026/",
+   "what": "Logitech McLaren G Challenge uses the McLaren 720S LMGT3 Evo"
+  },
+  {
+   "url": "https://lmu.tools/schedule",
+   "what": "Third-party daily schedule: classes and fixed/open setup per series"
+  },
+  {
+   "url": "https://www.lmu-assister.com/",
+   "what": "Third-party daily schedule: classes per series, agrees with lmu.tools"
+  },
+  {
+   "url": "https://racecontrol.gg/",
+   "what": "Homepage daily cards carry no car or class data; cards link to '#'; no details endpoint"
+  },
+  {
+   "url": "https://racecontrol.gg/events/29021",
+   "what": "Community event pages publish Classes and Cars, daily races have no such page"
+  }
+ ]
+}

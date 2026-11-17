@@ -1,0 +1,3528 @@
+{
+ "version": 1,
+ "game": "rr",
+ "researched": "2026-11-17",
+ "packs": [
+  {
+   "id": "online-racing-pack-s1-2026",
+   "name": "Online Racing Pack - Season 1 - 2026",
+   "type": "pack",
+   "includes": [],
+   "url": "https://game.raceroomracing.com/store/packs/online-racing-pack---season-1---2026/7000731"
+  },
+  {
+   "id": "rstc-pack-2026",
+   "name": "RSTC Pack 2026",
+   "type": "pack",
+   "includes": [],
+   "url": "https://game.raceroomracing.com/store/packs/rstc-pack-2026/7000730"
+  },
+  {
+   "id": "alpine-sim-racing-pack-2026",
+   "name": "Alpine Sim Racing Pack 2026",
+   "type": "pack",
+   "includes": [],
+   "url": "https://game.raceroomracing.com/store/packs/alpine-sim-racing-pack-2026/7000729"
+  },
+  {
+   "id": "dtm-2026-car-pack",
+   "name": "DTM 2026 Car Pack",
+   "type": "pack",
+   "includes": [],
+   "url": "https://game.raceroomracing.com/store/packs/dtm-2026-car-pack/7000726"
+  }
+ ],
+ "tracks": [
+  {
+   "name": "RaceRoom Raceway",
+   "id": 262,
+   "free": true,
+   "packs": []
+  },
+  {
+   "name": "Autodromo di Monza",
+   "id": 1670,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Mid-Ohio Sports Car Course",
+   "id": 1673,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Circuit Zandvoort - 2019",
+   "id": 1677,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "alpine-sim-racing-pack-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Lakeview Hillclimb",
+   "id": 1681,
+   "free": true,
+   "packs": []
+  },
+  {
+   "name": "Circuit Zolder",
+   "id": 1683,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Nürburgring - Grand Prix",
+   "id": 1690,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "rstc-pack-2026",
+    "alpine-sim-racing-pack-2026"
+   ]
+  },
+  {
+   "name": "Hockenheimring - Modern",
+   "id": 1692,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "RaceRoom Hillclimb",
+   "id": 1705,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Autodromo Internacional do Algarve",
+   "id": 1771,
+   "free": true,
+   "packs": []
+  },
+  {
+   "name": "Suzuka International Racing Course",
+   "id": 1840,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Mount Panorama Circuit",
+   "id": 1845,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Autódromo Internazionale Enzo e Dino Ferrari",
+   "id": 1849,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Indianapolis Motor Speedway - 2012",
+   "id": 1851,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Sonoma Raceway",
+   "id": 1853,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "WeatherTech Raceway Laguna Seca - Modern",
+   "id": 1855,
+   "free": true,
+   "packs": [],
+   "check": true
+  },
+  {
+   "name": "Hungaroring",
+   "id": 1865,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Autódromo Fernanda Pires da Silva",
+   "id": 2018,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Salzburgring",
+   "id": 2020,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Shanghai International Circuit",
+   "id": 2021,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Automotodróm Slovakia Ring",
+   "id": 2029,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Guia Circuit",
+   "id": 2122,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Motorsport Arena Oschersleben - Legacy",
+   "id": 2383,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "DEKRA Lausitzring - DEKRA Lausitzring",
+   "id": 2467,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Moscow Raceway",
+   "id": 2472,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Norisring",
+   "id": 2517,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Brands Hatch Circuit - Indy",
+   "id": 2519,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Red Bull Ring Spielberg",
+   "id": 2521,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Nürburgring - Nordschleife",
+   "id": 2812,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "rstc-pack-2026",
+    "alpine-sim-racing-pack-2026"
+   ]
+  },
+  {
+   "name": "Circuit Paul Ricard",
+   "id": 2866,
+   "free": false,
+   "packs": [
+    "alpine-sim-racing-pack-2026"
+   ]
+  },
+  {
+   "name": "Zhuhai International Circuit",
+   "id": 3463,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Sachsenring",
+   "id": 3537,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Circuit de Spa-Francorchamps - 2015",
+   "id": 3869,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "rstc-pack-2026",
+    "alpine-sim-racing-pack-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Silverstone Circuit - Modern",
+   "id": 4038,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Chang International Circuit",
+   "id": 4252,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Road America",
+   "id": 5275,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "CREDITAS Autodrom Brno",
+   "id": 5297,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Anderstorp Motorbana",
+   "id": 5300,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Gelleråsen Arena",
+   "id": 5924,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Mantorp Park",
+   "id": 6009,
+   "free": true,
+   "packs": []
+  },
+  {
+   "name": "Silverstone Circuit - Stowe Circuit",
+   "id": 6053,
+   "free": true,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Knutstorp Ring",
+   "id": 6136,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Falkenbergs Motorbana",
+   "id": 6139,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Sepang International Circuit",
+   "id": 6340,
+   "free": true,
+   "packs": []
+  },
+  {
+   "name": "Dubai Autodrome",
+   "id": 6586,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Twin Ring Motegi",
+   "id": 6657,
+   "free": true,
+   "packs": []
+  },
+  {
+   "name": "Autodrom Most",
+   "id": 7111,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Ningbo International Circuit",
+   "id": 7272,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Bilster Berg",
+   "id": 7818,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Zhejiang International Circuit",
+   "id": 8074,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Daytona International Speedway",
+   "id": 8366,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Motorland Aragón",
+   "id": 8703,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Watkins Glen International",
+   "id": 9176,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Genting Highlands",
+   "id": 9320,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Vålerbanen",
+   "id": 9464,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Brands Hatch Circuit - Grand Prix",
+   "id": 9472,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Circuit Paul Armagnac",
+   "id": 9657,
+   "free": false,
+   "packs": [
+    "alpine-sim-racing-pack-2026"
+   ]
+  },
+  {
+   "name": "Twin Forest",
+   "id": 9838,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Indianapolis Motor Speedway - Modern",
+   "id": 9942,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "TT Circuit Assen",
+   "id": 9984,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Hockenheimring - DMEC",
+   "id": 10273,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Donington Park",
+   "id": 10393,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Autódromo José Carlos Pace",
+   "id": 10462,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ]
+  },
+  {
+   "name": "Circuit Zandvoort - Modern",
+   "id": 10781,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "alpine-sim-racing-pack-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Circuit de Charade",
+   "id": 10903,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Circuit de Pau-Ville",
+   "id": 11904,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Hockenheimring - 2001",
+   "id": 12111,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Silverstone Circuit - 2001",
+   "id": 12267,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Fliegerhorst Diepholz",
+   "id": 12394,
+   "free": false,
+   "packs": [
+    "rstc-pack-2026"
+   ]
+  },
+  {
+   "name": "AVUS",
+   "id": 12419,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Motorsport Arena Oschersleben - Motorsport Arena Oschersleben",
+   "id": 12505,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Alemannenring",
+   "id": 12936,
+   "free": false,
+   "packs": [
+    "rstc-pack-2026"
+   ]
+  },
+  {
+   "name": "Autodromo Vallelunga Piero Taruffi",
+   "id": 13186,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Circuit de Spa-Francorchamps - Modern",
+   "id": 13255,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "rstc-pack-2026",
+    "alpine-sim-racing-pack-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Adria International Raceway - 2003",
+   "id": 13350,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Adria International Raceway - 2021",
+   "id": 13424,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Circuit de Spa-Francorchamps - 1995",
+   "id": 13427,
+   "free": false,
+   "packs": [
+    "online-racing-pack-s1-2026",
+    "rstc-pack-2026",
+    "alpine-sim-racing-pack-2026"
+   ],
+   "check": true
+  },
+  {
+   "name": "Fliegerhorst Wunstorf",
+   "id": 13431,
+   "free": false,
+   "packs": [
+    "rstc-pack-2026"
+   ]
+  },
+  {
+   "name": "WeatherTech Raceway Laguna Seca - 1987",
+   "id": 13532,
+   "free": false,
+   "packs": []
+  },
+  {
+   "name": "Glasbachrennen",
+   "id": 13631,
+   "free": false,
+   "packs": []
+  }
+ ],
+ "classes": [
+  {
+   "name": "FRJ Cup",
+   "id": 253,
+   "cars": [
+    {
+     "name": "Formula RaceRoom Junior",
+     "id": 4865,
+     "free": true,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Aquila CR1 Cup",
+   "id": 255,
+   "cars": [
+    {
+     "name": "Aquila CR1 Sports GT",
+     "id": 252,
+     "free": true,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Hillclimb Icons",
+   "id": 1685,
+   "cars": [
+    {
+     "name": "BMW 134 Judd V8",
+     "id": 258,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Carlsson SLK 340 JUDD",
+     "id": 2849,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "E36 V8 JUDD",
+     "id": 8115,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "GTR 1",
+   "id": 1687,
+   "cars": [
+    {
+     "name": "Saleen S7R",
+     "id": 1686,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Ford GT GT1",
+     "id": 1779,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Gumpert Apollo Sport",
+     "id": 1788,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Koenigsegg CCGT",
+     "id": 1794,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan GT-R GT1",
+     "id": 1807,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "RUF CTR3",
+     "id": 1834,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "GTR 3",
+   "id": 1703,
+   "cars": [
+    {
+     "name": "BMW Alpina B6 GT3",
+     "id": 1695,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW Z4 GT3",
+     "id": 1738,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ford Mustang GT3",
+     "id": 1782,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan GT-R GT3",
+     "id": 1811,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "P4-5 Competizione GT3",
+     "id": 1821,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren MP4-12C GT3",
+     "id": 1909,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS Ultra",
+     "id": 2037,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Camaro GT3",
+     "id": 2338,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-Benz SLS AMG GT3",
+     "id": 2533,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "RUF RT12R GTR3",
+     "id": 3516,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette Z06.R GT3",
+     "id": 3626,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ford GT GT3",
+     "id": 3754,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Bentley Continental GT3",
+     "id": 5170,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 650S GT3",
+     "id": 5786,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M6 GT3",
+     "id": 5818,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS",
+     "id": 6057,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes AMG GT3",
+     "id": 6168,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Callaway Corvette C7 GT3-R",
+     "id": 6174,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R",
+     "id": 6349,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019)",
+     "id": 8257,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Bentley Continental GT3 EVO",
+     "id": 8593,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO",
+     "id": 8604,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 720S GT3",
+     "id": 9575,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020",
+     "id": 9603,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ferrari 488 GT3 EVO 2020",
+     "id": 10890,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 GT3",
+     "id": 11536,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (992)",
+     "id": 12090,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO II",
+     "id": 12319,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ferrari 296 GT3",
+     "id": 12405,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lamborghini Huracán GT3 EVO II",
+     "id": 12771,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (992.2)",
+     "id": 13524,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "GTR 2",
+   "id": 1704,
+   "cars": [
+    {
+     "name": "BMW M3 E92 GT",
+     "id": 1733,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette C6.R ZR1",
+     "id": 1747,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "RUF RT12R",
+     "id": 1837,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Cadillac CTS-V.R",
+     "id": 2410,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "P4-5 Competizione GT2",
+     "id": 5214,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "German Nationals",
+   "id": 1706,
+   "cars": [
+    {
+     "name": "Carlsson C25 GT",
+     "id": 1744,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren-Mercedes SLR 722 GT",
+     "id": 1797,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Group 5",
+   "id": 1708,
+   "cars": [
+    {
+     "name": "BMW 320 Turbo",
+     "id": 1700,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan Silvia Turbo",
+     "id": 1815,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan Skyline 2000RS",
+     "id": 1818,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Zakspeed Capri",
+     "id": 2044,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Fabcar 935",
+     "id": 2859,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette Greenwood 1977",
+     "id": 4075,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Dekon Monza",
+     "id": 4145,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Super Touring",
+   "id": 1710,
+   "cars": [
+    {
+     "name": "Honda Accord Super Touring",
+     "id": 8645,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "BMW 320i E36 Super Touring",
+     "id": 12556,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Audi A4 Super Touring 1995",
+     "id": 12561,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Volvo 850 Super Touring",
+     "id": 12652,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Volvo S40 Super Touring",
+     "id": 12829,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Alfa Romeo 156 Super Touring",
+     "id": 13049,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Opel Vectra Super Touring",
+     "id": 13065,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Renault Laguna Super Touring",
+     "id": 13183,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Peugeot 406 Super Touring 1998",
+     "id": 13539,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Ford Mondeo Super Touring",
+     "id": 13548,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Drift",
+   "id": 1711,
+   "cars": [
+    {
+     "name": "BMW E30 M3 Drift",
+     "id": 9761,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW G82 M4 Drift",
+     "id": 10604,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Touring Classics",
+   "id": 1712,
+   "cars": [
+    {
+     "name": "BMW 635 CSI",
+     "id": 1862,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M3 E30 Gr.A",
+     "id": 2116,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Volvo 240 Turbo",
+     "id": 2275,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan Skyline GTR R32 Group N",
+     "id": 3964,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "GTO Classics",
+   "id": 1713,
+   "cars": [
+    {
+     "name": "Audi 90 Quattro",
+     "id": 2405,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan 300ZX Z32",
+     "id": 2868,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ford Mustang IMSA GTO",
+     "id": 4386,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "P1",
+   "id": 1714,
+   "cars": [
+    {
+     "name": "DMD P20",
+     "id": 1756,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Mistral M530",
+     "id": 1800,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Audi R18",
+     "id": 4308,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Silhouette Series",
+   "id": 1717,
+   "cars": [
+    {
+     "name": "Canhard R51",
+     "id": 1694,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Canhard R52",
+     "id": 1741,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Cougar C14-1",
+     "id": 1750,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Cougar C14-2",
+     "id": 1753,
+     "free": true,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2013",
+   "id": 1921,
+   "cars": [
+    {
+     "name": "DTM Mercedes AMG C-Coupé",
+     "id": 2413,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M3 DTM ",
+     "id": 2417,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "Audi RS 5 DTM",
+     "id": 2420,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCC 2013",
+   "id": 1922,
+   "cars": [
+    {
+     "name": "BMW E90 320 TC",
+     "id": 2705,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "Honda Civic WTCC",
+     "id": 2728,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "SEAT León WTCC",
+     "id": 2804,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Granta WTCC",
+     "id": 2842,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Cruze WTCC",
+     "id": 2846,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "P2",
+   "id": 1923,
+   "cars": [
+    {
+     "name": "DMD P21",
+     "id": 1759,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Mistral M531",
+     "id": 1803,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "Radical SR9 AER",
+     "id": 1827,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Radical SR9 Judd",
+     "id": 1831,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Daytona Prototype",
+     "id": 2333,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Procar",
+   "id": 2378,
+   "cars": [
+    {
+     "name": "BMW M1 Procar",
+     "id": 2339,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC GT Masters 2013",
+   "id": 2922,
+   "cars": [
+    {
+     "name": "Ford GT GT3",
+     "id": 2409,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette Z06.R GT3",
+     "id": 2611,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS Ultra",
+     "id": 2923,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW Z4 GT3",
+     "id": 2924,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Camaro GT3",
+     "id": 2925,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan GT-R GT3",
+     "id": 2926,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-Benz SLS AMG GT3",
+     "id": 2927,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2014",
+   "id": 3086,
+   "cars": [
+    {
+     "name": "Audi RS 5 DTM 2014",
+     "id": 3380,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 DTM",
+     "id": 3408,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "DTM Mercedes AMG C Coupe 14",
+     "id": 3479,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC GT Masters 2014",
+   "id": 3375,
+   "cars": [
+    {
+     "name": "Mercedes-Benz SLS AMG GT3",
+     "id": 3384,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS Ultra",
+     "id": 3500,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette Z06.R GT3",
+     "id": 3508,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren MP4-12C GT3",
+     "id": 3527,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW Z4 GT3",
+     "id": 3530,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Camaro GT3",
+     "id": 3534,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 1992",
+   "id": 3499,
+   "cars": [
+    {
+     "name": "Mercedes 190E Evo II DTM",
+     "id": 3539,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "BMW M3 Sport Evolution",
+     "id": 3549,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi V8 DTM",
+     "id": 3662,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ford Mustang GT DTM",
+     "id": 3842,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Opel Omega 3000 Evo500",
+     "id": 3874,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCC 2014",
+   "id": 3905,
+   "cars": [
+    {
+     "name": "Citroen C Elysee WTCC",
+     "id": 3899,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet RML Cruze TC1",
+     "id": 4046,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "LADA Granta 1.6T",
+     "id": 4067,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic WTCC 2014",
+     "id": 4197,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Group C",
+   "id": 4121,
+   "cars": [
+    {
+     "name": "Nissan R90CK",
+     "id": 4114,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 962 C Team Joest",
+     "id": 7399,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2015",
+   "id": 4260,
+   "cars": [
+    {
+     "name": "Audi RS 5 DTM 2015",
+     "id": 4261,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG C63 DTM",
+     "id": 4264,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 DTM 2015",
+     "id": 4267,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC GT Masters 2015",
+   "id": 4516,
+   "cars": [
+    {
+     "name": "Audi R8 LMS Ultra",
+     "id": 4518,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW Z4 GT3",
+     "id": 4544,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-Benz SLS AMG GT3",
+     "id": 4551,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Nissan GT-R GT3",
+     "id": 4557,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Corvette Z06.R GT3 GTM15",
+     "id": 4570,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet Camaro GT3",
+     "id": 4582,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Bentley Continental GT3",
+     "id": 5152,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCC 2015",
+   "id": 4517,
+   "cars": [
+    {
+     "name": "Honda Civic WTCC 2015",
+     "id": 4554,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet RML Cruze TC1 2015",
+     "id": 4579,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Citroen C Elysee WTCC 2015",
+     "id": 4585,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Vesta WTCC 2015",
+     "id": 4720,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "FR2 Cup",
+   "id": 4597,
+   "cars": [
+    {
+     "name": "Formula RaceRoom 2",
+     "id": 4598,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Audi Sport TT Cup 2015",
+   "id": 4680,
+   "cars": [
+    {
+     "name": "Audi TT cup 2015",
+     "id": 4681,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Tatuus F4 Cup",
+   "id": 4867,
+   "cars": [
+    {
+     "name": "Tatuus F4",
+     "id": 5051,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Audi TT RS cup",
+   "id": 5234,
+   "cars": [
+    {
+     "name": "Audi TT RS VLN",
+     "id": 4299,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DTM 2016",
+   "id": 5262,
+   "cars": [
+    {
+     "name": "BMW M4 DTM 2016",
+     "id": 5399,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG C 63 DTM 2016",
+     "id": 5402,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 5 DTM 2016",
+     "id": 5411,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "FR US Cup",
+   "id": 5383,
+   "cars": [
+    {
+     "name": "Formula RaceRoom US",
+     "id": 5348,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "KTM X-Bow RR Cup",
+   "id": 5385,
+   "cars": [
+    {
+     "name": "KTM X-Bow RR",
+     "id": 5342,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Mercedes-AMG Motorsport",
+   "id": 5634,
+   "cars": [
+    {
+     "name": "Mercedes-AMG C 63 DTM",
+     "id": 5259,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "FR3 Cup",
+   "id": 5652,
+   "cars": [
+    {
+     "name": "Formula RaceRoom 3",
+     "id": 5396,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Audi Sport TT Cup 2016",
+   "id": 5726,
+   "cars": [
+    {
+     "name": "Audi TT cup 2016",
+     "id": 5588,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "FR X-17 Cup",
+   "id": 5824,
+   "cars": [
+    {
+     "name": "Formula Raceroom X-17",
+     "id": 5821,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "GTR 4",
+   "id": 5825,
+   "cars": [
+    {
+     "name": "KTM X-Bow GT4",
+     "id": 5767,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche Cayman GT4 CS MR",
+     "id": 6623,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lotus Evora GT4",
+     "id": 7162,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 GT4 (F82)",
+     "id": 8053,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 718 Cayman GT4 Clubsport",
+     "id": 8201,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT4 2020",
+     "id": 8900,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes AMG GT4 2020",
+     "id": 9644,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 570s GT4",
+     "id": 10744,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 GT4 (G82)",
+     "id": 12509,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Alpine A110 GT4+",
+     "id": 13398,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "WTCC 2016",
+   "id": 6036,
+   "cars": [
+    {
+     "name": "Volvo S60 Polestar TC1",
+     "id": 6002,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Chevrolet RML Cruze TC1 2016",
+     "id": 6011,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Citroen C Elysee WTCC 2016",
+     "id": 6017,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic WTCC 2016",
+     "id": 6024,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Vesta WTCC 2016",
+     "id": 6031,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "RaceRoom Esports",
+   "id": 6172,
+   "cars": [
+    {
+     "name": "Chevrolet RML Cruze eSports",
+     "id": 6177,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Citroen C Elysee eSports",
+     "id": 6187,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic eSports",
+     "id": 6195,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Vesta eSports",
+     "id": 6203,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Volvo S60 Polestar eSports",
+     "id": 6208,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "CUPRA TCR",
+     "id": 8006,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic Type R",
+     "id": 8467,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCC 2017",
+   "id": 6309,
+   "cars": [
+    {
+     "name": "Chevrolet RML Cruze TC1 2017",
+     "id": 6310,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "Citroen C Elysee WTCC 2017",
+     "id": 6314,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic WTCC 2017",
+     "id": 6321,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Vesta WTCC 2017",
+     "id": 6329,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Volvo S60 Polestar TC1",
+     "id": 6334,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "BMW M235i Racing Cup",
+   "id": 6344,
+   "cars": [
+    {
+     "name": "BMW M235i Racing",
+     "id": 6262,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche 991.2 GT3 Cup",
+   "id": 6345,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup (991.2) Endurance",
+     "id": 4675,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Cayman GT4 Trophy by Manthey-Racing",
+   "id": 6648,
+   "cars": [
+    {
+     "name": "Porsche Cayman GT4 Clubsport",
+     "id": 6568,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Esports WTCR Prologue",
+   "id": 6783,
+   "cars": [
+    {
+     "name": "Audi RS 3 LMS",
+     "id": 6588,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Mercedes-AMG Motorsport 30 Years of DTM",
+   "id": 6794,
+   "cars": [
+    {
+     "name": "AMG-Mercedes CLK DTM 2003",
+     "id": 6791,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "AMG-Mercedes C-Klasse DTM 2005",
+     "id": 6849,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "AMG-Mercedes 190 E 2.5-16 Evolution II 1992",
+     "id": 6860,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG C 63 DTM 2015",
+     "id": 6949,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "AMG-Mercedes C-Klasse DTM 1995",
+     "id": 6978,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCR 2018",
+   "id": 7009,
+   "cars": [
+    {
+     "name": "CUPRA TCR",
+     "id": 7005,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 3 LMS",
+     "id": 7011,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Alfa Romeo Giulietta TCR",
+     "id": 7029,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Peugeot 308 TCR",
+     "id": 7036,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Volkswagen Golf GTI TCR",
+     "id": 7105,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Hyundai i30 N TCR",
+     "id": 7117,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 7125,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Super Racer",
+   "id": 7041,
+   "cars": [
+    {
+     "name": "Porsche Cayman GT4 Clubsport",
+     "id": 7040,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 1995",
+   "id": 7075,
+   "cars": [
+    {
+     "name": "AMG-Mercedes C-Klasse DTM",
+     "id": 7076,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Opel Calibra V6 DTM",
+     "id": 12839,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Alfa Romeo 155 TI DTM 1995",
+     "id": 12850,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Zonda R Cup",
+   "id": 7110,
+   "cars": [
+    {
+     "name": "Pagani Zonda R",
+     "id": 1824,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2003",
+   "id": 7167,
+   "cars": [
+    {
+     "name": "AMG-Mercedes CLK DTM",
+     "id": 7169,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "C-Klasse DTM 2005",
+   "id": 7168,
+   "cars": [
+    {
+     "name": "AMG-Mercedes C-Klasse DTM",
+     "id": 7183,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "FR X-90 Cup",
+   "id": 7214,
+   "cars": [
+    {
+     "name": "Formula RR 90 V8",
+     "id": 7215,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Formula RR 90 V12",
+     "id": 7218,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Formula RR 90 V10",
+     "id": 7220,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC GT Masters 2018",
+   "id": 7278,
+   "cars": [
+    {
+     "name": "BMW M6 GT3",
+     "id": 7629,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS",
+     "id": 7630,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Callaway Corvette C7 GT3-R",
+     "id": 7640,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes AMG GT3",
+     "id": 7643,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R",
+     "id": 7647,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche 964 Cup",
+   "id": 7287,
+   "cars": [
+    {
+     "name": "Porsche 911 Carrera Cup (964)",
+     "id": 7396,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Group 4",
+   "id": 7304,
+   "cars": [
+    {
+     "name": "Porsche 934 Turbo RSR",
+     "id": 7282,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M1 Gr. 4",
+     "id": 7805,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Volkswagen ID. R",
+   "id": 7765,
+   "cars": [
+    {
+     "name": "Volkswagen ID. R",
+     "id": 7810,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC GT Masters 2020",
+   "id": 7767,
+   "cars": [
+    {
+     "name": "BMW M6 GT3",
+     "id": 8936,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019)",
+     "id": 8938,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes AMG GT3",
+     "id": 8940,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Callaway Corvette C7 GT3-R",
+     "id": 8942,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS",
+     "id": 9031,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO",
+     "id": 9548,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Bentley Continental GT3 EVO",
+     "id": 9565,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020",
+     "id": 9581,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCR 2019",
+   "id": 7844,
+   "cars": [
+    {
+     "name": "Alfa Romeo Giulietta TCR",
+     "id": 7845,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 3 LMS",
+     "id": 7847,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "CUPRA TCR",
+     "id": 7850,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 7853,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Hyundai i30 N TCR",
+     "id": 7856,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Volkswagen Golf GTI TCR",
+     "id": 7859,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "Lynk & Co 03 TCR",
+     "id": 7926,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche Carrera Cup Deutschland 2019",
+   "id": 7982,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup",
+     "id": 7983,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche Carrera Cup Scandinavia",
+   "id": 8165,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup (991.2)",
+     "id": 8166,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "GT2",
+   "id": 8248,
+   "cars": [
+    {
+     "name": "Porsche 911 GT2 RS Clubsport",
+     "id": 8242,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT2 2019",
+     "id": 8652,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "KTM X-BOW GT2",
+     "id": 11991,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Group 2",
+   "id": 8483,
+   "cars": [
+    {
+     "name": "NSU TTS",
+     "id": 4810,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Volkswagen Scirocco Gr2",
+     "id": 8498,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Abarth 1000 TCR",
+     "id": 13679,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    },
+    {
+     "name": "Mini Cooper S MK.3",
+     "id": 13945,
+     "free": false,
+     "packs": [
+      "rstc-pack-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "GTE",
+   "id": 8600,
+   "cars": [
+    {
+     "name": "Porsche 911 RSR 2019",
+     "id": 8487,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M8 GTE",
+     "id": 12430,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "eSports WTCR",
+   "id": 8656,
+   "cars": [
+    {
+     "name": "Audi RS 3 LMS",
+     "id": 8657,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Hyundai i30 N TCR",
+     "id": 8715,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lynk & Co 03 TCR",
+     "id": 8719,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 8776,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Alfa Romeo Giulietta TCR",
+     "id": 8782,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Peugeot 308",
+     "id": 8785,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "CUPRA Leon Competición",
+     "id": 8788,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 3 LMS 2021",
+     "id": 11917,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Hyundai Elantra TCR 2022",
+     "id": 11922,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Touring Cars Cup",
+   "id": 8660,
+   "cars": [
+    {
+     "name": "Volkswagen Golf GTI TCR",
+     "id": 8084,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Opel Astra",
+     "id": 8149,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Hyundai i30 N TCR",
+     "id": 8661,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Vesta",
+     "id": 8698,
+     "free": true,
+     "packs": []
+    },
+    {
+     "name": "CUPRA Leon Competición",
+     "id": 8726,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lynk & Co 03 TCR",
+     "id": 9154,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 10441,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 3 LMS",
+     "id": 10578,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Shopping Cart",
+   "id": 8680,
+   "cars": [
+    {
+     "name": "Shopping Cart",
+     "id": 8677,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche Esports Malaysia",
+   "id": 8681,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup (992) Endurance",
+     "id": 8792,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "CUPRA Leon e-Racer",
+   "id": 8682,
+   "cars": [
+    {
+     "name": "CUPRA Leon e-Racer",
+     "id": 8757,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2020 Esport",
+   "id": 9101,
+   "cars": [
+    {
+     "name": "BMW M4 DTM 2020e",
+     "id": 9094,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 5 DTM 2020e",
+     "id": 9102,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2020",
+   "id": 9205,
+   "cars": [
+    {
+     "name": "Audi RS 5 DTM 2020",
+     "id": 9206,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "BMW M4 DTM 2020",
+     "id": 9220,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCR 2020",
+   "id": 9233,
+   "cars": [
+    {
+     "name": "Hyundai i30 N TCR",
+     "id": 9234,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lynk & Co 03 TCR",
+     "id": 9241,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Alfa Romeo Giulietta TCR",
+     "id": 9252,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 3 LMS",
+     "id": 9256,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 9266,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "CUPRA Leon Competición",
+     "id": 9278,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Renault Mégane RS TCR",
+     "id": 9467,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Truck Racing",
+   "id": 9989,
+   "cars": [
+    {
+     "name": "RaceRoom Truck",
+     "id": 9986,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC Esports GT Masters 2021",
+   "id": 10049,
+   "cars": [
+    {
+     "name": "Audi R8 LMS GT3 EVO",
+     "id": 10051,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M6 GT3",
+     "id": 10076,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Bentley Continental GT3 EVO",
+     "id": 10085,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020",
+     "id": 10110,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019)",
+     "id": 10119,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "FR X-22 Cup",
+   "id": 10050,
+   "cars": [
+    {
+     "name": "Formula Raceroom X-22",
+     "id": 10018,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Ford Mustang Mach E",
+   "id": 10266,
+   "cars": [
+    {
+     "name": "Ford Mustang Mach-E 1400",
+     "id": 10263,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCR 2021",
+   "id": 10344,
+   "cars": [
+    {
+     "name": "Audi RS 3 LMS 2021",
+     "id": 10345,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lynk & Co 03 TCR",
+     "id": 10368,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "CUPRA Leon Competición",
+     "id": 10371,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Hyundai Elantra TCR 2021",
+     "id": 10397,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 10401,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lada Vesta TCR",
+     "id": 10674,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2021",
+   "id": 10396,
+   "cars": [
+    {
+     "name": "Ferrari 488 GT3 EVO 2020 DTM",
+     "id": 10387,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO DTM",
+     "id": 10541,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M6 GT3 DTM",
+     "id": 10546,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 720S GT3 DTM",
+     "id": 10552,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020 DTM",
+     "id": 10556,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019) DTM",
+     "id": 10564,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Safety Cars",
+   "id": 10743,
+   "cars": [
+    {
+     "name": "S.C. Cupra TCR",
+     "id": 10721,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "S.C. Audi R8 LMS",
+     "id": 12537,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "S.C. Cupra Formentor",
+     "id": 13039,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC Esports GT Masters",
+   "id": 10786,
+   "cars": [
+    {
+     "name": "Callaway Corvette C7 GT3-R",
+     "id": 10127,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO",
+     "id": 10787,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Bentley Continental GT3 EVO",
+     "id": 10790,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M6 GT3",
+     "id": 10795,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 720S GT3",
+     "id": 10804,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020",
+     "id": 10806,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019)",
+     "id": 10808,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Crosslé 90F",
+   "id": 10899,
+   "cars": [
+    {
+     "name": "Crosslé 90F",
+     "id": 10896,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "BMW M2 Cup",
+   "id": 10909,
+   "cars": [
+    {
+     "name": "BMW M2 CS Racing 2021",
+     "id": 10599,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM Esports 2022",
+   "id": 10917,
+   "cars": [
+    {
+     "name": "Audi R8 LMS GT3 EVO eDTM",
+     "id": 10918,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M6 GT3 eDTM",
+     "id": 10920,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ferrari 488 GT3 EVO 2020 eDTM",
+     "id": 10924,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020 eDTM",
+     "id": 10945,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019) eDTM",
+     "id": 10950,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Mazda MX-5 Cup",
+   "id": 10977,
+   "cars": [
+    {
+     "name": "Mazda MX-5 CUP 2019 ND2",
+     "id": 10914,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Praga R1",
+   "id": 11055,
+   "cars": [
+    {
+     "name": "Praga R1",
+     "id": 11051,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "WTCR 2022",
+   "id": 11317,
+   "cars": [
+    {
+     "name": "Hyundai Elantra TCR 2022",
+     "id": 11318,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Honda Civic TCR",
+     "id": 11320,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "CUPRA Leon Competición",
+     "id": 11323,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi RS 3 LMS 2021",
+     "id": 11325,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lynk & Co 03 TCR",
+     "id": 11328,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "FRX-22 Esports",
+   "id": 11485,
+   "cars": [
+    {
+     "name": "Formula Raceroom X-22 Esports",
+     "id": 11474,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche 944 Turbo Cup",
+   "id": 11564,
+   "cars": [
+    {
+     "name": "Porsche 944 Turbo Cup",
+     "id": 11561,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "ADAC GT Masters 2021",
+   "id": 11566,
+   "cars": [
+    {
+     "name": "Callaway Corvette C7 GT3-R",
+     "id": 11025,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO",
+     "id": 11567,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M6 GT3",
+     "id": 11586,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020",
+     "id": 11589,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (2019)",
+     "id": 11597,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Crosslé 9S",
+   "id": 11844,
+   "cars": [
+    {
+     "name": "Crosslé 9S",
+     "id": 11285,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "KTM GTX",
+   "id": 11990,
+   "cars": [
+    {
+     "name": "KTM X-BOW GTX",
+     "id": 9660,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Mazda Dpi",
+   "id": 12003,
+   "cars": [
+    {
+     "name": "Mazda RT24 P DPi",
+     "id": 11342,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche Carrera Cup Deutschland 2023",
+   "id": 12015,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup (992)",
+     "id": 12163,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2023",
+   "id": 12196,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 R (992) DTM",
+     "id": 12197,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 GT3 DTM",
+     "id": 12237,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020 DTM",
+     "id": 12240,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO II DTM",
+     "id": 12352,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ferrari 296 GT3 DTM",
+     "id": 12421,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche 992 GT3 Cup",
+   "id": 12302,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup (992) Endurance",
+     "id": 12012,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DTM 2024",
+   "id": 12770,
+   "cars": [
+    {
+     "name": "Audi R8 LMS GT3 EVO II DTM",
+     "id": 12788,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 GT3 DTM",
+     "id": 12790,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Ferrari 296 GT3 DTM",
+     "id": 12792,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lamborghini Huracán GT3 EVO II DTM",
+     "id": 12795,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020 DTM",
+     "id": 12800,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (992) DTM",
+     "id": 12807,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 720S GT3 EVO DTM",
+     "id": 12815,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Porsche Carrera Cup North America 2024",
+   "id": 12969,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 Cup (992)",
+     "id": 12942,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Hypercars",
+   "id": 13129,
+   "cars": [
+    {
+     "name": "BMW M Hybrid V8",
+     "id": 13126,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lamborghini SC63",
+     "id": 13137,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "Porsche 963",
+     "id": 13169,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2025",
+   "id": 13136,
+   "cars": [
+    {
+     "name": "Ferrari 296 GT3 DTM",
+     "id": 13141,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Porsche 911 GT3 R (992) DTM",
+     "id": 13150,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Lamborghini Huracán GT3 EVO II DTM",
+     "id": 13160,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020 DTM",
+     "id": 13164,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "BMW M4 GT3 EVO DTM",
+     "id": 13172,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "McLaren 720S GT3 EVO DTM",
+     "id": 13174,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Audi R8 LMS GT3 EVO II DTM",
+     "id": 13190,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2002",
+   "id": 13264,
+   "cars": [
+    {
+     "name": "AMG-Mercedes CLK-DTM 2002",
+     "id": 13265,
+     "free": false,
+     "packs": []
+    },
+    {
+     "name": "Abt-Audi TT-R",
+     "id": 13312,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    {
+     "name": "Opel Astra V8 Coupé",
+     "id": 13323,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "NXT Gen Cup",
+   "id": 13358,
+   "cars": [
+    {
+     "name": "LRT NXT1",
+     "id": 13355,
+     "free": false,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "Alpine A110 Cup",
+   "id": 13397,
+   "cars": [
+    {
+     "name": "Alpine A110 Cup",
+     "id": 13394,
+     "free": true,
+     "packs": []
+    }
+   ]
+  },
+  {
+   "name": "DTM 2026",
+   "id": 13571,
+   "cars": [
+    {
+     "name": "Porsche 911 GT3 R (992.2) DTM",
+     "id": 13572,
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ]
+    },
+    {
+     "name": "Ford Mustang GT3 EVO DTM",
+     "id": 13591,
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ]
+    },
+    {
+     "name": "Lamborghini Temerario GT3 DTM",
+     "id": 13594,
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "dtm-2026-car-pack"
+     ]
+    },
+    {
+     "name": "Mercedes-AMG GT3 2020 DTM",
+     "id": 13597,
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ]
+    },
+    {
+     "name": "Aston Martin Vantage AMR GT3 EVO DTM",
+     "id": 13603,
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ]
+    },
+    {
+     "name": "BMW M4 GT3 EVO DTM",
+     "id": 13617,
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ]
+    },
+    {
+     "name": "McLaren 720S GT3 EVO DTM",
+     "id": 13620,
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ]
+    }
+   ]
+  }
+ ],
+ "rules": {
+  "needsTrack": true,
+  "needsOneCar": true,
+  "ownership": "Cars are owned per car model (since the 20-21 Oct 2026 Historic Update every livery comes with the car; liveries are no longer sold separately). Tracks are owned per track entry with all its layouts; separate year or version entries (Hockenheimring 2001 vs Modern, Laguna Seca Modern vs 1987, Spa 1995 vs Modern, Brands Hatch Indy vs GP) are separate store items. Packs are permanent bundles of cars and/or tracks, and owning part of a pack's content lowers its price. There is no subscription or premium tier that unlocks everything; the 'Premium Pack' is a one-off pack of all content at purchase time.",
+  "notes": "Needing both a track and a car is inferred, not officially documented: RaceRoom's own posts say a free series uses free content 'both the car and every track', and players report a ranked server stays locked if only the car or only the track is owned. Owning one car of an allowed class is assumed enough (not confirmed). Free-to-play ranked: the Alpine A110 Cup is paired with the permanently free tracks (Mantorp Park, Laguna Seca Modern, Twin Ring Motegi, Portimao, Sepang) in the daily races, and the whole Alpine A110 Cup ranked series is free. Every Wednesday one extra weekly free-to-play combo (one car plus one track, free in all modes for that week) is announced in the Steam post 'This Week in RaceRoom'; it changes weekly and is NOT in this file. Neither the ranked server feed nor the competitions JSON has a free or premium flag. Pack contents come from news posts, not from the store, because the new store app only reads data through an authenticated binary API. The Online Racing Pack Season 1 - 2026 is announced as 18 cars and 27 tracks but its list was not published; the entries here use the Oct 2025 Online Racing Pack list (18 car models, 27 tracks) minus Laguna Seca (now free) as a provisional guess (check). Season 1 ranked series also use hypercars/LMDh, WTCC/WTCR and more Super Touring cars that this guess does not cover. The Premium Pack, Starter/Pro packs and the limited-time Online Racing XXL, Xmas and Q3 2025 packs are not mapped item by item. Alpine Sim Racing Pack and RSTC Pack contents are inferred from 'contains everything required' wording. Prices are not recorded. Pack contents were read from the store on 2026-11-17 and replace the earlier provisional lists. Older packs that are no longer sold (Touring Car Pack, Super Touring Car Pack, Drivers Pack, Premium Pack) were dropped; owners of those can tick the items individually."
+ },
+ "sources": [
+  {
+   "url": "https://game.raceroomracing.com/store/packs",
+   "what": "Pack list and exact pack contents, read from the signed-in store on 2026-11-17. Only these four packs are on sale."
+  },
+  {
+   "url": "https://store.steampowered.com/api/appdetails?appids=211500",
+   "what": "Steam lists RaceRoom as free to play with no Steam DLC (packs are sold only in the RaceRoom store)"
+  },
+  {
+   "url": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=211500&count=400&maxlength=0&feeds=steam_community_announcements",
+   "what": "Official Steam announcements: Ranked Series 2026-11-09 (Online Racing Pack Season 1 - 2026, 18 cars / 27 tracks, 29.99 EUR, Alpine series free); This Week 2026-11-02 (RSTC Pack 2026, Alpine Sim Racing Pack 2026 store URLs); More Free Content 2026-03-30 (Laguna Seca, Motegi, Mantorp free; weekly free combo); Historic Update 2026-10-21 (liveries included with cars); Summer Sale 2026-07-03 (Touring Car Pack contents); Summer Update 2026-08-03 (DTM 2026 Car Pack); Super Touring Car Pack 2024-12-10; Drivers Pack 2022-12-14; Premium Pack posts"
+  },
+  {
+   "url": "https://raceroom.miraheze.org/wiki/Free_content",
+   "what": "Fan wiki list of free cars and tracks (last edited 2026-10-19)"
+  },
+  {
+   "url": "https://raceroom.miraheze.org/wiki/VRP",
+   "what": "Fan wiki Store page: packs permanent, no subscription, partial-ownership discount, track layouts included"
+  },
+  {
+   "url": "https://traxion.gg/raceroom-launches-value-focused-car-and-track-pack-for-ranked-multiplayer/",
+   "what": "Oct 2025 Online Racing Pack car and track list (basis of the provisional Season 1 mapping)"
+  },
+  {
+   "url": "https://game.raceroom.com/store/cars/?json",
+   "what": "Legacy JSON still served: car and track names and classes only, no pack or free flag; /store/packs/?json and other store routes return 410 deprecated route"
+  },
+  {
+   "url": "https://game.raceroom.com/multiplayer-rating/servers/",
+   "what": "Ranked server feed: no free or premium flag in any field"
+  },
+  {
+   "url": "https://game.raceroom.com/competitions/?json",
+   "what": "Competitions JSON: no free or premium field"
+  }
+ ]
+}
