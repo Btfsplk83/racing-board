@@ -1,18 +1,18 @@
 {
  "version": 2,
- "updated": "2026-11-17T20:46:58Z",
+ "updated": "2026-11-17T22:56:10Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T20:46:58Z",
-   "lastOk": "2026-11-17T20:46:58Z",
-   "found": 9
+   "checked": "2026-11-17T22:56:10Z",
+   "lastOk": "2026-11-17T22:56:10Z",
+   "found": 8
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T20:46:58Z",
-   "lastOk": "2026-11-17T20:46:58Z",
-   "found": 2
+   "checked": "2026-11-17T22:56:10Z",
+   "lastOk": "2026-11-17T22:56:10Z",
+   "found": 1
   }
  },
  "packs": {
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "lmu",
@@ -559,11 +559,11 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "rr",
-   "id": "rr-alpine-a110-cup-mantorp-park-long-circuit",
+   "id": "rr-mantorp-park-long-circuit",
    "title": "Alpine A110 Cup",
    "track": "Mantorp Park - Long Circuit",
    "durationMin": 15,
@@ -599,8 +599,8 @@
   },
   {
    "game": "rr",
-   "id": "rr-dtm-1995-norisring-grand-prix",
-   "title": "DTM 1995",
+   "id": "rr-norisring-grand-prix",
+   "title": "DTM All-Stars",
    "track": "Norisring - Grand Prix",
    "durationMin": 15,
    "classes": [
@@ -638,14 +638,15 @@
     "2026-11-17T17:45:00Z",
     "2026-11-17T18:45:00Z",
     "2026-11-17T19:45:00Z",
-    "2026-11-17T20:45:00Z"
+    "2026-11-17T20:45:00Z",
+    "2026-11-17T22:45:00Z"
    ],
-   "lastSeen": "2026-11-17T20:46:58Z"
+   "lastSeen": "2026-11-17T22:56:10Z"
   },
   {
    "game": "rr",
-   "id": "rr-dtm-2024-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
-   "title": "DTM 2024 + DTM 2025 + DTM 2026 + GTR 3",
+   "id": "rr-circuit-zandvoort-modern-grand-prix",
+   "title": "GT3 Sprint Series",
    "track": "Circuit Zandvoort - Modern - Grand Prix",
    "durationMin": 15,
    "classes": [
@@ -655,11 +656,17 @@
     "GTR 3"
    ],
    "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "Audi R8 LMS GT3 EVO II",
     "BMW M4 GT3",
     "BMW M4 GT3 DTM",
     "BMW M4 GT3 EVO DTM",
+    "Ferrari 296 GT3",
     "Ford Mustang GT3 EVO DTM",
+    "Lamborghini Hurac\u00e1n GT3 EVO II",
+    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
     "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
     "Mercedes-AMG GT3 2020",
     "Mercedes-AMG GT3 2020 DTM",
     "Porsche 911 GT3 R (992)",
@@ -706,120 +713,29 @@
   },
   {
    "game": "rr",
-   "id": "rr-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
-   "title": "DTM 2025 + DTM 2026 + GTR 3",
-   "track": "Circuit Zandvoort - Modern - Grand Prix",
-   "durationMin": 15,
-   "classes": [
-    "DTM 2025",
-    "DTM 2026",
-    "GTR 3"
-   ],
-   "cars": [
-    "Aston Martin Vantage AMR GT3 EVO DTM",
-    "Audi R8 LMS GT3 EVO II",
-    "BMW M4 GT3",
-    "BMW M4 GT3 EVO DTM",
-    "Ford Mustang GT3 EVO DTM",
-    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
-    "Lamborghini Temerario GT3 DTM",
-    "McLaren 720S GT3 EVO DTM",
-    "Mercedes-AMG GT3 2020 DTM",
-    "Porsche 911 GT3 R (992)",
-    "Porsche 911 GT3 R (992.2) DTM"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "Circuit Zandvoort - Modern",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "alpine-sim-racing-pack-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "dtm-2026-car-pack",
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "DTM 2025",
-      "DTM 2026",
-      "GTR 3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T11:00:00Z",
-    "2026-11-17T20:00:00Z"
-   ],
-   "lastSeen": "2026-11-17T20:21:43Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
-   "title": "DTM 2026 + GTR 3",
-   "track": "Circuit Zandvoort - Modern - Grand Prix",
-   "durationMin": 15,
-   "classes": [
-    "DTM 2026",
-    "GTR 3"
-   ],
-   "cars": [
-    "BMW M4 GT3",
-    "BMW M4 GT3 EVO DTM",
-    "Ferrari 296 GT3",
-    "Lamborghini Hurac\u00e1n GT3 EVO II",
-    "Lamborghini Temerario GT3 DTM",
-    "McLaren 720S GT3 EVO DTM",
-    "Mercedes-AMG GT3 2020 DTM",
-    "Porsche 911 GT3 R (992)",
-    "Porsche 911 GT3 R (992.2) DTM"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "Circuit Zandvoort - Modern",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "alpine-sim-racing-pack-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "dtm-2026-car-pack",
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "DTM 2026",
-      "GTR 3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T15:00:00Z"
-   ],
-   "lastSeen": "2026-11-17T15:18:31Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-mazda-mx-5-cup-n-rburgring-nordschleife-nls",
-   "title": "Mazda MX-5 Cup",
+   "id": "rr-n-rburgring-nordschleife-nls",
+   "title": "Nordschleife Trophy",
    "track": "N\u00fcrburgring - Nordschleife - NLS",
    "durationMin": null,
    "classes": [
-    "Mazda MX-5 Cup"
+    "Mazda MX-5 Cup",
+    "WTCR 2018",
+    "WTCR 2019",
+    "WTCR 2020",
+    "WTCR 2021",
+    "WTCR 2022"
    ],
    "cars": [
-    "Mazda MX-5 CUP 2019 ND2"
+    "Alfa Romeo Giulietta TCR",
+    "Audi RS 3 LMS 2021",
+    "CUPRA Leon Competici\u00f3n",
+    "Honda Civic TCR",
+    "Hyundai Elantra TCR 2021",
+    "Hyundai Elantra TCR 2022",
+    "Mazda MX-5 CUP 2019 ND2",
+    "Peugeot 308 TCR",
+    "Renault M\u00e9gane RS TCR",
+    "Volkswagen Golf GTI TCR"
    ],
    "free": false,
    "access": {
@@ -838,22 +754,29 @@
       "online-racing-pack-s1-2026"
      ],
      "classes": [
-      "Mazda MX-5 Cup"
+      "Mazda MX-5 Cup",
+      "WTCR 2018",
+      "WTCR 2019",
+      "WTCR 2020",
+      "WTCR 2021",
+      "WTCR 2022"
      ]
     }
    },
-   "intervalMin": 120,
+   "intervalMin": 60,
    "starts": [
     "2026-11-17T02:00:00Z",
     "2026-11-17T11:00:00Z",
+    "2026-11-17T17:00:00Z",
     "2026-11-17T18:00:00Z",
+    "2026-11-17T19:00:00Z",
     "2026-11-17T20:00:00Z"
    ],
    "lastSeen": "2026-11-17T20:36:52Z"
   },
   {
    "game": "rr",
-   "id": "rr-super-touring-hockenheimring-2001-grand-prix",
+   "id": "rr-hockenheimring-2001-grand-prix",
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
    "durationMin": 15,
@@ -906,8 +829,8 @@
   },
   {
    "game": "rr",
-   "id": "rr-tatuus-f4-cup-autodromo-di-monza-grand-prix",
-   "title": "Tatuus F4 Cup",
+   "id": "rr-autodromo-di-monza-grand-prix",
+   "title": "Tatuus F4",
    "track": "Autodromo di Monza - Grand Prix",
    "durationMin": 15,
    "classes": [
@@ -943,158 +866,6 @@
     "2026-11-17T20:30:00Z"
    ],
    "lastSeen": "2026-11-17T20:46:58Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-wtcr-2018-wtcr-2019-wtcr-2020-wtcr-2021-wtcr-2022-n-rburgring-nordschleife-nls",
-   "title": "WTCR 2018 + WTCR 2019 + WTCR 2020 + WTCR 2021 + WTCR 2022",
-   "track": "N\u00fcrburgring - Nordschleife - NLS",
-   "durationMin": 30,
-   "classes": [
-    "WTCR 2018",
-    "WTCR 2019",
-    "WTCR 2020",
-    "WTCR 2021",
-    "WTCR 2022"
-   ],
-   "cars": [
-    "Alfa Romeo Giulietta TCR",
-    "CUPRA Leon Competici\u00f3n",
-    "Honda Civic TCR",
-    "Hyundai Elantra TCR 2021",
-    "Hyundai Elantra TCR 2022",
-    "Peugeot 308 TCR",
-    "Renault M\u00e9gane RS TCR",
-    "Volkswagen Golf GTI TCR"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "N\u00fcrburgring - Nordschleife",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "rstc-pack-2026",
-      "alpine-sim-racing-pack-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "WTCR 2018",
-      "WTCR 2019",
-      "WTCR 2020",
-      "WTCR 2021",
-      "WTCR 2022"
-     ]
-    }
-   },
-   "intervalMin": 120,
-   "starts": [
-    "2026-11-17T17:00:00Z",
-    "2026-11-17T19:00:00Z"
-   ],
-   "lastSeen": "2026-11-17T19:41:17Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-wtcr-2019-wtcr-2020-wtcr-2021-wtcr-2022-n-rburgring-nordschleife-nls",
-   "title": "WTCR 2019 + WTCR 2020 + WTCR 2021 + WTCR 2022",
-   "track": "N\u00fcrburgring - Nordschleife - NLS",
-   "durationMin": 30,
-   "classes": [
-    "WTCR 2019",
-    "WTCR 2020",
-    "WTCR 2021",
-    "WTCR 2022"
-   ],
-   "cars": [
-    "Audi RS 3 LMS 2021",
-    "CUPRA Leon Competici\u00f3n",
-    "Honda Civic TCR",
-    "Hyundai Elantra TCR 2021",
-    "Hyundai Elantra TCR 2022",
-    "Volkswagen Golf GTI TCR"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "N\u00fcrburgring - Nordschleife",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "rstc-pack-2026",
-      "alpine-sim-racing-pack-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "WTCR 2019",
-      "WTCR 2020",
-      "WTCR 2021",
-      "WTCR 2022"
-     ]
-    }
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T19:00:00Z"
-   ],
-   "lastSeen": "2026-11-17T19:31:11Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-wtcr-2019-wtcr-2021-wtcr-2022-n-rburgring-nordschleife-nls",
-   "title": "WTCR 2019 + WTCR 2021 + WTCR 2022",
-   "track": "N\u00fcrburgring - Nordschleife - NLS",
-   "durationMin": 30,
-   "classes": [
-    "WTCR 2019",
-    "WTCR 2021",
-    "WTCR 2022"
-   ],
-   "cars": [
-    "CUPRA Leon Competici\u00f3n",
-    "Honda Civic TCR",
-    "Hyundai Elantra TCR 2021",
-    "Hyundai Elantra TCR 2022",
-    "Volkswagen Golf GTI TCR"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "N\u00fcrburgring - Nordschleife",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "rstc-pack-2026",
-      "alpine-sim-racing-pack-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "WTCR 2019",
-      "WTCR 2021",
-      "WTCR 2022"
-     ]
-    }
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T17:00:00Z"
-   ],
-   "lastSeen": "2026-11-17T17:44:57Z"
   }
  ]
 }
