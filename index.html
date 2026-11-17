@@ -29,7 +29,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);fon
 main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:var(--s3)}
 .num{font-variant-numeric:tabular-nums}
 header{position:relative;min-height:100px;padding:var(--s4);overflow:hidden;
-  background:linear-gradient(var(--ang),var(--lmu) 0 40%,transparent 40%),linear-gradient(-65deg,var(--blue) 0 15%,transparent 15%),var(--surface)}
+  background:var(--surface)}
 header::after{content:"";position:absolute;right:0;bottom:0;width:130px;height:12px;background:repeating-linear-gradient(135deg,var(--white) 0 2px,transparent 2px 8px);opacity:.85}
 h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;line-height:1;margin:0;letter-spacing:.03em;text-transform:uppercase;color:var(--white)}
 .crumb{display:inline-block;font-family:var(--f-head);font-size:var(--t-sm);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:var(--bg);border-left:4px solid var(--rrred);padding:var(--s1) var(--s3) var(--s1) var(--s2);margin-bottom:var(--s2)}
@@ -210,11 +210,68 @@ a{color:var(--fg)}
   .tfull{display:none}.tshort{display:inline}
   .bar .chip.tier{padding:4px 10px}
 }
+/* Motion: one diagonal, one easing, transform/opacity/clip-path only */
+:root{--ease:cubic-bezier(.2,.8,.2,1);--d-card:220ms;--d-hdr:450ms;--d-sweep:600ms;--d-det:300ms;--d-chip:260ms;--d-fx:700ms;--d-mid:220ms;--step:40ms}
+header{background:var(--surface)}
+.crumb,h1{position:relative;z-index:1}
+header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease) 120ms backwards}
+.hp{position:absolute;inset:0;pointer-events:none;animation:hpIn var(--d-hdr) var(--ease) backwards}
+.hp-r{background:linear-gradient(var(--ang),var(--lmu) 0 40%,transparent 40%);--fx:-90px;--fy:-50px}
+.hp-b{background:linear-gradient(-65deg,var(--blue) 0 15%,transparent 15%);--fx:90px;--fy:50px}
+@keyframes hpIn{from{transform:translate(var(--fx),var(--fy))}}
+.row.in,.sblock.in{animation:cardIn var(--d-card) var(--ease) backwards;animation-delay:calc(var(--i,0)*var(--step))}
+@keyframes cardIn{from{opacity:0;transform:translate(-22px,-10px);clip-path:polygon(0 0,40% 0,0 100%,0 100%,0 100%)}}
+.sblock.in{animation-name:blockIn}
+@keyframes blockIn{from{opacity:0;transform:translate(-22px,-10px)}}
+.row.rr.in{animation-name:plateIn}
+@keyframes plateIn{from{opacity:0;transform:translateX(-36px)}}
+.row.rr.in .when{animation:capIn 140ms var(--ease) backwards;animation-delay:calc(var(--i,0)*var(--step) + 140ms)}
+@keyframes capIn{from{opacity:0;transform:translateX(28px)}}
+.tabs{position:relative}
+.tab[aria-selected="true"]{border-bottom-color:transparent}
+.tabs::after{content:"";position:absolute;left:0;bottom:-1px;height:4px;width:calc(50% - 2px);background:var(--lmu);pointer-events:none}
+.tabs.anim::after{transition:transform var(--d-mid) var(--ease)}
+.tabs[data-v="schedule"]::after{transform:translateX(calc(100% + 4px))}
+.detail.wipe{animation:detIn var(--d-det) var(--ease)}
+@keyframes detIn{from{clip-path:polygon(0 0,0 0,-50% 100%,-50% 100%)}to{clip-path:polygon(0 0,200% 0,150% 100%,-50% 100%)}}
+.chip.wipe{animation:chipW var(--d-chip) var(--ease)}
+.chip.cls.wipe,.chip.mine.wipe{animation-name:chipWf}
+@keyframes chipW{from{clip-path:polygon(10px 0,10px 0,0 100%,0 100%)}to{clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}}
+@keyframes chipWf{from{clip-path:polygon(0 0,0 0,-20px 100%,-20px 100%)}to{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}}
+#wipe{position:fixed;inset:0;z-index:100;pointer-events:none;overflow:hidden;visibility:hidden}
+#wipe.go{visibility:visible}
+#wipe i{display:block;position:absolute;top:0;bottom:0;left:-15%;width:130%;transform:translateX(-120%)}
+#wipe .wb{background:var(--blue);clip-path:polygon(0 0,90% 0,100% 100%,10% 100%)}
+#wipe .wr{background:var(--lmu-dk);clip-path:polygon(10% 0,100% 0,90% 100%,0 100%)}
+#wipe.go .wb{animation:swB var(--d-sweep) var(--ease) both}
+#wipe.go .wr{animation:swA calc(var(--d-sweep) - 90ms) var(--ease) 90ms both}
+@keyframes swA{0%{transform:translateX(-120%)}42%,58%{transform:translateX(0)}100%{transform:translateX(120%)}}
+@keyframes swB{0%{transform:translateX(-120%)}35%,65%{transform:translateX(0)}100%{transform:translateX(120%)}}
+.row.unlock .head{animation:unHead var(--d-fx) var(--ease) backwards}
+@keyframes unHead{from{opacity:.6}}
+.row.lmu.unlock{--hatch:var(--hatch-lmu)}
+.row.rr.unlock{--hatch:var(--hatch-rr)}
+.row.unlock::before{content:"";position:absolute;top:0;right:0;z-index:3;width:34px;height:34px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--hatch) 0 2px,transparent 2px 7px);clip-path:polygon(0 0,100% 0,100% 100%);animation:hatchOff var(--d-fx) var(--ease) forwards}
+@keyframes hatchOff{to{transform:translate(40px,-40px);opacity:0}}
+.flashbar{position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(var(--ang),transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);animation:flash var(--d-fx) var(--ease) both}
+@keyframes flash{from{transform:translateX(-100%);opacity:1}to{transform:translateX(100%);opacity:0}}
+.cdbox{position:relative}
+.cdbox.pulse::after{content:"";position:absolute;inset:-2px;border:2px solid var(--lmu);pointer-events:none;animation:pulse 900ms var(--ease) both}
+.row.rr .cdbox.pulse::after{border-color:var(--white)}
+@keyframes pulse{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.3,1.7)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .row.in,.sblock.in{animation:fadeIn 200ms linear backwards!important}
+  @keyframes fadeIn{from{opacity:0}}
+  #wipe{display:none}
+}
 </style>
 </head>
 <body>
+<div id="wipe" aria-hidden="true"><i class="wb"></i><i class="wr"></i></div>
 <main>
   <header>
+    <i class="hp hp-r" aria-hidden="true"></i><i class="hp hp-b" aria-hidden="true"></i>
     <div class="crumb">LMU / RaceRoom &middot; Daily races</div>
     <h1>Dailies Board</h1>
   </header>
@@ -539,11 +596,15 @@ a{color:var(--fg)}
     });
     $("viewHead").textContent=p.view==="schedule"?"Schedule":"Next up";
     $("viewPanel").setAttribute("aria-labelledby","tab-"+p.view);
+    $("tabs").setAttribute("data-v",p.view);
   }
   function setView(v,focus){
     if(VIEWS.indexOf(v)<0)return;
-    p.view=v;savePrefs();renderTabs();refreshView();
-    if(focus)$("tab-"+v).focus();
+    var go=function(){
+      p.view=v;savePrefs();$("tabs").classList.add("anim");renderTabs();refreshView();
+      if(focus)$("tab-"+v).focus();
+    };
+    if(v===p.view)go();else sweep(go);
   }
   function toggleChip(label,on,disabled,fn,id){
     var b=el("button","chip cls",label);b.type="button";
@@ -642,18 +703,23 @@ a{color:var(--fg)}
 
   /* Items for both views: same filters, same ordering (running, upcoming, locked; favorites first; then time). */
   var STATE_RANK={running:0,upcoming:1,locked:2};
-  function sortT(x){return x.started||x.t||x.u.past[x.u.past.length-1]||8e15}
+  function sortT(x){if(!x.t&&!x.started&&x.lastRan)return 8e15-(Date.now()-x.lastRan);return x.started||x.t||x.u.past[x.u.past.length-1]||8e15}
   function collect(now,sched){
     var items=[];
     (data.series||[]).filter(visible).forEach(function(s){
       var u=upcoming(s,now),acc=evalAccess(s),fav=isFav(s);
       var any=u.next.length>0||(sched&&u.past.length>0);
       var live=acc.ok&&!!u.running;
-      if(!live&&!any)return;
+      /* RaceRoom combo seen once: no repeat interval yet, so show when it last ran (within 12 h). */
+      var lastRan=null;
+      if(!live&&!any&&s.game==="rr"&&!s.intervalMin){
+        (s.starts||[]).forEach(function(x){var t=Date.parse(x);if(t<=now.getTime()&&t>now.getTime()-432e5&&(!lastRan||t>lastRan))lastRan=t});
+      }
+      if(!live&&!any&&!lastRan)return;
       if(p.favOnly&&!fav)return;
       if(!acc.ok&&p.hideLocked&&!(p.favOnly&&fav))return;
       items.push({s:s,key:raceKey(s),u:u,fav:fav,locked:acc.ok?null:acc,live:live,started:live?u.running:null,
-        t:u.next[0],next:u.next.slice(1),state:acc.ok?(live?"running":"upcoming"):"locked"});
+        t:u.next[0],next:u.next.slice(1),lastRan:lastRan,state:acc.ok?(live?"running":"upcoming"):"locked"});
     });
     items.sort(function(a,b){return STATE_RANK[a.state]-STATE_RANK[b.state]||(b.fav?1:0)-(a.fav?1:0)||sortT(a)-sortT(b)});
     return items;
@@ -764,18 +830,18 @@ a{color:var(--fg)}
     if(tn)fc.appendChild(favChip(tn,"Favorite track "+tn,"track",tn,"fc:"+k+":track"));
     det.appendChild(fc);
   }
-  function syncCard(li){
+  function syncCard(li,anim){
     var key=li.getAttribute("data-key"),open=key===openKey;
     var head=li.querySelector(".head"),det=li.querySelector(".detail");
     head.setAttribute("aria-expanded",open?"true":"false");
-    det.textContent="";det.hidden=!open;
+    det.textContent="";det.hidden=!open;det.classList.remove("wipe");
     li.classList.toggle("open",open);
-    if(open&&itemMap[key])fillDetail(det,itemMap[key]);
+    if(open&&itemMap[key]){fillDetail(det,itemMap[key]);if(anim&&!reduce)det.classList.add("wipe")}
   }
   function toggleCard(key){
     var prev=openKey;
     openKey=prev===key?null:key;
-    [prev,openKey].forEach(function(k){if(k&&cardEls[k])syncCard(cardEls[k])});
+    [prev,openKey].forEach(function(k){if(k&&cardEls[k])syncCard(cardEls[k],true)});
   }
   function buildCard(x){
     var s=x.s,li=el("li","row "+s.game+(x.live?" live":"")+(x.hero?" hero":"")+(x.locked?" locked":""));
@@ -796,11 +862,13 @@ a{color:var(--fg)}
     if(then.length)m.appendChild(el("div","then num","Then "+then.join(", ")));
     var w=el("div","when");
     var box=el("div","cdbox");
-    var lbl=x.locked?"":x.hero?"Next RaceRoom race":x.live?"Running":"Starts in";
+    var seenOnce=!x.t&&!x.live&&x.lastRan;
+    var lbl=x.locked?"":x.hero?"Next RaceRoom race":x.live?"Running":seenOnce?"Last ran":"Starts in";
     if(lbl)box.appendChild(el("div","cdlbl",lbl));
-    var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":(x.t?"":"Running"));box.appendChild(cd);
+    var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":seenOnce?fmtTime(x.lastRan):(x.t?"":"Running"));box.appendChild(cd);
     w.appendChild(box);
     if(x.t)w.appendChild(el("div","at num",(x.live?"Next ":"")+fmtAt(x.t)));
+    else if(seenOnce)w.appendChild(el("div","at",(x.locked?"Last ran "+fmtTime(x.lastRan)+". ":"")+"Next time not known yet"));
     if(x.live)w.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
     head.appendChild(m);head.appendChild(w);
     head.onclick=function(e){
@@ -816,12 +884,19 @@ a{color:var(--fg)}
     if(x.locked)li.appendChild(reasonLine(x));
     li.appendChild(det);
     cardEls[x.key]=li;itemMap[x.key]=x;
+    if(!reduce){
+      if(lockSeen[x.key]===true&&!x.locked)li.className+=" unlock";
+      if(runSeen[x.key]===false&&x.live)li.appendChild(el("span","flashbar"));
+    }
+    lockSeen[x.key]=!!x.locked;runSeen[x.key]=!!x.live;
+    enter(li,x.key);
     if(x.key===openKey)syncCard(li);
-    rows.push({cd:x.locked?null:cd,t:x.t||0,e:endOf(x),hero:!!x.hero});
+    rows.push({box:x.locked?null:box,cd:x.locked?null:cd,t:x.t||0,e:endOf(x),hero:!!x.hero});
     return li;
   }
   function buildBlock(x){
     var s=x.s,li=el("li","sblock "+s.game+(x.locked?" locked":""));
+    enter(li,x.key);
     li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
     if(x.fav){li.setAttribute("data-fav","1");li.appendChild(el("span","favedge"))}
     var bg=badgeRow(s);if(bg)li.appendChild(bg);
@@ -834,7 +909,41 @@ a{color:var(--fg)}
     rows.push({cd:null,t:x.t||0,e:endOf(x)});
     return li;
   }
+  var reduce=false;try{reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches}catch(e){}
+  var shown={},lastSig="",animIdx=0,lockSeen={},runSeen={},busy=false,lastChip=null;
+  function beginRender(){
+    var s=p.view+"|"+p.lmu+p.rr+p.favOnly+p.hideLocked;
+    if(s!==lastSig){lastSig=s;shown={}}
+    animIdx=0;
+  }
+  function enter(li,key){
+    var k=p.view+":"+key;
+    if(shown[k])return;
+    shown[k]=true;li.className+=" in";
+    li.style.setProperty("--i",String(Math.min(animIdx++,6)));
+  }
+  function sweep(fn){
+    var w=$("wipe");
+    if(reduce||busy||!w){fn();return}
+    busy=true;w.className="go";
+    setTimeout(fn,340);
+    setTimeout(function(){w.className="";busy=false},620);
+  }
+  document.addEventListener("click",function(e){
+    var c=e.target&&e.target.closest?e.target.closest(".chip"):null;
+    lastChip=c?{id:c.id,fid:c.getAttribute("data-fid")}:null;
+  },true);
+  document.addEventListener("animationend",function(e){
+    var t=e.target;if(t&&t.classList){t.classList.remove("wipe");t.classList.remove("pulse")}
+  });
+  function wipeChip(){
+    if(!lastChip||reduce){lastChip=null;return}
+    var c=null,lc=lastChip;lastChip=null;
+    try{c=lc.id?$(lc.id):lc.fid?document.querySelector('[data-fid="'+lc.fid.replace(/["\\]/g,"")+'"]'):null}catch(e){}
+    if(c&&c.getAttribute("aria-pressed")==="true"){c.classList.remove("wipe");void c.offsetWidth;c.classList.add("wipe")}
+  }
   function renderNext(){
+    beginRender();
     var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};detSeq=0;
     if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
     var items=collect(now,false);
@@ -846,6 +955,7 @@ a{color:var(--fg)}
     updateCd();
   }
   function renderSchedule(){
+    beginRender();
     var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};
     if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
     var items=collect(now,true);
@@ -858,7 +968,11 @@ a{color:var(--fg)}
   function updateCd(){
     var now=Date.now(),stale=false;
     rows.forEach(function(r){
-      if(r.t){var ms=r.t-now;if(ms<=0)stale=true;else if(r.cd)r.cd.textContent=r.hero?fmtHero(ms):fmtCd(ms)}
+      if(r.t){var ms=r.t-now;if(ms<=0)stale=true;else{
+        if(r.cd)r.cd.textContent=r.hero?fmtHero(ms):fmtCd(ms);
+        if(r.box&&!reduce&&r.prev>3e5&&ms<=3e5)r.box.classList.add("pulse");
+        r.prev=ms;
+      }}
       if(r.e&&r.e<=now)stale=true;
     });
     return stale;
@@ -867,7 +981,7 @@ a{color:var(--fg)}
   function renderAll(){
     var f=captureFocus();
     computeOwn();renderStatus();renderFilters();renderTabs();renderPanel();renderView();
-    restoreFocus(f);
+    restoreFocus(f);wipeChip();
   }
 
   $("gLmu").onclick=function(){p.lmu=!p.lmu;savePrefs();renderAll()};
@@ -875,9 +989,11 @@ a{color:var(--fg)}
   $("favBtn").onclick=function(){p.favOnly=!p.favOnly;savePrefs();renderAll()};
   $("hideBtn").onclick=function(){p.hideLocked=!p.hideLocked;savePrefs();renderAll()};
   $("ownBtn").onclick=function(){
-    var d=$("ownBox");d.open=true;d.scrollIntoView();
-    var s=d.querySelector("summary");
-    if(s){try{s.focus({preventScroll:true})}catch(e){s.focus()}}
+    sweep(function(){
+      var d=$("ownBox");d.open=true;d.scrollIntoView();
+      var s=d.querySelector("summary");
+      if(s){try{s.focus({preventScroll:true})}catch(e){s.focus()}}
+    });
   };
   $("statusBtn").onclick=function(){statusOpen=!statusOpen;renderStatus()};
   VIEWS.forEach(function(v){$("tab-"+v).onclick=function(){setView(v,false)}});
