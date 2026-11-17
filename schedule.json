@@ -1,18 +1,18 @@
 {
  "version": 2,
- "updated": "2026-11-17T16:44:20Z",
+ "updated": "2026-11-17T16:59:29Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T16:44:20Z",
-   "lastOk": "2026-11-17T16:44:20Z",
+   "checked": "2026-11-17T16:59:29Z",
+   "lastOk": "2026-11-17T16:59:29Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T16:44:20Z",
-   "lastOk": "2026-11-17T16:44:20Z",
-   "found": 2
+   "checked": "2026-11-17T16:59:29Z",
+   "lastOk": "2026-11-17T16:59:29Z",
+   "found": 4
   }
  },
  "packs": {
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -258,7 +258,7 @@
     "2026-11-17T21:25:00Z",
     "2026-11-17T22:55:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "lmu",
@@ -559,7 +559,7 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "rr",
@@ -634,7 +634,7 @@
     "2026-11-17T15:45:00Z",
     "2026-11-17T16:45:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "rr",
@@ -649,18 +649,17 @@
     "GTR 3"
    ],
    "cars": [
-    "Audi R8 LMS GT3 EVO II DTM",
-    "BMW M4 GT3",
     "BMW M4 GT3 DTM",
     "BMW M4 GT3 EVO DTM",
     "Ferrari 296 GT3 DTM",
     "Ford Mustang GT3 EVO DTM",
+    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
     "Lamborghini Temerario GT3 DTM",
     "McLaren 720S GT3 EVO DTM",
     "Mercedes-AMG GT3 2020",
     "Mercedes-AMG GT3 2020 DTM",
-    "Porsche 911 GT3 R (992) DTM",
-    "Porsche 911 GT3 R (992.2) DTM"
+    "Porsche 911 GT3 R (992)",
+    "Porsche 911 GT3 R (992) DTM"
    ],
    "free": false,
    "access": {
@@ -692,9 +691,10 @@
     "2026-11-17T04:00:00Z",
     "2026-11-17T11:00:00Z",
     "2026-11-17T15:00:00Z",
-    "2026-11-17T16:00:00Z"
+    "2026-11-17T16:00:00Z",
+    "2026-11-17T17:00:00Z"
    ],
-   "lastSeen": "2026-11-17T16:19:06Z"
+   "lastSeen": "2026-11-17T16:59:29Z"
   },
   {
    "game": "rr",
@@ -923,7 +923,110 @@
     "2026-11-17T02:30:00Z",
     "2026-11-17T16:30:00Z"
    ],
-   "lastSeen": "2026-11-17T16:44:20Z"
+   "lastSeen": "2026-11-17T16:49:24Z"
+  },
+  {
+   "game": "rr",
+   "id": "rr-wtcr-2018-wtcr-2019-wtcr-2020-wtcr-2021-wtcr-2022-n-rburgring-nordschleife-nls",
+   "title": "WTCR 2018 + WTCR 2019 + WTCR 2020 + WTCR 2021 + WTCR 2022",
+   "track": "N\u00fcrburgring - Nordschleife - NLS",
+   "durationMin": 30,
+   "classes": [
+    "WTCR 2018",
+    "WTCR 2019",
+    "WTCR 2020",
+    "WTCR 2021",
+    "WTCR 2022"
+   ],
+   "cars": [
+    "Alfa Romeo Giulietta TCR",
+    "CUPRA Leon Competici\u00f3n",
+    "Honda Civic TCR",
+    "Hyundai Elantra TCR 2021",
+    "Hyundai Elantra TCR 2022",
+    "Hyundai i30 N TCR",
+    "Lynk & Co 03 TCR",
+    "Peugeot 308 TCR",
+    "Renault M\u00e9gane RS TCR",
+    "Volkswagen Golf GTI TCR"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "N\u00fcrburgring - Nordschleife",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "WTCR 2018",
+      "WTCR 2019",
+      "WTCR 2020",
+      "WTCR 2021",
+      "WTCR 2022"
+     ]
+    }
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T17:00:00Z"
+   ],
+   "lastSeen": "2026-11-17T16:59:29Z"
+  },
+  {
+   "game": "rr",
+   "id": "rr-wtcr-2019-wtcr-2021-wtcr-2022-n-rburgring-nordschleife-nls",
+   "title": "WTCR 2019 + WTCR 2021 + WTCR 2022",
+   "track": "N\u00fcrburgring - Nordschleife - NLS",
+   "durationMin": 30,
+   "classes": [
+    "WTCR 2019",
+    "WTCR 2021",
+    "WTCR 2022"
+   ],
+   "cars": [
+    "CUPRA Leon Competici\u00f3n",
+    "Honda Civic TCR",
+    "Hyundai Elantra TCR 2021",
+    "Hyundai Elantra TCR 2022",
+    "Volkswagen Golf GTI TCR"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "N\u00fcrburgring - Nordschleife",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "WTCR 2019",
+      "WTCR 2021",
+      "WTCR 2022"
+     ]
+    }
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T17:00:00Z"
+   ],
+   "lastSeen": "2026-11-17T16:59:29Z"
   }
  ]
 }
