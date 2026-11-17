@@ -1,18 +1,18 @@
 {
  "version": 2,
- "updated": "2026-11-17T19:46:19Z",
+ "updated": "2026-11-17T19:56:26Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T19:46:19Z",
-   "lastOk": "2026-11-17T19:46:19Z",
+   "checked": "2026-11-17T19:56:26Z",
+   "lastOk": "2026-11-17T19:56:26Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T19:46:19Z",
-   "lastOk": "2026-11-17T19:46:19Z",
-   "found": 2
+   "checked": "2026-11-17T19:56:26Z",
+   "lastOk": "2026-11-17T19:56:26Z",
+   "found": 3
   }
  },
  "packs": {
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -258,7 +258,7 @@
     "2026-11-17T21:25:00Z",
     "2026-11-17T22:55:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "lmu",
@@ -559,7 +559,7 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "rr",
@@ -595,7 +595,7 @@
     "2026-11-17T17:30:00Z",
     "2026-11-17T19:30:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:51:23Z"
   },
   {
    "game": "rr",
@@ -639,7 +639,7 @@
     "2026-11-17T18:45:00Z",
     "2026-11-17T19:45:00Z"
    ],
-   "lastSeen": "2026-11-17T19:46:19Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "rr",
@@ -702,6 +702,61 @@
     "2026-11-17T19:00:00Z"
    ],
    "lastSeen": "2026-11-17T19:21:04Z"
+  },
+  {
+   "game": "rr",
+   "id": "rr-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
+   "title": "DTM 2025 + DTM 2026 + GTR 3",
+   "track": "Circuit Zandvoort - Modern - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "DTM 2025",
+    "DTM 2026",
+    "GTR 3"
+   ],
+   "cars": [
+    "Audi R8 LMS GT3 EVO II DTM",
+    "BMW M4 GT3",
+    "BMW M4 GT3 EVO DTM",
+    "Ferrari 296 GT3 DTM",
+    "Ford Mustang GT3 EVO DTM",
+    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+    "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Porsche 911 GT3 R (992)",
+    "Porsche 911 GT3 R (992) DTM",
+    "Porsche 911 GT3 R (992.2) DTM"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Circuit Zandvoort - Modern",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack"
+     ],
+     "classes": [
+      "DTM 2025",
+      "DTM 2026",
+      "GTR 3"
+     ]
+    },
+    "unsure": true
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T11:00:00Z",
+    "2026-11-17T20:00:00Z"
+   ],
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "rr",
@@ -786,13 +841,14 @@
      ]
     }
    },
-   "intervalMin": null,
+   "intervalMin": 120,
    "starts": [
     "2026-11-17T02:00:00Z",
     "2026-11-17T11:00:00Z",
-    "2026-11-17T18:00:00Z"
+    "2026-11-17T18:00:00Z",
+    "2026-11-17T20:00:00Z"
    ],
-   "lastSeen": "2026-11-17T18:35:35Z"
+   "lastSeen": "2026-11-17T19:56:26Z"
   },
   {
    "game": "rr",
