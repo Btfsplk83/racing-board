@@ -1,17 +1,17 @@
 {
  "version": 2,
- "updated": "2026-11-17T16:14:03Z",
+ "updated": "2026-11-17T16:29:11Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T16:14:03Z",
-   "lastOk": "2026-11-17T16:14:03Z",
+   "checked": "2026-11-17T16:29:11Z",
+   "lastOk": "2026-11-17T16:29:11Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T16:14:03Z",
-   "lastOk": "2026-11-17T16:14:03Z",
+   "checked": "2026-11-17T16:29:11Z",
+   "lastOk": "2026-11-17T16:29:11Z",
    "found": 2
   }
  },
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -258,7 +258,7 @@
     "2026-11-17T21:25:00Z",
     "2026-11-17T22:55:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "lmu",
@@ -559,7 +559,7 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
   },
   {
    "game": "rr",
@@ -647,16 +647,16 @@
     "GTR 3"
    ],
    "cars": [
-    "Aston Martin Vantage AMR GT3 EVO DTM",
     "Audi R8 LMS GT3 EVO II DTM",
     "BMW M4 GT3",
     "BMW M4 GT3 DTM",
     "BMW M4 GT3 EVO DTM",
     "Ferrari 296 GT3 DTM",
+    "Ford Mustang GT3 EVO DTM",
     "Lamborghini Temerario GT3 DTM",
     "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020",
     "Mercedes-AMG GT3 2020 DTM",
-    "Porsche 911 GT3 R (992)",
     "Porsche 911 GT3 R (992) DTM",
     "Porsche 911 GT3 R (992.2) DTM"
    ],
@@ -692,7 +692,7 @@
     "2026-11-17T15:00:00Z",
     "2026-11-17T16:00:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:19:06Z"
   },
   {
    "game": "rr",
@@ -883,7 +883,45 @@
     "2026-11-17T15:15:00Z",
     "2026-11-17T16:15:00Z"
    ],
-   "lastSeen": "2026-11-17T16:14:03Z"
+   "lastSeen": "2026-11-17T16:29:11Z"
+  },
+  {
+   "game": "rr",
+   "id": "rr-tatuus-f4-cup-autodromo-di-monza-grand-prix",
+   "title": "Tatuus F4 Cup",
+   "track": "Autodromo di Monza - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "Tatuus F4 Cup"
+   ],
+   "cars": [
+    "Tatuus F4"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Autodromo di Monza",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "Tatuus F4 Cup"
+     ]
+    }
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T02:30:00Z",
+    "2026-11-17T16:30:00Z"
+   ],
+   "lastSeen": "2026-11-17T16:29:11Z"
   }
  ]
 }
