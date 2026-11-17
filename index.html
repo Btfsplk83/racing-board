@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#0a0f1a; --surface:#131c2f; --surface2:#1d2942; --fg:#f4f6fa; --muted:#9fb0c8; --line:#26334f;
-  --lmu:#f0405a; --lmu-bg:#3a1018; --rrred:#e0262f; --blue:#2f6bd8; --ok:#5fd08f; --warn:#ffb547;
+  --lmu:#f0405a; --lmu-bg:#3a1018; --rrred:#e0262f; --blue:#2f6bd8; --ok:#5fd08f; --warn:#ffb547; --fav:#ffc83d;
   --f-head:"Barlow Condensed","Arial Narrow",system-ui,sans-serif; --f-body:"Barlow",system-ui,sans-serif;
   color-scheme:dark;
 }
@@ -18,7 +18,7 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.45;
   padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
 .num{font-variant-numeric:tabular-nums}
 header{position:relative;min-height:108px;padding:16px;overflow:hidden;
   background:linear-gradient(115deg,var(--lmu) 0 42%,transparent 42%),linear-gradient(-65deg,var(--blue) 0 15%,transparent 15%),var(--surface)}
@@ -26,12 +26,26 @@ header::after{content:"";position:absolute;right:0;bottom:0;width:130px;height:1
 h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;line-height:1;margin:0;letter-spacing:.03em;text-transform:uppercase;color:#fff}
 .crumb{display:inline-block;font-family:var(--f-head);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--bg);border-left:4px solid var(--rrred);padding:2px 10px 2px 8px;margin-bottom:6px}
 .sub{color:var(--muted);margin:0;font-size:13px}
-.status{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted)}
-.status b{font-weight:600}
-.status .bad{color:var(--warn)}
-.bar{display:flex;flex-direction:column;gap:10px;background:var(--surface);padding:12px}
+/* One-line status: dot plus text, tap for per-source detail */
+.infoline{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 12px}
+.statusbtn{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 4px;background:none;border:none;color:var(--muted);font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--muted)}
+.dot[data-s="ok"]{background:var(--ok)}
+.dot[data-s="warn"]{background:var(--warn)}
+.statusbtn .warnmsg{color:var(--warn);font-weight:600}
+.statusdetail{margin:0;padding:0 4px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.statusdetail .bad{color:var(--warn)}
+/* View tabs */
+.tabs{display:flex;gap:2px}
+.tab{flex:1;min-height:44px;border:none;cursor:pointer;background:var(--surface);color:var(--muted);
+  font-family:var(--f-head);font-style:italic;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;
+  border-bottom:3px solid transparent}
+.tab[aria-selected="true"]{background:var(--surface2);color:var(--fg);border-bottom-color:var(--lmu)}
+/* Sticky filter row */
+.bar{display:flex;flex-direction:column;gap:6px;background:var(--surface);padding:8px 10px}
+.bar.sticky{position:sticky;top:0;z-index:20;box-shadow:0 6px 10px -6px rgba(0,0,0,.7)}
 .grp{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.lbl{font-family:var(--f-head);font-style:italic;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);min-width:72px;font-weight:600}
+.frow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .chip{font-family:var(--f-head);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:16px;
   padding:6px 22px;min-height:36px;border:none;cursor:pointer;background:var(--surface2);color:var(--muted);
   clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
@@ -40,21 +54,37 @@ h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;li
 .chip.cls{font-size:14px;padding:5px 18px;min-height:36px}
 .chip.cls[aria-pressed="true"]{background:#f2f4f7;color:#12161f}
 .chip[aria-disabled="true"]{opacity:.55;cursor:default}
-.chip:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible{outline:none;box-shadow:inset 0 0 0 2px #fff}
-details{background:var(--surface);padding:12px}
-details .bar{padding:10px 0 0}
-summary{cursor:pointer;font-weight:600}
+.bar .chip{font-size:14px;letter-spacing:.02em;padding:4px 12px;min-height:36px}
+.bar .chip.rr[aria-pressed="true"]{padding-right:24px}
+.chip.fav[aria-pressed="true"],.chip.favchip[aria-pressed="true"]{background:var(--fav);color:#12161f}
+.chip.favchip{font-size:14px;padding:5px 18px;min-height:36px}
+.chip.mine{margin-left:auto}
+.tshort{display:none}
+.chip:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible,.head:focus-visible{outline:none;box-shadow:inset 0 0 0 2px #fff}
+details{background:var(--surface);padding:12px;scroll-margin-top:120px}
+summary{cursor:pointer;font-weight:600;min-height:36px}
 .note{font-size:12px;color:var(--muted);margin:0}
 .sec{display:flex;flex-direction:column;gap:8px;margin-top:14px}
 .seclbl{font-family:var(--f-head);font-style:italic;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
 .sumline{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin-top:14px}
 .linkbtn{background:none;border:none;color:var(--fg);text-decoration:underline;font:inherit;font-size:13px;min-height:36px;padding:0 4px;cursor:pointer}
+.favlist{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
+.favrow{display:flex;align-items:center;gap:8px;font-size:14px}
+.favrow .favkind{flex:none;min-width:52px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--fav)}
+.favrow .favname{flex:1;min-width:0;overflow-wrap:anywhere}
 .list{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
-.row{position:relative;display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;background:var(--surface);padding:12px 18px 12px 0;overflow:hidden;
+.row{position:relative;background:var(--surface);overflow:hidden;
   clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
+.head{position:relative;display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;padding:12px 18px 12px 0;cursor:pointer}
 .stripe{align-self:stretch;clip-path:polygon(0 0,100% 0,40% 100%,0 100%)}
 .main{min-width:0}
+.titlerow{display:flex;align-items:flex-start;justify-content:space-between;gap:4px}
+.titlerow .title{flex:1;min-width:0}
 .title{font-family:var(--f-head);font-style:italic;text-transform:uppercase;font-size:21px;font-weight:600;letter-spacing:.01em;line-height:1.15;overflow-wrap:anywhere}
+.star{flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px -8px -10px 0;padding:0;
+  background:none;border:none;cursor:pointer;color:var(--muted);font-size:24px;line-height:1}
+.star[aria-pressed="true"],[data-fav="1"] .star{color:var(--fav)}
+.favedge{position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--fav);z-index:2;pointer-events:none}
 .track{font-size:14px;margin-top:1px;overflow-wrap:anywhere}
 .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px;align-items:center;font-size:12px;color:var(--muted)}
 .pill{font-size:11px;font-weight:600;padding:2px 8px;text-transform:uppercase;letter-spacing:.05em}
@@ -68,16 +98,18 @@ summary{cursor:pointer;font-weight:600}
 /* LMU card: dark card, red wash, blue hatched edge */
 .row.lmu{background:linear-gradient(115deg,#34121c 0,var(--surface) 38%)}
 .row.lmu .stripe{background:var(--lmu)}
-.row.lmu::after{content:"";position:absolute;right:16px;bottom:0;width:96px;height:7px;background:repeating-linear-gradient(135deg,var(--blue) 0 4px,#fff 4px 6px,var(--blue) 6px 10px)}
+.row.lmu::after{content:"";position:absolute;right:16px;bottom:0;width:96px;height:7px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--blue) 0 4px,#fff 4px 6px,var(--blue) 6px 10px)}
 .row.lmu .cd{color:var(--lmu)}
-.row.lmu .pill.game{background:var(--lmu);color:#fff}
+.row.lmu .pill.game,.sblock.lmu .pill.game{background:var(--lmu);color:#fff}
 /* RaceRoom card: white plate, red end cap */
 .row.rr{background:#f2f4f7;color:#12161f;clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
 .row.rr .stripe{background:linear-gradient(90deg,var(--rrred) 0 55%,#12161f 55% 75%,var(--rrred) 75%);clip-path:polygon(0 0,60% 0,100% 100%,0 100%)}
 .row.rr .meta,.row.rr .then{color:#4a5568}
-.row.rr .pill.game{background:var(--rrred);color:#fff}
+.row.rr .pill.game,.sblock.rr .pill.game{background:var(--rrred);color:#fff}
 .row.rr .pill.free{color:#1d7a46;border-color:#1d7a46}
 .row.rr .pill.cls{border-color:#4a5568;color:#4a5568}
+.row.rr .star{color:#4a5568}
+.row.rr .star[aria-pressed="true"],.row.rr[data-fav="1"] .star{color:#b07d00}
 .row.rr .when{background:var(--rrred);color:#fff;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:0 18px 0 28px;margin:-12px -18px -12px 0;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%)}
 .row.rr .at{color:rgba(255,255,255,.9)}
 .cd.word{font-size:22px}
@@ -92,10 +124,40 @@ summary{cursor:pointer;font-weight:600}
 .reason{margin-top:5px;font-size:13px;font-weight:600;line-height:1.3;color:var(--warn);overflow-wrap:anywhere}
 .row.rr .reason{color:#8a3a00}
 .reason .tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border:1px solid currentColor;padding:0 5px;margin-left:6px;white-space:nowrap}
+/* Expanded detail */
+.detail{padding:10px 18px 18px 24px;border-top:1px solid var(--line)}
+.row.rr .detail{border-top-color:#c7ccd6}
+.dlabel{font-family:var(--f-head);font-style:italic;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:4px}
+.row.rr .dlabel,.row.rr .fact .k{color:#4a5568}
+.facts{display:flex;flex-direction:column;gap:4px;margin:10px 0}
+.fact{display:flex;gap:8px;font-size:13px}
+.fact .k{flex:none;min-width:84px;color:var(--muted)}
+.fact .v{min-width:0;overflow-wrap:anywhere}
+.favchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+/* Time grid, used in NEXT detail and SCHEDULE */
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:6px 0}
+.tg{text-align:center;font-size:14px;padding:6px 2px;white-space:nowrap;background:rgba(128,140,160,.2);border:2px solid transparent}
+.tg[data-state="past"]{opacity:.45}
+.tg[data-state="next"]{border-color:var(--lmu)}
+.rr .tg[data-state="next"]{border-color:var(--rrred)}
+.tg[data-state="running"]{background:var(--ok);color:#0a0f1a;font-weight:600}
+/* SCHEDULE block */
+.sblock{position:relative;background:var(--surface);padding:12px 14px 10px 18px;border-left:6px solid var(--lmu)}
+.sblock.rr{border-left-color:var(--rrred)}
+.sblock.locked .track,.sblock.locked .meta,.sblock.locked .tgrid{opacity:.6}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px}
 a{color:var(--fg)}
-@media (max-width:460px){h1{font-size:38px}.cd{font-size:22px}.title{font-size:19px}}
+@media (min-width:520px){.tgrid{grid-template-columns:repeat(6,1fr)}}
+@media (max-width:460px){
+  body{padding-top:10px}
+  header{min-height:0;padding:10px 14px}
+  .crumb{margin-bottom:4px}
+  h1{font-size:32px}
+  .cd{font-size:22px}.title{font-size:19px}
+  .tfull{display:none}.tshort{display:inline}
+  .bar .chip.tier{padding:4px 10px}
+}
 </style>
 </head>
 <body>
@@ -104,17 +166,31 @@ a{color:var(--fg)}
     <div class="crumb">LMU / RaceRoom &middot; Daily races</div>
     <h1>Dailies Board</h1>
   </header>
-  <p class="sub">Official daily races for both games, one list. Times in <span id="tz"></span>.</p>
-  <div class="status" id="status" role="status"></div>
 
-  <section class="bar" aria-label="Filters">
-    <div class="grp"><span class="lbl">Games</span>
+  <div class="infoline">
+    <button class="statusbtn" id="statusBtn" type="button" aria-expanded="false" aria-controls="statusDetail">
+      <span class="dot" id="statusDot" data-s="idle"></span>
+      <span id="statusText" class="num">Loading...</span><span id="statusWarn" class="warnmsg" role="status"></span>
+    </button>
+    <p class="sub">Times in <span id="tz"></span></p>
+  </div>
+  <div class="statusdetail" id="statusDetail" hidden></div>
+
+  <div class="tabs" id="tabs" role="tablist" aria-label="View">
+    <button class="tab" id="tab-next" role="tab" type="button" aria-selected="true" aria-controls="viewPanel">Next</button>
+    <button class="tab" id="tab-schedule" role="tab" type="button" aria-selected="false" aria-controls="viewPanel" tabindex="-1">Schedule</button>
+  </div>
+
+  <section class="bar sticky" id="filters" aria-label="Filters">
+    <div class="frow" role="group" aria-label="Games and favorites">
       <button class="chip lmu" id="gLmu" type="button">LMU</button>
       <button class="chip rr" id="gRr" type="button">RaceRoom</button>
+      <button class="chip fav" id="favBtn" type="button">&#9733; Favorites</button>
     </div>
-    <div class="grp"><span class="lbl">LMU tier</span><span id="tierChips" class="grp"></span></div>
-    <div class="grp" id="lockGrp"><span class="lbl">Locked</span>
+    <div class="frow">
+      <span id="tierChips" class="frow" role="group" aria-label="LMU tier"></span>
       <button class="chip cls" id="hideBtn" type="button">Hide locked</button>
+      <button class="chip cls mine" id="ownBtn" type="button">My content</button>
     </div>
   </section>
 
@@ -123,7 +199,7 @@ a{color:var(--fg)}
     <div id="ownBody"></div>
   </details>
 
-  <section aria-label="Up next">
+  <section id="viewPanel" role="tabpanel" aria-labelledby="tab-next">
     <ul class="list" id="list"></ul>
   </section>
 
@@ -139,9 +215,13 @@ a{color:var(--fg)}
   "use strict";
   var TIERS=["Beginner","Intermediate","Advanced"];
   var RANKS=["Bronze","Silver","Gold"];
+  var VIEWS=["next","schedule"];
+  var FAVKINDS=["series","race","cls","track"];
+  var FAVLABEL={series:"Series",race:"Race",cls:"Class",track:"Track"};
   var PKEY="dailiesBoard.prefs.v3", OLDKEY="dailiesBoard.prefs.v2";
   var src=new URLSearchParams(location.search).get("src")||"schedule.json";
   var data=null, rows=[];
+  var openKey=null, cardEls={}, itemMap={}, statusOpen=false, detSeq=0;
   var $=function(i){return document.getElementById(i)};
   function load(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
   function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
@@ -167,12 +247,53 @@ a{color:var(--fg)}
   if(RANKS.indexOf(p.rank)<0)p.rank="Bronze";
   p.packs=obj(p.packs);p.packs.lmu=obj(p.packs.lmu);p.packs.rr=obj(p.packs.rr);
   p.rrTracks=obj(p.rrTracks);p.rrClasses=obj(p.rrClasses);
+  if(VIEWS.indexOf(p.view)<0)p.view="next";
+  if(typeof p.favOnly!=="boolean")p.favOnly=false;
+  p.fav=obj(p.fav);
+  FAVKINDS.forEach(function(k){p.fav[k]=obj(p.fav[k])});
   function savePrefs(){save(PKEY,p)}
   if(fresh)savePrefs();
 
   try{$("tz").textContent=Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g," ")}catch(e){$("tz").textContent="your time zone"}
 
   function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n}
+
+  /* Favorites. Keys stored in p.fav:
+     series: game + ":" + title lowercased (any track)
+     race:   series.id (that series at its track)
+     cls:    class name as in series.classes
+     track:  series.track, except LMU uses access.track.name when present so catalog names stay stable. */
+  function seriesKey(s){return s.game+":"+String(s.title).toLowerCase()}
+  function raceKey(s){return s.id!=null&&s.id!==""?String(s.id):s.game+":"+String(s.title).toLowerCase()+"@"+String(s.track)}
+  function trackKey(s){var t=s.access&&s.access.track;return s.game==="lmu"&&t&&t.name?String(t.name):String(s.track||"")}
+  function favClasses(s){
+    return (s.classes||[]).filter(function(c){return !(s.game==="rr"&&String(c).toLowerCase()===String(s.title).toLowerCase())});
+  }
+  function isFav(s){
+    if(p.fav.series[seriesKey(s)]===true||p.fav.race[raceKey(s)]===true)return true;
+    if(trackKey(s)&&p.fav.track[trackKey(s)]===true)return true;
+    return (s.classes||[]).some(function(c){return p.fav.cls[c]===true});
+  }
+  function toggleFav(kind,key){
+    if(p.fav[kind][key]===true)delete p.fav[kind][key];else p.fav[kind][key]=true;
+    savePrefs();renderAll();
+  }
+  function favEntries(){
+    var out=[],ser=(data&&data.series)||[];
+    FAVKINDS.forEach(function(kind){
+      Object.keys(p.fav[kind]).filter(function(k){return p.fav[kind][k]===true}).forEach(function(k){
+        var name=k,i;
+        if(kind==="series"){
+          for(i=0;i<ser.length;i++)if(seriesKey(ser[i])===k){name=ser[i].title+" ("+(ser[i].game==="lmu"?"LMU":"RaceRoom")+")";break}
+          if(name===k)name=k.replace(/^[a-z]+:/,"");
+        }else if(kind==="race"){
+          for(i=0;i<ser.length;i++)if(raceKey(ser[i])===k){name=ser[i].title+" at "+ser[i].track;break}
+        }
+        out.push({kind:kind,key:k,label:FAVLABEL[kind],name:name});
+      });
+    });
+    return out;
+  }
 
   /* LMU rotations change at the Tuesday 10:00 UTC reset, so projections stop there. */
   function nextLmuReset(now){
@@ -181,21 +302,32 @@ a{color:var(--fg)}
     if(d<=now)d=new Date(d.getTime()+7*864e5);
     return d;
   }
-  /* Upcoming starts: observed ones first, then projected from the interval, up to 24 h ahead. */
+  /* Starts: observed ones first, then projected from the interval, up to 24 h ahead.
+     past holds starts from the last 2 h (observed, plus projected between observed ones), oldest first. */
   function upcoming(s,now){
-    var horizon=now.getTime()+864e5, limit=s.game==="lmu"?Math.min(horizon,nextLmuReset(now).getTime()):horizon;
+    var nowT=now.getTime(),horizon=nowT+864e5,limit=s.game==="lmu"?Math.min(horizon,nextLmuReset(now).getTime()):horizon;
     var seen=(s.starts||[]).map(function(x){return Date.parse(x)}).filter(function(t){return !isNaN(t)}).sort(function(a,b){return a-b});
-    var out=seen.filter(function(t){return t>now.getTime()&&t<limit});
+    var out=seen.filter(function(t){return t>nowT&&t<limit});
     var iv=s.intervalMin*6e4;
     if(iv&&seen.length){
       var t=seen[seen.length-1];
-      if(t<=now.getTime())t+=Math.ceil((now.getTime()-t+1)/iv)*iv;
+      if(t<=nowT)t+=Math.ceil((nowT-t+1)/iv)*iv;
       else t+=iv;
       for(;t<limit&&out.length<40;t+=iv)out.push(t);
     }
-    var last=seen.filter(function(t){return t<=now.getTime()}).pop();
-    var running=last&&s.durationMin&&now.getTime()<last+s.durationMin*6e4?last:null;
-    return {next:out.sort(function(a,b){return a-b}),running:running};
+    var last=seen.filter(function(t){return t<=nowT}).pop();
+    var running=last&&s.durationMin&&nowT<last+s.durationMin*6e4?last:null;
+    var lo=nowT-72e5,past=seen.filter(function(t){return t<=nowT&&t>lo});
+    function addPast(t){
+      for(var i=0;i<past.length;i++)if(Math.abs(past[i]-t)<6e4)return;
+      past.push(t);
+    }
+    if(iv&&seen.length){
+      var a=seen[seen.length-1];
+      for(var q=a+Math.ceil((lo-a)/iv)*iv;q<=nowT;q+=iv)if(q>lo&&q>=seen[0])addPast(q);
+    }
+    if(running)addPast(running);
+    return {next:out.sort(function(a,b){return a-b}),running:running,past:past.sort(function(a,b){return a-b})};
   }
 
   /* Ownership. own[g][id] is true for ticked packs and everything they include; via[g][id] marks the included ones. */
@@ -271,6 +403,7 @@ a{color:var(--fg)}
     var day=d.toDateString()===now.toDateString()?"Today":d.toDateString()===tm.toDateString()?"Tomorrow":d.toLocaleDateString([],{weekday:"short"});
     return day+" "+fmtTime(t);
   }
+  function everyText(m){return "Every "+(m%60===0?(m/60===1?"hour":m/60+" h"):m+" min")}
   function ago(iso){
     var m=Math.round((Date.now()-Date.parse(iso))/6e4);
     if(isNaN(m))return "unknown";
@@ -278,32 +411,83 @@ a{color:var(--fg)}
     var h=Math.round(m/60);return h<48?h+" h ago":Math.round(h/24)+" days ago";
   }
 
+  /* Keep keyboard focus on the same control when a render rebuilds it. */
+  function fid(n,id){n.setAttribute("data-fid",id);return n}
+  function captureFocus(){var a=document.activeElement;return a&&a.getAttribute?a.getAttribute("data-fid"):null}
+  function restoreFocus(id){
+    if(!id)return;
+    var all=document.querySelectorAll("[data-fid]");
+    for(var i=0;i<all.length;i++){
+      if(all[i].getAttribute("data-fid")===id){
+        if(all[i]!==document.activeElement){try{all[i].focus({preventScroll:true})}catch(e){}}
+        return;
+      }
+    }
+  }
+
+  var loadErr=null;
   function renderStatus(){
-    var box=$("status");box.textContent="";
-    if(!data){box.appendChild(el("span","",loadErr||"Loading..."));return}
-    box.appendChild(el("span","num","Updated "+ago(data.updated)));
+    var txt=$("statusText"),warn=$("statusWarn"),dot=$("statusDot"),det=$("statusDetail"),btn=$("statusBtn");
+    det.textContent="";warn.textContent="";
+    if(!data){
+      txt.textContent=loadErr||"Loading...";
+      dot.setAttribute("data-s",loadErr?"warn":"idle");
+      det.hidden=true;btn.setAttribute("aria-expanded","false");
+      return;
+    }
+    txt.textContent="Updated "+ago(data.updated);
+    var bad=[],msgs=[];
     [["lmu","LMU"],["rr","RaceRoom"]].forEach(function(g){
       var s=(data.sources||{})[g[0]];if(!s)return;
-      if(s.ok)box.appendChild(el("span","",g[1]+" ok"));
-      else box.appendChild(el("span","bad",g[1]+" check failed, last good "+(s.lastOk?ago(s.lastOk):"never")));
+      if(s.ok)det.appendChild(el("span","",g[1]+" ok"));
+      else{
+        bad.push(g[1]);
+        det.appendChild(el("span","bad",g[1]+" check failed, last good "+(s.lastOk?ago(s.lastOk):"never")));
+      }
     });
-    if(Date.now()-Date.parse(data.updated)>3*36e5)box.appendChild(el("span","bad","The schedule hasn't refreshed in a while, so times may be out of date."));
+    if(bad.length)msgs.push(bad.join(" and ")+(bad.length>1?" checks":" check")+" failed");
+    if(Date.now()-Date.parse(data.updated)>3*36e5){
+      msgs.push("Schedule is out of date");
+      det.appendChild(el("span","bad","The schedule hasn't refreshed in a while, so times may be out of date."));
+    }
+    warn.textContent=msgs.length?" · "+msgs.join(" · "):"";
+    dot.setAttribute("data-s",msgs.length?"warn":"ok");
+    det.hidden=!(statusOpen&&det.childNodes.length>0);
+    btn.setAttribute("aria-expanded",det.hidden?"false":"true");
   }
   function renderFilters(){
     var box=$("tierChips");box.textContent="";
     TIERS.forEach(function(t){
-      var b=el("button","chip lmu",t);b.type="button";b.setAttribute("aria-pressed",p.tiers.indexOf(t)>-1);
+      var b=el("button","chip lmu tier");b.type="button";
+      b.appendChild(el("span","tfull",t));b.appendChild(el("span","tshort",t.slice(0,3)));
+      b.setAttribute("aria-label",t);b.setAttribute("aria-pressed",p.tiers.indexOf(t)>-1);
+      fid(b,"tier:"+t);
       b.onclick=function(){var i=p.tiers.indexOf(t);if(i>-1)p.tiers.splice(i,1);else p.tiers.push(t);savePrefs();renderAll()};
       box.appendChild(b);
     });
     $("gLmu").setAttribute("aria-pressed",p.lmu);
     $("gRr").setAttribute("aria-pressed",p.rr);
+    $("favBtn").setAttribute("aria-pressed",p.favOnly);
     $("hideBtn").setAttribute("aria-pressed",p.hideLocked);
-    $("lockGrp").hidden=!hasPacks();
+    $("hideBtn").hidden=!hasPacks();
   }
-  function toggleChip(label,on,disabled,fn){
+  function renderTabs(){
+    VIEWS.forEach(function(v){
+      var b=$("tab-"+v),on=p.view===v;
+      b.setAttribute("aria-selected",on?"true":"false");
+      b.tabIndex=on?0:-1;
+    });
+    $("viewPanel").setAttribute("aria-labelledby","tab-"+p.view);
+  }
+  function setView(v,focus){
+    if(VIEWS.indexOf(v)<0)return;
+    p.view=v;savePrefs();renderTabs();refreshView();
+    if(focus)$("tab-"+v).focus();
+  }
+  function toggleChip(label,on,disabled,fn,id){
     var b=el("button","chip cls",label);b.type="button";
     b.setAttribute("aria-pressed",on?"true":"false");
+    if(id)fid(b,id);
     if(disabled)b.setAttribute("aria-disabled","true");else b.onclick=fn;
     return b;
   }
@@ -321,13 +505,34 @@ a{color:var(--fg)}
   }
   function countTrue(o){return Object.keys(o).filter(function(k){return o[k]===true}).length}
   function plural(n,w){return n+" "+w+(n===1?"":"s")}
+  function renderFavSection(box){
+    var d=el("div","sec");d.appendChild(el("span","seclbl","Favorites"));
+    var list=favEntries();
+    if(!list.length)d.appendChild(el("p","note","Star a race to keep it here."));
+    else{
+      var ul=el("ul","favlist");
+      list.forEach(function(en){
+        var li=el("li","favrow");
+        li.appendChild(el("span","favkind",en.label));
+        li.appendChild(el("span","favname",en.name));
+        var b=el("button","linkbtn","Remove");b.type="button";
+        b.setAttribute("aria-label","Remove favorite "+en.label.toLowerCase()+" "+en.name);
+        fid(b,"rm:"+en.kind+":"+en.key);
+        b.onclick=function(){delete p.fav[en.kind][en.key];savePrefs();renderAll()};
+        li.appendChild(b);ul.appendChild(li);
+      });
+      d.appendChild(ul);
+    }
+    box.appendChild(d);
+  }
   function renderPanel(){
-    var box=$("ownBody"),det=$("ownBox");box.textContent="";
-    det.hidden=!hasPacks();
+    var box=$("ownBody");box.textContent="";
+    renderFavSection(box);
     if(!hasPacks())return;
     var g=section(box,"LMU safety rank");
     RANKS.forEach(function(r){
       var b=el("button","chip lmu",r);b.type="button";b.setAttribute("aria-pressed",p.rank===r?"true":"false");
+      fid(b,"rank:"+r);
       b.onclick=function(){p.rank=r;savePrefs();renderAll()};
       g.appendChild(b);
     });
@@ -340,7 +545,7 @@ a{color:var(--fg)}
         grp.appendChild(toggleChip(shortName(pk.name),granted||p.packs[game][pk.id]===true,granted,function(){
           if(p.packs[game][pk.id])delete p.packs[game][pk.id];else p.packs[game][pk.id]=true;
           savePrefs();renderAll();
-        }));
+        },"pk:"+game+":"+pk.id));
       });
     }
     packChips("lmu","LMU packs");
@@ -358,82 +563,240 @@ a{color:var(--fg)}
       sg.parentNode.insertBefore(el("p","note","Tick tracks and classes you bought on their own."),sg);
       tn.forEach(function(n){sg.appendChild(toggleChip(n,p.rrTracks[n]===true,false,function(){
         if(p.rrTracks[n])delete p.rrTracks[n];else p.rrTracks[n]=true;savePrefs();renderAll();
-      }))});
+      },"rt:"+n))});
       cn.forEach(function(n){sg.appendChild(toggleChip(n,p.rrClasses[n]===true,false,function(){
         if(p.rrClasses[n])delete p.rrClasses[n];else p.rrClasses[n]=true;savePrefs();renderAll();
-      }))});
+      },"rc:"+n))});
     }
     var line=el("div","sumline");
     var items=countTrue(p.rrTracks)+countTrue(p.rrClasses);
     line.appendChild(el("span","note","LMU: "+plural(countTrue(p.packs.lmu),"pack")+" · RaceRoom: "+plural(countTrue(p.packs.rr),"pack")+", "+plural(items,"item")));
     var clr=el("button","linkbtn","Clear all");clr.type="button";
+    /* Clears packs, tracks and classes only. Favorites are kept. */
     clr.onclick=function(){p.packs={lmu:{},rr:{}};p.rrTracks={};p.rrClasses={};savePrefs();renderAll()};
     line.appendChild(clr);
     box.appendChild(line);
   }
-  function renderList(){
-    var now=new Date(),list=$("list");list.textContent="";rows=[];
-    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
+
+  /* Items for both views: same filters, same ordering (running, upcoming, locked; favorites first; then time). */
+  var STATE_RANK={running:0,upcoming:1,locked:2};
+  function sortT(x){return x.started||x.t||x.u.past[x.u.past.length-1]||8e15}
+  function collect(now,sched){
     var items=[];
     (data.series||[]).filter(visible).forEach(function(s){
-      var acc=evalAccess(s),u=upcoming(s,now);
-      if(!acc.ok){
-        if(p.hideLocked||!u.next.length)return;
-        items.push({s:s,locked:acc,t:u.next[0],next:u.next.slice(1)});
-        return;
-      }
-      if(u.running)items.push({s:s,live:true,started:u.running,t:u.next[0],next:u.next.slice(1)});
-      else if(u.next.length)items.push({s:s,t:u.next[0],next:u.next.slice(1)});
+      var u=upcoming(s,now),acc=evalAccess(s),fav=isFav(s);
+      var any=u.next.length>0||(sched&&u.past.length>0);
+      var live=acc.ok&&!!u.running;
+      if(!live&&!any)return;
+      if(p.favOnly&&!fav)return;
+      if(!acc.ok&&p.hideLocked&&!(p.favOnly&&fav))return;
+      items.push({s:s,key:raceKey(s),u:u,fav:fav,locked:acc.ok?null:acc,live:live,started:live?u.running:null,
+        t:u.next[0],next:u.next.slice(1),state:acc.ok?(live?"running":"upcoming"):"locked"});
     });
-    items.sort(function(a,b){return (a.live?0:1)-(b.live?0:1)||(a.locked?1:0)-(b.locked?1:0)||(a.started||a.t)-(b.started||b.t)});
-    if(!items.length){list.appendChild(el("li","empty","Nothing coming up for these filters. Turn on another tier or game, or show locked races."));return}
-    items.forEach(function(x){
-      var s=x.s,li=el("li","row "+s.game+(x.live?" live":"")+(x.locked?" locked":""));
-      li.appendChild(el("span","stripe"));
-      var m=el("div","main");
-      m.appendChild(el("div","title",s.title));
-      m.appendChild(el("div","track",s.track));
-      var meta=el("div","meta");
-      meta.appendChild(el("span","pill game",s.game==="lmu"?"LMU":"RaceRoom"));
-      if(s.game==="lmu"&&s.tier)meta.appendChild(el("span","pill tier",s.tier));
-      (s.classes||[]).forEach(function(c){
-        if(s.game==="rr"&&String(c).toLowerCase()===String(s.title).toLowerCase())return;
-        meta.appendChild(el("span","pill cls",c));
-      });
-      if(s.game==="rr"&&s.free)meta.appendChild(el("span","pill free","Free to play"));
-      var bits=[];
-      if(s.durationMin)bits.push(s.durationMin+" min race");
-      if(s.intervalMin)bits.push("every "+(s.intervalMin%60===0?(s.intervalMin/60===1?"hour":s.intervalMin/60+" h"):s.intervalMin+" min"));
-      if(bits.length)meta.appendChild(el("span","",bits.join(" · ")));
-      m.appendChild(meta);
-      var then=x.next.slice(0,3).map(fmtTime);
-      if(then.length)m.appendChild(el("div","then num","Then "+then.join(", ")));
-      if(x.locked){
-        var rs=el("div","reason",x.locked.reasons.join(" · "));
-        if(x.locked.unsure)rs.appendChild(el("span","tag","unconfirmed"));
-        m.appendChild(rs);
-      }
-      var w=el("div","when");
-      if(x.live)w.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
-      var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":(x.t?"":"Running"));w.appendChild(cd);
-      if(x.t)w.appendChild(el("div","at num",(x.live?"Next ":"")+fmtAt(x.t)));
-      li.appendChild(m);li.appendChild(w);list.appendChild(li);
-      if(x.t)rows.push({cd:x.locked?null:cd,t:x.t});
-    });
-    tick();
+    items.sort(function(a,b){return STATE_RANK[a.state]-STATE_RANK[b.state]||(b.fav?1:0)-(a.fav?1:0)||sortT(a)-sortT(b)});
+    return items;
   }
-  function tick(){
+  function emptyMsg(){
+    if(p.favOnly)return "No favorites to show. Star a race to keep it here.";
+    return "Nothing coming up for these filters. Turn on another tier or game, or show locked races.";
+  }
+  function endOf(x){return x.u.running&&x.s.durationMin?x.u.running+x.s.durationMin*6e4:0}
+
+  function starBtn(s,key){
+    var on=p.fav.series[seriesKey(s)]===true;
+    var b=el("button","star",on?"★":"☆");b.type="button";
+    b.setAttribute("aria-pressed",on?"true":"false");
+    b.setAttribute("aria-label","Favorite this series");b.title="Favorite this series";
+    fid(b,"star:"+key);
+    b.onclick=function(e){e.stopPropagation();toggleFav("series",seriesKey(s))};
+    return b;
+  }
+  function titleRow(s,key){
+    var r=el("div","titlerow");r.appendChild(el("div","title",s.title));r.appendChild(starBtn(s,key));return r;
+  }
+  function metaRow(s){
+    var meta=el("div","meta");
+    meta.appendChild(el("span","pill game",s.game==="lmu"?"LMU":"RaceRoom"));
+    if(s.game==="lmu"&&s.tier)meta.appendChild(el("span","pill tier",s.tier));
+    favClasses(s).forEach(function(c){meta.appendChild(el("span","pill cls",c))});
+    if(s.game==="rr"&&s.free)meta.appendChild(el("span","pill free ribbon","Free this week"));
+    return meta;
+  }
+  function reasonLine(x){
+    var rs=el("div","reason",x.locked.reasons.join(" · "));
+    if(x.locked.unsure)rs.appendChild(el("span","tag","unconfirmed"));
+    return rs;
+  }
+  /* Time grid shared by SCHEDULE and the expanded card. States: past (dimmed), running, next (outlined), later. */
+  function timeGrid(past,runT,nextArr){
+    var g=el("div","tgrid num");g.setAttribute("role","list");
+    var all=[];
+    past.forEach(function(t){if(t!==runT)all.push([t,"past"])});
+    if(runT)all.push([runT,"running"]);
+    nextArr.forEach(function(t,i){all.push([t,i===0?"next":"later"])});
+    all.sort(function(a,b){return a[0]-b[0]});
+    all.forEach(function(a){
+      var c=el("span","tg",fmtTime(a[0]));
+      c.setAttribute("role","listitem");c.setAttribute("data-state",a[1]);
+      c.setAttribute("aria-label",(a[1]==="next"?"Next start ":a[1]==="running"?"Running, started ":a[1]==="past"?"Started ":"")+fmtAt(a[0]));
+      g.appendChild(c);
+    });
+    return g;
+  }
+  function favChip(label,aria,kind,key,id){
+    var b=el("button","chip favchip",label);b.type="button";
+    b.setAttribute("aria-pressed",p.fav[kind][key]===true?"true":"false");
+    b.setAttribute("aria-label",aria);fid(b,id);
+    b.onclick=function(){toggleFav(kind,key)};
+    return b;
+  }
+  function fact(box,k,v){
+    if(!v)return;
+    var r=el("div","fact");r.appendChild(el("span","k",k));r.appendChild(el("span","v",v));box.appendChild(r);
+  }
+  function fillDetail(det,x){
+    var s=x.s;
+    det.appendChild(el("div","dlabel","Start times, next 24 hours"));
+    if(x.u.next.length||x.u.running)det.appendChild(timeGrid([],x.u.running,x.u.next));
+    else det.appendChild(el("p","note","No more starts in the next 24 hours."));
+    var f=el("div","facts");
+    fact(f,"Race length",s.durationMin?s.durationMin+" min":"");
+    fact(f,"Interval",s.intervalMin?everyText(s.intervalMin):"");
+    fact(f,"Classes",(s.classes||[]).join(", "));
+    if(s.game==="rr"&&Array.isArray(s.cars)){
+      fact(f,"Cars",s.cars.map(function(c){return typeof c==="string"?c:(c&&c.name)||""}).filter(function(c){return c}).join(", "));
+    }
+    if(x.locked)fact(f,"Needs",x.locked.reasons.join(" · ")+(x.locked.unsure?" (unconfirmed)":""));
+    else fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
+    det.appendChild(f);
+    det.appendChild(el("div","dlabel","Favorites"));
+    var fc=el("div","favchips");
+    var tn=trackKey(s),k=x.key;
+    fc.appendChild(favChip("Series","Favorite series "+s.title,"series",seriesKey(s),"fc:"+k+":series"));
+    fc.appendChild(favChip("This race","Favorite this race","race",raceKey(s),"fc:"+k+":race"));
+    favClasses(s).forEach(function(c){fc.appendChild(favChip(c,"Favorite class "+c,"cls",c,"fc:"+k+":cls:"+c))});
+    if(tn)fc.appendChild(favChip(tn,"Favorite track "+tn,"track",tn,"fc:"+k+":track"));
+    det.appendChild(fc);
+  }
+  function syncCard(li){
+    var key=li.getAttribute("data-key"),open=key===openKey;
+    var head=li.querySelector(".head"),det=li.querySelector(".detail");
+    head.setAttribute("aria-expanded",open?"true":"false");
+    det.textContent="";det.hidden=!open;
+    li.classList.toggle("open",open);
+    if(open&&itemMap[key])fillDetail(det,itemMap[key]);
+  }
+  function toggleCard(key){
+    var prev=openKey;
+    openKey=prev===key?null:key;
+    [prev,openKey].forEach(function(k){if(k&&cardEls[k])syncCard(cardEls[k])});
+  }
+  function buildCard(x){
+    var s=x.s,li=el("li","row "+s.game+(x.live?" live":"")+(x.locked?" locked":""));
+    li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
+    if(x.fav){li.setAttribute("data-fav","1");li.appendChild(el("span","favedge"))}
+    var did="det"+(detSeq++);
+    var head=el("div","head");
+    head.setAttribute("role","button");head.tabIndex=0;
+    head.setAttribute("aria-expanded","false");head.setAttribute("aria-controls",did);
+    fid(head,"card:"+x.key);
+    head.appendChild(el("span","stripe"));
+    var m=el("div","main");
+    m.appendChild(titleRow(s,x.key));
+    m.appendChild(el("div","track",s.track));
+    m.appendChild(metaRow(s));
+    var then=x.next.slice(0,3).map(fmtTime);
+    if(then.length)m.appendChild(el("div","then num","Then "+then.join(", ")));
+    if(x.locked)m.appendChild(reasonLine(x));
+    var w=el("div","when");
+    if(x.live)w.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
+    var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":(x.t?"":"Running"));w.appendChild(cd);
+    if(x.t)w.appendChild(el("div","at num",(x.live?"Next ":"")+fmtAt(x.t)));
+    head.appendChild(m);head.appendChild(w);
+    head.onclick=function(e){
+      if(e.target.closest&&e.target.closest("button"))return;
+      toggleCard(x.key);
+    };
+    head.onkeydown=function(e){
+      if(e.target!==head)return;
+      if(e.key==="Enter"||e.key===" "||e.key==="Spacebar"){e.preventDefault();toggleCard(x.key)}
+    };
+    var det=el("div","detail");det.id=did;det.hidden=true;
+    li.appendChild(head);li.appendChild(det);
+    cardEls[x.key]=li;itemMap[x.key]=x;
+    if(x.key===openKey)syncCard(li);
+    rows.push({cd:x.locked?null:cd,t:x.t||0,e:endOf(x)});
+    return li;
+  }
+  function buildBlock(x){
+    var s=x.s,li=el("li","sblock "+s.game+(x.locked?" locked":""));
+    li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
+    if(x.fav){li.setAttribute("data-fav","1");li.appendChild(el("span","favedge"))}
+    li.appendChild(titleRow(s,x.key));
+    li.appendChild(el("div","track",s.track));
+    li.appendChild(metaRow(s));
+    if(x.live)li.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
+    if(x.locked)li.appendChild(reasonLine(x));
+    li.appendChild(timeGrid(x.u.past,x.u.running,x.u.next));
+    rows.push({cd:null,t:x.t||0,e:endOf(x)});
+    return li;
+  }
+  function renderNext(){
+    var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};detSeq=0;
+    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
+    var items=collect(now,false);
+    if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
+    items.forEach(function(x){list.appendChild(buildCard(x))});
+    updateCd();
+  }
+  function renderSchedule(){
+    var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};
+    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
+    var items=collect(now,true);
+    if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
+    items.forEach(function(x){list.appendChild(buildBlock(x))});
+  }
+  function renderView(){if(p.view==="schedule")renderSchedule();else renderNext()}
+  function refreshView(){var f=captureFocus();renderView();restoreFocus(f)}
+  /* Updates countdown text only. Returns true when a start or a running race has passed and the view needs a rebuild. */
+  function updateCd(){
     var now=Date.now(),stale=false;
-    rows.forEach(function(r){var ms=r.t-now;if(ms<=0)stale=true;else if(r.cd)r.cd.textContent=fmtCd(ms)});
-    if(stale)renderList();
+    rows.forEach(function(r){
+      if(r.t){var ms=r.t-now;if(ms<=0)stale=true;else if(r.cd)r.cd.textContent=fmtCd(ms)}
+      if(r.e&&r.e<=now)stale=true;
+    });
+    return stale;
   }
-  function renderAll(){computeOwn();renderStatus();renderFilters();renderPanel();renderList()}
+  function tick(){if(updateCd())refreshView()}
+  function renderAll(){
+    var f=captureFocus();
+    computeOwn();renderStatus();renderFilters();renderTabs();renderPanel();renderView();
+    restoreFocus(f);
+  }
 
   $("gLmu").onclick=function(){p.lmu=!p.lmu;savePrefs();renderAll()};
   $("gRr").onclick=function(){p.rr=!p.rr;savePrefs();renderAll()};
+  $("favBtn").onclick=function(){p.favOnly=!p.favOnly;savePrefs();renderAll()};
   $("hideBtn").onclick=function(){p.hideLocked=!p.hideLocked;savePrefs();renderAll()};
+  $("ownBtn").onclick=function(){
+    var d=$("ownBox");d.open=true;d.scrollIntoView();
+    var s=d.querySelector("summary");
+    if(s){try{s.focus({preventScroll:true})}catch(e){s.focus()}}
+  };
+  $("statusBtn").onclick=function(){statusOpen=!statusOpen;renderStatus()};
+  VIEWS.forEach(function(v){$("tab-"+v).onclick=function(){setView(v,false)}});
+  $("tabs").onkeydown=function(e){
+    var i=VIEWS.indexOf(String(e.target.id||"").replace("tab-",""));
+    if(i<0)return;
+    var n=-1;
+    if(e.key==="ArrowRight")n=(i+1)%VIEWS.length;
+    else if(e.key==="ArrowLeft")n=(i+VIEWS.length-1)%VIEWS.length;
+    else if(e.key==="Home")n=0;
+    else if(e.key==="End")n=VIEWS.length-1;
+    if(n<0)return;
+    e.preventDefault();setView(VIEWS[n],true);
+  };
 
-  var loadErr=null;
   function fetchData(){
     var url=src+(src.indexOf("?")>-1?"&":"?")+"t="+Math.floor(Date.now()/6e4);
     fetch(url,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
