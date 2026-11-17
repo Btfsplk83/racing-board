@@ -73,7 +73,9 @@ summary{cursor:pointer;font-weight:600}
 .row.rr .pill.free{color:#1d7a46;border-color:#1d7a46}
 .row.rr .when{background:var(--rrred);color:#fff;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:0 18px 0 28px;margin:-12px -18px -12px 0;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%)}
 .row.rr .at{color:rgba(255,255,255,.9)}
-.row.live .cd{font-size:22px}
+.cd.word{font-size:22px}
+.livetag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ok)}
+.row.rr .livetag{color:#fff}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px}
 a{color:var(--fg)}
@@ -230,10 +232,10 @@ a{color:var(--fg)}
     var items=[];
     (data.series||[]).filter(visible).forEach(function(s){
       var u=upcoming(s,now);
-      if(u.running)items.push({s:s,t:u.running,live:true,next:u.next});
+      if(u.running)items.push({s:s,live:true,started:u.running,t:u.next[0],next:u.next.slice(1)});
       else if(u.next.length)items.push({s:s,t:u.next[0],next:u.next.slice(1)});
     });
-    items.sort(function(a,b){return (a.live?0:1)-(b.live?0:1)||a.t-b.t});
+    items.sort(function(a,b){return (a.live?0:1)-(b.live?0:1)||(a.started||a.t)-(b.started||b.t)});
     if(!items.length){list.appendChild(el("li","empty","Nothing coming up for these filters. Turn on another tier or game."));return}
     items.forEach(function(x){
       var s=x.s,li=el("li","row "+s.game+(x.live?" live":""));
@@ -253,10 +255,11 @@ a{color:var(--fg)}
       var then=x.next.slice(0,3).map(fmtTime);
       if(then.length)m.appendChild(el("div","then num","Then "+then.join(", ")));
       var w=el("div","when");
-      var cd=el("div","cd num",x.live?"Running":"");w.appendChild(cd);
-      w.appendChild(el("div","at num",(x.live?"Started ":"")+fmtAt(x.t)));
+      if(x.live)w.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
+      var cd=el("div",x.t?"cd num":"cd word",x.t?"":"Running");w.appendChild(cd);
+      if(x.t)w.appendChild(el("div","at num",(x.live?"Next ":"")+fmtAt(x.t)));
       li.appendChild(m);li.appendChild(w);list.appendChild(li);
-      if(!x.live)rows.push({cd:cd,t:x.t});
+      if(x.t)rows.push({cd:cd,t:x.t});
     });
     tick();
   }
