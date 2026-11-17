@@ -1,19 +1,169 @@
 {
- "version": 1,
- "updated": "2026-11-17T03:39:59Z",
+ "version": 2,
+ "updated": "2026-11-17T03:58:39Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T03:39:59Z",
-   "lastOk": "2026-11-17T03:39:59Z",
+   "checked": "2026-11-17T03:58:39Z",
+   "lastOk": "2026-11-17T03:58:39Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T03:39:59Z",
-   "lastOk": "2026-11-17T03:39:59Z",
-   "found": 1
+   "checked": "2026-11-17T03:58:39Z",
+   "lastOk": "2026-11-17T03:58:39Z",
+   "found": 2
   }
+ },
+ "packs": {
+  "lmu": [
+   {
+    "id": "2024-pack-1",
+    "name": "Le Mans Ultimate - 2024 Pack 1",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "2024-pack-2",
+    "name": "Le Mans Ultimate - 2024 Pack 2",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "2024-pack-3",
+    "name": "Le Mans Ultimate - 2024 Pack 3",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "2024-pack-4",
+    "name": "Le Mans Ultimate - 2024 Pack 4",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "2024-pack-5",
+    "name": "Le Mans Ultimate - 2024 Pack 5",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "2024-season-pass",
+    "name": "Le Mans Ultimate - 2024 Season Pass",
+    "type": "pass",
+    "includes": [
+     "2024-pack-1",
+     "2024-pack-2",
+     "2024-pack-3",
+     "2024-pack-4",
+     "2024-pack-5"
+    ]
+   },
+   {
+    "id": "wec-full-access-bundle",
+    "name": "Le Mans Ultimate WEC Full Access Bundle",
+    "type": "bundle",
+    "includes": [
+     "2024-pack-1",
+     "2024-pack-2",
+     "2024-pack-3",
+     "2024-pack-4",
+     "2024-pack-5"
+    ]
+   },
+   {
+    "id": "elms-pack-1",
+    "name": "Le Mans Ultimate - ELMS Pack 1",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "elms-pack-2",
+    "name": "Le Mans Ultimate - ELMS Pack 2",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "elms-pack-3",
+    "name": "Le Mans Ultimate - ELMS Pack 3",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "elms-season-pass",
+    "name": "Le Mans Ultimate - ELMS Season Pass",
+    "type": "pass",
+    "includes": [
+     "elms-pack-1",
+     "elms-pack-2",
+     "elms-pack-3"
+    ]
+   },
+   {
+    "id": "us-pack-1",
+    "name": "Le Mans Ultimate - US Track Pack 1",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "us-pack-2",
+    "name": "Le Mans Ultimate - US Track Pack 2",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "us-track-pass",
+    "name": "Le Mans Ultimate - US Track Pass",
+    "type": "pass",
+    "includes": [
+     "us-pack-1",
+     "us-pack-2"
+    ]
+   },
+   {
+    "id": "racecontrol-pro-plus",
+    "name": "RaceControl Pro+",
+    "type": "subscription",
+    "includes": [
+     "2024-pack-1",
+     "2024-pack-2",
+     "2024-pack-3",
+     "2024-pack-4",
+     "2024-pack-5",
+     "elms-pack-1",
+     "elms-pack-2",
+     "elms-pack-3",
+     "us-pack-1",
+     "us-pack-2"
+    ]
+   }
+  ],
+  "rr": [
+   {
+    "id": "online-racing-pack-s1-2026",
+    "name": "Online Racing Pack - Season 1 - 2026",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "rstc-pack-2026",
+    "name": "RSTC Pack 2026",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "alpine-sim-racing-pack-2026",
+    "name": "Alpine Sim Racing Pack 2026",
+    "type": "pack",
+    "includes": []
+   },
+   {
+    "id": "dtm-2026-car-pack",
+    "name": "DTM 2026 Car Pack",
+    "type": "pack",
+    "includes": []
+   }
+  ]
  },
  "series": [
   {
@@ -23,6 +173,31 @@
    "track": "Silverstone 2025",
    "durationMin": 44,
    "tier": "Intermediate",
+   "classes": [
+    "LMP2 ELMS",
+    "LMP3",
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Silver",
+    "track": {
+     "name": "Silverstone Circuit",
+     "free": false,
+     "packs": [
+      "elms-pack-1"
+     ]
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMP2 ELMS",
+      "LMP3",
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 60,
    "starts": [
     "2026-11-17T02:50:00Z",
@@ -34,7 +209,7 @@
     "2026-11-17T08:50:00Z",
     "2026-11-17T09:50:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -43,6 +218,29 @@
    "track": "Le Mans",
    "durationMin": 73,
    "tier": "Advanced",
+   "classes": [
+    "LMP2 ELMS",
+    "LMP3",
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Gold",
+    "track": {
+     "name": "Circuit de la Sarthe (Le Mans)",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMP2 ELMS",
+      "LMP3",
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 90,
    "starts": [
     "2026-11-17T03:25:00Z",
@@ -51,7 +249,7 @@
     "2026-11-17T07:55:00Z",
     "2026-11-17T09:25:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -60,6 +258,25 @@
    "track": "Spa Francorchamps",
    "durationMin": 32,
    "tier": "Beginner",
+   "classes": [
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Bronze",
+    "track": {
+     "name": "Spa-Francorchamps",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 45,
    "starts": [
     "2026-11-17T02:30:00Z",
@@ -74,7 +291,7 @@
     "2026-11-17T09:15:00Z",
     "2026-11-17T10:00:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -83,6 +300,27 @@
    "track": "Paul Ricard 2025",
    "durationMin": 44,
    "tier": "Intermediate",
+   "classes": [
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Silver",
+    "track": {
+     "name": "Circuit Paul Ricard",
+     "free": false,
+     "packs": [
+      "elms-pack-2"
+     ]
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 60,
    "starts": [
     "2026-11-17T03:10:00Z",
@@ -93,7 +331,7 @@
     "2026-11-17T08:10:00Z",
     "2026-11-17T09:10:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -102,6 +340,24 @@
    "track": "Monza",
    "durationMin": 32,
    "tier": "Beginner",
+   "classes": [
+    "LMP3"
+   ],
+   "access": {
+    "rank": "Bronze",
+    "track": {
+     "name": "Autodromo Nazionale Monza",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMP3"
+     ]
+    }
+   },
    "intervalMin": 45,
    "starts": [
     "2026-11-17T03:00:00Z",
@@ -115,7 +371,7 @@
     "2026-11-17T09:00:00Z",
     "2026-11-17T09:45:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -124,6 +380,25 @@
    "track": "Le Mans",
    "durationMin": 30,
    "tier": "Beginner",
+   "classes": [
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Bronze",
+    "track": {
+     "name": "Circuit de la Sarthe (Le Mans)",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 45,
    "starts": [
     "2026-11-17T02:45:00Z",
@@ -137,7 +412,7 @@
     "2026-11-17T08:45:00Z",
     "2026-11-17T09:30:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -146,6 +421,27 @@
    "track": "Monza",
    "durationMin": 55,
    "tier": "Advanced",
+   "classes": [
+    "Hypercar",
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Gold",
+    "track": {
+     "name": "Autodromo Nazionale Monza",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "Hypercar",
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 90,
    "starts": [
     "2026-11-17T02:55:00Z",
@@ -154,7 +450,7 @@
     "2026-11-17T07:25:00Z",
     "2026-11-17T08:55:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -163,6 +459,29 @@
    "track": "Circuit De Barcelona Catalunya",
    "durationMin": 44,
    "tier": "Intermediate",
+   "classes": [
+    "LMP2 ELMS",
+    "LMP3"
+   ],
+   "access": {
+    "rank": "Silver",
+    "track": {
+     "name": "Circuit de Barcelona-Catalunya",
+     "free": false,
+     "packs": [
+      "elms-pack-3"
+     ]
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMP2 ELMS",
+      "LMP3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 60,
    "starts": [
     "2026-11-17T02:30:00Z",
@@ -174,7 +493,7 @@
     "2026-11-17T08:30:00Z",
     "2026-11-17T09:30:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "lmu",
@@ -183,6 +502,27 @@
    "track": "Bahrain Wec 2023",
    "durationMin": 74,
    "tier": "Advanced",
+   "classes": [
+    "Hypercar",
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Gold",
+    "track": {
+     "name": "Bahrain International Circuit",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "Hypercar",
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": 90,
    "starts": [
     "2026-11-17T03:55:00Z",
@@ -191,7 +531,7 @@
     "2026-11-17T08:25:00Z",
     "2026-11-17T09:55:00Z"
    ],
-   "lastSeen": "2026-11-17T03:39:59Z"
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "rr",
@@ -206,11 +546,119 @@
     "Alpine A110 Cup"
    ],
    "free": true,
+   "access": {
+    "track": {
+     "name": "Mantorp Park",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "Alpine A110 Cup"
+     ]
+    }
+   },
    "intervalMin": null,
    "starts": [
     "2026-11-17T03:30:00Z"
    ],
    "lastSeen": "2026-11-17T03:39:59Z"
+  },
+  {
+   "game": "rr",
+   "id": "rr-dtm-1995-norisring-grand-prix",
+   "title": "DTM 1995",
+   "track": "Norisring - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "DTM 1995"
+   ],
+   "cars": [
+    "AMG-Mercedes C-Klasse DTM",
+    "Alfa Romeo 155 TI DTM 1995",
+    "Opel Calibra V6 DTM"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Norisring",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "DTM 1995"
+     ]
+    }
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T03:45:00Z"
+   ],
+   "lastSeen": "2026-11-17T03:58:39Z"
+  },
+  {
+   "game": "rr",
+   "id": "rr-dtm-2024-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
+   "title": "DTM 2024 + DTM 2025 + DTM 2026 + GTR 3",
+   "track": "Circuit Zandvoort - Modern - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "DTM 2024",
+    "DTM 2025",
+    "DTM 2026",
+    "GTR 3"
+   ],
+   "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "BMW M4 GT3",
+    "BMW M4 GT3 DTM",
+    "BMW M4 GT3 EVO DTM",
+    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+    "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Porsche 911 GT3 R (992) DTM",
+    "Porsche 911 GT3 R (992.2) DTM"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Circuit Zandvoort - Modern",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack",
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "DTM 2024",
+      "DTM 2025",
+      "DTM 2026",
+      "GTR 3"
+     ]
+    },
+    "unsure": true
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T04:00:00Z"
+   ],
+   "lastSeen": "2026-11-17T03:58:39Z"
   },
   {
    "game": "rr",
@@ -225,6 +673,26 @@
     "Mazda MX-5 CUP 2019 ND2"
    ],
    "free": false,
+   "access": {
+    "track": {
+     "name": "N\u00fcrburgring - Nordschleife",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "Mazda MX-5 Cup"
+     ]
+    }
+   },
    "intervalMin": null,
    "starts": [
     "2026-11-17T02:00:00Z"
@@ -251,6 +719,26 @@
     "Volvo S40 Super Touring"
    ],
    "free": false,
+   "access": {
+    "track": {
+     "name": "Hockenheimring - 2001",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026"
+     ],
+     "classes": [
+      "Super Touring"
+     ]
+    },
+    "unsure": true
+   },
    "intervalMin": null,
    "starts": [
     "2026-11-17T02:15:00Z"
@@ -270,6 +758,24 @@
     "Tatuus F4"
    ],
    "free": false,
+   "access": {
+    "track": {
+     "name": "Autodromo di Monza",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "Tatuus F4 Cup"
+     ]
+    }
+   },
    "intervalMin": null,
    "starts": [
     "2026-11-17T02:30:00Z"

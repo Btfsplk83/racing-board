@@ -37,13 +37,18 @@ h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;li
   clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
 .chip.lmu[aria-pressed="true"]{background:var(--lmu);color:#fff}
 .chip.rr[aria-pressed="true"]{background:linear-gradient(90deg,#f2f4f7 0 78%,var(--rrred) 78%);color:#12161f;padding-right:36px}
-.chip.cls{font-size:14px;padding:5px 18px;min-height:32px}
+.chip.cls{font-size:14px;padding:5px 18px;min-height:36px}
 .chip.cls[aria-pressed="true"]{background:#f2f4f7;color:#12161f}
+.chip[aria-disabled="true"]{opacity:.55;cursor:default}
 .chip:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible{outline:none;box-shadow:inset 0 0 0 2px #fff}
 details{background:var(--surface);padding:12px}
 details .bar{padding:10px 0 0}
 summary{cursor:pointer;font-weight:600}
 .note{font-size:12px;color:var(--muted);margin:0}
+.sec{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.seclbl{font-family:var(--f-head);font-style:italic;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.sumline{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin-top:14px}
+.linkbtn{background:none;border:none;color:var(--fg);text-decoration:underline;font:inherit;font-size:13px;min-height:36px;padding:0 4px;cursor:pointer}
 .list{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
 .row{position:relative;display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;background:var(--surface);padding:12px 18px 12px 0;overflow:hidden;
   clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
@@ -55,6 +60,7 @@ summary{cursor:pointer;font-weight:600}
 .pill{font-size:11px;font-weight:600;padding:2px 8px;text-transform:uppercase;letter-spacing:.05em}
 .pill.free{border:1px solid var(--ok);color:var(--ok)}
 .pill.tier{background:#d9dce2;color:#141821}
+.pill.cls{border:1px solid var(--muted);color:var(--muted)}
 .then{font-size:12px;color:var(--muted);margin-top:4px}
 .when{text-align:right;white-space:nowrap}
 .cd{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:30px;letter-spacing:.02em;line-height:1.1}
@@ -71,11 +77,21 @@ summary{cursor:pointer;font-weight:600}
 .row.rr .meta,.row.rr .then{color:#4a5568}
 .row.rr .pill.game{background:var(--rrred);color:#fff}
 .row.rr .pill.free{color:#1d7a46;border-color:#1d7a46}
+.row.rr .pill.cls{border-color:#4a5568;color:#4a5568}
 .row.rr .when{background:var(--rrred);color:#fff;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:0 18px 0 28px;margin:-12px -18px -12px 0;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%)}
 .row.rr .at{color:rgba(255,255,255,.9)}
 .cd.word{font-size:22px}
 .livetag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ok)}
 .row.rr .livetag{color:#fff}
+/* Locked race: content dimmed, reason stays full strength, hatched top-right corner */
+.row.locked .stripe,.row.locked .title,.row.locked .track,.row.locked .meta,.row.locked .then,.row.locked .when{opacity:.6}
+.row.locked::before{content:"";position:absolute;top:0;right:0;width:38px;height:38px;pointer-events:none;
+  background:repeating-linear-gradient(135deg,var(--hatch) 0 2px,transparent 2px 7px);clip-path:polygon(0 0,100% 0,100% 100%)}
+.row.lmu.locked{--hatch:rgba(255,255,255,.5)}
+.row.rr.locked{--hatch:rgba(18,22,31,.65)}
+.reason{margin-top:5px;font-size:13px;font-weight:600;line-height:1.3;color:var(--warn);overflow-wrap:anywhere}
+.row.rr .reason{color:#8a3a00}
+.reason .tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border:1px solid currentColor;padding:0 5px;margin-left:6px;white-space:nowrap}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px}
 a{color:var(--fg)}
@@ -97,15 +113,14 @@ a{color:var(--fg)}
       <button class="chip rr" id="gRr" type="button">RaceRoom</button>
     </div>
     <div class="grp"><span class="lbl">LMU tier</span><span id="tierChips" class="grp"></span></div>
-    <div class="grp"><span class="lbl">RaceRoom</span>
-      <button class="chip rr" id="ownBtn" type="button">Only what I can run</button>
+    <div class="grp" id="lockGrp"><span class="lbl">Locked</span>
+      <button class="chip cls" id="hideBtn" type="button">Hide locked</button>
     </div>
   </section>
 
   <details id="ownBox">
-    <summary>My RaceRoom content</summary>
-    <p class="note" style="margin-top:8px">Tick the car classes you can drive. Free-to-play classes start ticked. Saved in this browser.</p>
-    <div class="grp" id="clsChips" style="margin-top:10px"></div>
+    <summary>My content</summary>
+    <div id="ownBody"></div>
   </details>
 
   <section aria-label="Up next">
@@ -123,19 +138,37 @@ a{color:var(--fg)}
 (function(){
   "use strict";
   var TIERS=["Beginner","Intermediate","Advanced"];
-  var PKEY="dailiesBoard.prefs.v2";
+  var RANKS=["Bronze","Silver","Gold"];
+  var PKEY="dailiesBoard.prefs.v3", OLDKEY="dailiesBoard.prefs.v2";
   var src=new URLSearchParams(location.search).get("src")||"schedule.json";
   var data=null, rows=[];
   var $=function(i){return document.getElementById(i)};
   function load(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
   function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
-  var p=load(PKEY,null)||{};
-  if(!Array.isArray(p.tiers))p.tiers=["Beginner"];
+  function obj(v){return v&&typeof v==="object"&&!Array.isArray(v)?v:{}}
+  var p=load(PKEY,null), fresh=!p||typeof p!=="object"||Array.isArray(p);
+  if(fresh){
+    p={};
+    var old=load(OLDKEY,null);
+    if(old&&typeof old==="object"){
+      if(Array.isArray(old.tiers))p.tiers=old.tiers;
+      if(typeof old.lmu==="boolean")p.lmu=old.lmu;
+      if(typeof old.rr==="boolean")p.rr=old.rr;
+      p.hideLocked=false;
+      p.rrClasses={};
+      var oo=obj(old.owned);
+      Object.keys(oo).forEach(function(k){if(oo[k]===true)p.rrClasses[k]=true});
+    }
+  }
+  if(!Array.isArray(p.tiers))p.tiers=TIERS.slice();
   if(typeof p.lmu!=="boolean")p.lmu=true;
   if(typeof p.rr!=="boolean")p.rr=true;
-  if(typeof p.own!=="boolean")p.own=true;
-  if(!p.owned||typeof p.owned!=="object")p.owned={};   // class name -> true/false, set by the viewer
+  if(typeof p.hideLocked!=="boolean")p.hideLocked=false;
+  if(RANKS.indexOf(p.rank)<0)p.rank="Bronze";
+  p.packs=obj(p.packs);p.packs.lmu=obj(p.packs.lmu);p.packs.rr=obj(p.packs.rr);
+  p.rrTracks=obj(p.rrTracks);p.rrClasses=obj(p.rrClasses);
   function savePrefs(){save(PKEY,p)}
+  if(fresh)savePrefs();
 
   try{$("tz").textContent=Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g," ")}catch(e){$("tz").textContent="your time zone"}
 
@@ -164,18 +197,68 @@ a{color:var(--fg)}
     var running=last&&s.durationMin&&now.getTime()<last+s.durationMin*6e4?last:null;
     return {next:out.sort(function(a,b){return a-b}),running:running};
   }
-  function canRun(s){
-    if(s.game!=="rr")return true;
-    return (s.classes||[]).some(function(c){return owned(c,s)});
+
+  /* Ownership. own[g][id] is true for ticked packs and everything they include; via[g][id] marks the included ones. */
+  var own={lmu:{},rr:{}}, via={lmu:{},rr:{}}, idx={lmu:{},rr:{}};
+  function hasPacks(){return !!(data&&data.packs&&typeof data.packs==="object")}
+  function packList(g){var a=data&&data.packs&&data.packs[g];return Array.isArray(a)?a:[]}
+  function buildIdx(){
+    idx={lmu:{},rr:{}};
+    ["lmu","rr"].forEach(function(g){packList(g).forEach(function(pk){if(pk&&pk.id)idx[g][pk.id]=pk})});
   }
-  function owned(c,s){
-    if(c in p.owned)return p.owned[c];
-    return !!(s&&s.free)||freeClasses.indexOf(c)>-1;
+  function computeOwn(){
+    own={lmu:{},rr:{}};via={lmu:{},rr:{}};
+    ["lmu","rr"].forEach(function(g){
+      Object.keys(p.packs[g]).forEach(function(id){
+        if(!p.packs[g][id])return;
+        own[g][id]=true;
+        var stack=[id],seen={};seen[id]=true;
+        while(stack.length){
+          var pk=idx[g][stack.pop()];
+          ((pk&&pk.includes)||[]).forEach(function(c){
+            if(seen[c])return;
+            seen[c]=true;own[g][c]=true;via[g][c]=true;stack.push(c);
+          });
+        }
+      });
+    });
   }
-  var freeClasses=[];
+  function ownsAny(g,ids){return (ids||[]).some(function(id){return own[g][id]===true})}
+  function shortName(n){return String(n).replace(/^Le Mans Ultimate\s*-\s*/,"").replace(/^Le Mans Ultimate\s+/,"")}
+  function packNames(g,ids){
+    var n=ids.map(function(id){return shortName(idx[g][id]?idx[g][id].name:id)});
+    n.sort(function(a,b){return a.length-b.length});
+    return n.slice(0,2).join(" or ")+(n.length>2?"…":"");
+  }
+  /* Runnable rule from SCHEDULE-FORMAT.md. Returns {ok:true} or {ok:false,reasons:[...],unsure:bool}. */
+  function evalAccess(s){
+    var a=s.access;
+    if(!a||!hasPacks())return {ok:true};
+    if(s.game==="rr"&&s.free)return {ok:true};
+    var g=s.game,reasons=[];
+    if(g==="lmu"&&a.rank&&RANKS.indexOf(a.rank)>-1&&RANKS.indexOf(p.rank)<RANKS.indexOf(a.rank))reasons.push("Needs SR "+a.rank);
+    var t=a.track;
+    if(t&&!t.unknown&&!t.free){
+      var tOk=ownsAny(g,t.packs)||(g==="rr"&&p.rrTracks[t.name]===true);
+      if(!tOk)reasons.push((t.packs&&t.packs.length)?"Track: "+packNames(g,t.packs):"Track sold separately");
+    }
+    var c=a.cars;
+    if(c&&!c.unknown&&!c.free){
+      var cOk=ownsAny(g,c.packs);
+      if(!cOk&&g==="rr")cOk=(c.classes||[]).some(function(n){return p.rrClasses[n]===true});
+      if(!cOk){
+        var last=reasons[reasons.length-1];
+        if(c.packs&&c.packs.length&&last==="Track: "+packNames(g,c.packs))reasons[reasons.length-1]="Needs "+packNames(g,c.packs);
+        else if(c.packs&&c.packs.length)reasons.push("Car: "+packNames(g,c.packs));
+        else if(c.classes&&c.classes.length)reasons.push("Car: "+c.classes.join(", ")+" (sold separately)");
+        else reasons.push("Car sold separately");
+      }
+    }
+    return reasons.length?{ok:false,reasons:reasons,unsure:a.unsure===true}:{ok:true};
+  }
   function visible(s){
     if(s.game==="lmu")return p.lmu&&p.tiers.indexOf(s.tier)>-1;
-    return p.rr&&(!p.own||canRun(s));
+    return p.rr;
   }
   function fmtCd(ms){
     var s=Math.max(0,Math.floor(ms/1000)),h=Math.floor(s/3600),m=Math.floor(s%3600/60),r=s%60;
@@ -215,30 +298,97 @@ a{color:var(--fg)}
     });
     $("gLmu").setAttribute("aria-pressed",p.lmu);
     $("gRr").setAttribute("aria-pressed",p.rr);
-    $("ownBtn").setAttribute("aria-pressed",p.own);
-    var cb=$("clsChips");cb.textContent="";
-    var cls={};
-    ((data&&data.series)||[]).forEach(function(s){if(s.game==="rr")(s.classes||[]).forEach(function(c){if(!(c in cls)||s.free)cls[c]=s})});
-    Object.keys(cls).sort().forEach(function(c){
-      var b=el("button","chip cls",c);b.type="button";b.setAttribute("aria-pressed",owned(c,cls[c]));
-      b.onclick=function(){p.owned[c]=!owned(c,cls[c]);savePrefs();renderAll()};
-      cb.appendChild(b);
+    $("hideBtn").setAttribute("aria-pressed",p.hideLocked);
+    $("lockGrp").hidden=!hasPacks();
+  }
+  function toggleChip(label,on,disabled,fn){
+    var b=el("button","chip cls",label);b.type="button";
+    b.setAttribute("aria-pressed",on?"true":"false");
+    if(disabled)b.setAttribute("aria-disabled","true");else b.onclick=fn;
+    return b;
+  }
+  function section(body,title){
+    var d=el("div","sec");d.appendChild(el("span","seclbl",title));
+    var g=el("div","grp");d.appendChild(g);body.appendChild(d);return g;
+  }
+  var TYPE_ORDER={subscription:0,pass:1,bundle:1,pack:2};
+  function sortedPacks(g){
+    return packList(g).map(function(pk,i){return {pk:pk,i:i}}).sort(function(a,b){
+      var x=TYPE_ORDER[a.pk.type],y=TYPE_ORDER[b.pk.type];
+      if(x==null)x=2;if(y==null)y=2;
+      return x-y||a.i-b.i;
+    }).map(function(o){return o.pk});
+  }
+  function countTrue(o){return Object.keys(o).filter(function(k){return o[k]===true}).length}
+  function plural(n,w){return n+" "+w+(n===1?"":"s")}
+  function renderPanel(){
+    var box=$("ownBody"),det=$("ownBox");box.textContent="";
+    det.hidden=!hasPacks();
+    if(!hasPacks())return;
+    var g=section(box,"LMU safety rank");
+    RANKS.forEach(function(r){
+      var b=el("button","chip lmu",r);b.type="button";b.setAttribute("aria-pressed",p.rank===r?"true":"false");
+      b.onclick=function(){p.rank=r;savePrefs();renderAll()};
+      g.appendChild(b);
     });
-    if(!cb.childNodes.length)cb.appendChild(el("p","note","No RaceRoom classes seen yet."));
+    function packChips(game,title){
+      var list=sortedPacks(game);
+      if(!list.length)return;
+      var grp=section(box,title);
+      list.forEach(function(pk){
+        var granted=via[game][pk.id]===true;
+        grp.appendChild(toggleChip(shortName(pk.name),granted||p.packs[game][pk.id]===true,granted,function(){
+          if(p.packs[game][pk.id])delete p.packs[game][pk.id];else p.packs[game][pk.id]=true;
+          savePrefs();renderAll();
+        }));
+      });
+    }
+    packChips("lmu","LMU packs");
+    packChips("rr","RaceRoom packs");
+    var tr={},cl={};
+    (data.series||[]).forEach(function(s){
+      if(s.game!=="rr"||s.free||!s.access)return;
+      var t=s.access.track,c=s.access.cars;
+      if(t&&!t.free&&!t.unknown&&t.name)tr[t.name]=true;
+      if(c&&!c.free&&!c.unknown)(c.classes||[]).forEach(function(n){cl[n]=true});
+    });
+    var tn=Object.keys(tr).sort(),cn=Object.keys(cl).sort();
+    if(tn.length||cn.length){
+      var sg=section(box,"RaceRoom, bought separately");
+      sg.parentNode.insertBefore(el("p","note","Tick tracks and classes you bought on their own."),sg);
+      tn.forEach(function(n){sg.appendChild(toggleChip(n,p.rrTracks[n]===true,false,function(){
+        if(p.rrTracks[n])delete p.rrTracks[n];else p.rrTracks[n]=true;savePrefs();renderAll();
+      }))});
+      cn.forEach(function(n){sg.appendChild(toggleChip(n,p.rrClasses[n]===true,false,function(){
+        if(p.rrClasses[n])delete p.rrClasses[n];else p.rrClasses[n]=true;savePrefs();renderAll();
+      }))});
+    }
+    var line=el("div","sumline");
+    var items=countTrue(p.rrTracks)+countTrue(p.rrClasses);
+    line.appendChild(el("span","note","LMU: "+plural(countTrue(p.packs.lmu),"pack")+" · RaceRoom: "+plural(countTrue(p.packs.rr),"pack")+", "+plural(items,"item")));
+    var clr=el("button","linkbtn","Clear all");clr.type="button";
+    clr.onclick=function(){p.packs={lmu:{},rr:{}};p.rrTracks={};p.rrClasses={};savePrefs();renderAll()};
+    line.appendChild(clr);
+    box.appendChild(line);
   }
   function renderList(){
     var now=new Date(),list=$("list");list.textContent="";rows=[];
     if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
     var items=[];
     (data.series||[]).filter(visible).forEach(function(s){
-      var u=upcoming(s,now);
+      var acc=evalAccess(s),u=upcoming(s,now);
+      if(!acc.ok){
+        if(p.hideLocked||!u.next.length)return;
+        items.push({s:s,locked:acc,t:u.next[0],next:u.next.slice(1)});
+        return;
+      }
       if(u.running)items.push({s:s,live:true,started:u.running,t:u.next[0],next:u.next.slice(1)});
       else if(u.next.length)items.push({s:s,t:u.next[0],next:u.next.slice(1)});
     });
-    items.sort(function(a,b){return (a.live?0:1)-(b.live?0:1)||(a.started||a.t)-(b.started||b.t)});
-    if(!items.length){list.appendChild(el("li","empty","Nothing coming up for these filters. Turn on another tier or game."));return}
+    items.sort(function(a,b){return (a.live?0:1)-(b.live?0:1)||(a.locked?1:0)-(b.locked?1:0)||(a.started||a.t)-(b.started||b.t)});
+    if(!items.length){list.appendChild(el("li","empty","Nothing coming up for these filters. Turn on another tier or game, or show locked races."));return}
     items.forEach(function(x){
-      var s=x.s,li=el("li","row "+s.game+(x.live?" live":""));
+      var s=x.s,li=el("li","row "+s.game+(x.live?" live":"")+(x.locked?" locked":""));
       li.appendChild(el("span","stripe"));
       var m=el("div","main");
       m.appendChild(el("div","title",s.title));
@@ -246,6 +396,10 @@ a{color:var(--fg)}
       var meta=el("div","meta");
       meta.appendChild(el("span","pill game",s.game==="lmu"?"LMU":"RaceRoom"));
       if(s.game==="lmu"&&s.tier)meta.appendChild(el("span","pill tier",s.tier));
+      (s.classes||[]).forEach(function(c){
+        if(s.game==="rr"&&String(c).toLowerCase()===String(s.title).toLowerCase())return;
+        meta.appendChild(el("span","pill cls",c));
+      });
       if(s.game==="rr"&&s.free)meta.appendChild(el("span","pill free","Free to play"));
       var bits=[];
       if(s.durationMin)bits.push(s.durationMin+" min race");
@@ -254,25 +408,30 @@ a{color:var(--fg)}
       m.appendChild(meta);
       var then=x.next.slice(0,3).map(fmtTime);
       if(then.length)m.appendChild(el("div","then num","Then "+then.join(", ")));
+      if(x.locked){
+        var rs=el("div","reason",x.locked.reasons.join(" · "));
+        if(x.locked.unsure)rs.appendChild(el("span","tag","unconfirmed"));
+        m.appendChild(rs);
+      }
       var w=el("div","when");
       if(x.live)w.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
-      var cd=el("div",x.t?"cd num":"cd word",x.t?"":"Running");w.appendChild(cd);
+      var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":(x.t?"":"Running"));w.appendChild(cd);
       if(x.t)w.appendChild(el("div","at num",(x.live?"Next ":"")+fmtAt(x.t)));
       li.appendChild(m);li.appendChild(w);list.appendChild(li);
-      if(x.t)rows.push({cd:cd,t:x.t});
+      if(x.t)rows.push({cd:x.locked?null:cd,t:x.t});
     });
     tick();
   }
   function tick(){
     var now=Date.now(),stale=false;
-    rows.forEach(function(r){var ms=r.t-now;if(ms<=0)stale=true;r.cd.textContent=fmtCd(ms)});
+    rows.forEach(function(r){var ms=r.t-now;if(ms<=0)stale=true;else if(r.cd)r.cd.textContent=fmtCd(ms)});
     if(stale)renderList();
   }
-  function renderAll(){renderStatus();renderFilters();renderList()}
+  function renderAll(){computeOwn();renderStatus();renderFilters();renderPanel();renderList()}
 
   $("gLmu").onclick=function(){p.lmu=!p.lmu;savePrefs();renderAll()};
   $("gRr").onclick=function(){p.rr=!p.rr;savePrefs();renderAll()};
-  $("ownBtn").onclick=function(){p.own=!p.own;savePrefs();renderAll()};
+  $("hideBtn").onclick=function(){p.hideLocked=!p.hideLocked;savePrefs();renderAll()};
 
   var loadErr=null;
   function fetchData(){
@@ -280,7 +439,7 @@ a{color:var(--fg)}
     fetch(url,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
       if(!d||!Array.isArray(d.series))throw new Error("bad file");
       data=d;loadErr=null;
-      freeClasses=[];d.series.forEach(function(s){if(s.game==="rr"&&s.free)(s.classes||[]).forEach(function(c){freeClasses.push(c)})});
+      buildIdx();
       renderAll();
     }).catch(function(){
       if(!data){loadErr="Couldn't load the schedule. Check your connection and reload.";renderAll()}

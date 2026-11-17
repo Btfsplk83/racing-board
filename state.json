@@ -5,7 +5,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-le-mans",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T03:25:00Z",
     "2026-11-17T04:55:00Z",
@@ -22,7 +22,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-monza",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T02:55:00Z",
     "2026-11-17T04:25:00Z",
@@ -39,7 +39,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-bahrain-wec-2023",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T03:55:00Z",
     "2026-11-17T05:25:00Z",
@@ -56,7 +56,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T02:30:00Z",
     "2026-11-17T03:15:00Z",
@@ -79,7 +79,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-monza",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T03:00:00Z",
     "2026-11-17T03:45:00Z",
@@ -101,7 +101,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T02:45:00Z",
     "2026-11-17T03:30:00Z",
@@ -123,7 +123,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-silverstone-2025",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T02:50:00Z",
     "2026-11-17T03:50:00Z",
@@ -143,7 +143,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-paul-ricard-2025",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T03:10:00Z",
     "2026-11-17T04:10:00Z",
@@ -162,7 +162,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-17T03:39:59Z",
+   "lastSeen": "2026-11-17T03:58:39Z",
    "starts": [
     "2026-11-17T02:30:00Z",
     "2026-11-17T03:30:00Z",
@@ -196,6 +196,81 @@
    ],
    "title": "Alpine A110 Cup",
    "track": "Mantorp Park - Long Circuit"
+  },
+  "rr-dtm-1995-norisring-grand-prix": {
+   "carIds": [
+    7076,
+    12839,
+    12850
+   ],
+   "cars": [
+    "AMG-Mercedes C-Klasse DTM",
+    "Alfa Romeo 155 TI DTM 1995",
+    "Opel Calibra V6 DTM"
+   ],
+   "classes": [
+    "DTM 1995"
+   ],
+   "durationMin": 15,
+   "firstSeen": "2026-11-17T03:58:39Z",
+   "game": "rr",
+   "id": "rr-dtm-1995-norisring-grand-prix",
+   "lastSeen": "2026-11-17T03:58:39Z",
+   "practiceMin": 5,
+   "servers": 1,
+   "starts": [
+    "2026-11-17T03:45:00Z"
+   ],
+   "title": "DTM 1995",
+   "track": "Norisring - Grand Prix",
+   "trackId": 2517
+  },
+  "rr-dtm-2024-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix": {
+   "carIds": [
+    11536,
+    12790,
+    12807,
+    13160,
+    13164,
+    13172,
+    13174,
+    13572,
+    13594,
+    13597,
+    13603,
+    13617
+   ],
+   "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "BMW M4 GT3",
+    "BMW M4 GT3 DTM",
+    "BMW M4 GT3 EVO DTM",
+    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+    "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Porsche 911 GT3 R (992) DTM",
+    "Porsche 911 GT3 R (992.2) DTM"
+   ],
+   "classes": [
+    "DTM 2024",
+    "DTM 2025",
+    "DTM 2026",
+    "GTR 3"
+   ],
+   "durationMin": 15,
+   "firstSeen": "2026-11-17T03:58:39Z",
+   "game": "rr",
+   "id": "rr-dtm-2024-dtm-2025-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
+   "lastSeen": "2026-11-17T03:58:39Z",
+   "practiceMin": 5,
+   "servers": 1,
+   "starts": [
+    "2026-11-17T04:00:00Z"
+   ],
+   "title": "DTM 2024 + DTM 2025 + DTM 2026 + GTR 3",
+   "track": "Circuit Zandvoort - Modern - Grand Prix",
+   "trackId": 10781
   },
   "rr-mazda-mx-5-cup-n-rburgring-nordschleife-nls": {
    "cars": [
@@ -267,18 +342,18 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-17T03:39:59Z",
+   "checked": "2026-11-17T03:58:39Z",
    "found": 9,
-   "lastOk": "2026-11-17T03:39:59Z",
+   "lastOk": "2026-11-17T03:58:39Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-17T03:39:59Z",
-   "found": 1,
-   "lastOk": "2026-11-17T03:39:59Z",
+   "checked": "2026-11-17T03:58:39Z",
+   "found": 2,
+   "lastOk": "2026-11-17T03:58:39Z",
    "ok": true
   }
  },
- "updated": "2026-11-17T03:39:59Z",
+ "updated": "2026-11-17T03:58:39Z",
  "version": 1
 }
