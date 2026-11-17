@@ -1,18 +1,18 @@
 {
  "version": 2,
- "updated": "2026-11-17T20:16:39Z",
+ "updated": "2026-11-17T20:26:45Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T20:16:39Z",
-   "lastOk": "2026-11-17T20:16:39Z",
+   "checked": "2026-11-17T20:26:45Z",
+   "lastOk": "2026-11-17T20:26:45Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T20:16:39Z",
-   "lastOk": "2026-11-17T20:16:39Z",
-   "found": 4
+   "checked": "2026-11-17T20:26:45Z",
+   "lastOk": "2026-11-17T20:26:45Z",
+   "found": 3
   }
  },
  "packs": {
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -258,7 +258,7 @@
     "2026-11-17T21:25:00Z",
     "2026-11-17T22:55:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "lmu",
@@ -559,7 +559,7 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "rr",
@@ -654,16 +654,15 @@
     "GTR 3"
    ],
    "cars": [
-    "Audi R8 LMS GT3 EVO II DTM",
     "BMW M4 GT3",
     "BMW M4 GT3 DTM",
     "BMW M4 GT3 EVO DTM",
-    "Ferrari 296 GT3",
     "Ford Mustang GT3 EVO DTM",
     "Lamborghini Temerario GT3 DTM",
     "Mercedes-AMG GT3 2020",
     "Mercedes-AMG GT3 2020 DTM",
     "Porsche 911 GT3 R (992)",
+    "Porsche 911 GT3 R (992) DTM",
     "Porsche 911 GT3 R (992.2) DTM"
    ],
    "free": false,
@@ -702,7 +701,7 @@
     "2026-11-17T19:00:00Z",
     "2026-11-17T20:00:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:21:43Z"
   },
   {
    "game": "rr",
@@ -716,17 +715,16 @@
     "GTR 3"
    ],
    "cars": [
-    "Audi R8 LMS GT3 EVO II DTM",
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "Audi R8 LMS GT3 EVO II",
     "BMW M4 GT3",
     "BMW M4 GT3 EVO DTM",
-    "Ferrari 296 GT3 DTM",
     "Ford Mustang GT3 EVO DTM",
     "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+    "Lamborghini Temerario GT3 DTM",
     "McLaren 720S GT3 EVO DTM",
-    "Mercedes-AMG GT3 2020",
     "Mercedes-AMG GT3 2020 DTM",
     "Porsche 911 GT3 R (992)",
-    "Porsche 911 GT3 R (992) DTM",
     "Porsche 911 GT3 R (992.2) DTM"
    ],
    "free": false,
@@ -742,7 +740,8 @@
     "cars": {
      "free": false,
      "packs": [
-      "dtm-2026-car-pack"
+      "dtm-2026-car-pack",
+      "online-racing-pack-s1-2026"
      ],
      "classes": [
       "DTM 2025",
@@ -757,7 +756,7 @@
     "2026-11-17T11:00:00Z",
     "2026-11-17T20:00:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:21:43Z"
   },
   {
    "game": "rr",
@@ -849,7 +848,7 @@
     "2026-11-17T18:00:00Z",
     "2026-11-17T20:00:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "rr",
@@ -862,11 +861,10 @@
    ],
    "cars": [
     "Alfa Romeo 156 Super Touring",
+    "Audi A4 Super Touring 1995",
     "BMW 320i E36 Super Touring",
     "Ford Mondeo Super Touring",
     "Honda Accord Super Touring",
-    "Opel Vectra Super Touring",
-    "Peugeot 406 Super Touring 1998",
     "Renault Laguna Super Touring",
     "Volvo S40 Super Touring"
    ],
@@ -902,7 +900,7 @@
     "2026-11-17T19:15:00Z",
     "2026-11-17T20:15:00Z"
    ],
-   "lastSeen": "2026-11-17T20:16:39Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "rr",
@@ -939,9 +937,10 @@
    "starts": [
     "2026-11-17T02:30:00Z",
     "2026-11-17T16:30:00Z",
-    "2026-11-17T18:30:00Z"
+    "2026-11-17T18:30:00Z",
+    "2026-11-17T20:30:00Z"
    ],
-   "lastSeen": "2026-11-17T18:45:40Z"
+   "lastSeen": "2026-11-17T20:26:45Z"
   },
   {
    "game": "rr",
