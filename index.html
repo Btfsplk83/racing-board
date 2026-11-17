@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dailies Board</title>
+<meta name="description" content="Le Mans Ultimate and RaceRoom daily races in one list, in your time zone.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap">
+<style>
+:root{
+  --bg:#0a0f1a; --surface:#131c2f; --surface2:#1d2942; --fg:#f4f6fa; --muted:#9fb0c8; --line:#26334f;
+  --lmu:#f0405a; --lmu-bg:#3a1018; --rrred:#e0262f; --blue:#2f6bd8; --ok:#5fd08f; --warn:#ffb547;
+  --f-head:"Barlow Condensed","Arial Narrow",system-ui,sans-serif; --f-body:"Barlow",system-ui,sans-serif;
+  color-scheme:dark;
+}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.45;
+  padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.num{font-variant-numeric:tabular-nums}
+header{position:relative;min-height:108px;padding:16px;overflow:hidden;
+  background:linear-gradient(115deg,var(--lmu) 0 42%,transparent 42%),linear-gradient(-65deg,var(--blue) 0 15%,transparent 15%),var(--surface)}
+header::after{content:"";position:absolute;right:0;bottom:0;width:130px;height:12px;background:repeating-linear-gradient(135deg,#fff 0 2px,transparent 2px 8px);opacity:.85}
+h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;line-height:1;margin:0;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+.crumb{display:inline-block;font-family:var(--f-head);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--bg);border-left:4px solid var(--rrred);padding:2px 10px 2px 8px;margin-bottom:6px}
+.sub{color:var(--muted);margin:0;font-size:13px}
+.status{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted)}
+.status b{font-weight:600}
+.status .bad{color:var(--warn)}
+.bar{display:flex;flex-direction:column;gap:10px;background:var(--surface);padding:12px}
+.grp{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.lbl{font-family:var(--f-head);font-style:italic;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);min-width:72px;font-weight:600}
+.chip{font-family:var(--f-head);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:16px;
+  padding:6px 22px;min-height:36px;border:none;cursor:pointer;background:var(--surface2);color:var(--muted);
+  clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.chip.lmu[aria-pressed="true"]{background:var(--lmu);color:#fff}
+.chip.rr[aria-pressed="true"]{background:linear-gradient(90deg,#f2f4f7 0 78%,var(--rrred) 78%);color:#12161f;padding-right:36px}
+.chip.cls{font-size:14px;padding:5px 18px;min-height:32px}
+.chip.cls[aria-pressed="true"]{background:#f2f4f7;color:#12161f}
+.chip:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible{outline:none;box-shadow:inset 0 0 0 2px #fff}
+details{background:var(--surface);padding:12px}
+details .bar{padding:10px 0 0}
+summary{cursor:pointer;font-weight:600}
+.note{font-size:12px;color:var(--muted);margin:0}
+.list{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.row{position:relative;display:grid;grid-template-columns:12px 1fr auto;gap:12px;align-items:center;background:var(--surface);padding:12px 18px 12px 0;overflow:hidden;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
+.stripe{align-self:stretch;clip-path:polygon(0 0,100% 0,40% 100%,0 100%)}
+.main{min-width:0}
+.title{font-family:var(--f-head);font-style:italic;text-transform:uppercase;font-size:21px;font-weight:600;letter-spacing:.01em;line-height:1.15;overflow-wrap:anywhere}
+.track{font-size:14px;margin-top:1px;overflow-wrap:anywhere}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px;align-items:center;font-size:12px;color:var(--muted)}
+.pill{font-size:11px;font-weight:600;padding:2px 8px;text-transform:uppercase;letter-spacing:.05em}
+.pill.free{border:1px solid var(--ok);color:var(--ok)}
+.pill.tier{background:#d9dce2;color:#141821}
+.then{font-size:12px;color:var(--muted);margin-top:4px}
+.when{text-align:right;white-space:nowrap}
+.cd{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:30px;letter-spacing:.02em;line-height:1.1}
+.at{font-size:12px;color:var(--muted)}
+/* LMU card: dark card, red wash, blue hatched edge */
+.row.lmu{background:linear-gradient(115deg,#34121c 0,var(--surface) 38%)}
+.row.lmu .stripe{background:var(--lmu)}
+.row.lmu::after{content:"";position:absolute;right:16px;bottom:0;width:96px;height:7px;background:repeating-linear-gradient(135deg,var(--blue) 0 4px,#fff 4px 6px,var(--blue) 6px 10px)}
+.row.lmu .cd{color:var(--lmu)}
+.row.lmu .pill.game{background:var(--lmu);color:#fff}
+/* RaceRoom card: white plate, red end cap */
+.row.rr{background:#f2f4f7;color:#12161f;clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
+.row.rr .stripe{background:linear-gradient(90deg,var(--rrred) 0 55%,#12161f 55% 75%,var(--rrred) 75%);clip-path:polygon(0 0,60% 0,100% 100%,0 100%)}
+.row.rr .meta,.row.rr .then{color:#4a5568}
+.row.rr .pill.game{background:var(--rrred);color:#fff}
+.row.rr .pill.free{color:#1d7a46;border-color:#1d7a46}
+.row.rr .when{background:var(--rrred);color:#fff;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:0 18px 0 28px;margin:-12px -18px -12px 0;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%)}
+.row.rr .at{color:rgba(255,255,255,.9)}
+.row.live .cd{font-size:22px}
+.empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
+.links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px}
+a{color:var(--fg)}
+@media (max-width:460px){h1{font-size:38px}.cd{font-size:22px}.title{font-size:19px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="crumb">LMU / RaceRoom &middot; Daily races</div>
+    <h1>Dailies Board</h1>
+  </header>
+  <p class="sub">Official daily races for both games, one list. Times in <span id="tz"></span>.</p>
+  <div class="status" id="status" role="status"></div>
+
+  <section class="bar" aria-label="Filters">
+    <div class="grp"><span class="lbl">Games</span>
+      <button class="chip lmu" id="gLmu" type="button">LMU</button>
+      <button class="chip rr" id="gRr" type="button">RaceRoom</button>
+    </div>
+    <div class="grp"><span class="lbl">LMU tier</span><span id="tierChips" class="grp"></span></div>
+    <div class="grp"><span class="lbl">RaceRoom</span>
+      <button class="chip rr" id="ownBtn" type="button">Only what I can run</button>
+    </div>
+  </section>
+
+  <details id="ownBox">
+    <summary>My RaceRoom content</summary>
+    <p class="note" style="margin-top:8px">Tick the car classes you can drive. Free-to-play classes start ticked. Saved in this browser.</p>
+    <div class="grp" id="clsChips" style="margin-top:10px"></div>
+  </details>
+
+  <section aria-label="Up next">
+    <ul class="list" id="list"></ul>
+  </section>
+
+  <div class="links">
+    <a href="https://racecontrol.gg/" target="_blank" rel="noopener">LMU on RaceControl</a>
+    <a href="https://game.raceroom.com/multiplayer-rating/" target="_blank" rel="noopener">RaceRoom ranked</a>
+  </div>
+  <p class="note">LMU times come from racecontrol.gg. RaceRoom times come from its live ranked servers, so a combo shows up once it has run and the time is when its server opens. Checked about every 30 minutes.</p>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var TIERS=["Beginner","Intermediate","Advanced"];
+  var PKEY="dailiesBoard.prefs.v2";
+  var src=new URLSearchParams(location.search).get("src")||"schedule.json";
+  var data=null, rows=[];
+  var $=function(i){return document.getElementById(i)};
+  function load(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+  var p=load(PKEY,null)||{};
+  if(!Array.isArray(p.tiers))p.tiers=["Beginner"];
+  if(typeof p.lmu!=="boolean")p.lmu=true;
+  if(typeof p.rr!=="boolean")p.rr=true;
+  if(typeof p.own!=="boolean")p.own=true;
+  if(!p.owned||typeof p.owned!=="object")p.owned={};   // class name -> true/false, set by the viewer
+  function savePrefs(){save(PKEY,p)}
+
+  try{$("tz").textContent=Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g," ")}catch(e){$("tz").textContent="your time zone"}
+
+  function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n}
+
+  /* LMU rotations change at the Tuesday 10:00 UTC reset, so projections stop there. */
+  function nextLmuReset(now){
+    var d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),10,0));
+    d=new Date(d.getTime()+((2-d.getUTCDay()+7)%7)*864e5);
+    if(d<=now)d=new Date(d.getTime()+7*864e5);
+    return d;
+  }
+  /* Upcoming starts: observed ones first, then projected from the interval, up to 24 h ahead. */
+  function upcoming(s,now){
+    var horizon=now.getTime()+864e5, limit=s.game==="lmu"?Math.min(horizon,nextLmuReset(now).getTime()):horizon;
+    var seen=(s.starts||[]).map(function(x){return Date.parse(x)}).filter(function(t){return !isNaN(t)}).sort(function(a,b){return a-b});
+    var out=seen.filter(function(t){return t>now.getTime()&&t<limit});
+    var iv=s.intervalMin*6e4;
+    if(iv&&seen.length){
+      var t=seen[seen.length-1];
+      if(t<=now.getTime())t+=Math.ceil((now.getTime()-t+1)/iv)*iv;
+      else t+=iv;
+      for(;t<limit&&out.length<40;t+=iv)out.push(t);
+    }
+    var last=seen.filter(function(t){return t<=now.getTime()}).pop();
+    var running=last&&s.durationMin&&now.getTime()<last+s.durationMin*6e4?last:null;
+    return {next:out.sort(function(a,b){return a-b}),running:running};
+  }
+  function canRun(s){
+    if(s.game!=="rr")return true;
+    return (s.classes||[]).some(function(c){return owned(c,s)});
+  }
+  function owned(c,s){
+    if(c in p.owned)return p.owned[c];
+    return !!(s&&s.free)||freeClasses.indexOf(c)>-1;
+  }
+  var freeClasses=[];
+  function visible(s){
+    if(s.game==="lmu")return p.lmu&&p.tiers.indexOf(s.tier)>-1;
+    return p.rr&&(!p.own||canRun(s));
+  }
+  function fmtCd(ms){
+    var s=Math.max(0,Math.floor(ms/1000)),h=Math.floor(s/3600),m=Math.floor(s%3600/60),r=s%60;
+    var z=function(n){return n<10?"0"+n:""+n};
+    return (h?h+":":"")+z(m)+":"+z(r);
+  }
+  function fmtTime(t){return new Date(t).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}
+  function fmtAt(t){
+    var d=new Date(t),now=new Date(),tm=new Date(now.getTime()+864e5);
+    var day=d.toDateString()===now.toDateString()?"Today":d.toDateString()===tm.toDateString()?"Tomorrow":d.toLocaleDateString([],{weekday:"short"});
+    return day+" "+fmtTime(t);
+  }
+  function ago(iso){
+    var m=Math.round((Date.now()-Date.parse(iso))/6e4);
+    if(isNaN(m))return "unknown";
+    if(m<1)return "just now";if(m<60)return m+" min ago";
+    var h=Math.round(m/60);return h<48?h+" h ago":Math.round(h/24)+" days ago";
+  }
+
+  function renderStatus(){
+    var box=$("status");box.textContent="";
+    if(!data){box.appendChild(el("span","",loadErr||"Loading..."));return}
+    box.appendChild(el("span","num","Updated "+ago(data.updated)));
+    [["lmu","LMU"],["rr","RaceRoom"]].forEach(function(g){
+      var s=(data.sources||{})[g[0]];if(!s)return;
+      if(s.ok)box.appendChild(el("span","",g[1]+" ok"));
+      else box.appendChild(el("span","bad",g[1]+" check failed, last good "+(s.lastOk?ago(s.lastOk):"never")));
+    });
+    if(Date.now()-Date.parse(data.updated)>3*36e5)box.appendChild(el("span","bad","The schedule hasn't refreshed in a while, so times may be out of date."));
+  }
+  function renderFilters(){
+    var box=$("tierChips");box.textContent="";
+    TIERS.forEach(function(t){
+      var b=el("button","chip lmu",t);b.type="button";b.setAttribute("aria-pressed",p.tiers.indexOf(t)>-1);
+      b.onclick=function(){var i=p.tiers.indexOf(t);if(i>-1)p.tiers.splice(i,1);else p.tiers.push(t);savePrefs();renderAll()};
+      box.appendChild(b);
+    });
+    $("gLmu").setAttribute("aria-pressed",p.lmu);
+    $("gRr").setAttribute("aria-pressed",p.rr);
+    $("ownBtn").setAttribute("aria-pressed",p.own);
+    var cb=$("clsChips");cb.textContent="";
+    var cls={};
+    ((data&&data.series)||[]).forEach(function(s){if(s.game==="rr")(s.classes||[]).forEach(function(c){if(!(c in cls)||s.free)cls[c]=s})});
+    Object.keys(cls).sort().forEach(function(c){
+      var b=el("button","chip cls",c);b.type="button";b.setAttribute("aria-pressed",owned(c,cls[c]));
+      b.onclick=function(){p.owned[c]=!owned(c,cls[c]);savePrefs();renderAll()};
+      cb.appendChild(b);
+    });
+    if(!cb.childNodes.length)cb.appendChild(el("p","note","No RaceRoom classes seen yet."));
+  }
+  function renderList(){
+    var now=new Date(),list=$("list");list.textContent="";rows=[];
+    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule..."));return}
+    var items=[];
+    (data.series||[]).filter(visible).forEach(function(s){
+      var u=upcoming(s,now);
+      if(u.running)items.push({s:s,t:u.running,live:true,next:u.next});
+      else if(u.next.length)items.push({s:s,t:u.next[0],next:u.next.slice(1)});
+    });
+    items.sort(function(a,b){return (a.live?0:1)-(b.live?0:1)||a.t-b.t});
+    if(!items.length){list.appendChild(el("li","empty","Nothing coming up for these filters. Turn on another tier or game."));return}
+    items.forEach(function(x){
+      var s=x.s,li=el("li","row "+s.game+(x.live?" live":""));
+      li.appendChild(el("span","stripe"));
+      var m=el("div","main");
+      m.appendChild(el("div","title",s.title));
+      m.appendChild(el("div","track",s.track));
+      var meta=el("div","meta");
+      meta.appendChild(el("span","pill game",s.game==="lmu"?"LMU":"RaceRoom"));
+      if(s.game==="lmu"&&s.tier)meta.appendChild(el("span","pill tier",s.tier));
+      if(s.game==="rr"&&s.free)meta.appendChild(el("span","pill free","Free to play"));
+      var bits=[];
+      if(s.durationMin)bits.push(s.durationMin+" min race");
+      if(s.intervalMin)bits.push("every "+(s.intervalMin%60===0?(s.intervalMin/60===1?"hour":s.intervalMin/60+" h"):s.intervalMin+" min"));
+      if(bits.length)meta.appendChild(el("span","",bits.join(" · ")));
+      m.appendChild(meta);
+      var then=x.next.slice(0,3).map(fmtTime);
+      if(then.length)m.appendChild(el("div","then num","Then "+then.join(", ")));
+      var w=el("div","when");
+      var cd=el("div","cd num",x.live?"Running":"");w.appendChild(cd);
+      w.appendChild(el("div","at num",(x.live?"Started ":"")+fmtAt(x.t)));
+      li.appendChild(m);li.appendChild(w);list.appendChild(li);
+      if(!x.live)rows.push({cd:cd,t:x.t});
+    });
+    tick();
+  }
+  function tick(){
+    var now=Date.now(),stale=false;
+    rows.forEach(function(r){var ms=r.t-now;if(ms<=0)stale=true;r.cd.textContent=fmtCd(ms)});
+    if(stale)renderList();
+  }
+  function renderAll(){renderStatus();renderFilters();renderList()}
+
+  $("gLmu").onclick=function(){p.lmu=!p.lmu;savePrefs();renderAll()};
+  $("gRr").onclick=function(){p.rr=!p.rr;savePrefs();renderAll()};
+  $("ownBtn").onclick=function(){p.own=!p.own;savePrefs();renderAll()};
+
+  var loadErr=null;
+  function fetchData(){
+    var url=src+(src.indexOf("?")>-1?"&":"?")+"t="+Math.floor(Date.now()/6e4);
+    fetch(url,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+      if(!d||!Array.isArray(d.series))throw new Error("bad file");
+      data=d;loadErr=null;
+      freeClasses=[];d.series.forEach(function(s){if(s.game==="rr"&&s.free)(s.classes||[]).forEach(function(c){freeClasses.push(c)})});
+      renderAll();
+    }).catch(function(){
+      if(!data){loadErr="Couldn't load the schedule. Check your connection and reload.";renderAll()}
+    });
+  }
+  renderAll();
+  fetchData();
+  setInterval(fetchData,5*6e4);
+  setInterval(tick,1000);
+  setInterval(renderStatus,6e4);
+})();
+</script>
+</body>
+</html>
