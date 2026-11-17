@@ -1,18 +1,18 @@
 {
  "version": 2,
- "updated": "2026-11-17T11:06:02Z",
+ "updated": "2026-11-17T15:08:21Z",
  "sources": {
   "lmu": {
    "ok": true,
-   "checked": "2026-11-17T11:06:02Z",
-   "lastOk": "2026-11-17T11:06:02Z",
+   "checked": "2026-11-17T15:08:21Z",
+   "lastOk": "2026-11-17T15:08:21Z",
    "found": 9
   },
   "rr": {
    "ok": true,
-   "checked": "2026-11-17T11:06:02Z",
-   "lastOk": "2026-11-17T11:06:02Z",
-   "found": 3
+   "checked": "2026-11-17T15:08:21Z",
+   "lastOk": "2026-11-17T15:08:21Z",
+   "found": 2
   }
  },
  "packs": {
@@ -213,7 +213,7 @@
     "2026-11-17T22:50:00Z",
     "2026-11-17T23:50:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -258,7 +258,7 @@
     "2026-11-17T21:25:00Z",
     "2026-11-17T22:55:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -301,7 +301,7 @@
     "2026-11-17T22:45:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -344,7 +344,7 @@
     "2026-11-17T22:10:00Z",
     "2026-11-17T23:10:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -386,7 +386,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:15:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -429,7 +429,7 @@
     "2026-11-17T23:00:00Z",
     "2026-11-17T23:45:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -471,7 +471,7 @@
     "2026-11-17T22:25:00Z",
     "2026-11-17T23:55:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -517,7 +517,7 @@
     "2026-11-17T22:30:00Z",
     "2026-11-17T23:30:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "lmu",
@@ -559,79 +559,7 @@
     "2026-11-17T21:55:00Z",
     "2026-11-17T23:25:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-alpine-a110-cup-mantorp-park-long-circuit",
-   "title": "Alpine A110 Cup",
-   "track": "Mantorp Park - Long Circuit",
-   "durationMin": 15,
-   "classes": [
-    "Alpine A110 Cup"
-   ],
-   "cars": [
-    "Alpine A110 Cup"
-   ],
-   "free": true,
-   "access": {
-    "track": {
-     "name": "Mantorp Park",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "Alpine A110 Cup"
-     ]
-    }
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T03:30:00Z"
-   ],
-   "lastSeen": "2026-11-17T03:39:59Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-dtm-1995-norisring-grand-prix",
-   "title": "DTM 1995",
-   "track": "Norisring - Grand Prix",
-   "durationMin": 15,
-   "classes": [
-    "DTM 1995"
-   ],
-   "cars": [
-    "AMG-Mercedes C-Klasse DTM",
-    "Alfa Romeo 155 TI DTM 1995",
-    "Opel Calibra V6 DTM"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "Norisring",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026"
-     ],
-     "classes": [
-      "DTM 1995"
-     ]
-    }
-   },
-   "intervalMin": null,
-   "starts": [
-    "2026-11-17T03:45:00Z"
-   ],
-   "lastSeen": "2026-11-17T03:58:39Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "rr",
@@ -646,13 +574,14 @@
     "GTR 3"
    ],
    "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "BMW M4 GT3",
     "BMW M4 GT3 DTM",
     "BMW M4 GT3 EVO DTM",
-    "Ferrari 296 GT3",
     "Ferrari 296 GT3 DTM",
     "Ford Mustang GT3 EVO DTM",
-    "Lamborghini Hurac\u00e1n GT3 EVO II",
     "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
     "Mercedes-AMG GT3 2020",
     "Mercedes-AMG GT3 2020 DTM",
     "Porsche 911 GT3 R (992)",
@@ -683,12 +612,13 @@
     },
     "unsure": true
    },
-   "intervalMin": null,
+   "intervalMin": 240,
    "starts": [
     "2026-11-17T04:00:00Z",
-    "2026-11-17T11:00:00Z"
+    "2026-11-17T11:00:00Z",
+    "2026-11-17T15:00:00Z"
    ],
-   "lastSeen": "2026-11-17T11:06:02Z"
+   "lastSeen": "2026-11-17T15:08:21Z"
   },
   {
    "game": "rr",
@@ -744,6 +674,56 @@
   },
   {
    "game": "rr",
+   "id": "rr-dtm-2026-gtr-3-circuit-zandvoort-modern-grand-prix",
+   "title": "DTM 2026 + GTR 3",
+   "track": "Circuit Zandvoort - Modern - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "DTM 2026",
+    "GTR 3"
+   ],
+   "cars": [
+    "BMW M4 GT3",
+    "BMW M4 GT3 EVO DTM",
+    "Ferrari 296 GT3",
+    "Lamborghini Hurac\u00e1n GT3 EVO II",
+    "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Porsche 911 GT3 R (992)",
+    "Porsche 911 GT3 R (992.2) DTM"
+   ],
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Circuit Zandvoort - Modern",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack",
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "DTM 2026",
+      "GTR 3"
+     ]
+    },
+    "unsure": true
+   },
+   "intervalMin": null,
+   "starts": [
+    "2026-11-17T15:00:00Z"
+   ],
+   "lastSeen": "2026-11-17T15:08:21Z"
+  },
+  {
+   "game": "rr",
    "id": "rr-mazda-mx-5-cup-n-rburgring-nordschleife-nls",
    "title": "Mazda MX-5 Cup",
    "track": "N\u00fcrburgring - Nordschleife - NLS",
@@ -781,51 +761,6 @@
     "2026-11-17T11:00:00Z"
    ],
    "lastSeen": "2026-11-17T11:06:02Z"
-  },
-  {
-   "game": "rr",
-   "id": "rr-super-touring-hockenheimring-2001-grand-prix",
-   "title": "Super Touring",
-   "track": "Hockenheimring - 2001 - Grand Prix",
-   "durationMin": 15,
-   "classes": [
-    "Super Touring"
-   ],
-   "cars": [
-    "Alfa Romeo 156 Super Touring",
-    "Ford Mondeo Super Touring",
-    "Honda Accord Super Touring",
-    "Opel Vectra Super Touring",
-    "Renault Laguna Super Touring",
-    "Volvo S40 Super Touring"
-   ],
-   "free": false,
-   "access": {
-    "track": {
-     "name": "Hockenheimring - 2001",
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026"
-     ]
-    },
-    "cars": {
-     "free": false,
-     "packs": [
-      "online-racing-pack-s1-2026",
-      "rstc-pack-2026"
-     ],
-     "classes": [
-      "Super Touring"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 120,
-   "starts": [
-    "2026-11-17T02:15:00Z",
-    "2026-11-17T04:15:00Z"
-   ],
-   "lastSeen": "2026-11-17T04:14:48Z"
   }
  ]
 }
