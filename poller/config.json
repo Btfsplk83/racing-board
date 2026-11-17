@@ -1,4 +1,13 @@
 {
   "_note": "RaceRoom car classes in this week's free-to-play combo (the one marked free in the Discord #schedule post). Names must match RaceRoom's class names.",
-  "rrFreeClasses": ["Alpine A110 Cup"]
+  "rrFreeClasses": ["Alpine A110 Cup"],
+  "rrSeriesNames": {
+    "_note": "Ranked series name by track, as the in-game schedule shows it. Update when the rotation changes tracks.",
+    "Hockenheimring - 2001 - Grand Prix": "Super Touring",
+    "Mantorp Park - Long Circuit": "Alpine A110 Cup",
+    "Norisring - Grand Prix": "DTM All-Stars",
+    "Circuit Zandvoort - Modern - Grand Prix": "GT3 Sprint Series",
+    "Nürburgring - Nordschleife - NLS": "Nordschleife Trophy",
+    "Autodromo di Monza - Grand Prix": "Tatuus F4"
+  }
 }

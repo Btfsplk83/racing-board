@@ -172,21 +172,84 @@ def poll_rr():
         car_ids = sorted({liveries[i][2] for i in st.get("LiveryId", []) if i in liveries and liveries[i][2] is not None})
         if not tracks or not classes:
             continue
-        track = tracks[0][0] + (" - " + tracks[0][1] if tracks[0][1] and tracks[0][1] != tracks[0][0] else "")
-        title = " + ".join(classes)
-        sid = "rr-" + slug(title + "-" + track)
+        track = rr_track_name(tracks[0])
+        # One ranked series per track layout. Servers in the same race can carry
+        # different class mixes, and some series alternate cars, so classes are pooled.
+        sid = rr_sid(track)
         c = combos.setdefault(sid, {
-            "game": "rr", "id": sid, "title": title, "classes": classes, "cars": cars,
-            "track": track, "trackId": tracks[0][2], "carIds": car_ids, "durationMin": st.get("Race1Duration") or None,
+            "game": "rr", "id": sid, "classes": set(), "cars": set(), "carIds": set(),
+            "track": track, "trackId": tracks[0][2], "durationMin": st.get("Race1Duration") or None,
             "practiceMin": st.get("PracticeDuration") or None, "starts": set(), "servers": 0,
         })
+        c["classes"].update(classes)
+        c["cars"].update(cars)
+        c["carIds"].update(car_ids)
         c["starts"].add(iso(start))
         c["servers"] += 1
     out = []
     for c in combos.values():
-        c["starts"] = sorted(c["starts"])
+        for k in ("classes", "cars", "carIds", "starts"):
+            c[k] = sorted(c[k])
+        c["title"] = " + ".join(c["classes"])
         out.append(c)
     return out
+
+
+def rr_track_name(t):
+    return t[0] + (" - " + t[1] if t[1] and t[1] != t[0] else "")
+
+
+def rr_sid(track):
+    return "rr-" + slug(track)
+
+
+def rr_pool(cur, s, when):
+    """Keep classes and cars seen on this track within the active window."""
+    pool = cur.setdefault("pool", {"classes": {}, "cars": {}, "carIds": {}})
+    for k in pool:
+        for x in s.get(k, []):
+            pool[k][str(x)] = iso(when)
+    keep = when - ACTIVE["rr"]
+    for k in pool:
+        pool[k] = {x: t for x, t in pool[k].items() if parse_iso(t) >= keep}
+    cur["classes"] = sorted(pool["classes"])
+    cur["cars"] = sorted(pool["cars"])
+    cur["carIds"] = sorted(int(x) for x in pool["carIds"])
+    cur["title"] = " + ".join(cur["classes"])
+
+
+def rr_migrate(state):
+    """Old state keyed RaceRoom series by class mix + track. Re-key by track, keeping starts."""
+    if state.get("rrByTrack"):
+        return
+    series = state.get("series", {})
+    for sid in [k for k, v in series.items() if v.get("game") == "rr"]:
+        old = series.pop(sid)
+        new = rr_sid(old["track"])
+        cur = series.get(new)
+        if cur is None:
+            old["id"] = new
+            old["pool"] = {k: {str(x): old["lastSeen"] for x in old.get(k, [])} for k in ("classes", "cars", "carIds")}
+            series[new] = old
+            continue
+        cur["starts"] = sorted(set(cur["starts"]) | set(old["starts"]))
+        cur["firstSeen"] = min(cur["firstSeen"], old["firstSeen"])
+        for k in ("classes", "cars", "carIds"):
+            for x in old.get(k, []):
+                t = cur["pool"][k].get(str(x))
+                cur["pool"][k][str(x)] = max(t, old["lastSeen"]) if t else old["lastSeen"]
+        if old["lastSeen"] > cur["lastSeen"]:
+            for k in ("durationMin", "practiceMin", "trackId"):
+                if k in old:
+                    cur[k] = old[k]
+            cur["lastSeen"] = old["lastSeen"]
+    for s in series.values():
+        if s.get("game") == "rr":
+            p = s["pool"]
+            s["classes"], s["cars"] = sorted(p["classes"]), sorted(p["cars"])
+            s["carIds"] = sorted(int(x) for x in p["carIds"])
+            s["title"] = " + ".join(s["classes"])
+    state["rrByTrack"] = True
 
 
 # ---------- merge + output ----------
@@ -212,6 +275,8 @@ def merge(state, seen, game, when):
         cur.update({k: v for k, v in s.items() if k != "starts"})
         cur["starts"] = sorted(starts)
         cur["lastSeen"] = iso(when)
+        if game == "rr":
+            rr_pool(cur, s, when)
         series[s["id"]] = cur
     cutoff = when - KEEP_STARTS
     for sid in list(series):
@@ -221,12 +286,21 @@ def merge(state, seen, game, when):
             del series[sid]
 
 
-def load_free():
+def load_config():
     try:
         with open(os.path.join(HERE, "config.json"), encoding="utf-8") as f:
-            return [x.lower() for x in json.load(f).get("rrFreeClasses", [])]
+            return json.load(f)
     except FileNotFoundError:
-        return []
+        return {}
+
+
+def load_free():
+    return [x.lower() for x in load_config().get("rrFreeClasses", [])]
+
+
+def load_series_names():
+    """RaceRoom series names keyed by normalized track name (from the in-game schedule)."""
+    return {norm(k): v for k, v in load_config().get("rrSeriesNames", {}).items() if not k.startswith("_")}
 
 
 # ---------- content catalogs (packs, tracks, cars) ----------
@@ -370,6 +444,7 @@ def rr_access(s, cat):
 
 def build_schedule(state, when, sources):
     free = load_free()
+    names = load_series_names()
     cats = {g: load_catalog(g) for g in ("lmu", "rr")}
     out = []
     for s in state.get("series", {}).values():
@@ -386,6 +461,7 @@ def build_schedule(state, when, sources):
             row["classes"] = s.get("classes", [])
             row["cars"] = s.get("cars", [])
             row["free"] = any(c.lower() in free for c in row["classes"])
+            row["title"] = names.get(norm(s.get("track", ""))) or row.get("title", "")
             if cat:
                 row["access"] = rr_access(s, cat)
         row["intervalMin"] = infer_interval(s["starts"])
@@ -408,6 +484,7 @@ def main():
             state = json.load(f)
     except (FileNotFoundError, ValueError):
         state = {"version": 1, "series": {}}
+    rr_migrate(state)
 
     when = now_utc()
     sources = state.get("sources", {})
