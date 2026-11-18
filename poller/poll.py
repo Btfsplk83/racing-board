@@ -8,6 +8,7 @@ each series' timetable and weekly track rounds. It is fetched at most hourly and
 cached in state.json. The live ranked server list is the fallback: it runs every
 pass when the feed is unusable, and every RR_CHECK_EVERY otherwise as a cross-check.
 
+LMU is fetched every LMU_EVERY (and right after the Tuesday reset).
 LMU and the RaceRoom fallback only show races that are about to start or are
 running, so each run adds the starts it sees and the page projects the rest
 from the interval between them.
@@ -33,6 +34,7 @@ RR_SERVERS_URL = "https://game.raceroom.com/multiplayer-rating/servers/"
 RR_DATA_URL = "https://raw.githubusercontent.com/sector3studios/r3e-spectator-overlay/master/r3e-data.json"
 RR_FEED_URL = "https://r3e-leaderboards.info/cache/ranked_series.json.gz"
 
+LMU_EVERY = timedelta(minutes=15)       # racecontrol.gg lists ~6 h of starts, so this misses none
 RR_FEED_EVERY = timedelta(minutes=60)   # refetch the feed this often (it changes about daily)
 RR_CHECK_EVERY = timedelta(minutes=30)  # server-list cross-check while the feed works
 PAST = timedelta(hours=2)               # feed rows: starts from this long before UTC midnight...
@@ -628,6 +630,32 @@ def build_schedule(state, when, sources, rr_rows):
     return {"version": 2, "updated": iso(when), "sources": sources, "packs": packs, "series": out}
 
 
+def last_lmu_reset(when):
+    """Most recent Tuesday 10:00 UTC, when LMU swaps its rotation."""
+    d = datetime(when.year, when.month, when.day, 10, tzinfo=timezone.utc)
+    d -= timedelta(days=(d.weekday() - 1) % 7)
+    return d if d <= when else d - timedelta(days=7)
+
+
+def lmu_due(prev, when):
+    """Poll LMU every LMU_EVERY, every pass after a failure, and on the first pass after the weekly reset."""
+    if not prev.get("ok") or not prev.get("checked"):
+        return True
+    last = parse_iso(prev["checked"])
+    return when - last >= LMU_EVERY - timedelta(minutes=2) or last < last_lmu_reset(when)
+
+
+def run_lmu(state, sources, prev, when):
+    try:
+        seen = poll_lmu(when)
+        merge(state, seen, "lmu", when)
+        sources["lmu"] = {"ok": True, "checked": iso(when), "lastOk": iso(when), "found": len(seen)}
+        print(f"lmu: {len(seen)} series")
+    except Exception as e:  # keep RaceRoom and the old data
+        sources["lmu"] = {"ok": False, "checked": iso(when), "lastOk": prev.get("lastOk"), "error": str(e)[:200]}
+        print(f"lmu: FAILED {e}", file=sys.stderr)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True, help="site folder holding state.json and schedule.json")
@@ -645,14 +673,10 @@ def main():
     sources = state.get("sources", {})
 
     prev = sources.get("lmu", {})
-    try:
-        seen = poll_lmu(when)
-        merge(state, seen, "lmu", when)
-        sources["lmu"] = {"ok": True, "checked": iso(when), "lastOk": iso(when), "found": len(seen)}
-        print(f"lmu: {len(seen)} series")
-    except Exception as e:  # keep RaceRoom and the old data
-        sources["lmu"] = {"ok": False, "checked": iso(when), "lastOk": prev.get("lastOk"), "error": str(e)[:200]}
-        print(f"lmu: FAILED {e}", file=sys.stderr)
+    if lmu_due(prev, when):
+        run_lmu(state, sources, prev, when)
+    else:
+        print("lmu: skipped, checked " + prev["checked"])
 
     # RaceRoom: feed first. The server list runs every pass without it, every RR_CHECK_EVERY with it.
     cache = rr_feed_refresh(state, when)
