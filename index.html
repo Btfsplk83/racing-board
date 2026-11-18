@@ -339,7 +339,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     <a href="https://racecontrol.gg/" target="_blank" rel="noopener">LMU on RaceControl</a>
     <a href="https://game.raceroom.com/multiplayer-rating/" target="_blank" rel="noopener">RaceRoom ranked</a>
   </div>
-  <p class="note">LMU times come from racecontrol.gg. RaceRoom times come from its live ranked servers, so a combo shows up once it has run and the time is when its server opens. Checked every 5 minutes.</p>
+  <p class="note">LMU times come from racecontrol.gg. RaceRoom times come from the ranked timetable on r3e-leaderboards.info, checked against the live ranked servers. If that site is down, the board falls back to the servers alone. Checked every 5 minutes.</p>
 </main>
 
 <script>
@@ -440,6 +440,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
      past holds starts from the last 2 h (observed, plus projected between observed ones), oldest first. */
   function upcoming(s,now){
     var nowT=now.getTime(),horizon=nowT+864e5,limit=s.game==="lmu"?Math.min(horizon,nextLmuReset(now).getTime()):horizon;
+    var until=Date.parse(s.until);if(!isNaN(until))limit=Math.min(limit,until);
     var seen=(s.starts||[]).map(function(x){return Date.parse(x)}).filter(function(t){return !isNaN(t)}).sort(function(a,b){return a-b});
     var out=seen.filter(function(t){return t>nowT&&t<limit});
     var iv=s.intervalMin*6e4;

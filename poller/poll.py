@@ -3,15 +3,21 @@
 Fetches the live LMU and RaceRoom daily-race data, merges what it sees into a
 running state file, and writes schedule.json for the board page.
 
-Both sources only show races that are about to start or are running, so each
-run adds the starts it sees and the page projects the rest from the interval
-between them.
+RaceRoom comes from the r3e-leaderboards.info ranked-series feed, which lists
+each series' timetable and weekly track rounds. It is fetched at most hourly and
+cached in state.json. The live ranked server list is the fallback: it runs every
+pass when the feed is unusable, and every RR_CHECK_EVERY otherwise as a cross-check.
+
+LMU and the RaceRoom fallback only show races that are about to start or are
+running, so each run adds the starts it sees and the page projects the rest
+from the interval between them.
 
 Usage: python poll.py --out <site dir>
 Reads and writes <site dir>/state.json and writes <site dir>/schedule.json.
 Standard library only.
 """
 import argparse
+import gzip
 import html
 import json
 import math
@@ -25,6 +31,12 @@ UA = "Mozilla/5.0 (compatible; dailies-board-poller/1.0)"
 LMU_URL = "https://racecontrol.gg/"
 RR_SERVERS_URL = "https://game.raceroom.com/multiplayer-rating/servers/"
 RR_DATA_URL = "https://raw.githubusercontent.com/sector3studios/r3e-spectator-overlay/master/r3e-data.json"
+RR_FEED_URL = "https://r3e-leaderboards.info/cache/ranked_series.json.gz"
+
+RR_FEED_EVERY = timedelta(minutes=60)   # refetch the feed this often (it changes about daily)
+RR_CHECK_EVERY = timedelta(minutes=30)  # server-list cross-check while the feed works
+PAST = timedelta(hours=2)               # feed rows: starts from this long before UTC midnight...
+AHEAD = timedelta(hours=24)             # ...to this long after the next one (the page shows 24 h)
 
 KEEP_STARTS = timedelta(days=3)      # how far back observed starts are kept
 ACTIVE = {"lmu": timedelta(hours=6), "rr": timedelta(hours=8)}  # unseen this long = out of rotation
@@ -49,6 +61,8 @@ def fetch(url, timeout=30):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         raw = r.read()
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
     try:
         return raw.decode("utf-8")
     except UnicodeDecodeError:  # r3e-data.json is not UTF-8
@@ -201,6 +215,136 @@ def rr_track_name(t):
 
 def rr_sid(track):
     return "rr-" + slug(track)
+
+
+# ---------- RaceRoom (r3e-leaderboards.info ranked-series feed) ----------
+
+def rr_feed_resolve(feed, data):
+    """Compact the feed to what the board needs. Names, cars and ids come from r3e-data.json when it loaded."""
+    layouts, cls_names, cars_by_class = {}, {}, {}
+    if data:
+        for t in data["tracks"].values():
+            for l in t["layouts"]:
+                layouts[int(l["Id"])] = (t["Name"], l["Name"], t.get("Id"))
+        cls_names = {str(k): v["Name"] for k, v in data["classes"].items()}
+        for car in data["cars"].values():
+            cars_by_class.setdefault(str(car["Class"]), []).append((car["Name"], car.get("Id")))
+    out = []
+    for s in feed.get("series", []):
+        sch = s.get("schedule") or {}
+        fmt = s.get("format") or {}
+        race = (fmt.get("races") or [{}])[0]
+        rounds = []
+        for r in s.get("rounds", []):
+            tr = r.get("track") or {}
+            lay = layouts.get(int(tr.get("layout_id") or 0))
+            if lay:
+                track, track_id = rr_track_name(lay), lay[2]
+            else:
+                track = " - ".join(x for x in (tr.get("name"), tr.get("layout")) if x)
+                track_id = int(tr["track_id"]) if str(tr.get("track_id", "")).isdigit() else None
+            classes = r.get("eligible_classes") or s.get("eligible_classes") or []
+            ids = [str(c.get("id")) for c in classes]
+            cars = [c for i in ids for c in cars_by_class.get(i, [])]
+            rounds.append({
+                "start": r["starts_at"] // 1000, "end": r["ends_at"] // 1000,
+                "track": track, "trackId": track_id,
+                "classes": sorted({cls_names.get(i) or c.get("name", "") for i, c in zip(ids, classes)} - {""}),
+                "cars": sorted({n for n, _ in cars}),
+                "carIds": sorted({i for _, i in cars if i is not None}),
+            })
+        out.append({
+            "name": s.get("name", ""),
+            "cadence": sch.get("cadence_minutes") or 0,
+            "anchors": sch.get("anchor_minutes") or [],
+            "daily": sch.get("daily_times") or [],
+            "weekdays": sch.get("weekdays") or [],
+            "durationMin": race.get("length") if race.get("format") == "minutes" else race.get("estimated_minutes"),
+            "practiceMin": fmt.get("practice_minutes") or None,
+            "rounds": rounds,
+        })
+    return out
+
+
+def rr_feed_refresh(state, when):
+    """Refetch the feed once the cache is RR_FEED_EVERY old. On failure the cache is kept:
+    it lists all rounds of the season, so it stays right until RaceRoom changes the timetable."""
+    cache = state.get("rrFeed") or {}
+    if cache.get("fetched") and when - parse_iso(cache["fetched"]) < RR_FEED_EVERY - timedelta(minutes=2):
+        return cache
+    cache["fetched"] = iso(when)  # also spaces out retries after a failure
+    try:
+        feed = json.loads(fetch(RR_FEED_URL))
+        if not feed.get("series"):
+            raise RuntimeError("feed has no series")
+        try:
+            data = json.loads(fetch(RR_DATA_URL, timeout=60))
+        except Exception as e:
+            data = None
+            print(f"rr feed: r3e-data.json failed ({e}); using the feed's own names", file=sys.stderr)
+        cache["series"] = rr_feed_resolve(feed, data)
+        cache["feedUpdated"] = str(feed.get("updated_at", ""))[:19] + "Z"
+        cache.pop("error", None)
+    except Exception as e:
+        cache["error"] = str(e)[:200]
+        print(f"rr feed: FAILED {e}", file=sys.stderr)
+    state["rrFeed"] = cache
+    return cache
+
+
+def rr_feed_starts(s, lo, hi):
+    """Starts in [lo, hi) from a series timetable. Minutes count from UTC midnight.
+    weekdays (empty in every series so far) is read as 0 = Sunday, Go's convention."""
+    marks = set(s["daily"])
+    if s["cadence"] > 0:
+        for a in s["anchors"] or [0]:
+            marks.update(range(a % s["cadence"], 1440, s["cadence"]))
+    out = []
+    day = datetime(lo.year, lo.month, lo.day, tzinfo=timezone.utc)
+    while day < hi:
+        if not s["weekdays"] or (day.weekday() + 1) % 7 in s["weekdays"]:
+            out += [t for t in (day + timedelta(minutes=m) for m in marks) if lo <= t < hi]
+        day += timedelta(days=1)
+    return sorted(out)
+
+
+def rr_feed_rows(cache, when):
+    """Schedule rows for every round with starts in the window. The window is pinned to the
+    UTC day (PAST before midnight to AHEAD after the next one), so schedule.json only changes
+    once a day and loop.sh does not commit on every pass."""
+    day = datetime(when.year, when.month, when.day, tzinfo=timezone.utc)
+    lo, hi = day - PAST, day + timedelta(days=1) + AHEAD
+    rows = []
+    for s in cache.get("series", []):
+        for r in s["rounds"]:
+            r_end = datetime.fromtimestamp(r["end"], timezone.utc)
+            starts = rr_feed_starts(s, max(lo, datetime.fromtimestamp(r["start"], timezone.utc)), min(hi, r_end))
+            if not starts:
+                continue
+            rows.append({
+                "game": "rr", "id": rr_sid(r["track"]), "title": s["name"] or " + ".join(r["classes"]),
+                "track": r["track"], "trackId": r["trackId"],
+                "durationMin": s["durationMin"], "practiceMin": s["practiceMin"],
+                "classes": r["classes"], "cars": r["cars"], "carIds": r["carIds"],
+                "intervalMin": s["cadence"] if s["cadence"] and len(s["anchors"]) <= 1 and not s["daily"] else None,
+                "starts": [iso(t) for t in starts], "until": iso(r_end),
+            })
+    # Ids are by track, like the server-list rows, so favorites carry over. Two series on one track get the name added.
+    count = {}
+    for row in rows:
+        count[row["id"]] = count.get(row["id"], 0) + 1
+    for row in rows:
+        if count[row["id"]] > 1:
+            row["id"] += "-" + slug(row["title"])
+    return rows
+
+
+def rr_cross_check(seen, rows):
+    """Server-list starts that no feed row with the same track has. Empty means the feed agrees."""
+    have = {}
+    for r in rows:
+        have.setdefault(rr_sid(r["track"]), set()).update(r["starts"])
+    return sorted(f"{s['track']} {t[11:16]}Z" for s in seen for t in s["starts"] if t not in have.get(s["id"], ()))
 
 
 def rr_pool(cur, s, when):
@@ -442,13 +586,24 @@ def rr_access(s, cat):
     return acc
 
 
-def build_schedule(state, when, sources):
+def build_schedule(state, when, sources, rr_rows):
+    """rr_rows: RaceRoom rows from the feed. When there are any, they replace the server-list series."""
     free = load_free()
     names = load_series_names()
     cats = {g: load_catalog(g) for g in ("lmu", "rr")}
     out = []
+    for row in rr_rows:
+        row = dict(row, lastSeen=iso(when))
+        row["free"] = any(c.lower() in free for c in row["classes"])
+        if cats["rr"]:
+            row["access"] = rr_access(row, cats["rr"])
+        for k in ("trackId", "carIds", "practiceMin"):
+            row.pop(k, None)
+        out.append(row)
     for s in state.get("series", {}).values():
         if parse_iso(s["lastSeen"]) < when - ACTIVE[s["game"]]:
+            continue
+        if s["game"] == "rr" and rr_rows:
             continue
         row = {k: s[k] for k in ("game", "id", "title", "track", "durationMin") if k in s}
         cat = cats.get(s["game"])
@@ -488,24 +643,59 @@ def main():
 
     when = now_utc()
     sources = state.get("sources", {})
-    for game, fn in (("lmu", lambda: poll_lmu(when)), ("rr", poll_rr)):
-        prev = sources.get(game, {})
+
+    prev = sources.get("lmu", {})
+    try:
+        seen = poll_lmu(when)
+        merge(state, seen, "lmu", when)
+        sources["lmu"] = {"ok": True, "checked": iso(when), "lastOk": iso(when), "found": len(seen)}
+        print(f"lmu: {len(seen)} series")
+    except Exception as e:  # keep RaceRoom and the old data
+        sources["lmu"] = {"ok": False, "checked": iso(when), "lastOk": prev.get("lastOk"), "error": str(e)[:200]}
+        print(f"lmu: FAILED {e}", file=sys.stderr)
+
+    # RaceRoom: feed first. The server list runs every pass without it, every RR_CHECK_EVERY with it.
+    cache = rr_feed_refresh(state, when)
+    rr_rows = rr_feed_rows(cache, when)
+    prev = sources.get("rr", {})
+    check = prev.get("serverCheck") or {}
+    last = check.get("checked")
+    seen, err = None, None
+    if not rr_rows or not last or when - parse_iso(last) >= RR_CHECK_EVERY - timedelta(minutes=2):
         try:
-            seen = fn()
-            merge(state, seen, game, when)
-            sources[game] = {"ok": True, "checked": iso(when), "lastOk": iso(when), "found": len(seen)}
-            print(f"{game}: {len(seen)} series")
-        except Exception as e:  # keep the other source and the old data
-            sources[game] = {"ok": False, "checked": iso(when), "lastOk": prev.get("lastOk"),
-                             "error": str(e)[:200]}
-            print(f"{game}: FAILED {e}", file=sys.stderr)
+            seen = poll_rr()
+            merge(state, seen, "rr", when)
+            check = {"checked": iso(when), "found": len(seen)}
+            if rr_rows:
+                check["mismatch"] = rr_cross_check(seen, rr_rows)[:20]
+                if check["mismatch"]:
+                    print("rr: server list has starts the feed lacks: " + ", ".join(check["mismatch"]), file=sys.stderr)
+        except Exception as e:
+            err = str(e)[:200]
+            check = {"checked": iso(when), "error": err}
+            print(f"rr servers: FAILED {e}", file=sys.stderr)
+    if rr_rows:
+        src = {"ok": True, "via": "feed", "found": len({r["title"] for r in rr_rows}),
+               "feedUpdated": cache.get("feedUpdated")}
+        if cache.get("error"):
+            src["feedError"] = cache["error"]
+    elif seen is not None:
+        src = {"ok": True, "via": "servers", "found": len(seen)}
+        if cache.get("error"):
+            src["feedError"] = cache["error"]
+    else:
+        src = {"ok": False, "error": err or cache.get("error") or "no source"}
+    src.update(checked=iso(when), lastOk=iso(when) if src["ok"] else prev.get("lastOk"), serverCheck=check)
+    sources["rr"] = src
+    print(f"rr: {src.get('found', 0)} series via {src.get('via', 'nothing')}")
+
     state["sources"] = sources
     state["updated"] = iso(when)
 
     with open(state_path, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=1, sort_keys=True)
     with open(os.path.join(a.out, "schedule.json"), "w", encoding="utf-8") as f:
-        json.dump(build_schedule(state, when, sources), f, indent=1)
+        json.dump(build_schedule(state, when, sources, rr_rows), f, indent=1)
     if not any(v.get("ok") for v in sources.values()):
         sys.exit(1)
 
