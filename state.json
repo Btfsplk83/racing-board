@@ -3556,7 +3556,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-18T23:01:59Z",
+   "lastSeen": "2026-11-18T23:32:06Z",
    "starts": [
     "2026-11-17T11:55:00Z",
     "2026-11-17T13:25:00Z",
@@ -3627,7 +3627,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-monza",
-   "lastSeen": "2026-11-18T23:01:59Z",
+   "lastSeen": "2026-11-18T23:17:05Z",
    "starts": [
     "2026-11-17T11:25:00Z",
     "2026-11-17T12:55:00Z",
@@ -3664,7 +3664,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "lastSeen": "2026-11-18T23:01:59Z",
+   "lastSeen": "2026-11-18T23:17:05Z",
    "starts": [
     "2026-11-17T11:30:00Z",
     "2026-11-17T12:15:00Z",
@@ -3830,7 +3830,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-18T23:01:59Z",
+   "lastSeen": "2026-11-18T23:32:06Z",
    "starts": [
     "2026-11-17T02:45:00Z",
     "2026-11-17T03:30:00Z",
@@ -3901,7 +3901,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "lastSeen": "2026-11-18T23:01:59Z",
+   "lastSeen": "2026-11-18T23:32:06Z",
    "starts": [
     "2026-11-17T11:50:00Z",
     "2026-11-17T12:50:00Z",
@@ -4057,7 +4057,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "lastSeen": "2026-11-18T23:01:59Z",
+   "lastSeen": "2026-11-18T23:17:05Z",
    "starts": [
     "2026-11-17T11:30:00Z",
     "2026-11-17T12:30:00Z",
@@ -4334,38 +4334,38 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-hockenheimring-2001-grand-prix",
-   "lastSeen": "2026-11-18T22:31:53Z",
+   "lastSeen": "2026-11-18T23:32:06Z",
    "pool": {
     "carIds": {
-     "12556": "2026-11-18T22:31:53Z",
+     "12556": "2026-11-18T23:32:06Z",
      "12561": "2026-11-18T22:31:53Z",
-     "12652": "2026-11-18T22:31:53Z",
-     "12829": "2026-11-18T22:31:53Z",
-     "13049": "2026-11-18T22:31:53Z",
-     "13065": "2026-11-18T22:31:53Z",
-     "13183": "2026-11-18T22:31:53Z",
-     "13539": "2026-11-18T22:31:53Z",
-     "13548": "2026-11-18T19:14:26Z",
-     "8645": "2026-11-18T22:31:53Z"
+     "12652": "2026-11-18T23:32:06Z",
+     "12829": "2026-11-18T23:32:06Z",
+     "13049": "2026-11-18T23:32:06Z",
+     "13065": "2026-11-18T23:32:06Z",
+     "13183": "2026-11-18T23:32:06Z",
+     "13539": "2026-11-18T23:32:06Z",
+     "13548": "2026-11-18T23:32:06Z",
+     "8645": "2026-11-18T23:32:06Z"
     },
     "cars": {
-     "Alfa Romeo 156 Super Touring": "2026-11-18T22:31:53Z",
+     "Alfa Romeo 156 Super Touring": "2026-11-18T23:32:06Z",
      "Audi A4 Super Touring 1995": "2026-11-18T22:31:53Z",
-     "BMW 320i E36 Super Touring": "2026-11-18T22:31:53Z",
-     "Ford Mondeo Super Touring": "2026-11-18T19:14:26Z",
-     "Honda Accord Super Touring": "2026-11-18T22:31:53Z",
-     "Opel Vectra Super Touring": "2026-11-18T22:31:53Z",
-     "Peugeot 406 Super Touring 1998": "2026-11-18T22:31:53Z",
-     "Renault Laguna Super Touring": "2026-11-18T22:31:53Z",
-     "Volvo 850 Super Touring": "2026-11-18T22:31:53Z",
-     "Volvo S40 Super Touring": "2026-11-18T22:31:53Z"
+     "BMW 320i E36 Super Touring": "2026-11-18T23:32:06Z",
+     "Ford Mondeo Super Touring": "2026-11-18T23:32:06Z",
+     "Honda Accord Super Touring": "2026-11-18T23:32:06Z",
+     "Opel Vectra Super Touring": "2026-11-18T23:32:06Z",
+     "Peugeot 406 Super Touring 1998": "2026-11-18T23:32:06Z",
+     "Renault Laguna Super Touring": "2026-11-18T23:32:06Z",
+     "Volvo 850 Super Touring": "2026-11-18T23:32:06Z",
+     "Volvo S40 Super Touring": "2026-11-18T23:32:06Z"
     },
     "classes": {
-     "Super Touring": "2026-11-18T22:31:53Z"
+     "Super Touring": "2026-11-18T23:32:06Z"
     }
    },
    "practiceMin": 5,
-   "servers": 3,
+   "servers": 2,
    "starts": [
     "2026-11-17T02:15:00Z",
     "2026-11-17T04:15:00Z",
@@ -4393,7 +4393,8 @@
     "2026-11-18T17:15:00Z",
     "2026-11-18T18:15:00Z",
     "2026-11-18T19:15:00Z",
-    "2026-11-18T22:15:00Z"
+    "2026-11-18T22:15:00Z",
+    "2026-11-18T23:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
@@ -4413,20 +4414,20 @@
    "firstSeen": "2026-11-17T03:36:17Z",
    "game": "rr",
    "id": "rr-mantorp-park-long-circuit",
-   "lastSeen": "2026-11-18T19:44:35Z",
+   "lastSeen": "2026-11-18T23:32:06Z",
    "pool": {
     "carIds": {
-     "13394": "2026-11-18T19:44:35Z"
+     "13394": "2026-11-18T23:32:06Z"
     },
     "cars": {
-     "Alpine A110 Cup": "2026-11-18T19:44:35Z"
+     "Alpine A110 Cup": "2026-11-18T23:32:06Z"
     },
     "classes": {
-     "Alpine A110 Cup": "2026-11-18T19:44:35Z"
+     "Alpine A110 Cup": "2026-11-18T23:32:06Z"
     }
    },
    "practiceMin": 5,
-   "servers": 7,
+   "servers": 4,
    "starts": [
     "2026-11-17T03:30:00Z",
     "2026-11-17T15:30:00Z",
@@ -4440,7 +4441,8 @@
     "2026-11-18T09:30:00Z",
     "2026-11-18T15:30:00Z",
     "2026-11-18T17:30:00Z",
-    "2026-11-18T19:30:00Z"
+    "2026-11-18T19:30:00Z",
+    "2026-11-18T23:30:00Z"
    ],
    "title": "Alpine A110 Cup",
    "track": "Mantorp Park - Long Circuit",
@@ -4639,25 +4641,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-18T23:01:59Z",
-   "found": 8,
-   "lastOk": "2026-11-18T23:01:59Z",
+   "checked": "2026-11-18T23:32:06Z",
+   "found": 3,
+   "lastOk": "2026-11-18T23:32:06Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-18T23:01:59Z",
+   "checked": "2026-11-18T23:32:06Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-18T23:01:59Z",
+   "lastOk": "2026-11-18T23:32:06Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-18T23:01:59Z",
+    "checked": "2026-11-18T23:32:06Z",
     "found": 2,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-18T23:01:59Z",
+ "updated": "2026-11-18T23:32:06Z",
  "version": 1
 }
