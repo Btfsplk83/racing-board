@@ -3520,7 +3520,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T12:25:00Z",
     "2026-11-17T13:55:00Z",
@@ -3572,7 +3572,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:55:00Z",
     "2026-11-17T13:25:00Z",
@@ -3659,7 +3659,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-monza",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:25:00Z",
     "2026-11-17T12:55:00Z",
@@ -3712,7 +3712,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:30:00Z",
     "2026-11-17T12:15:00Z",
@@ -3828,7 +3828,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:15:00Z",
     "2026-11-17T12:00:00Z",
@@ -3941,7 +3941,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T02:45:00Z",
     "2026-11-17T03:30:00Z",
@@ -4044,7 +4044,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:50:00Z",
     "2026-11-17T12:50:00Z",
@@ -4156,7 +4156,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:10:00Z",
     "2026-11-17T12:10:00Z",
@@ -4247,7 +4247,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "lastSeen": "2026-11-19T14:35:12Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "starts": [
     "2026-11-17T11:30:00Z",
     "2026-11-17T12:30:00Z",
@@ -4329,20 +4329,20 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-autodromo-di-monza-grand-prix",
-   "lastSeen": "2026-11-19T08:34:31Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "pool": {
     "carIds": {
-     "5051": "2026-11-19T08:34:31Z"
+     "5051": "2026-11-19T14:50:16Z"
     },
     "cars": {
-     "Tatuus F4": "2026-11-19T08:34:31Z"
+     "Tatuus F4": "2026-11-19T14:50:16Z"
     },
     "classes": {
-     "Tatuus F4 Cup": "2026-11-19T08:34:31Z"
+     "Tatuus F4 Cup": "2026-11-19T14:50:16Z"
     }
    },
    "practiceMin": 5,
-   "servers": 1,
+   "servers": 2,
    "starts": [
     "2026-11-17T02:30:00Z",
     "2026-11-17T16:30:00Z",
@@ -4361,7 +4361,8 @@
     "2026-11-19T02:30:00Z",
     "2026-11-19T04:30:00Z",
     "2026-11-19T06:30:00Z",
-    "2026-11-19T08:30:00Z"
+    "2026-11-19T08:30:00Z",
+    "2026-11-19T14:30:00Z"
    ],
    "title": "Tatuus F4 Cup",
    "track": "Autodromo di Monza - Grand Prix",
@@ -4771,24 +4772,24 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-norisring-grand-prix",
-   "lastSeen": "2026-11-19T13:49:56Z",
+   "lastSeen": "2026-11-19T14:50:16Z",
    "pool": {
     "carIds": {
-     "12839": "2026-11-19T13:49:56Z",
-     "12850": "2026-11-19T13:49:56Z",
-     "7076": "2026-11-19T13:49:56Z"
+     "12839": "2026-11-19T14:50:16Z",
+     "12850": "2026-11-19T14:50:16Z",
+     "7076": "2026-11-19T14:50:16Z"
     },
     "cars": {
-     "AMG-Mercedes C-Klasse DTM": "2026-11-19T13:49:56Z",
-     "Alfa Romeo 155 TI DTM 1995": "2026-11-19T13:49:56Z",
-     "Opel Calibra V6 DTM": "2026-11-19T13:49:56Z"
+     "AMG-Mercedes C-Klasse DTM": "2026-11-19T14:50:16Z",
+     "Alfa Romeo 155 TI DTM 1995": "2026-11-19T14:50:16Z",
+     "Opel Calibra V6 DTM": "2026-11-19T14:50:16Z"
     },
     "classes": {
-     "DTM 1995": "2026-11-19T13:49:56Z"
+     "DTM 1995": "2026-11-19T14:50:16Z"
     }
    },
    "practiceMin": 5,
-   "servers": 1,
+   "servers": 2,
    "starts": [
     "2026-11-17T03:45:00Z",
     "2026-11-17T15:45:00Z",
@@ -4823,7 +4824,8 @@
     "2026-11-19T02:45:00Z",
     "2026-11-19T04:45:00Z",
     "2026-11-19T07:45:00Z",
-    "2026-11-19T13:45:00Z"
+    "2026-11-19T13:45:00Z",
+    "2026-11-19T14:45:00Z"
    ],
    "title": "DTM 1995",
    "track": "Norisring - Grand Prix",
@@ -4832,25 +4834,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-19T14:35:12Z",
+   "checked": "2026-11-19T14:50:16Z",
    "found": 9,
-   "lastOk": "2026-11-19T14:35:12Z",
+   "lastOk": "2026-11-19T14:50:16Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-19T14:45:14Z",
+   "checked": "2026-11-19T14:50:16Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-19T14:45:14Z",
+   "lastOk": "2026-11-19T14:50:16Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-19T14:20:04Z",
+    "checked": "2026-11-19T14:50:16Z",
     "found": 2,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-19T14:45:14Z",
+ "updated": "2026-11-19T14:50:16Z",
  "version": 1
 }
