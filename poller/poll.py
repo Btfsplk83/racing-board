@@ -622,7 +622,10 @@ def build_schedule(state, when, sources, rr_rows):
             if cat:
                 row["access"] = rr_access(s, cat)
         row["intervalMin"] = infer_interval(s["starts"])
-        row["starts"] = s["starts"][-12:]
+        # Every start from 12 h back (the page looks back that far). Keeping only the last few dropped the soonest ones
+        # once racecontrol.gg began listing ~9 h ahead.
+        lo = when - timedelta(hours=12)
+        row["starts"] = [x for x in s["starts"] if parse_iso(x) >= lo]
         row["lastSeen"] = s["lastSeen"]
         out.append(row)
     out.sort(key=lambda r: (r["game"], r["title"]))
