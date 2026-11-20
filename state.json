@@ -4933,16 +4933,16 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-19T23:58:01Z",
+   "checked": "2026-11-20T00:03:03Z",
    "error": "no race cards found; the page layout may have changed",
    "lastOk": "2026-11-19T23:42:56Z",
    "ok": false
   },
   "rr": {
-   "checked": "2026-11-19T23:58:01Z",
+   "checked": "2026-11-20T00:03:03Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-19T23:58:01Z",
+   "lastOk": "2026-11-20T00:03:03Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-19T23:42:56Z",
@@ -4952,6 +4952,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-19T23:58:01Z",
+ "updated": "2026-11-20T00:03:03Z",
  "version": 1
 }
