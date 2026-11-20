@@ -93,6 +93,9 @@ h2.seclbl::before{height:22px}
 .main{min-width:0}
 .titlerow{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s1)}
 .titlerow .title{flex:1;min-width:0}
+.gmark{display:inline-block;height:20px;width:auto;margin-right:var(--s2);vertical-align:-2px}
+/* The RaceRoom mark is white: turn it dark on light card grounds */
+.row.skin-rr:not(.hero) .gmark.rr,.row.skin-lmu.open .gmark.rr{filter:brightness(0);opacity:.9}
 .title{font-family:var(--f-head);font-style:italic;text-transform:uppercase;font-size:24px;font-weight:700;letter-spacing:.01em;line-height:1.05;overflow-wrap:anywhere}
 .star{flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px -8px -10px 0;padding:0;
   background:none;border:none;cursor:pointer;color:var(--muted);font-size:24px;line-height:1}
@@ -122,62 +125,62 @@ h2.seclbl::before{height:22px}
 .cd{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-xl);letter-spacing:.02em;line-height:1.1}
 .at{font-size:var(--t-sm);color:var(--muted);margin-top:var(--s1)}
 /* LMU card: dark card, red wash on the diagonal, blue hatched edge */
-.row.lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
-.row.lmu,.sblock.lmu{--tk:var(--white)}
-.row.lmu .stripe{background:var(--lmu)}
-.row.lmu::after{content:"";position:absolute;right:16px;bottom:0;width:96px;height:7px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--blue) 0 4px,var(--white) 4px 6px,var(--blue) 6px 10px)}
-.row.lmu .cdbox{border:2px solid var(--lmu);padding:var(--s1) var(--s3);text-align:center}
-.row.lmu .cd{color:var(--lmu)}
-.row.lmu .at,.row.lmu .livetag{text-align:center}
+.row.skin-lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
+.row.skin-lmu,.sblock.skin-lmu{--tk:var(--white)}
+.row.skin-lmu .stripe{background:var(--lmu)}
+.row.skin-lmu::after{content:"";position:absolute;right:16px;bottom:0;width:96px;height:7px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--blue) 0 4px,var(--white) 4px 6px,var(--blue) 6px 10px)}
+.row.skin-lmu .cdbox{border:2px solid var(--lmu);padding:var(--s1) var(--s3);text-align:center}
+.row.skin-lmu .cd{color:var(--lmu)}
+.row.skin-lmu .at,.row.skin-lmu .livetag{text-align:center}
 /* Track name: outline-only text, solid fallback */
-.row.lmu .track,.sblock.lmu .track{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.06em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px var(--tk)}
+.row.skin-lmu .track,.sblock.skin-lmu .track{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.06em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px var(--tk)}
 @supports not (-webkit-text-stroke:1px #fff){
-  .row.lmu .track,.sblock.lmu .track{color:var(--tk);-webkit-text-stroke:0}
+  .row.skin-lmu .track,.sblock.skin-lmu .track{color:var(--tk);-webkit-text-stroke:0}
 }
 /* Expanded LMU card: white plate, red text; detail stays dark */
-.row.lmu.open .head{background:var(--plate);color:var(--ink);--muted:var(--ink2);--tk:var(--lmu-dk)}
-.row.lmu.open .title,.row.lmu.open .cd{color:var(--lmu-dk)}
-.row.lmu.open .cdbox{border-color:var(--lmu-dk)}
-.row.lmu.open .star[aria-pressed="true"],.row.lmu.open[data-fav="1"] .star{color:var(--fav-dk)}
-.row.lmu.open .livetag{color:var(--ok-dk)}
+.row.skin-lmu.open .head{background:var(--plate);color:var(--ink);--muted:var(--ink2);--tk:var(--lmu-dk)}
+.row.skin-lmu.open .title,.row.skin-lmu.open .cd{color:var(--lmu-dk)}
+.row.skin-lmu.open .cdbox{border-color:var(--lmu-dk)}
+.row.skin-lmu.open .star[aria-pressed="true"],.row.skin-lmu.open[data-fav="1"] .star{color:var(--fav-dk)}
+.row.skin-lmu.open .livetag{color:var(--ok-dk)}
 /* RaceRoom card: white plate, slanted left edge, red round end cap */
-.row.rr{background:var(--plate);color:var(--ink);border-radius:0 30px 30px 0;clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
-.row.rr .stripe{background:linear-gradient(90deg,var(--rrred) 0 55%,var(--ink) 55% 75%,var(--rrred) 75%);clip-path:polygon(0 0,60% 0,100% 100%,0 100%)}
-.row.rr .meta,.row.rr .then,.row.rr .at{color:var(--ink2)}
-.row.rr .star{color:var(--ink2)}
-.row.rr .star[aria-pressed="true"],.row.rr[data-fav="1"] .star{color:var(--fav-dk)}
-.row.rr .when{background:var(--rrred);color:var(--white);align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding:0 var(--s5) 0 28px;margin:-12px -18px -12px 0;border-radius:0 30px 30px 0;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%)}
-.row.rr .cdlbl,.row.rr .at,.row.rr .livetag{color:var(--white)}
+.row.skin-rr{background:var(--plate);color:var(--ink);border-radius:0 30px 30px 0;clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
+.row.skin-rr .stripe{background:linear-gradient(90deg,var(--rrred) 0 55%,var(--ink) 55% 75%,var(--rrred) 75%);clip-path:polygon(0 0,60% 0,100% 100%,0 100%)}
+.row.skin-rr .meta,.row.skin-rr .then,.row.skin-rr .at{color:var(--ink2)}
+.row.skin-rr .star{color:var(--ink2)}
+.row.skin-rr .star[aria-pressed="true"],.row.skin-rr[data-fav="1"] .star{color:var(--fav-dk)}
+.row.skin-rr .when{background:var(--rrred);color:var(--white);align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding:0 var(--s5) 0 28px;margin:-12px -18px -12px 0;border-radius:0 30px 30px 0;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%)}
+.row.skin-rr .cdlbl,.row.skin-rr .at,.row.skin-rr .livetag{color:var(--white)}
 .cd.word{font-size:var(--t-lg)}
 .livetag{font-size:var(--t-xs);font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ok)}
 /* RaceRoom hero: the soonest runnable race in NEXT */
-.row.rr.hero{background:linear-gradient(var(--ang),var(--rr-dk) 0,var(--rrred) 60%);color:var(--white)}
-.row.rr.hero .head{grid-template-columns:1fr;padding:var(--s4)}
-.row.rr.hero .stripe{display:none}
-.row.rr.hero .when{grid-column:1;grid-row:1;align-self:start;align-items:flex-start;text-align:left;background:none;margin:0 0 var(--s2);padding:0;border-radius:0;clip-path:none}
-.row.rr.hero .main{grid-column:1;grid-row:2}
-.row.rr.hero .cd{font-size:var(--t-hero)}
-.row.rr.hero .meta,.row.rr.hero .then,.row.rr.hero .at{color:var(--white)}
-.row.rr.hero .star{color:var(--white)}
-.row.rr.hero .star[aria-pressed="true"],.row.rr.hero[data-fav="1"] .star{color:var(--fav)}
-.row.rr.hero .pill.ribbon{background:var(--white);color:var(--rr-dk)}
-.row.rr.hero .detail{background:var(--plate);color:var(--ink)}
+.row.skin-rr.hero{background:linear-gradient(var(--ang),var(--rr-dk) 0,var(--rrred) 60%);color:var(--white)}
+.row.skin-rr.hero .head{grid-template-columns:1fr;padding:var(--s4)}
+.row.skin-rr.hero .stripe{display:none}
+.row.skin-rr.hero .when{grid-column:1;grid-row:1;align-self:start;align-items:flex-start;text-align:left;background:none;margin:0 0 var(--s2);padding:0;border-radius:0;clip-path:none}
+.row.skin-rr.hero .main{grid-column:1;grid-row:2}
+.row.skin-rr.hero .cd{font-size:var(--t-hero)}
+.row.skin-rr.hero .meta,.row.skin-rr.hero .then,.row.skin-rr.hero .at{color:var(--white)}
+.row.skin-rr.hero .star{color:var(--white)}
+.row.skin-rr.hero .star[aria-pressed="true"],.row.skin-rr.hero[data-fav="1"] .star{color:var(--fav)}
+.row.skin-rr.hero .pill.ribbon{background:var(--white);color:var(--rr-dk)}
+.row.skin-rr.hero .detail{background:var(--plate);color:var(--ink)}
 /* Locked race: body dimmed and hatched corner, reason in a solid strip at the bottom */
 .row.locked .head{opacity:.75}
 .row.locked::before{content:"";position:absolute;top:0;right:0;z-index:3;width:34px;height:34px;pointer-events:none;
   background:repeating-linear-gradient(135deg,var(--hatch) 0 2px,transparent 2px 7px);clip-path:polygon(0 0,100% 0,100% 100%)}
-.row.lmu.locked{--hatch:var(--hatch-lmu)}
-.row.rr.locked{--hatch:var(--hatch-rr)}
-.row.lmu.locked::after{display:none}
+.row.skin-lmu.locked{--hatch:var(--hatch-lmu)}
+.row.skin-rr.locked{--hatch:var(--hatch-rr)}
+.row.skin-lmu.locked::after{display:none}
 .reason{margin:0;padding:var(--s2) var(--s4) var(--s2) var(--s5);background:var(--warn);color:var(--warn-ink);font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.06em;text-transform:uppercase;line-height:1.2;overflow-wrap:anywhere}
-.row.rr .reason{background:var(--ink);color:var(--warn)}
+.row.skin-rr .reason{background:var(--ink);color:var(--warn)}
 .sblock .reason{margin:var(--s2) -14px -10px -18px}
 .reason .tag{display:inline-block;font-size:var(--t-xs);letter-spacing:.05em;border:1px solid currentColor;padding:0 5px;margin-left:6px;white-space:nowrap}
 /* Expanded detail */
 .detail{padding:10px 18px 18px 24px;border-top:1px solid var(--line)}
-.row.rr .detail{border-top-color:var(--plate-line)}
+.row.skin-rr .detail{border-top-color:var(--plate-line)}
 .dlabel{font-family:var(--f-head);font-style:italic;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:var(--s1)}
-.row.rr .dlabel,.row.rr .fact .k{color:var(--ink2)}
+.row.skin-rr .dlabel,.row.skin-rr .fact .k{color:var(--ink2)}
 .facts{display:flex;flex-direction:column;gap:var(--s1);margin:10px 0}
 .fact{display:flex;gap:var(--s2);font-size:var(--t-sm)}
 .fact .k{flex:none;min-width:84px;color:var(--muted)}
@@ -188,13 +191,13 @@ h2.seclbl::before{height:22px}
 .tg{text-align:center;font-size:14px;padding:6px 2px;white-space:nowrap;background:var(--tile);border:2px solid transparent}
 .tg[data-state="past"]{opacity:.45}
 .tg[data-state="next"]{border-color:var(--lmu)}
-.rr .tg[data-state="next"]{border-color:var(--rrred)}
+.skin-rr .tg[data-state="next"]{border-color:var(--rrred)}
 .tg[data-state="running"]{background:var(--lmu-dk);border-color:var(--lmu-dk);color:var(--white);font-weight:600}
-.rr .tg[data-state="running"]{background:var(--rrred);border-color:var(--rrred)}
+.skin-rr .tg[data-state="running"]{background:var(--rrred);border-color:var(--rrred)}
 /* SCHEDULE block */
 .sblock{position:relative;background:var(--surface);padding:var(--s3) 14px 10px 18px;border-left:6px solid var(--lmu)}
-.sblock.lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
-.sblock.rr{border-left-color:var(--rrred)}
+.sblock.skin-lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
+.sblock.skin-rr{border-left-color:var(--rrred)}
 .sblock.locked .track,.sblock.locked .meta,.sblock.locked .badges,.sblock.locked .tgrid{opacity:.75}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:var(--t-sm)}
@@ -206,8 +209,8 @@ a{color:var(--fg)}
   .crumb{margin-bottom:var(--s1)}
   h1{font-size:32px}
   .cd{font-size:24px}.title{font-size:21px}
-  .row.rr.hero .cd{font-size:40px}
-  .row.rr .when{padding:0 var(--s4) 0 22px}
+  .row.skin-rr.hero .cd{font-size:40px}
+  .row.skin-rr .when{padding:0 var(--s4) 0 22px}
   .tfull{display:none}.tshort{display:inline}
   .bar .chip.tier{padding:4px 10px}
 }
@@ -224,9 +227,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 @keyframes cardIn{from{opacity:0;transform:translate(-22px,-10px);clip-path:polygon(0 0,40% 0,0 100%,0 100%,0 100%)}}
 .sblock.in{animation-name:blockIn}
 @keyframes blockIn{from{opacity:0;transform:translate(-22px,-10px)}}
-.row.rr.in{animation-name:plateIn}
+.row.skin-rr.in{animation-name:plateIn}
 @keyframes plateIn{from{opacity:0;transform:translateX(-36px)}}
-.row.rr.in .when{animation:capIn 140ms var(--ease) backwards;animation-delay:calc(var(--i,0)*var(--step) + 140ms)}
+.row.skin-rr.in .when{animation:capIn 140ms var(--ease) backwards;animation-delay:calc(var(--i,0)*var(--step) + 140ms)}
 @keyframes capIn{from{opacity:0;transform:translateX(28px)}}
 .tabs{position:relative}
 .tab[aria-selected="true"]{border-bottom-color:transparent}
@@ -250,15 +253,18 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 @keyframes swB{0%{transform:translateX(-120%)}35%,65%{transform:translateX(0)}100%{transform:translateX(120%)}}
 .row.unlock .head{animation:unHead var(--d-fx) var(--ease) backwards}
 @keyframes unHead{from{opacity:.75}}
-.row.lmu.unlock{--hatch:var(--hatch-lmu)}
-.row.rr.unlock{--hatch:var(--hatch-rr)}
+.row.skin-lmu.unlock{--hatch:var(--hatch-lmu)}
+.row.skin-rr.unlock{--hatch:var(--hatch-rr)}
 .row.unlock::before{content:"";position:absolute;top:0;right:0;z-index:3;width:34px;height:34px;pointer-events:none;background:repeating-linear-gradient(135deg,var(--hatch) 0 2px,transparent 2px 7px);clip-path:polygon(0 0,100% 0,100% 100%);animation:hatchOff var(--d-fx) var(--ease) forwards}
 @keyframes hatchOff{to{transform:translate(40px,-40px);opacity:0}}
 .flashbar{position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(var(--ang),transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);animation:flash var(--d-fx) var(--ease) both}
 @keyframes flash{from{transform:translateX(-100%);opacity:1}to{transform:translateX(100%);opacity:0}}
 .cdbox{position:relative}
+/* Same box width on every card: sized for "12:45 PM" plus padding, centred */
+.row:not(.hero) .cdbox{width:136px;margin-left:auto;text-align:center}
+@media (max-width:460px){.row:not(.hero) .cdbox{width:116px}}
 .cdbox.pulse::after{content:"";position:absolute;inset:-2px;border:2px solid var(--lmu);pointer-events:none;animation:pulse 900ms var(--ease) both}
-.row.rr .cdbox.pulse::after{border-color:var(--white)}
+.row.skin-rr .cdbox.pulse::after{border-color:var(--white)}
 @keyframes pulse{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.3,1.7)}}
 /* Touch screens: 44px tap targets, 8px apart */
 @media (pointer:coarse){
@@ -277,7 +283,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   .chip.cls:not([aria-pressed="true"]):hover,.chip.mine:hover,.linkbtn:hover{border-color:var(--fg)}
   .tab:not([aria-selected="true"]):hover,.statusbtn:hover,a:hover{color:var(--white)}
   .star:not([aria-pressed="true"]):hover{color:var(--fg)}
-  .row.rr .star:not([aria-pressed="true"]):hover,.row.lmu.open .star:not([aria-pressed="true"]):hover{color:var(--ink)}
+  .row.skin-rr .star:not([aria-pressed="true"]):hover,.row.skin-lmu.open .star:not([aria-pressed="true"]):hover{color:var(--ink)}
   .row:hover{transform:translateX(2px);transition-duration:150ms}
 }
 @media (prefers-reduced-motion:reduce){
@@ -348,6 +354,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   var TIERS=["Beginner","Intermediate","Advanced"];
   var RANKS=["Bronze","Silver","Gold"];
   var VIEWS=["next","schedule"];
+  var THEMES=["mixed","lmu","rr"];
   var FAVKINDS=["series","race","cls","track"];
   var FAVLABEL={series:"Series",race:"Race",cls:"Class",track:"Track"};
   var PKEY="dailiesBoard.prefs.v3", OLDKEY="dailiesBoard.prefs.v2";
@@ -383,6 +390,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   p.rrTracks=obj(p.rrTracks);p.rrClasses=obj(p.rrClasses);
   if(VIEWS.indexOf(p.view)<0)p.view="next";
   if(typeof p.favOnly!=="boolean")p.favOnly=false;
+  if(THEMES.indexOf(p.theme)<0)p.theme="mixed";
   p.fav=obj(p.fav);
   FAVKINDS.forEach(function(k){p.fav[k]=obj(p.fav[k])});
   function savePrefs(){save(PKEY,p)}
@@ -390,6 +398,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 
   try{$("tz").textContent=Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g," ")}catch(e){$("tz").textContent="your time zone"}
 
+  function skin(g){return "skin-"+(p.theme==="mixed"?g:p.theme)}
   function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n}
 
   /* Favorites. Keys stored in p.fav:
@@ -763,7 +772,14 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return b;
   }
   function titleRow(s,key){
-    var r=el("div","titlerow");r.appendChild(el("div","title",s.title));r.appendChild(starBtn(s,key));return r;
+    var r=el("div","titlerow");var t=el("div","title");t.appendChild(gameMark(s.game));t.appendChild(document.createTextNode(s.title));r.appendChild(t);r.appendChild(starBtn(s,key));return r;
+  }
+  /* Official game logos, used only to label which game a race is */
+  var MARKS={lmu:["marks/lmu.svg","Le Mans Ultimate",41],rr:["marks/rr.png","RaceRoom",37]};
+  function gameMark(g){
+    var m=MARKS[g]||MARKS.lmu,i=el("img","gmark "+(MARKS[g]?g:"lmu"));
+    i.src=m[0];i.alt=m[1];i.width=m[2];i.height=20;i.decoding="async";
+    return i;
   }
   /* LMU class tags: short label and colour key. Unknown classes show their own name in grey. */
   function classTag(c){
@@ -867,7 +883,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     [prev,openKey].forEach(function(k){if(k&&cardEls[k])syncCard(cardEls[k],true)});
   }
   function buildCard(x){
-    var s=x.s,li=el("li","row "+s.game+(x.live?" live":"")+(x.hero?" hero":"")+(x.locked?" locked":""));
+    var s=x.s,li=el("li","row "+skin(s.game)+(x.live?" live":"")+(x.hero?" hero":"")+(x.locked?" locked":""));
     li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
     if(x.fav){li.setAttribute("data-fav","1");li.appendChild(el("span","favedge"))}
     var did="det"+(detSeq++);
@@ -918,7 +934,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return li;
   }
   function buildBlock(x){
-    var s=x.s,li=el("li","sblock "+s.game+(x.locked?" locked":""));
+    var s=x.s,li=el("li","sblock "+skin(s.game)+(x.locked?" locked":""));
     enter(li,x.key);
     li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
     if(x.fav){li.setAttribute("data-fav","1");li.appendChild(el("span","favedge"))}
