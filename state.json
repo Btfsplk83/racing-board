@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-20T08:15:55Z",
+  "fetched": "2026-11-20T09:16:15Z",
   "series": [
    {
     "anchors": [
@@ -3516,7 +3516,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T12:25:00Z",
     "2026-11-17T13:55:00Z",
@@ -3584,7 +3584,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:55:00Z",
     "2026-11-17T13:25:00Z",
@@ -3677,7 +3677,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-monza",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:25:00Z",
     "2026-11-17T12:55:00Z",
@@ -3746,7 +3746,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:30:00Z",
     "2026-11-17T12:15:00Z",
@@ -3873,7 +3873,6 @@
    "id": "lmu-beginner-lmgt3-fixed-spa-francorchamps",
    "lastSeen": "2026-11-17T04:14:48Z",
    "starts": [
-    "2026-11-17T09:15:00Z",
     "2026-11-17T10:00:00Z"
    ],
    "tier": "Beginner",
@@ -3885,7 +3884,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:15:00Z",
     "2026-11-17T12:00:00Z",
@@ -4020,7 +4019,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T09:30:00Z",
     "2026-11-17T11:45:00Z",
@@ -4146,7 +4145,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:50:00Z",
     "2026-11-17T12:50:00Z",
@@ -4257,9 +4256,7 @@
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-paul-ricard-2025",
    "lastSeen": "2026-11-17T04:14:48Z",
-   "starts": [
-    "2026-11-17T09:10:00Z"
-   ],
+   "starts": [],
    "tier": "Intermediate",
    "title": "LMGT3 Sprint Cup",
    "track": "Paul Ricard 2025"
@@ -4269,7 +4266,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:10:00Z",
     "2026-11-17T12:10:00Z",
@@ -4376,7 +4373,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "lastSeen": "2026-11-20T09:01:10Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "starts": [
     "2026-11-17T11:30:00Z",
     "2026-11-17T12:30:00Z",
@@ -4511,6 +4508,109 @@
    "track": "Alemannenring - Full Circuit",
    "trackId": 12936
   },
+  "rr-aut-dromo-internazionale-enzo-e-dino-ferrari-grand-prix": {
+   "carIds": [
+    9603,
+    11536,
+    12405,
+    12790,
+    13126,
+    13137,
+    13150,
+    13164,
+    13169,
+    13172,
+    13190,
+    13572,
+    13594,
+    13597,
+    13603,
+    13617,
+    13620
+   ],
+   "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "Audi R8 LMS GT3 EVO II DTM",
+    "BMW M Hybrid V8",
+    "BMW M4 GT3",
+    "BMW M4 GT3 DTM",
+    "BMW M4 GT3 EVO DTM",
+    "Ferrari 296 GT3",
+    "Lamborghini SC63",
+    "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Porsche 911 GT3 R (992) DTM",
+    "Porsche 911 GT3 R (992.2) DTM",
+    "Porsche 963"
+   ],
+   "classes": [
+    "DTM 2024",
+    "DTM 2025",
+    "DTM 2026",
+    "GTR 3",
+    "Hypercars"
+   ],
+   "durationMin": 60,
+   "firstSeen": "2026-11-20T09:16:15Z",
+   "game": "rr",
+   "id": "rr-aut-dromo-internazionale-enzo-e-dino-ferrari-grand-prix",
+   "lastSeen": "2026-11-20T09:16:15Z",
+   "pool": {
+    "carIds": {
+     "11536": "2026-11-20T09:16:15Z",
+     "12405": "2026-11-20T09:16:15Z",
+     "12790": "2026-11-20T09:16:15Z",
+     "13126": "2026-11-20T09:16:15Z",
+     "13137": "2026-11-20T09:16:15Z",
+     "13150": "2026-11-20T09:16:15Z",
+     "13164": "2026-11-20T09:16:15Z",
+     "13169": "2026-11-20T09:16:15Z",
+     "13172": "2026-11-20T09:16:15Z",
+     "13190": "2026-11-20T09:16:15Z",
+     "13572": "2026-11-20T09:16:15Z",
+     "13594": "2026-11-20T09:16:15Z",
+     "13597": "2026-11-20T09:16:15Z",
+     "13603": "2026-11-20T09:16:15Z",
+     "13617": "2026-11-20T09:16:15Z",
+     "13620": "2026-11-20T09:16:15Z",
+     "9603": "2026-11-20T09:16:15Z"
+    },
+    "cars": {
+     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-20T09:16:15Z",
+     "Audi R8 LMS GT3 EVO II DTM": "2026-11-20T09:16:15Z",
+     "BMW M Hybrid V8": "2026-11-20T09:16:15Z",
+     "BMW M4 GT3": "2026-11-20T09:16:15Z",
+     "BMW M4 GT3 DTM": "2026-11-20T09:16:15Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-20T09:16:15Z",
+     "Ferrari 296 GT3": "2026-11-20T09:16:15Z",
+     "Lamborghini SC63": "2026-11-20T09:16:15Z",
+     "Lamborghini Temerario GT3 DTM": "2026-11-20T09:16:15Z",
+     "McLaren 720S GT3 EVO DTM": "2026-11-20T09:16:15Z",
+     "Mercedes-AMG GT3 2020": "2026-11-20T09:16:15Z",
+     "Mercedes-AMG GT3 2020 DTM": "2026-11-20T09:16:15Z",
+     "Porsche 911 GT3 R (992) DTM": "2026-11-20T09:16:15Z",
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-20T09:16:15Z",
+     "Porsche 963": "2026-11-20T09:16:15Z"
+    },
+    "classes": {
+     "DTM 2024": "2026-11-20T09:16:15Z",
+     "DTM 2025": "2026-11-20T09:16:15Z",
+     "DTM 2026": "2026-11-20T09:16:15Z",
+     "GTR 3": "2026-11-20T09:16:15Z",
+     "Hypercars": "2026-11-20T09:16:15Z"
+    }
+   },
+   "practiceMin": 10,
+   "servers": 2,
+   "starts": [
+    "2026-11-20T09:00:00Z"
+   ],
+   "title": "DTM 2024 + DTM 2025 + DTM 2026 + GTR 3 + Hypercars",
+   "track": "Aut\u00f3dromo Internazionale Enzo e Dino Ferrari - Grand Prix",
+   "trackId": 1849
+  },
   "rr-autodromo-di-monza-grand-prix": {
    "carIds": [
     5051
@@ -4581,7 +4681,6 @@
     12788,
     12790,
     12795,
-    12807,
     13150,
     13164,
     13172,
@@ -4624,56 +4723,55 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-circuit-zandvoort-modern-grand-prix",
-   "lastSeen": "2026-11-20T08:15:55Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "pool": {
     "carIds": {
      "11536": "2026-11-20T08:15:55Z",
-     "12090": "2026-11-20T08:15:55Z",
+     "12090": "2026-11-20T09:16:15Z",
      "12319": "2026-11-20T07:15:36Z",
      "12405": "2026-11-20T03:14:07Z",
      "12771": "2026-11-20T03:14:07Z",
      "12788": "2026-11-20T06:15:16Z",
-     "12790": "2026-11-20T08:15:55Z",
-     "12795": "2026-11-20T08:15:55Z",
-     "12807": "2026-11-20T01:13:26Z",
-     "13150": "2026-11-20T02:13:47Z",
+     "12790": "2026-11-20T09:16:15Z",
+     "12795": "2026-11-20T09:16:15Z",
+     "13150": "2026-11-20T09:16:15Z",
      "13164": "2026-11-20T07:15:36Z",
-     "13172": "2026-11-20T08:15:55Z",
+     "13172": "2026-11-20T09:16:15Z",
      "13174": "2026-11-20T05:14:56Z",
      "13190": "2026-11-20T07:15:36Z",
-     "13572": "2026-11-20T08:15:55Z",
-     "13591": "2026-11-20T06:15:16Z",
-     "13594": "2026-11-20T07:15:36Z",
+     "13572": "2026-11-20T09:16:15Z",
+     "13591": "2026-11-20T09:16:15Z",
+     "13594": "2026-11-20T09:16:15Z",
      "13597": "2026-11-20T08:15:55Z",
      "13603": "2026-11-20T04:14:36Z",
-     "13617": "2026-11-20T08:15:55Z",
-     "13620": "2026-11-20T06:15:16Z",
-     "9603": "2026-11-20T08:15:55Z"
+     "13617": "2026-11-20T09:16:15Z",
+     "13620": "2026-11-20T09:16:15Z",
+     "9603": "2026-11-20T09:16:15Z"
     },
     "cars": {
      "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-20T04:14:36Z",
      "Audi R8 LMS GT3 EVO II": "2026-11-20T07:15:36Z",
      "Audi R8 LMS GT3 EVO II DTM": "2026-11-20T07:15:36Z",
      "BMW M4 GT3": "2026-11-20T08:15:55Z",
-     "BMW M4 GT3 DTM": "2026-11-20T08:15:55Z",
-     "BMW M4 GT3 EVO DTM": "2026-11-20T08:15:55Z",
+     "BMW M4 GT3 DTM": "2026-11-20T09:16:15Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-20T09:16:15Z",
      "Ferrari 296 GT3": "2026-11-20T03:14:07Z",
-     "Ford Mustang GT3 EVO DTM": "2026-11-20T06:15:16Z",
+     "Ford Mustang GT3 EVO DTM": "2026-11-20T09:16:15Z",
      "Lamborghini Hurac\u00e1n GT3 EVO II": "2026-11-20T03:14:07Z",
-     "Lamborghini Hurac\u00e1n GT3 EVO II DTM": "2026-11-20T08:15:55Z",
-     "Lamborghini Temerario GT3 DTM": "2026-11-20T07:15:36Z",
-     "McLaren 720S GT3 EVO DTM": "2026-11-20T06:15:16Z",
-     "Mercedes-AMG GT3 2020": "2026-11-20T08:15:55Z",
+     "Lamborghini Hurac\u00e1n GT3 EVO II DTM": "2026-11-20T09:16:15Z",
+     "Lamborghini Temerario GT3 DTM": "2026-11-20T09:16:15Z",
+     "McLaren 720S GT3 EVO DTM": "2026-11-20T09:16:15Z",
+     "Mercedes-AMG GT3 2020": "2026-11-20T09:16:15Z",
      "Mercedes-AMG GT3 2020 DTM": "2026-11-20T08:15:55Z",
-     "Porsche 911 GT3 R (992)": "2026-11-20T08:15:55Z",
-     "Porsche 911 GT3 R (992) DTM": "2026-11-20T02:13:47Z",
-     "Porsche 911 GT3 R (992.2) DTM": "2026-11-20T08:15:55Z"
+     "Porsche 911 GT3 R (992)": "2026-11-20T09:16:15Z",
+     "Porsche 911 GT3 R (992) DTM": "2026-11-20T09:16:15Z",
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-20T09:16:15Z"
     },
     "classes": {
-     "DTM 2024": "2026-11-20T08:15:55Z",
-     "DTM 2025": "2026-11-20T08:15:55Z",
-     "DTM 2026": "2026-11-20T08:15:55Z",
-     "GTR 3": "2026-11-20T08:15:55Z"
+     "DTM 2024": "2026-11-20T09:16:15Z",
+     "DTM 2025": "2026-11-20T09:16:15Z",
+     "DTM 2026": "2026-11-20T09:16:15Z",
+     "GTR 3": "2026-11-20T09:16:15Z"
     }
    },
    "practiceMin": 5,
@@ -4732,7 +4830,8 @@
     "2026-11-20T05:00:00Z",
     "2026-11-20T06:00:00Z",
     "2026-11-20T07:00:00Z",
-    "2026-11-20T08:00:00Z"
+    "2026-11-20T08:00:00Z",
+    "2026-11-20T09:00:00Z"
    ],
    "title": "DTM 2024 + DTM 2025 + DTM 2026 + GTR 3",
    "track": "Circuit Zandvoort - Modern - Grand Prix",
@@ -4766,30 +4865,30 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-hockenheimring-2001-grand-prix",
-   "lastSeen": "2026-11-20T08:15:55Z",
+   "lastSeen": "2026-11-20T09:16:15Z",
    "pool": {
     "carIds": {
      "12556": "2026-11-20T08:15:55Z",
-     "12829": "2026-11-20T08:15:55Z",
-     "13049": "2026-11-20T08:15:55Z",
-     "13065": "2026-11-20T08:15:55Z",
-     "13183": "2026-11-20T08:15:55Z",
+     "12829": "2026-11-20T09:16:15Z",
+     "13049": "2026-11-20T09:16:15Z",
+     "13065": "2026-11-20T09:16:15Z",
+     "13183": "2026-11-20T09:16:15Z",
      "13539": "2026-11-20T04:14:36Z",
      "13548": "2026-11-20T05:14:56Z",
-     "8645": "2026-11-20T08:15:55Z"
+     "8645": "2026-11-20T09:16:15Z"
     },
     "cars": {
-     "Alfa Romeo 156 Super Touring": "2026-11-20T08:15:55Z",
+     "Alfa Romeo 156 Super Touring": "2026-11-20T09:16:15Z",
      "BMW 320i E36 Super Touring": "2026-11-20T08:15:55Z",
      "Ford Mondeo Super Touring": "2026-11-20T05:14:56Z",
-     "Honda Accord Super Touring": "2026-11-20T08:15:55Z",
-     "Opel Vectra Super Touring": "2026-11-20T08:15:55Z",
+     "Honda Accord Super Touring": "2026-11-20T09:16:15Z",
+     "Opel Vectra Super Touring": "2026-11-20T09:16:15Z",
      "Peugeot 406 Super Touring 1998": "2026-11-20T04:14:36Z",
-     "Renault Laguna Super Touring": "2026-11-20T08:15:55Z",
-     "Volvo S40 Super Touring": "2026-11-20T08:15:55Z"
+     "Renault Laguna Super Touring": "2026-11-20T09:16:15Z",
+     "Volvo S40 Super Touring": "2026-11-20T09:16:15Z"
     },
     "classes": {
-     "Super Touring": "2026-11-20T08:15:55Z"
+     "Super Touring": "2026-11-20T09:16:15Z"
     }
    },
    "practiceMin": 5,
@@ -4842,7 +4941,8 @@
     "2026-11-20T05:15:00Z",
     "2026-11-20T06:15:00Z",
     "2026-11-20T07:15:00Z",
-    "2026-11-20T08:15:00Z"
+    "2026-11-20T08:15:00Z",
+    "2026-11-20T09:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
@@ -5080,25 +5180,27 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-20T09:01:10Z",
+   "checked": "2026-11-20T09:16:15Z",
    "found": 9,
-   "lastOk": "2026-11-20T09:01:10Z",
+   "lastOk": "2026-11-20T09:16:15Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-20T09:11:13Z",
+   "checked": "2026-11-20T09:16:15Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-20T09:11:13Z",
+   "lastOk": "2026-11-20T09:16:15Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-20T08:46:04Z",
-    "found": 2,
-    "mismatch": []
+    "checked": "2026-11-20T09:16:15Z",
+    "found": 3,
+    "mismatch": [
+     "Aut\u00f3dromo Internazionale Enzo e Dino Ferrari - Grand Prix 09:00Z"
+    ]
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-20T09:11:13Z",
+ "updated": "2026-11-20T09:16:15Z",
  "version": 1
 }
