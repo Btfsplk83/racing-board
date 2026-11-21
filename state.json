@@ -3514,7 +3514,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T04:55:00Z",
     "2026-11-18T06:25:00Z",
@@ -3587,7 +3587,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T04:25:00Z",
     "2026-11-18T05:55:00Z",
@@ -3683,7 +3683,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-monza",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T03:55:00Z",
     "2026-11-18T05:25:00Z",
@@ -3757,7 +3757,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T04:00:00Z",
     "2026-11-18T04:45:00Z",
@@ -3903,7 +3903,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T03:45:00Z",
     "2026-11-18T04:30:00Z",
@@ -4046,9 +4046,8 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
-    "2026-11-18T03:30:00Z",
     "2026-11-18T04:15:00Z",
     "2026-11-18T05:00:00Z",
     "2026-11-18T05:45:00Z",
@@ -4182,7 +4181,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T03:50:00Z",
     "2026-11-18T04:50:00Z",
@@ -4309,7 +4308,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
     "2026-11-18T04:10:00Z",
     "2026-11-18T05:10:00Z",
@@ -4421,9 +4420,8 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "lastSeen": "2026-11-21T03:29:28Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "starts": [
-    "2026-11-18T03:30:00Z",
     "2026-11-18T04:30:00Z",
     "2026-11-18T05:30:00Z",
     "2026-11-18T06:30:00Z",
@@ -5057,22 +5055,21 @@
    "firstSeen": "2026-11-17T03:36:17Z",
    "game": "rr",
    "id": "rr-mantorp-park-long-circuit",
-   "lastSeen": "2026-11-21T01:43:45Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "pool": {
     "carIds": {
-     "13394": "2026-11-21T01:43:45Z"
+     "13394": "2026-11-21T03:44:33Z"
     },
     "cars": {
-     "Alpine A110 Cup": "2026-11-21T01:43:45Z"
+     "Alpine A110 Cup": "2026-11-21T03:44:33Z"
     },
     "classes": {
-     "Alpine A110 Cup": "2026-11-21T01:43:45Z"
+     "Alpine A110 Cup": "2026-11-21T03:44:33Z"
     }
    },
    "practiceMin": 5,
-   "servers": 4,
+   "servers": 3,
    "starts": [
-    "2026-11-18T03:30:00Z",
     "2026-11-18T05:30:00Z",
     "2026-11-18T07:30:00Z",
     "2026-11-18T09:30:00Z",
@@ -5097,7 +5094,8 @@
     "2026-11-20T17:30:00Z",
     "2026-11-20T21:30:00Z",
     "2026-11-20T23:30:00Z",
-    "2026-11-21T01:30:00Z"
+    "2026-11-21T01:30:00Z",
+    "2026-11-21T03:30:00Z"
    ],
    "title": "Alpine A110 Cup",
    "track": "Mantorp Park - Long Circuit",
@@ -5233,20 +5231,20 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-norisring-grand-prix",
-   "lastSeen": "2026-11-21T02:44:05Z",
+   "lastSeen": "2026-11-21T03:44:33Z",
    "pool": {
     "carIds": {
-     "12839": "2026-11-21T02:44:05Z",
-     "12850": "2026-11-21T02:44:05Z",
-     "7076": "2026-11-21T02:44:05Z"
+     "12839": "2026-11-21T03:44:33Z",
+     "12850": "2026-11-21T03:44:33Z",
+     "7076": "2026-11-21T03:44:33Z"
     },
     "cars": {
-     "AMG-Mercedes C-Klasse DTM": "2026-11-21T02:44:05Z",
-     "Alfa Romeo 155 TI DTM 1995": "2026-11-21T02:44:05Z",
-     "Opel Calibra V6 DTM": "2026-11-21T02:44:05Z"
+     "AMG-Mercedes C-Klasse DTM": "2026-11-21T03:44:33Z",
+     "Alfa Romeo 155 TI DTM 1995": "2026-11-21T03:44:33Z",
+     "Opel Calibra V6 DTM": "2026-11-21T03:44:33Z"
     },
     "classes": {
-     "DTM 1995": "2026-11-21T02:44:05Z"
+     "DTM 1995": "2026-11-21T03:44:33Z"
     }
    },
    "practiceMin": 5,
@@ -5301,7 +5299,8 @@
     "2026-11-20T23:45:00Z",
     "2026-11-21T00:45:00Z",
     "2026-11-21T01:45:00Z",
-    "2026-11-21T02:45:00Z"
+    "2026-11-21T02:45:00Z",
+    "2026-11-21T03:45:00Z"
    ],
    "title": "DTM 1995",
    "track": "Norisring - Grand Prix",
@@ -5310,25 +5309,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-21T03:29:28Z",
+   "checked": "2026-11-21T03:44:33Z",
    "found": 9,
-   "lastOk": "2026-11-21T03:29:28Z",
+   "lastOk": "2026-11-21T03:44:33Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-21T03:34:31Z",
+   "checked": "2026-11-21T03:49:35Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-21T03:34:31Z",
+   "lastOk": "2026-11-21T03:49:35Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-21T03:14:23Z",
+    "checked": "2026-11-21T03:44:33Z",
     "found": 2,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-21T03:34:31Z",
+ "updated": "2026-11-21T03:49:35Z",
  "version": 1
 }
