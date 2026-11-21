@@ -5273,10 +5273,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-21T07:15:46Z",
+   "checked": "2026-11-21T07:25:50Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-21T07:15:46Z",
+   "lastOk": "2026-11-21T07:25:50Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-21T07:15:46Z",
@@ -5286,6 +5286,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-21T07:15:46Z",
+ "updated": "2026-11-21T07:25:50Z",
  "version": 1
 }
