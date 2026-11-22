@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-22T22:51:44Z",
+  "fetched": "2026-11-22T23:52:05Z",
   "series": [
    {
     "anchors": [
@@ -3574,7 +3574,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-22T23:37:02Z",
+   "lastSeen": "2026-11-22T23:52:05Z",
    "starts": [
     "2026-11-19T23:55:00Z",
     "2026-11-20T01:25:00Z",
@@ -3953,7 +3953,6 @@
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
    "lastSeen": "2026-11-22T23:37:02Z",
    "starts": [
-    "2026-11-19T23:45:00Z",
     "2026-11-20T00:30:00Z",
     "2026-11-20T01:15:00Z",
     "2026-11-20T02:00:00Z",
@@ -4062,7 +4061,6 @@
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
    "lastSeen": "2026-11-22T23:37:02Z",
    "starts": [
-    "2026-11-19T23:50:00Z",
     "2026-11-20T00:50:00Z",
     "2026-11-20T01:50:00Z",
     "2026-11-20T02:50:00Z",
@@ -5095,26 +5093,25 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-norisring-grand-prix",
-   "lastSeen": "2026-11-22T22:51:44Z",
+   "lastSeen": "2026-11-22T23:52:05Z",
    "pool": {
     "carIds": {
-     "12839": "2026-11-22T22:51:44Z",
-     "12850": "2026-11-22T22:51:44Z",
-     "7076": "2026-11-22T22:51:44Z"
+     "12839": "2026-11-22T23:52:05Z",
+     "12850": "2026-11-22T23:52:05Z",
+     "7076": "2026-11-22T23:52:05Z"
     },
     "cars": {
-     "AMG-Mercedes C-Klasse DTM": "2026-11-22T22:51:44Z",
-     "Alfa Romeo 155 TI DTM 1995": "2026-11-22T22:51:44Z",
-     "Opel Calibra V6 DTM": "2026-11-22T22:51:44Z"
+     "AMG-Mercedes C-Klasse DTM": "2026-11-22T23:52:05Z",
+     "Alfa Romeo 155 TI DTM 1995": "2026-11-22T23:52:05Z",
+     "Opel Calibra V6 DTM": "2026-11-22T23:52:05Z"
     },
     "classes": {
-     "DTM 1995": "2026-11-22T22:51:44Z"
+     "DTM 1995": "2026-11-22T23:52:05Z"
     }
    },
    "practiceMin": 5,
    "servers": 2,
    "starts": [
-    "2026-11-19T23:45:00Z",
     "2026-11-20T00:45:00Z",
     "2026-11-20T01:45:00Z",
     "2026-11-20T02:45:00Z",
@@ -5161,7 +5158,8 @@
     "2026-11-22T19:45:00Z",
     "2026-11-22T20:45:00Z",
     "2026-11-22T21:45:00Z",
-    "2026-11-22T22:45:00Z"
+    "2026-11-22T22:45:00Z",
+    "2026-11-22T23:45:00Z"
    ],
    "title": "DTM 1995",
    "track": "Norisring - Grand Prix",
@@ -5170,25 +5168,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-22T23:37:02Z",
-   "found": 3,
-   "lastOk": "2026-11-22T23:37:02Z",
+   "checked": "2026-11-22T23:52:05Z",
+   "found": 1,
+   "lastOk": "2026-11-22T23:52:05Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-22T23:47:03Z",
+   "checked": "2026-11-22T23:52:05Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-22T23:47:03Z",
+   "lastOk": "2026-11-22T23:52:05Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-22T23:21:57Z",
+    "checked": "2026-11-22T23:52:05Z",
     "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-22T23:47:03Z",
+ "updated": "2026-11-22T23:52:05Z",
  "version": 1
 }
