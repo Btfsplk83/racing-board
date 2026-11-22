@@ -3514,7 +3514,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T04:55:00Z",
     "2026-11-19T06:25:00Z",
@@ -3587,7 +3587,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T04:25:00Z",
     "2026-11-19T05:55:00Z",
@@ -3683,7 +3683,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-monza",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T03:55:00Z",
     "2026-11-19T05:25:00Z",
@@ -3757,7 +3757,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T04:00:00Z",
     "2026-11-19T04:45:00Z",
@@ -3902,9 +3902,8 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
-    "2026-11-19T03:45:00Z",
     "2026-11-19T04:30:00Z",
     "2026-11-19T05:15:00Z",
     "2026-11-19T06:00:00Z",
@@ -4045,7 +4044,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T04:15:00Z",
     "2026-11-19T05:00:00Z",
@@ -4180,7 +4179,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T03:50:00Z",
     "2026-11-19T04:50:00Z",
@@ -4307,7 +4306,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T04:10:00Z",
     "2026-11-19T05:10:00Z",
@@ -4419,7 +4418,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "lastSeen": "2026-11-22T03:32:20Z",
+   "lastSeen": "2026-11-22T03:47:23Z",
    "starts": [
     "2026-11-19T04:30:00Z",
     "2026-11-19T05:30:00Z",
@@ -4974,34 +4973,34 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-hockenheimring-2001-grand-prix",
-   "lastSeen": "2026-11-22T01:36:48Z",
+   "lastSeen": "2026-11-22T03:37:22Z",
    "pool": {
     "carIds": {
-     "12556": "2026-11-22T01:36:48Z",
+     "12556": "2026-11-22T03:37:22Z",
      "12561": "2026-11-22T01:36:48Z",
      "12652": "2026-11-22T01:36:48Z",
-     "12829": "2026-11-22T01:36:48Z",
+     "12829": "2026-11-22T03:37:22Z",
      "13049": "2026-11-22T01:36:48Z",
-     "13065": "2026-11-22T01:36:48Z",
-     "13183": "2026-11-22T01:36:48Z",
-     "13539": "2026-11-21T23:36:00Z",
+     "13065": "2026-11-22T03:37:22Z",
+     "13183": "2026-11-22T03:37:22Z",
+     "13539": "2026-11-22T03:37:22Z",
      "13548": "2026-11-22T01:36:48Z",
-     "8645": "2026-11-22T00:36:32Z"
+     "8645": "2026-11-22T03:37:22Z"
     },
     "cars": {
      "Alfa Romeo 156 Super Touring": "2026-11-22T01:36:48Z",
      "Audi A4 Super Touring 1995": "2026-11-22T01:36:48Z",
-     "BMW 320i E36 Super Touring": "2026-11-22T01:36:48Z",
+     "BMW 320i E36 Super Touring": "2026-11-22T03:37:22Z",
      "Ford Mondeo Super Touring": "2026-11-22T01:36:48Z",
-     "Honda Accord Super Touring": "2026-11-22T00:36:32Z",
-     "Opel Vectra Super Touring": "2026-11-22T01:36:48Z",
-     "Peugeot 406 Super Touring 1998": "2026-11-21T23:36:00Z",
-     "Renault Laguna Super Touring": "2026-11-22T01:36:48Z",
+     "Honda Accord Super Touring": "2026-11-22T03:37:22Z",
+     "Opel Vectra Super Touring": "2026-11-22T03:37:22Z",
+     "Peugeot 406 Super Touring 1998": "2026-11-22T03:37:22Z",
+     "Renault Laguna Super Touring": "2026-11-22T03:37:22Z",
      "Volvo 850 Super Touring": "2026-11-22T01:36:48Z",
-     "Volvo S40 Super Touring": "2026-11-22T01:36:48Z"
+     "Volvo S40 Super Touring": "2026-11-22T03:37:22Z"
     },
     "classes": {
-     "Super Touring": "2026-11-22T01:36:48Z"
+     "Super Touring": "2026-11-22T03:37:22Z"
     }
    },
    "practiceMin": 5,
@@ -5058,7 +5057,8 @@
     "2026-11-21T22:15:00Z",
     "2026-11-21T23:15:00Z",
     "2026-11-22T00:15:00Z",
-    "2026-11-22T01:15:00Z"
+    "2026-11-22T01:15:00Z",
+    "2026-11-22T03:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
@@ -5078,20 +5078,20 @@
    "firstSeen": "2026-11-17T03:36:17Z",
    "game": "rr",
    "id": "rr-mantorp-park-long-circuit",
-   "lastSeen": "2026-11-22T01:36:48Z",
+   "lastSeen": "2026-11-22T03:37:22Z",
    "pool": {
     "carIds": {
-     "13394": "2026-11-22T01:36:48Z"
+     "13394": "2026-11-22T03:37:22Z"
     },
     "cars": {
-     "Alpine A110 Cup": "2026-11-22T01:36:48Z"
+     "Alpine A110 Cup": "2026-11-22T03:37:22Z"
     },
     "classes": {
-     "Alpine A110 Cup": "2026-11-22T01:36:48Z"
+     "Alpine A110 Cup": "2026-11-22T03:37:22Z"
     }
    },
    "practiceMin": 5,
-   "servers": 4,
+   "servers": 3,
    "starts": [
     "2026-11-19T05:30:00Z",
     "2026-11-19T07:30:00Z",
@@ -5118,7 +5118,8 @@
     "2026-11-21T19:30:00Z",
     "2026-11-21T21:30:00Z",
     "2026-11-21T23:30:00Z",
-    "2026-11-22T01:30:00Z"
+    "2026-11-22T01:30:00Z",
+    "2026-11-22T03:30:00Z"
    ],
    "title": "Alpine A110 Cup",
    "track": "Mantorp Park - Long Circuit",
@@ -5344,27 +5345,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-22T03:32:20Z",
+   "checked": "2026-11-22T03:47:23Z",
    "found": 9,
-   "lastOk": "2026-11-22T03:32:20Z",
+   "lastOk": "2026-11-22T03:47:23Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-22T03:32:20Z",
+   "checked": "2026-11-22T03:47:23Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-22T03:32:20Z",
+   "lastOk": "2026-11-22T03:47:23Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-22T03:07:13Z",
+    "checked": "2026-11-22T03:37:22Z",
     "found": 2,
-    "mismatch": [
-     "Aut\u00f3dromo Internazionale Enzo e Dino Ferrari - Grand Prix 01:45Z"
-    ]
+    "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-22T03:32:20Z",
+ "updated": "2026-11-22T03:47:23Z",
  "version": 1
 }
