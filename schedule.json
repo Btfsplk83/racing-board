@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-21T23:56:19Z",
+ "updated": "2026-11-22T00:01:21Z",
  "sources": {
   "lmu": {
    "checked": "2026-11-21T23:51:17Z",
@@ -13,8 +13,8 @@
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-17T18:58:45Z",
-   "checked": "2026-11-21T23:56:19Z",
-   "lastOk": "2026-11-21T23:56:19Z",
+   "checked": "2026-11-22T00:01:21Z",
+   "lastOk": "2026-11-22T00:01:21Z",
    "serverCheck": {
     "checked": "2026-11-21T23:36:00Z",
     "found": 2,
@@ -384,7 +384,6 @@
    },
    "intervalMin": 45,
    "starts": [
-    "2026-11-21T12:00:00Z",
     "2026-11-21T12:45:00Z",
     "2026-11-21T13:30:00Z",
     "2026-11-21T14:15:00Z",
@@ -592,18 +591,6 @@
    ],
    "intervalMin": 120,
    "starts": [
-    "2026-11-20T23:30:00Z",
-    "2026-11-21T01:30:00Z",
-    "2026-11-21T03:30:00Z",
-    "2026-11-21T05:30:00Z",
-    "2026-11-21T07:30:00Z",
-    "2026-11-21T09:30:00Z",
-    "2026-11-21T11:30:00Z",
-    "2026-11-21T13:30:00Z",
-    "2026-11-21T15:30:00Z",
-    "2026-11-21T17:30:00Z",
-    "2026-11-21T19:30:00Z",
-    "2026-11-21T21:30:00Z",
     "2026-11-21T23:30:00Z",
     "2026-11-22T01:30:00Z",
     "2026-11-22T03:30:00Z",
@@ -616,14 +603,59 @@
     "2026-11-22T17:30:00Z",
     "2026-11-22T19:30:00Z",
     "2026-11-22T21:30:00Z",
-    "2026-11-22T23:30:00Z"
+    "2026-11-22T23:30:00Z",
+    "2026-11-23T01:30:00Z",
+    "2026-11-23T03:30:00Z",
+    "2026-11-23T05:30:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": true,
    "access": {
     "track": {
      "name": "Mantorp Park",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "Alpine A110 Cup"
+     ]
+    }
+   }
+  },
+  {
+   "game": "rr",
+   "id": "rr-twin-ring-motegi-road-course",
+   "title": "Alpine A110 Cup",
+   "track": "Twin Ring Motegi - Road Course",
+   "durationMin": 15,
+   "classes": [
+    "Alpine A110 Cup"
+   ],
+   "cars": [
+    "Alpine A110 Cup"
+   ],
+   "intervalMin": 120,
+   "starts": [
+    "2026-11-23T07:30:00Z",
+    "2026-11-23T09:30:00Z",
+    "2026-11-23T11:30:00Z",
+    "2026-11-23T13:30:00Z",
+    "2026-11-23T15:30:00Z",
+    "2026-11-23T17:30:00Z",
+    "2026-11-23T19:30:00Z",
+    "2026-11-23T21:30:00Z",
+    "2026-11-23T23:30:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": true,
+   "access": {
+    "track": {
+     "name": "Twin Ring Motegi",
      "free": true,
      "packs": []
     },
@@ -652,30 +684,6 @@
    ],
    "intervalMin": 60,
    "starts": [
-    "2026-11-20T22:45:00Z",
-    "2026-11-20T23:45:00Z",
-    "2026-11-21T00:45:00Z",
-    "2026-11-21T01:45:00Z",
-    "2026-11-21T02:45:00Z",
-    "2026-11-21T03:45:00Z",
-    "2026-11-21T04:45:00Z",
-    "2026-11-21T05:45:00Z",
-    "2026-11-21T06:45:00Z",
-    "2026-11-21T07:45:00Z",
-    "2026-11-21T08:45:00Z",
-    "2026-11-21T09:45:00Z",
-    "2026-11-21T10:45:00Z",
-    "2026-11-21T11:45:00Z",
-    "2026-11-21T12:45:00Z",
-    "2026-11-21T13:45:00Z",
-    "2026-11-21T14:45:00Z",
-    "2026-11-21T15:45:00Z",
-    "2026-11-21T16:45:00Z",
-    "2026-11-21T17:45:00Z",
-    "2026-11-21T18:45:00Z",
-    "2026-11-21T19:45:00Z",
-    "2026-11-21T20:45:00Z",
-    "2026-11-21T21:45:00Z",
     "2026-11-21T22:45:00Z",
     "2026-11-21T23:45:00Z",
     "2026-11-22T00:45:00Z",
@@ -701,10 +709,17 @@
     "2026-11-22T20:45:00Z",
     "2026-11-22T21:45:00Z",
     "2026-11-22T22:45:00Z",
-    "2026-11-22T23:45:00Z"
+    "2026-11-22T23:45:00Z",
+    "2026-11-23T00:45:00Z",
+    "2026-11-23T01:45:00Z",
+    "2026-11-23T02:45:00Z",
+    "2026-11-23T03:45:00Z",
+    "2026-11-23T04:45:00Z",
+    "2026-11-23T05:45:00Z",
+    "2026-11-23T06:45:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": false,
    "access": {
     "track": {
@@ -727,7 +742,63 @@
   },
   {
    "game": "rr",
-   "id": "rr-circuit-zandvoort-modern-grand-prix",
+   "id": "rr-circuit-zolder-grand-prix",
+   "title": "DTM All-Stars",
+   "track": "Circuit Zolder - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "DTM 2002"
+   ],
+   "cars": [
+    "AMG-Mercedes CLK-DTM 2002",
+    "Abt-Audi TT-R",
+    "Opel Astra V8 Coup\u00e9"
+   ],
+   "intervalMin": 60,
+   "starts": [
+    "2026-11-23T07:45:00Z",
+    "2026-11-23T08:45:00Z",
+    "2026-11-23T09:45:00Z",
+    "2026-11-23T10:45:00Z",
+    "2026-11-23T11:45:00Z",
+    "2026-11-23T12:45:00Z",
+    "2026-11-23T13:45:00Z",
+    "2026-11-23T14:45:00Z",
+    "2026-11-23T15:45:00Z",
+    "2026-11-23T16:45:00Z",
+    "2026-11-23T17:45:00Z",
+    "2026-11-23T18:45:00Z",
+    "2026-11-23T19:45:00Z",
+    "2026-11-23T20:45:00Z",
+    "2026-11-23T21:45:00Z",
+    "2026-11-23T22:45:00Z",
+    "2026-11-23T23:45:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Circuit Zolder",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "DTM 2002"
+     ]
+    }
+   }
+  },
+  {
+   "game": "rr",
+   "id": "rr-circuit-zandvoort-modern-grand-prix-gt3-sprint-series",
    "title": "GT3 Sprint Series",
    "track": "Circuit Zandvoort - Modern - Grand Prix",
    "durationMin": 15,
@@ -784,30 +855,6 @@
    ],
    "intervalMin": 60,
    "starts": [
-    "2026-11-20T22:00:00Z",
-    "2026-11-20T23:00:00Z",
-    "2026-11-21T00:00:00Z",
-    "2026-11-21T01:00:00Z",
-    "2026-11-21T02:00:00Z",
-    "2026-11-21T03:00:00Z",
-    "2026-11-21T04:00:00Z",
-    "2026-11-21T05:00:00Z",
-    "2026-11-21T06:00:00Z",
-    "2026-11-21T07:00:00Z",
-    "2026-11-21T08:00:00Z",
-    "2026-11-21T09:00:00Z",
-    "2026-11-21T10:00:00Z",
-    "2026-11-21T11:00:00Z",
-    "2026-11-21T12:00:00Z",
-    "2026-11-21T13:00:00Z",
-    "2026-11-21T14:00:00Z",
-    "2026-11-21T15:00:00Z",
-    "2026-11-21T16:00:00Z",
-    "2026-11-21T17:00:00Z",
-    "2026-11-21T18:00:00Z",
-    "2026-11-21T19:00:00Z",
-    "2026-11-21T20:00:00Z",
-    "2026-11-21T21:00:00Z",
     "2026-11-21T22:00:00Z",
     "2026-11-21T23:00:00Z",
     "2026-11-22T00:00:00Z",
@@ -833,10 +880,17 @@
     "2026-11-22T20:00:00Z",
     "2026-11-22T21:00:00Z",
     "2026-11-22T22:00:00Z",
-    "2026-11-22T23:00:00Z"
+    "2026-11-22T23:00:00Z",
+    "2026-11-23T00:00:00Z",
+    "2026-11-23T01:00:00Z",
+    "2026-11-23T02:00:00Z",
+    "2026-11-23T03:00:00Z",
+    "2026-11-23T04:00:00Z",
+    "2026-11-23T05:00:00Z",
+    "2026-11-23T06:00:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": false,
    "access": {
     "track": {
@@ -865,6 +919,109 @@
   },
   {
    "game": "rr",
+   "id": "rr-watkins-glen-international-grand-prix-with-inner-loop",
+   "title": "GT3 Sprint Series",
+   "track": "Watkins Glen International - Grand Prix with Inner Loop",
+   "durationMin": 15,
+   "classes": [
+    "DTM 2024",
+    "DTM 2025",
+    "DTM 2026",
+    "GTR 3"
+   ],
+   "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "Audi R8 LMS",
+    "Audi R8 LMS GT3 EVO",
+    "Audi R8 LMS GT3 EVO II",
+    "Audi R8 LMS GT3 EVO II DTM",
+    "Audi R8 LMS Ultra",
+    "BMW Alpina B6 GT3",
+    "BMW M4 GT3",
+    "BMW M4 GT3 DTM",
+    "BMW M4 GT3 EVO DTM",
+    "BMW M6 GT3",
+    "BMW Z4 GT3",
+    "Bentley Continental GT3",
+    "Bentley Continental GT3 EVO",
+    "Callaway Corvette C7 GT3-R",
+    "Chevrolet Camaro GT3",
+    "Chevrolet Corvette Z06.R GT3",
+    "Ferrari 296 GT3",
+    "Ferrari 296 GT3 DTM",
+    "Ferrari 488 GT3 EVO 2020",
+    "Ford GT GT3",
+    "Ford Mustang GT3",
+    "Ford Mustang GT3 EVO DTM",
+    "Lamborghini Hurac\u00e1n GT3 EVO II",
+    "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+    "Lamborghini Temerario GT3 DTM",
+    "McLaren 650S GT3",
+    "McLaren 720S GT3",
+    "McLaren 720S GT3 EVO DTM",
+    "McLaren MP4-12C GT3",
+    "Mercedes AMG GT3",
+    "Mercedes-AMG GT3 2020",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Mercedes-Benz SLS AMG GT3",
+    "Nissan GT-R GT3",
+    "P4-5 Competizione GT3",
+    "Porsche 911 GT3 R",
+    "Porsche 911 GT3 R (2019)",
+    "Porsche 911 GT3 R (992)",
+    "Porsche 911 GT3 R (992) DTM",
+    "Porsche 911 GT3 R (992.2)",
+    "Porsche 911 GT3 R (992.2) DTM",
+    "RUF RT12R GTR3"
+   ],
+   "intervalMin": 60,
+   "starts": [
+    "2026-11-23T07:00:00Z",
+    "2026-11-23T08:00:00Z",
+    "2026-11-23T09:00:00Z",
+    "2026-11-23T10:00:00Z",
+    "2026-11-23T11:00:00Z",
+    "2026-11-23T12:00:00Z",
+    "2026-11-23T13:00:00Z",
+    "2026-11-23T14:00:00Z",
+    "2026-11-23T15:00:00Z",
+    "2026-11-23T16:00:00Z",
+    "2026-11-23T17:00:00Z",
+    "2026-11-23T18:00:00Z",
+    "2026-11-23T19:00:00Z",
+    "2026-11-23T20:00:00Z",
+    "2026-11-23T21:00:00Z",
+    "2026-11-23T22:00:00Z",
+    "2026-11-23T23:00:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Watkins Glen International",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "dtm-2026-car-pack",
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "DTM 2024",
+      "DTM 2025",
+      "DTM 2026",
+      "GTR 3"
+     ]
+    }
+   }
+  },
+  {
+   "game": "rr",
    "id": "rr-n-rburgring-nordschleife-nls-nordschleife-trophy",
    "title": "Nordschleife Trophy",
    "track": "N\u00fcrburgring - Nordschleife - NLS",
@@ -877,20 +1034,16 @@
    ],
    "intervalMin": null,
    "starts": [
-    "2026-11-20T22:00:00Z",
-    "2026-11-21T02:00:00Z",
-    "2026-11-21T11:00:00Z",
-    "2026-11-21T18:00:00Z",
-    "2026-11-21T20:00:00Z",
     "2026-11-21T22:00:00Z",
     "2026-11-22T02:00:00Z",
     "2026-11-22T11:00:00Z",
     "2026-11-22T18:00:00Z",
     "2026-11-22T20:00:00Z",
-    "2026-11-22T22:00:00Z"
+    "2026-11-22T22:00:00Z",
+    "2026-11-23T02:00:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": false,
    "access": {
     "track": {
@@ -909,6 +1062,59 @@
      ],
      "classes": [
       "Mazda MX-5 Cup"
+     ]
+    }
+   }
+  },
+  {
+   "game": "rr",
+   "id": "rr-n-rburgring-nordschleife-nls-nordschleife-trophy",
+   "title": "Nordschleife Trophy",
+   "track": "N\u00fcrburgring - Nordschleife - NLS",
+   "durationMin": 0,
+   "classes": [
+    "GTR 4"
+   ],
+   "cars": [
+    "Alpine A110 GT4+",
+    "Audi R8 LMS GT4 2020",
+    "BMW M4 GT4 (F82)",
+    "BMW M4 GT4 (G82)",
+    "KTM X-Bow GT4",
+    "Lotus Evora GT4",
+    "McLaren 570s GT4",
+    "Mercedes AMG GT4 2020",
+    "Porsche 718 Cayman GT4 Clubsport",
+    "Porsche Cayman GT4 CS MR"
+   ],
+   "intervalMin": null,
+   "starts": [
+    "2026-11-23T11:00:00Z",
+    "2026-11-23T18:00:00Z",
+    "2026-11-23T20:00:00Z",
+    "2026-11-23T22:00:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": false,
+   "access": {
+    "track": {
+     "name": "N\u00fcrburgring - Nordschleife",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "alpine-sim-racing-pack-2026",
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "GTR 4"
      ]
     }
    }
@@ -936,30 +1142,6 @@
    ],
    "intervalMin": 60,
    "starts": [
-    "2026-11-20T22:15:00Z",
-    "2026-11-20T23:15:00Z",
-    "2026-11-21T00:15:00Z",
-    "2026-11-21T01:15:00Z",
-    "2026-11-21T02:15:00Z",
-    "2026-11-21T03:15:00Z",
-    "2026-11-21T04:15:00Z",
-    "2026-11-21T05:15:00Z",
-    "2026-11-21T06:15:00Z",
-    "2026-11-21T07:15:00Z",
-    "2026-11-21T08:15:00Z",
-    "2026-11-21T09:15:00Z",
-    "2026-11-21T10:15:00Z",
-    "2026-11-21T11:15:00Z",
-    "2026-11-21T12:15:00Z",
-    "2026-11-21T13:15:00Z",
-    "2026-11-21T14:15:00Z",
-    "2026-11-21T15:15:00Z",
-    "2026-11-21T16:15:00Z",
-    "2026-11-21T17:15:00Z",
-    "2026-11-21T18:15:00Z",
-    "2026-11-21T19:15:00Z",
-    "2026-11-21T20:15:00Z",
-    "2026-11-21T21:15:00Z",
     "2026-11-21T22:15:00Z",
     "2026-11-21T23:15:00Z",
     "2026-11-22T00:15:00Z",
@@ -985,10 +1167,17 @@
     "2026-11-22T20:15:00Z",
     "2026-11-22T21:15:00Z",
     "2026-11-22T22:15:00Z",
-    "2026-11-22T23:15:00Z"
+    "2026-11-22T23:15:00Z",
+    "2026-11-23T00:15:00Z",
+    "2026-11-23T01:15:00Z",
+    "2026-11-23T02:15:00Z",
+    "2026-11-23T03:15:00Z",
+    "2026-11-23T04:15:00Z",
+    "2026-11-23T05:15:00Z",
+    "2026-11-23T06:15:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": false,
    "access": {
     "track": {
@@ -1013,6 +1202,70 @@
   },
   {
    "game": "rr",
+   "id": "rr-salzburgring-grand-prix",
+   "title": "Super Touring",
+   "track": "Salzburgring - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "Super Touring"
+   ],
+   "cars": [
+    "Alfa Romeo 156 Super Touring",
+    "Audi A4 Super Touring 1995",
+    "BMW 320i E36 Super Touring",
+    "Ford Mondeo Super Touring",
+    "Honda Accord Super Touring",
+    "Opel Vectra Super Touring",
+    "Peugeot 406 Super Touring 1998",
+    "Renault Laguna Super Touring",
+    "Volvo 850 Super Touring",
+    "Volvo S40 Super Touring"
+   ],
+   "intervalMin": 60,
+   "starts": [
+    "2026-11-23T07:15:00Z",
+    "2026-11-23T08:15:00Z",
+    "2026-11-23T09:15:00Z",
+    "2026-11-23T10:15:00Z",
+    "2026-11-23T11:15:00Z",
+    "2026-11-23T12:15:00Z",
+    "2026-11-23T13:15:00Z",
+    "2026-11-23T14:15:00Z",
+    "2026-11-23T15:15:00Z",
+    "2026-11-23T16:15:00Z",
+    "2026-11-23T17:15:00Z",
+    "2026-11-23T18:15:00Z",
+    "2026-11-23T19:15:00Z",
+    "2026-11-23T20:15:00Z",
+    "2026-11-23T21:15:00Z",
+    "2026-11-23T22:15:00Z",
+    "2026-11-23T23:15:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Salzburgring",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "rstc-pack-2026"
+     ],
+     "classes": [
+      "Super Touring"
+     ]
+    }
+   }
+  },
+  {
+   "game": "rr",
    "id": "rr-autodromo-di-monza-grand-prix",
    "title": "Tatuus F4",
    "track": "Autodromo di Monza - Grand Prix",
@@ -1025,18 +1278,6 @@
    ],
    "intervalMin": 120,
    "starts": [
-    "2026-11-20T22:30:00Z",
-    "2026-11-21T00:30:00Z",
-    "2026-11-21T02:30:00Z",
-    "2026-11-21T04:30:00Z",
-    "2026-11-21T06:30:00Z",
-    "2026-11-21T08:30:00Z",
-    "2026-11-21T10:30:00Z",
-    "2026-11-21T12:30:00Z",
-    "2026-11-21T14:30:00Z",
-    "2026-11-21T16:30:00Z",
-    "2026-11-21T18:30:00Z",
-    "2026-11-21T20:30:00Z",
     "2026-11-21T22:30:00Z",
     "2026-11-22T00:30:00Z",
     "2026-11-22T02:30:00Z",
@@ -1049,10 +1290,14 @@
     "2026-11-22T16:30:00Z",
     "2026-11-22T18:30:00Z",
     "2026-11-22T20:30:00Z",
-    "2026-11-22T22:30:00Z"
+    "2026-11-22T22:30:00Z",
+    "2026-11-23T00:30:00Z",
+    "2026-11-23T02:30:00Z",
+    "2026-11-23T04:30:00Z",
+    "2026-11-23T06:30:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": false,
    "access": {
     "track": {
@@ -1071,6 +1316,52 @@
       "Tatuus F4 Cup"
      ]
     }
+   }
+  },
+  {
+   "game": "rr",
+   "id": "rr-hockenheimring-modern-grand-prix",
+   "title": "Tatuus F4",
+   "track": "Hockenheimring - Modern - Grand Prix",
+   "durationMin": 15,
+   "classes": [
+    "Tatuus F4 Cup"
+   ],
+   "cars": [
+    "Tatuus F4"
+   ],
+   "intervalMin": 120,
+   "starts": [
+    "2026-11-23T08:30:00Z",
+    "2026-11-23T10:30:00Z",
+    "2026-11-23T12:30:00Z",
+    "2026-11-23T14:30:00Z",
+    "2026-11-23T16:30:00Z",
+    "2026-11-23T18:30:00Z",
+    "2026-11-23T20:30:00Z",
+    "2026-11-23T22:30:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Hockenheimring - Modern",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "Tatuus F4 Cup"
+     ]
+    },
+    "unsure": true
    }
   },
   {
@@ -1104,19 +1395,15 @@
    ],
    "intervalMin": null,
    "starts": [
-    "2026-11-21T01:00:00Z",
-    "2026-11-21T08:00:00Z",
-    "2026-11-21T17:00:00Z",
-    "2026-11-21T19:00:00Z",
-    "2026-11-21T21:00:00Z",
     "2026-11-22T01:00:00Z",
     "2026-11-22T08:00:00Z",
     "2026-11-22T17:00:00Z",
     "2026-11-22T19:00:00Z",
-    "2026-11-22T21:00:00Z"
+    "2026-11-22T21:00:00Z",
+    "2026-11-23T01:00:00Z"
    ],
    "until": "2026-11-23T07:00:00Z",
-   "lastSeen": "2026-11-21T23:56:19Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
    "free": false,
    "access": {
     "track": {
@@ -1141,6 +1428,71 @@
       "WTCR 2022"
      ]
     }
+   }
+  },
+  {
+   "game": "rr",
+   "id": "rr-circuit-zandvoort-modern-grand-prix-touring-car-series",
+   "title": "Touring Car Series",
+   "track": "Circuit Zandvoort - Modern - Grand Prix",
+   "durationMin": 30,
+   "classes": [
+    "WTCC 2014",
+    "WTCC 2015",
+    "WTCC 2016",
+    "WTCC 2017"
+   ],
+   "cars": [
+    "Chevrolet RML Cruze TC1",
+    "Chevrolet RML Cruze TC1 2015",
+    "Chevrolet RML Cruze TC1 2016",
+    "Chevrolet RML Cruze TC1 2017",
+    "Citroen C Elysee WTCC",
+    "Citroen C Elysee WTCC 2015",
+    "Citroen C Elysee WTCC 2016",
+    "Citroen C Elysee WTCC 2017",
+    "Honda Civic WTCC 2014",
+    "Honda Civic WTCC 2015",
+    "Honda Civic WTCC 2016",
+    "Honda Civic WTCC 2017",
+    "LADA Granta 1.6T",
+    "Lada Vesta WTCC 2015",
+    "Lada Vesta WTCC 2016",
+    "Lada Vesta WTCC 2017",
+    "Volvo S60 Polestar TC1"
+   ],
+   "intervalMin": null,
+   "starts": [
+    "2026-11-23T08:00:00Z",
+    "2026-11-23T17:00:00Z",
+    "2026-11-23T19:00:00Z",
+    "2026-11-23T21:00:00Z"
+   ],
+   "until": "2026-11-30T07:00:00Z",
+   "lastSeen": "2026-11-22T00:01:21Z",
+   "free": false,
+   "access": {
+    "track": {
+     "name": "Circuit Zandvoort - Modern",
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026",
+      "alpine-sim-racing-pack-2026"
+     ]
+    },
+    "cars": {
+     "free": false,
+     "packs": [
+      "online-racing-pack-s1-2026"
+     ],
+     "classes": [
+      "WTCC 2014",
+      "WTCC 2015",
+      "WTCC 2016",
+      "WTCC 2017"
+     ]
+    },
+    "unsure": true
    }
   }
  ]
