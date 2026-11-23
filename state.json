@@ -5353,10 +5353,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T03:53:38Z",
+   "checked": "2026-11-23T03:58:41Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T03:53:38Z",
+   "lastOk": "2026-11-23T03:58:41Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-23T03:53:38Z",
@@ -5366,6 +5366,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-23T03:53:38Z",
+ "updated": "2026-11-23T03:58:41Z",
  "version": 1
 }
