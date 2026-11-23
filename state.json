@@ -4964,34 +4964,34 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-hockenheimring-2001-grand-prix",
-   "lastSeen": "2026-11-23T02:23:00Z",
+   "lastSeen": "2026-11-23T03:23:22Z",
    "pool": {
     "carIds": {
      "12556": "2026-11-23T01:22:40Z",
      "12561": "2026-11-23T01:22:40Z",
-     "12652": "2026-11-23T02:23:00Z",
-     "12829": "2026-11-23T02:23:00Z",
-     "13049": "2026-11-23T02:23:00Z",
-     "13065": "2026-11-23T02:23:00Z",
+     "12652": "2026-11-23T03:23:22Z",
+     "12829": "2026-11-23T03:23:22Z",
+     "13049": "2026-11-23T03:23:22Z",
+     "13065": "2026-11-23T03:23:22Z",
      "13183": "2026-11-23T00:22:19Z",
      "13539": "2026-11-23T01:22:40Z",
      "13548": "2026-11-23T02:23:00Z",
-     "8645": "2026-11-23T02:23:00Z"
+     "8645": "2026-11-23T03:23:22Z"
     },
     "cars": {
-     "Alfa Romeo 156 Super Touring": "2026-11-23T02:23:00Z",
+     "Alfa Romeo 156 Super Touring": "2026-11-23T03:23:22Z",
      "Audi A4 Super Touring 1995": "2026-11-23T01:22:40Z",
      "BMW 320i E36 Super Touring": "2026-11-23T01:22:40Z",
      "Ford Mondeo Super Touring": "2026-11-23T02:23:00Z",
-     "Honda Accord Super Touring": "2026-11-23T02:23:00Z",
-     "Opel Vectra Super Touring": "2026-11-23T02:23:00Z",
+     "Honda Accord Super Touring": "2026-11-23T03:23:22Z",
+     "Opel Vectra Super Touring": "2026-11-23T03:23:22Z",
      "Peugeot 406 Super Touring 1998": "2026-11-23T01:22:40Z",
      "Renault Laguna Super Touring": "2026-11-23T00:22:19Z",
-     "Volvo 850 Super Touring": "2026-11-23T02:23:00Z",
-     "Volvo S40 Super Touring": "2026-11-23T02:23:00Z"
+     "Volvo 850 Super Touring": "2026-11-23T03:23:22Z",
+     "Volvo S40 Super Touring": "2026-11-23T03:23:22Z"
     },
     "classes": {
-     "Super Touring": "2026-11-23T02:23:00Z"
+     "Super Touring": "2026-11-23T03:23:22Z"
     }
    },
    "practiceMin": 5,
@@ -5052,7 +5052,8 @@
     "2026-11-22T23:15:00Z",
     "2026-11-23T00:15:00Z",
     "2026-11-23T01:15:00Z",
-    "2026-11-23T02:15:00Z"
+    "2026-11-23T02:15:00Z",
+    "2026-11-23T03:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
@@ -5358,21 +5359,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T03:18:18Z",
+   "checked": "2026-11-23T03:28:23Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T03:18:18Z",
+   "lastOk": "2026-11-23T03:28:23Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T02:53:09Z",
-    "found": 2,
-    "mismatch": [
-     "Aut\u00f3dromo Internazionale Enzo e Dino Ferrari - Grand Prix 01:45Z"
-    ]
+    "checked": "2026-11-23T03:23:22Z",
+    "found": 1,
+    "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T03:18:18Z",
+ "updated": "2026-11-23T03:28:23Z",
  "version": 1
 }
