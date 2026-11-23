@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-23T03:53:38Z",
+  "fetched": "2026-11-23T04:53:58Z",
   "series": [
    {
     "anchors": [
@@ -4174,7 +4174,6 @@
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
    "lastSeen": "2026-11-23T04:48:56Z",
    "starts": [
-    "2026-11-20T04:50:00Z",
     "2026-11-20T05:50:00Z",
     "2026-11-20T06:50:00Z",
     "2026-11-20T07:50:00Z",
@@ -5262,20 +5261,20 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-norisring-grand-prix",
-   "lastSeen": "2026-11-23T03:53:38Z",
+   "lastSeen": "2026-11-23T04:53:58Z",
    "pool": {
     "carIds": {
-     "12839": "2026-11-23T03:53:38Z",
-     "12850": "2026-11-23T03:53:38Z",
+     "12839": "2026-11-23T04:53:58Z",
+     "12850": "2026-11-23T04:53:58Z",
      "7076": "2026-11-23T02:53:09Z"
     },
     "cars": {
      "AMG-Mercedes C-Klasse DTM": "2026-11-23T02:53:09Z",
-     "Alfa Romeo 155 TI DTM 1995": "2026-11-23T03:53:38Z",
-     "Opel Calibra V6 DTM": "2026-11-23T03:53:38Z"
+     "Alfa Romeo 155 TI DTM 1995": "2026-11-23T04:53:58Z",
+     "Opel Calibra V6 DTM": "2026-11-23T04:53:58Z"
     },
     "classes": {
-     "DTM 1995": "2026-11-23T03:53:38Z"
+     "DTM 1995": "2026-11-23T04:53:58Z"
     }
    },
    "practiceMin": 5,
@@ -5327,7 +5326,8 @@
     "2026-11-23T00:45:00Z",
     "2026-11-23T01:45:00Z",
     "2026-11-23T02:45:00Z",
-    "2026-11-23T03:45:00Z"
+    "2026-11-23T03:45:00Z",
+    "2026-11-23T04:45:00Z"
    ],
    "title": "DTM 1995",
    "track": "Norisring - Grand Prix",
@@ -5342,19 +5342,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T04:48:56Z",
+   "checked": "2026-11-23T04:53:58Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T04:48:56Z",
+   "lastOk": "2026-11-23T04:53:58Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T04:23:49Z",
+    "checked": "2026-11-23T04:53:58Z",
     "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T04:48:56Z",
+ "updated": "2026-11-23T04:53:58Z",
  "version": 1
 }
