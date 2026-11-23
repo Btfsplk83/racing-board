@@ -3514,7 +3514,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T15:25:00Z",
     "2026-11-20T16:55:00Z",
@@ -3580,7 +3580,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T14:55:00Z",
     "2026-11-20T16:25:00Z",
@@ -3669,9 +3669,8 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-monza",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
-    "2026-11-20T14:25:00Z",
     "2026-11-20T15:55:00Z",
     "2026-11-20T17:25:00Z",
     "2026-11-20T18:55:00Z",
@@ -3736,7 +3735,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T14:30:00Z",
     "2026-11-20T15:15:00Z",
@@ -3866,9 +3865,8 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
-    "2026-11-20T14:15:00Z",
     "2026-11-20T15:00:00Z",
     "2026-11-20T15:45:00Z",
     "2026-11-20T16:30:00Z",
@@ -3995,7 +3993,7 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T14:45:00Z",
     "2026-11-20T15:30:00Z",
@@ -4116,7 +4114,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T14:50:00Z",
     "2026-11-20T15:50:00Z",
@@ -4232,7 +4230,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T15:10:00Z",
     "2026-11-20T16:10:00Z",
@@ -4333,7 +4331,7 @@
    "firstSeen": "2026-11-17T11:06:02Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "lastSeen": "2026-11-23T14:13:02Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "starts": [
     "2026-11-20T14:30:00Z",
     "2026-11-20T15:30:00Z",
@@ -4868,7 +4866,6 @@
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-20T14:15:00Z",
     "2026-11-20T15:15:00Z",
     "2026-11-20T16:15:00Z",
     "2026-11-20T17:15:00Z",
@@ -4925,6 +4922,41 @@
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
    "trackId": 12111
+  },
+  "rr-hockenheimring-modern-grand-prix": {
+   "carIds": [
+    5051
+   ],
+   "cars": [
+    "Tatuus F4"
+   ],
+   "classes": [
+    "Tatuus F4 Cup"
+   ],
+   "durationMin": 15,
+   "firstSeen": "2026-11-23T14:28:07Z",
+   "game": "rr",
+   "id": "rr-hockenheimring-modern-grand-prix",
+   "lastSeen": "2026-11-23T14:28:07Z",
+   "pool": {
+    "carIds": {
+     "5051": "2026-11-23T14:28:07Z"
+    },
+    "cars": {
+     "Tatuus F4": "2026-11-23T14:28:07Z"
+    },
+    "classes": {
+     "Tatuus F4 Cup": "2026-11-23T14:28:07Z"
+    }
+   },
+   "practiceMin": 5,
+   "servers": 3,
+   "starts": [
+    "2026-11-23T14:30:00Z"
+   ],
+   "title": "Tatuus F4 Cup",
+   "track": "Hockenheimring - Modern - Grand Prix",
+   "trackId": 1692
   },
   "rr-mantorp-park-long-circuit": {
    "carIds": [
@@ -5239,34 +5271,34 @@
    "firstSeen": "2026-11-23T07:24:51Z",
    "game": "rr",
    "id": "rr-salzburgring-grand-prix",
-   "lastSeen": "2026-11-23T13:27:47Z",
+   "lastSeen": "2026-11-23T14:28:07Z",
    "pool": {
     "carIds": {
-     "12556": "2026-11-23T13:27:47Z",
-     "12561": "2026-11-23T13:27:47Z",
-     "12652": "2026-11-23T13:27:47Z",
-     "12829": "2026-11-23T13:27:47Z",
-     "13049": "2026-11-23T13:27:47Z",
-     "13065": "2026-11-23T13:27:47Z",
-     "13183": "2026-11-23T13:27:47Z",
-     "13539": "2026-11-23T13:27:47Z",
-     "13548": "2026-11-23T13:27:47Z",
-     "8645": "2026-11-23T13:27:47Z"
+     "12556": "2026-11-23T14:28:07Z",
+     "12561": "2026-11-23T14:28:07Z",
+     "12652": "2026-11-23T14:28:07Z",
+     "12829": "2026-11-23T14:28:07Z",
+     "13049": "2026-11-23T14:28:07Z",
+     "13065": "2026-11-23T14:28:07Z",
+     "13183": "2026-11-23T14:28:07Z",
+     "13539": "2026-11-23T14:28:07Z",
+     "13548": "2026-11-23T14:28:07Z",
+     "8645": "2026-11-23T14:28:07Z"
     },
     "cars": {
-     "Alfa Romeo 156 Super Touring": "2026-11-23T13:27:47Z",
-     "Audi A4 Super Touring 1995": "2026-11-23T13:27:47Z",
-     "BMW 320i E36 Super Touring": "2026-11-23T13:27:47Z",
-     "Ford Mondeo Super Touring": "2026-11-23T13:27:47Z",
-     "Honda Accord Super Touring": "2026-11-23T13:27:47Z",
-     "Opel Vectra Super Touring": "2026-11-23T13:27:47Z",
-     "Peugeot 406 Super Touring 1998": "2026-11-23T13:27:47Z",
-     "Renault Laguna Super Touring": "2026-11-23T13:27:47Z",
-     "Volvo 850 Super Touring": "2026-11-23T13:27:47Z",
-     "Volvo S40 Super Touring": "2026-11-23T13:27:47Z"
+     "Alfa Romeo 156 Super Touring": "2026-11-23T14:28:07Z",
+     "Audi A4 Super Touring 1995": "2026-11-23T14:28:07Z",
+     "BMW 320i E36 Super Touring": "2026-11-23T14:28:07Z",
+     "Ford Mondeo Super Touring": "2026-11-23T14:28:07Z",
+     "Honda Accord Super Touring": "2026-11-23T14:28:07Z",
+     "Opel Vectra Super Touring": "2026-11-23T14:28:07Z",
+     "Peugeot 406 Super Touring 1998": "2026-11-23T14:28:07Z",
+     "Renault Laguna Super Touring": "2026-11-23T14:28:07Z",
+     "Volvo 850 Super Touring": "2026-11-23T14:28:07Z",
+     "Volvo S40 Super Touring": "2026-11-23T14:28:07Z"
     },
     "classes": {
-     "Super Touring": "2026-11-23T13:27:47Z"
+     "Super Touring": "2026-11-23T14:28:07Z"
     }
    },
    "practiceMin": 5,
@@ -5274,7 +5306,8 @@
    "starts": [
     "2026-11-23T07:15:00Z",
     "2026-11-23T08:15:00Z",
-    "2026-11-23T13:15:00Z"
+    "2026-11-23T13:15:00Z",
+    "2026-11-23T14:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Salzburgring - Grand Prix",
@@ -5428,25 +5461,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-23T14:13:02Z",
+   "checked": "2026-11-23T14:28:07Z",
    "found": 9,
-   "lastOk": "2026-11-23T14:13:02Z",
+   "lastOk": "2026-11-23T14:28:07Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T14:18:05Z",
+   "checked": "2026-11-23T14:28:07Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T14:18:05Z",
+   "lastOk": "2026-11-23T14:28:07Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T13:57:57Z",
+    "checked": "2026-11-23T14:28:07Z",
     "found": 2,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T14:18:05Z",
+ "updated": "2026-11-23T14:28:07Z",
  "version": 1
 }
