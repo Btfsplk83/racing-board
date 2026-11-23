@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-23T07:54:59Z",
+  "fetched": "2026-11-23T08:55:21Z",
   "series": [
    {
     "anchors": [
@@ -3586,7 +3586,6 @@
    "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
    "lastSeen": "2026-11-23T08:50:19Z",
    "starts": [
-    "2026-11-20T08:55:00Z",
     "2026-11-20T10:25:00Z",
     "2026-11-20T11:55:00Z",
     "2026-11-20T13:25:00Z",
@@ -4827,26 +4826,27 @@
    "firstSeen": "2026-11-23T07:54:59Z",
    "game": "rr",
    "id": "rr-circuit-zolder-grand-prix",
-   "lastSeen": "2026-11-23T07:54:59Z",
+   "lastSeen": "2026-11-23T08:55:21Z",
    "pool": {
     "carIds": {
-     "13265": "2026-11-23T07:54:59Z",
-     "13312": "2026-11-23T07:54:59Z",
+     "13265": "2026-11-23T08:55:21Z",
+     "13312": "2026-11-23T08:55:21Z",
      "13323": "2026-11-23T07:54:59Z"
     },
     "cars": {
-     "AMG-Mercedes CLK-DTM 2002": "2026-11-23T07:54:59Z",
-     "Abt-Audi TT-R": "2026-11-23T07:54:59Z",
+     "AMG-Mercedes CLK-DTM 2002": "2026-11-23T08:55:21Z",
+     "Abt-Audi TT-R": "2026-11-23T08:55:21Z",
      "Opel Astra V8 Coup\u00e9": "2026-11-23T07:54:59Z"
     },
     "classes": {
-     "DTM 2002": "2026-11-23T07:54:59Z"
+     "DTM 2002": "2026-11-23T08:55:21Z"
     }
    },
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-23T07:45:00Z"
+    "2026-11-23T07:45:00Z",
+    "2026-11-23T08:45:00Z"
    ],
    "title": "DTM 2002",
    "track": "Circuit Zolder - Grand Prix",
@@ -5330,19 +5330,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T08:50:19Z",
+   "checked": "2026-11-23T08:55:21Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T08:50:19Z",
+   "lastOk": "2026-11-23T08:55:21Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T08:25:11Z",
-    "found": 2,
+    "checked": "2026-11-23T08:55:21Z",
+    "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T08:50:19Z",
+ "updated": "2026-11-23T08:55:21Z",
  "version": 1
 }
