@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-23T05:54:19Z",
+  "fetched": "2026-11-23T06:54:39Z",
   "series": [
    {
     "anchors": [
@@ -4162,7 +4162,6 @@
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
    "lastSeen": "2026-11-23T06:49:37Z",
    "starts": [
-    "2026-11-20T06:50:00Z",
     "2026-11-20T07:50:00Z",
     "2026-11-20T08:50:00Z",
     "2026-11-20T09:50:00Z",
@@ -5320,19 +5319,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T06:49:37Z",
+   "checked": "2026-11-23T06:54:39Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T06:49:37Z",
+   "lastOk": "2026-11-23T06:54:39Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T06:24:30Z",
-    "found": 1,
+    "checked": "2026-11-23T06:54:39Z",
+    "found": 0,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T06:49:37Z",
+ "updated": "2026-11-23T06:54:39Z",
  "version": 1
 }
