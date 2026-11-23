@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-23T06:54:39Z",
+  "fetched": "2026-11-23T07:54:59Z",
   "series": [
    {
     "anchors": [
@@ -4156,7 +4156,6 @@
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
    "lastSeen": "2026-11-23T07:49:57Z",
    "starts": [
-    "2026-11-20T07:50:00Z",
     "2026-11-20T08:50:00Z",
     "2026-11-20T09:50:00Z",
     "2026-11-20T10:50:00Z",
@@ -4886,6 +4885,49 @@
    "track": "Circuit Zandvoort - Modern - Grand Prix",
    "trackId": 10781
   },
+  "rr-circuit-zolder-grand-prix": {
+   "carIds": [
+    13265,
+    13312,
+    13323
+   ],
+   "cars": [
+    "AMG-Mercedes CLK-DTM 2002",
+    "Abt-Audi TT-R",
+    "Opel Astra V8 Coup\u00e9"
+   ],
+   "classes": [
+    "DTM 2002"
+   ],
+   "durationMin": 15,
+   "firstSeen": "2026-11-23T07:54:59Z",
+   "game": "rr",
+   "id": "rr-circuit-zolder-grand-prix",
+   "lastSeen": "2026-11-23T07:54:59Z",
+   "pool": {
+    "carIds": {
+     "13265": "2026-11-23T07:54:59Z",
+     "13312": "2026-11-23T07:54:59Z",
+     "13323": "2026-11-23T07:54:59Z"
+    },
+    "cars": {
+     "AMG-Mercedes CLK-DTM 2002": "2026-11-23T07:54:59Z",
+     "Abt-Audi TT-R": "2026-11-23T07:54:59Z",
+     "Opel Astra V8 Coup\u00e9": "2026-11-23T07:54:59Z"
+    },
+    "classes": {
+     "DTM 2002": "2026-11-23T07:54:59Z"
+    }
+   },
+   "practiceMin": 5,
+   "servers": 1,
+   "starts": [
+    "2026-11-23T07:45:00Z"
+   ],
+   "title": "DTM 2002",
+   "track": "Circuit Zolder - Grand Prix",
+   "trackId": 1683
+  },
   "rr-hockenheimring-2001-grand-prix": {
    "carIds": [
     8645,
@@ -5358,19 +5400,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T07:49:57Z",
+   "checked": "2026-11-23T07:54:59Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T07:49:57Z",
+   "lastOk": "2026-11-23T07:54:59Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T07:24:51Z",
+    "checked": "2026-11-23T07:54:59Z",
     "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T07:49:57Z",
+ "updated": "2026-11-23T07:54:59Z",
  "version": 1
 }
