@@ -2,7 +2,7 @@
  "rrByTrack": true,
  "rrFeed": {
   "feedUpdated": "2026-11-17T18:58:45Z",
-  "fetched": "2026-11-23T04:53:58Z",
+  "fetched": "2026-11-23T05:54:19Z",
   "series": [
    {
     "anchors": [
@@ -4168,7 +4168,6 @@
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
    "lastSeen": "2026-11-23T05:49:16Z",
    "starts": [
-    "2026-11-20T05:50:00Z",
     "2026-11-20T06:50:00Z",
     "2026-11-20T07:50:00Z",
     "2026-11-20T08:50:00Z",
@@ -5251,20 +5250,20 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-norisring-grand-prix",
-   "lastSeen": "2026-11-23T04:53:58Z",
+   "lastSeen": "2026-11-23T05:54:19Z",
    "pool": {
     "carIds": {
-     "12839": "2026-11-23T04:53:58Z",
-     "12850": "2026-11-23T04:53:58Z",
-     "7076": "2026-11-23T02:53:09Z"
+     "12839": "2026-11-23T05:54:19Z",
+     "12850": "2026-11-23T05:54:19Z",
+     "7076": "2026-11-23T05:54:19Z"
     },
     "cars": {
-     "AMG-Mercedes C-Klasse DTM": "2026-11-23T02:53:09Z",
-     "Alfa Romeo 155 TI DTM 1995": "2026-11-23T04:53:58Z",
-     "Opel Calibra V6 DTM": "2026-11-23T04:53:58Z"
+     "AMG-Mercedes C-Klasse DTM": "2026-11-23T05:54:19Z",
+     "Alfa Romeo 155 TI DTM 1995": "2026-11-23T05:54:19Z",
+     "Opel Calibra V6 DTM": "2026-11-23T05:54:19Z"
     },
     "classes": {
-     "DTM 1995": "2026-11-23T04:53:58Z"
+     "DTM 1995": "2026-11-23T05:54:19Z"
     }
    },
    "practiceMin": 5,
@@ -5316,7 +5315,8 @@
     "2026-11-23T01:45:00Z",
     "2026-11-23T02:45:00Z",
     "2026-11-23T03:45:00Z",
-    "2026-11-23T04:45:00Z"
+    "2026-11-23T04:45:00Z",
+    "2026-11-23T05:45:00Z"
    ],
    "title": "DTM 1995",
    "track": "Norisring - Grand Prix",
@@ -5331,19 +5331,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T05:49:16Z",
+   "checked": "2026-11-23T05:54:19Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T05:49:16Z",
+   "lastOk": "2026-11-23T05:54:19Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T05:24:10Z",
+    "checked": "2026-11-23T05:54:19Z",
     "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T05:49:16Z",
+ "updated": "2026-11-23T05:54:19Z",
  "version": 1
 }
