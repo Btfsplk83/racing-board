@@ -5303,6 +5303,57 @@
    "title": "DTM 1995",
    "track": "Norisring - Grand Prix",
    "trackId": 2517
+  },
+  "rr-salzburgring-grand-prix": {
+   "carIds": [
+    12829,
+    13049,
+    13183,
+    13539,
+    13548
+   ],
+   "cars": [
+    "Alfa Romeo 156 Super Touring",
+    "Ford Mondeo Super Touring",
+    "Peugeot 406 Super Touring 1998",
+    "Renault Laguna Super Touring",
+    "Volvo S40 Super Touring"
+   ],
+   "classes": [
+    "Super Touring"
+   ],
+   "durationMin": 15,
+   "firstSeen": "2026-11-23T07:24:51Z",
+   "game": "rr",
+   "id": "rr-salzburgring-grand-prix",
+   "lastSeen": "2026-11-23T07:24:51Z",
+   "pool": {
+    "carIds": {
+     "12829": "2026-11-23T07:24:51Z",
+     "13049": "2026-11-23T07:24:51Z",
+     "13183": "2026-11-23T07:24:51Z",
+     "13539": "2026-11-23T07:24:51Z",
+     "13548": "2026-11-23T07:24:51Z"
+    },
+    "cars": {
+     "Alfa Romeo 156 Super Touring": "2026-11-23T07:24:51Z",
+     "Ford Mondeo Super Touring": "2026-11-23T07:24:51Z",
+     "Peugeot 406 Super Touring 1998": "2026-11-23T07:24:51Z",
+     "Renault Laguna Super Touring": "2026-11-23T07:24:51Z",
+     "Volvo S40 Super Touring": "2026-11-23T07:24:51Z"
+    },
+    "classes": {
+     "Super Touring": "2026-11-23T07:24:51Z"
+    }
+   },
+   "practiceMin": 5,
+   "servers": 1,
+   "starts": [
+    "2026-11-23T07:15:00Z"
+   ],
+   "title": "Super Touring",
+   "track": "Salzburgring - Grand Prix",
+   "trackId": 2020
   }
  },
  "sources": {
@@ -5313,19 +5364,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T07:19:48Z",
+   "checked": "2026-11-23T07:29:52Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T07:19:48Z",
+   "lastOk": "2026-11-23T07:29:52Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T06:54:39Z",
-    "found": 0,
+    "checked": "2026-11-23T07:24:51Z",
+    "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T07:19:48Z",
+ "updated": "2026-11-23T07:29:52Z",
  "version": 1
 }
