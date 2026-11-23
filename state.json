@@ -4933,34 +4933,34 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-hockenheimring-2001-grand-prix",
-   "lastSeen": "2026-11-23T05:24:10Z",
+   "lastSeen": "2026-11-23T06:24:30Z",
    "pool": {
     "carIds": {
-     "12556": "2026-11-23T05:24:10Z",
+     "12556": "2026-11-23T06:24:30Z",
      "12561": "2026-11-23T01:22:40Z",
      "12652": "2026-11-23T04:23:49Z",
-     "12829": "2026-11-23T05:24:10Z",
+     "12829": "2026-11-23T06:24:30Z",
      "13049": "2026-11-23T03:23:22Z",
      "13065": "2026-11-23T03:23:22Z",
      "13183": "2026-11-23T00:22:19Z",
      "13539": "2026-11-23T01:22:40Z",
-     "13548": "2026-11-23T02:23:00Z",
+     "13548": "2026-11-23T06:24:30Z",
      "8645": "2026-11-23T03:23:22Z"
     },
     "cars": {
      "Alfa Romeo 156 Super Touring": "2026-11-23T03:23:22Z",
      "Audi A4 Super Touring 1995": "2026-11-23T01:22:40Z",
-     "BMW 320i E36 Super Touring": "2026-11-23T05:24:10Z",
-     "Ford Mondeo Super Touring": "2026-11-23T02:23:00Z",
+     "BMW 320i E36 Super Touring": "2026-11-23T06:24:30Z",
+     "Ford Mondeo Super Touring": "2026-11-23T06:24:30Z",
      "Honda Accord Super Touring": "2026-11-23T03:23:22Z",
      "Opel Vectra Super Touring": "2026-11-23T03:23:22Z",
      "Peugeot 406 Super Touring 1998": "2026-11-23T01:22:40Z",
      "Renault Laguna Super Touring": "2026-11-23T00:22:19Z",
      "Volvo 850 Super Touring": "2026-11-23T04:23:49Z",
-     "Volvo S40 Super Touring": "2026-11-23T05:24:10Z"
+     "Volvo S40 Super Touring": "2026-11-23T06:24:30Z"
     },
     "classes": {
-     "Super Touring": "2026-11-23T05:24:10Z"
+     "Super Touring": "2026-11-23T06:24:30Z"
     }
    },
    "practiceMin": 5,
@@ -5021,7 +5021,8 @@
     "2026-11-23T02:15:00Z",
     "2026-11-23T03:15:00Z",
     "2026-11-23T04:15:00Z",
-    "2026-11-23T05:15:00Z"
+    "2026-11-23T05:15:00Z",
+    "2026-11-23T06:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Hockenheimring - 2001 - Grand Prix",
@@ -5325,19 +5326,19 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-23T06:19:28Z",
+   "checked": "2026-11-23T06:29:31Z",
    "feedUpdated": "2026-11-17T18:58:45Z",
    "found": 7,
-   "lastOk": "2026-11-23T06:19:28Z",
+   "lastOk": "2026-11-23T06:29:31Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-23T05:54:19Z",
+    "checked": "2026-11-23T06:24:30Z",
     "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-23T06:19:28Z",
+ "updated": "2026-11-23T06:29:31Z",
  "version": 1
 }
