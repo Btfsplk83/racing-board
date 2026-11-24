@@ -5418,10 +5418,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-24T01:57:54Z",
+   "checked": "2026-11-24T02:02:59Z",
    "feedUpdated": "2026-11-24T01:05:37Z",
    "found": 7,
-   "lastOk": "2026-11-24T01:57:54Z",
+   "lastOk": "2026-11-24T02:02:59Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-24T01:57:54Z",
@@ -5431,6 +5431,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-24T01:57:54Z",
+ "updated": "2026-11-24T02:02:59Z",
  "version": 1
 }
