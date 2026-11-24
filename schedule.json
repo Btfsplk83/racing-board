@@ -1,22 +1,22 @@
 {
  "version": 2,
- "updated": "2026-11-24T12:26:02Z",
+ "updated": "2026-11-24T12:31:04Z",
  "sources": {
   "lmu": {
-   "checked": "2026-11-24T12:16:00Z",
-   "found": 9,
-   "lastOk": "2026-11-24T12:16:00Z",
-   "ok": true
+   "ok": true,
+   "checked": "2026-11-24T12:31:04Z",
+   "lastOk": "2026-11-24T12:31:04Z",
+   "found": 9
   },
   "rr": {
    "ok": true,
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-24T11:05:56Z",
-   "checked": "2026-11-24T12:26:02Z",
-   "lastOk": "2026-11-24T12:26:02Z",
+   "checked": "2026-11-24T12:31:04Z",
+   "lastOk": "2026-11-24T12:31:04Z",
    "serverCheck": {
-    "checked": "2026-11-24T12:00:56Z",
+    "checked": "2026-11-24T12:31:04Z",
     "found": 2,
     "mismatch": []
    }
@@ -175,52 +175,6 @@
  "series": [
   {
    "game": "lmu",
-   "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
-   "title": "ELMS Sprint Trophy",
-   "track": "Interlagos 2024",
-   "durationMin": 44,
-   "tier": "Intermediate",
-   "classes": [
-    "LMP2 ELMS",
-    "LMP3",
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Silver",
-    "track": {
-     "name": "Interlagos (Autodromo Jose Carlos Pace)",
-     "free": false,
-     "packs": [
-      "2024-pack-3"
-     ]
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMP2 ELMS",
-      "LMP3",
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 60,
-   "starts": [
-    "2026-11-24T01:50:00Z",
-    "2026-11-24T02:50:00Z",
-    "2026-11-24T03:50:00Z",
-    "2026-11-24T04:50:00Z",
-    "2026-11-24T05:50:00Z",
-    "2026-11-24T06:50:00Z",
-    "2026-11-24T07:50:00Z",
-    "2026-11-24T08:50:00Z",
-    "2026-11-24T09:50:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
-  },
-  {
-   "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
    "title": "ELMS Sprint Trophy",
    "track": "Sebring",
@@ -265,7 +219,7 @@
     "2026-11-24T22:50:00Z",
     "2026-11-24T23:50:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -310,50 +264,7 @@
     "2026-11-24T21:25:00Z",
     "2026-11-24T22:55:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "title": "ELMS Super 60",
-   "track": "Long Beach 2026",
-   "durationMin": 73,
-   "tier": "Advanced",
-   "classes": [
-    "LMP2 ELMS",
-    "LMP3",
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Gold",
-    "track": {
-     "name": "Streets of Long Beach",
-     "free": false,
-     "packs": [
-      "us-pack-2"
-     ]
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMP2 ELMS",
-      "LMP3",
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 90,
-   "starts": [
-    "2026-11-24T01:55:00Z",
-    "2026-11-24T03:25:00Z",
-    "2026-11-24T04:55:00Z",
-    "2026-11-24T06:25:00Z",
-    "2026-11-24T07:55:00Z",
-    "2026-11-24T09:25:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -401,51 +312,7 @@
     "2026-11-24T22:45:00Z",
     "2026-11-24T23:30:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "title": "LMGT3 Fixed",
-   "track": "Sebring",
-   "durationMin": 32,
-   "tier": "Beginner",
-   "classes": [
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Bronze",
-    "track": {
-     "name": "Sebring International Raceway",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 45,
-   "starts": [
-    "2026-11-24T01:00:00Z",
-    "2026-11-24T01:45:00Z",
-    "2026-11-24T02:30:00Z",
-    "2026-11-24T03:15:00Z",
-    "2026-11-24T04:00:00Z",
-    "2026-11-24T04:45:00Z",
-    "2026-11-24T05:30:00Z",
-    "2026-11-24T06:15:00Z",
-    "2026-11-24T07:00:00Z",
-    "2026-11-24T07:45:00Z",
-    "2026-11-24T08:30:00Z",
-    "2026-11-24T09:15:00Z",
-    "2026-11-24T10:00:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -491,89 +358,7 @@
     "2026-11-24T22:10:00Z",
     "2026-11-24T23:10:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "title": "LMGT3 Sprint Cup",
-   "track": "Portimao Wec 2023",
-   "durationMin": 44,
-   "tier": "Intermediate",
-   "classes": [
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Silver",
-    "track": {
-     "name": "Algarve International Circuit (Portimao)",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 60,
-   "starts": [
-    "2026-11-24T01:10:00Z",
-    "2026-11-24T02:10:00Z",
-    "2026-11-24T03:10:00Z",
-    "2026-11-24T04:10:00Z",
-    "2026-11-24T05:10:00Z",
-    "2026-11-24T06:10:00Z",
-    "2026-11-24T07:10:00Z",
-    "2026-11-24T08:10:00Z",
-    "2026-11-24T09:10:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
-   "title": "LMP3 Fixed",
-   "track": "Bahrain Wec 2023",
-   "durationMin": 32,
-   "tier": "Beginner",
-   "classes": [
-    "LMP3"
-   ],
-   "access": {
-    "rank": "Bronze",
-    "track": {
-     "name": "Bahrain International Circuit",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMP3"
-     ]
-    }
-   },
-   "intervalMin": 45,
-   "starts": [
-    "2026-11-24T01:30:00Z",
-    "2026-11-24T02:15:00Z",
-    "2026-11-24T03:00:00Z",
-    "2026-11-24T03:45:00Z",
-    "2026-11-24T04:30:00Z",
-    "2026-11-24T05:15:00Z",
-    "2026-11-24T06:00:00Z",
-    "2026-11-24T06:45:00Z",
-    "2026-11-24T07:30:00Z",
-    "2026-11-24T08:15:00Z",
-    "2026-11-24T09:00:00Z",
-    "2026-11-24T09:45:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -620,50 +405,7 @@
     "2026-11-24T22:30:00Z",
     "2026-11-24T23:15:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q3-le-mans",
-   "title": "Logitech McLaren G Challenge Winter - Q3",
-   "track": "Le Mans",
-   "durationMin": 30,
-   "tier": "Beginner",
-   "classes": [
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Bronze",
-    "track": {
-     "name": "Circuit de la Sarthe (Le Mans)",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 45,
-   "starts": [
-    "2026-11-24T01:15:00Z",
-    "2026-11-24T02:00:00Z",
-    "2026-11-24T02:45:00Z",
-    "2026-11-24T03:30:00Z",
-    "2026-11-24T04:15:00Z",
-    "2026-11-24T05:00:00Z",
-    "2026-11-24T05:45:00Z",
-    "2026-11-24T06:30:00Z",
-    "2026-11-24T07:15:00Z",
-    "2026-11-24T08:00:00Z",
-    "2026-11-24T08:45:00Z",
-    "2026-11-24T09:30:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -711,46 +453,7 @@
     "2026-11-24T23:00:00Z",
     "2026-11-24T23:45:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-advanced-one-stint-sprint-fuji-wec-2023",
-   "title": "One Stint Sprint",
-   "track": "Fuji Wec 2023",
-   "durationMin": 55,
-   "tier": "Advanced",
-   "classes": [
-    "Hypercar",
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Gold",
-    "track": {
-     "name": "Fuji Speedway",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "Hypercar",
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 90,
-   "starts": [
-    "2026-11-24T01:25:00Z",
-    "2026-11-24T02:55:00Z",
-    "2026-11-24T04:25:00Z",
-    "2026-11-24T05:55:00Z",
-    "2026-11-24T07:25:00Z",
-    "2026-11-24T08:55:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -792,7 +495,7 @@
     "2026-11-24T22:25:00Z",
     "2026-11-24T23:55:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -834,89 +537,7 @@
     "2026-11-24T22:30:00Z",
     "2026-11-24T23:30:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
-   "title": "Prototype Fixed",
-   "track": "Cot A Wec 2024",
-   "durationMin": 44,
-   "tier": "Intermediate",
-   "classes": [
-    "LMP2 ELMS",
-    "LMP3"
-   ],
-   "access": {
-    "rank": "Silver",
-    "track": {
-     "name": "Cot A Wec 2024",
-     "free": false,
-     "packs": [],
-     "unknown": true
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMP2 ELMS",
-      "LMP3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 60,
-   "starts": [
-    "2026-11-24T01:30:00Z",
-    "2026-11-24T02:30:00Z",
-    "2026-11-24T03:30:00Z",
-    "2026-11-24T04:30:00Z",
-    "2026-11-24T05:30:00Z",
-    "2026-11-24T06:30:00Z",
-    "2026-11-24T07:30:00Z",
-    "2026-11-24T08:30:00Z",
-    "2026-11-24T09:30:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
-  },
-  {
-   "game": "lmu",
-   "id": "lmu-advanced-wec-xperience-monza",
-   "title": "WEC-Xperience",
-   "track": "Monza",
-   "durationMin": 73,
-   "tier": "Advanced",
-   "classes": [
-    "Hypercar",
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Gold",
-    "track": {
-     "name": "Autodromo Nazionale Monza",
-     "free": true,
-     "packs": []
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "Hypercar",
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 90,
-   "starts": [
-    "2026-11-24T02:25:00Z",
-    "2026-11-24T03:55:00Z",
-    "2026-11-24T05:25:00Z",
-    "2026-11-24T06:55:00Z",
-    "2026-11-24T08:25:00Z",
-    "2026-11-24T09:55:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "lmu",
@@ -960,7 +581,7 @@
     "2026-11-24T21:55:00Z",
     "2026-11-24T23:25:00Z"
    ],
-   "lastSeen": "2026-11-24T12:16:00Z"
+   "lastSeen": "2026-11-24T12:31:04Z"
   },
   {
    "game": "rr",
@@ -1003,7 +624,7 @@
     "2026-11-25T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": true,
    "access": {
     "track": {
@@ -1088,7 +709,7 @@
     "2026-11-25T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1220,7 +841,7 @@
     "2026-11-25T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1281,7 +902,7 @@
     "2026-11-25T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1380,7 +1001,7 @@
     "2026-11-25T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1443,7 +1064,7 @@
     "2026-11-25T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1510,7 +1131,7 @@
     "2026-11-25T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T12:26:02Z",
+   "lastSeen": "2026-11-24T12:31:04Z",
    "free": false,
    "access": {
     "track": {
