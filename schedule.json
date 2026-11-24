@@ -1,20 +1,20 @@
 {
  "version": 2,
- "updated": "2026-11-24T11:00:32Z",
+ "updated": "2026-11-24T11:10:38Z",
  "sources": {
   "lmu": {
-   "ok": true,
    "checked": "2026-11-24T11:00:32Z",
+   "found": 9,
    "lastOk": "2026-11-24T11:00:32Z",
-   "found": 9
+   "ok": true
   },
   "rr": {
    "ok": true,
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-24T10:05:54Z",
-   "checked": "2026-11-24T11:00:32Z",
-   "lastOk": "2026-11-24T11:00:32Z",
+   "checked": "2026-11-24T11:10:38Z",
+   "lastOk": "2026-11-24T11:10:38Z",
    "serverCheck": {
     "checked": "2026-11-24T11:00:32Z",
     "found": 3,
@@ -270,49 +270,6 @@
   },
   {
    "game": "lmu",
-   "id": "lmu-advanced-elms-super-60-long-beach-2026",
-   "title": "ELMS Super 60",
-   "track": "Long Beach 2026",
-   "durationMin": 73,
-   "tier": "Advanced",
-   "classes": [
-    "LMP2 ELMS",
-    "LMP3",
-    "LMGT3"
-   ],
-   "access": {
-    "rank": "Gold",
-    "track": {
-     "name": "Streets of Long Beach",
-     "free": false,
-     "packs": [
-      "us-pack-2"
-     ]
-    },
-    "cars": {
-     "free": true,
-     "packs": [],
-     "classes": [
-      "LMP2 ELMS",
-      "LMP3",
-      "LMGT3"
-     ]
-    },
-    "unsure": true
-   },
-   "intervalMin": 90,
-   "starts": [
-    "2026-11-24T01:55:00Z",
-    "2026-11-24T03:25:00Z",
-    "2026-11-24T04:55:00Z",
-    "2026-11-24T06:25:00Z",
-    "2026-11-24T07:55:00Z",
-    "2026-11-24T09:25:00Z"
-   ],
-   "lastSeen": "2026-11-24T06:29:43Z"
-  },
-  {
-   "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
    "title": "ELMS Super 60",
    "track": "Daytona",
@@ -358,46 +315,44 @@
   },
   {
    "game": "lmu",
-   "id": "lmu-beginner-lmgt3-fixed-sebring",
-   "title": "LMGT3 Fixed",
-   "track": "Sebring",
-   "durationMin": 32,
-   "tier": "Beginner",
+   "id": "lmu-advanced-elms-super-60-long-beach-2026",
+   "title": "ELMS Super 60",
+   "track": "Long Beach 2026",
+   "durationMin": 73,
+   "tier": "Advanced",
    "classes": [
+    "LMP2 ELMS",
+    "LMP3",
     "LMGT3"
    ],
    "access": {
-    "rank": "Bronze",
+    "rank": "Gold",
     "track": {
-     "name": "Sebring International Raceway",
-     "free": true,
-     "packs": []
+     "name": "Streets of Long Beach",
+     "free": false,
+     "packs": [
+      "us-pack-2"
+     ]
     },
     "cars": {
      "free": true,
      "packs": [],
      "classes": [
+      "LMP2 ELMS",
+      "LMP3",
       "LMGT3"
      ]
     },
     "unsure": true
    },
-   "intervalMin": 45,
+   "intervalMin": 90,
    "starts": [
-    "2026-11-23T23:30:00Z",
-    "2026-11-24T01:00:00Z",
-    "2026-11-24T01:45:00Z",
-    "2026-11-24T02:30:00Z",
-    "2026-11-24T03:15:00Z",
-    "2026-11-24T04:00:00Z",
-    "2026-11-24T04:45:00Z",
-    "2026-11-24T05:30:00Z",
-    "2026-11-24T06:15:00Z",
-    "2026-11-24T07:00:00Z",
-    "2026-11-24T07:45:00Z",
-    "2026-11-24T08:30:00Z",
-    "2026-11-24T09:15:00Z",
-    "2026-11-24T10:00:00Z"
+    "2026-11-24T01:55:00Z",
+    "2026-11-24T03:25:00Z",
+    "2026-11-24T04:55:00Z",
+    "2026-11-24T06:25:00Z",
+    "2026-11-24T07:55:00Z",
+    "2026-11-24T09:25:00Z"
    ],
    "lastSeen": "2026-11-24T06:29:43Z"
   },
@@ -451,18 +406,18 @@
   },
   {
    "game": "lmu",
-   "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
-   "title": "LMGT3 Sprint Cup",
-   "track": "Portimao Wec 2023",
-   "durationMin": 44,
-   "tier": "Intermediate",
+   "id": "lmu-beginner-lmgt3-fixed-sebring",
+   "title": "LMGT3 Fixed",
+   "track": "Sebring",
+   "durationMin": 32,
+   "tier": "Beginner",
    "classes": [
     "LMGT3"
    ],
    "access": {
-    "rank": "Silver",
+    "rank": "Bronze",
     "track": {
-     "name": "Algarve International Circuit (Portimao)",
+     "name": "Sebring International Raceway",
      "free": true,
      "packs": []
     },
@@ -475,18 +430,22 @@
     },
     "unsure": true
    },
-   "intervalMin": 60,
+   "intervalMin": 45,
    "starts": [
-    "2026-11-23T23:10:00Z",
-    "2026-11-24T01:10:00Z",
-    "2026-11-24T02:10:00Z",
-    "2026-11-24T03:10:00Z",
-    "2026-11-24T04:10:00Z",
-    "2026-11-24T05:10:00Z",
-    "2026-11-24T06:10:00Z",
-    "2026-11-24T07:10:00Z",
-    "2026-11-24T08:10:00Z",
-    "2026-11-24T09:10:00Z"
+    "2026-11-23T23:30:00Z",
+    "2026-11-24T01:00:00Z",
+    "2026-11-24T01:45:00Z",
+    "2026-11-24T02:30:00Z",
+    "2026-11-24T03:15:00Z",
+    "2026-11-24T04:00:00Z",
+    "2026-11-24T04:45:00Z",
+    "2026-11-24T05:30:00Z",
+    "2026-11-24T06:15:00Z",
+    "2026-11-24T07:00:00Z",
+    "2026-11-24T07:45:00Z",
+    "2026-11-24T08:30:00Z",
+    "2026-11-24T09:15:00Z",
+    "2026-11-24T10:00:00Z"
    ],
    "lastSeen": "2026-11-24T06:29:43Z"
   },
@@ -535,6 +494,46 @@
     "2026-11-24T23:10:00Z"
    ],
    "lastSeen": "2026-11-24T11:00:32Z"
+  },
+  {
+   "game": "lmu",
+   "id": "lmu-intermediate-lmgt3-sprint-cup-portimao-wec-2023",
+   "title": "LMGT3 Sprint Cup",
+   "track": "Portimao Wec 2023",
+   "durationMin": 44,
+   "tier": "Intermediate",
+   "classes": [
+    "LMGT3"
+   ],
+   "access": {
+    "rank": "Silver",
+    "track": {
+     "name": "Algarve International Circuit (Portimao)",
+     "free": true,
+     "packs": []
+    },
+    "cars": {
+     "free": true,
+     "packs": [],
+     "classes": [
+      "LMGT3"
+     ]
+    },
+    "unsure": true
+   },
+   "intervalMin": 60,
+   "starts": [
+    "2026-11-24T01:10:00Z",
+    "2026-11-24T02:10:00Z",
+    "2026-11-24T03:10:00Z",
+    "2026-11-24T04:10:00Z",
+    "2026-11-24T05:10:00Z",
+    "2026-11-24T06:10:00Z",
+    "2026-11-24T07:10:00Z",
+    "2026-11-24T08:10:00Z",
+    "2026-11-24T09:10:00Z"
+   ],
+   "lastSeen": "2026-11-24T06:29:43Z"
   },
   {
    "game": "lmu",
@@ -1011,7 +1010,7 @@
     "2026-11-25T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": true,
    "access": {
     "track": {
@@ -1096,7 +1095,7 @@
     "2026-11-25T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": false,
    "access": {
     "track": {
@@ -1228,7 +1227,7 @@
     "2026-11-25T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": false,
    "access": {
     "track": {
@@ -1289,7 +1288,7 @@
     "2026-11-25T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": false,
    "access": {
     "track": {
@@ -1388,7 +1387,7 @@
     "2026-11-25T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": false,
    "access": {
     "track": {
@@ -1451,7 +1450,7 @@
     "2026-11-25T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": false,
    "access": {
     "track": {
@@ -1518,7 +1517,7 @@
     "2026-11-25T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-24T11:00:32Z",
+   "lastSeen": "2026-11-24T11:10:38Z",
    "free": false,
    "access": {
     "track": {
