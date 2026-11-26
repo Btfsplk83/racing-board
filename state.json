@@ -5287,10 +5287,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-26T19:55:39Z",
+   "checked": "2026-11-26T20:00:42Z",
    "feedUpdated": "2026-11-26T18:52:00Z",
    "found": 7,
-   "lastOk": "2026-11-26T19:55:39Z",
+   "lastOk": "2026-11-26T20:00:42Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-26T19:40:30Z",
@@ -5302,6 +5302,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-26T19:55:39Z",
+ "updated": "2026-11-26T20:00:42Z",
  "version": 1
 }
