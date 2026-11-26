@@ -1,8 +1,8 @@
 {
  "rrByTrack": true,
  "rrFeed": {
-  "feedUpdated": "2026-11-26T21:52:06Z",
-  "fetched": "2026-11-26T22:41:42Z",
+  "feedUpdated": "2026-11-26T22:52:08Z",
+  "fetched": "2026-11-26T23:42:06Z",
   "series": [
    {
     "anchors": [
@@ -3591,7 +3591,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-26T23:27:01Z",
+   "lastSeen": "2026-11-26T23:42:06Z",
    "starts": [
     "2026-11-24T11:55:00Z",
     "2026-11-24T13:25:00Z",
@@ -3808,7 +3808,6 @@
    "id": "lmu-beginner-lmgt3-fixed-sebring",
    "lastSeen": "2026-11-24T06:29:43Z",
    "starts": [
-    "2026-11-23T23:30:00Z",
     "2026-11-24T01:00:00Z",
     "2026-11-24T01:45:00Z",
     "2026-11-24T02:30:00Z",
@@ -3972,7 +3971,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-26T23:27:01Z",
+   "lastSeen": "2026-11-26T23:42:06Z",
    "starts": [
     "2026-11-24T11:45:00Z",
     "2026-11-24T12:30:00Z",
@@ -4087,7 +4086,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-26T23:27:01Z",
+   "lastSeen": "2026-11-26T23:42:06Z",
    "starts": [
     "2026-11-24T11:50:00Z",
     "2026-11-24T12:50:00Z",
@@ -4327,7 +4326,6 @@
    "id": "lmu-intermediate-prototype-fixed-cot-a-wec-2024",
    "lastSeen": "2026-11-24T06:29:43Z",
    "starts": [
-    "2026-11-23T23:30:00Z",
     "2026-11-24T01:30:00Z",
     "2026-11-24T02:30:00Z",
     "2026-11-24T03:30:00Z",
@@ -4642,20 +4640,20 @@
    "firstSeen": "2026-11-23T07:54:59Z",
    "game": "rr",
    "id": "rr-circuit-zolder-grand-prix",
-   "lastSeen": "2026-11-26T22:41:42Z",
+   "lastSeen": "2026-11-26T23:42:06Z",
    "pool": {
     "carIds": {
-     "13265": "2026-11-26T22:41:42Z",
-     "13312": "2026-11-26T22:41:42Z",
-     "13323": "2026-11-26T22:41:42Z"
+     "13265": "2026-11-26T23:42:06Z",
+     "13312": "2026-11-26T23:42:06Z",
+     "13323": "2026-11-26T23:42:06Z"
     },
     "cars": {
-     "AMG-Mercedes CLK-DTM 2002": "2026-11-26T22:41:42Z",
-     "Abt-Audi TT-R": "2026-11-26T22:41:42Z",
-     "Opel Astra V8 Coup\u00e9": "2026-11-26T22:41:42Z"
+     "AMG-Mercedes CLK-DTM 2002": "2026-11-26T23:42:06Z",
+     "Abt-Audi TT-R": "2026-11-26T23:42:06Z",
+     "Opel Astra V8 Coup\u00e9": "2026-11-26T23:42:06Z"
     },
     "classes": {
-     "DTM 2002": "2026-11-26T22:41:42Z"
+     "DTM 2002": "2026-11-26T23:42:06Z"
     }
    },
    "practiceMin": 5,
@@ -4694,7 +4692,8 @@
     "2026-11-26T03:45:00Z",
     "2026-11-26T04:45:00Z",
     "2026-11-26T05:45:00Z",
-    "2026-11-26T22:45:00Z"
+    "2026-11-26T22:45:00Z",
+    "2026-11-26T23:45:00Z"
    ],
    "title": "DTM 2002",
    "track": "Circuit Zolder - Grand Prix",
@@ -5098,20 +5097,20 @@
    "firstSeen": "2026-11-23T13:27:47Z",
    "game": "rr",
    "id": "rr-twin-ring-motegi-road-course",
-   "lastSeen": "2026-11-26T21:41:20Z",
+   "lastSeen": "2026-11-26T23:42:06Z",
    "pool": {
     "carIds": {
-     "13394": "2026-11-26T21:41:20Z"
+     "13394": "2026-11-26T23:42:06Z"
     },
     "cars": {
-     "Alpine A110 Cup": "2026-11-26T21:41:20Z"
+     "Alpine A110 Cup": "2026-11-26T23:42:06Z"
     },
     "classes": {
-     "Alpine A110 Cup": "2026-11-26T21:41:20Z"
+     "Alpine A110 Cup": "2026-11-26T23:42:06Z"
     }
    },
    "practiceMin": 5,
-   "servers": 6,
+   "servers": 4,
    "starts": [
     "2026-11-24T01:30:00Z",
     "2026-11-24T03:30:00Z",
@@ -5132,7 +5131,8 @@
     "2026-11-26T11:30:00Z",
     "2026-11-26T13:30:00Z",
     "2026-11-26T19:30:00Z",
-    "2026-11-26T21:30:00Z"
+    "2026-11-26T21:30:00Z",
+    "2026-11-26T23:30:00Z"
    ],
    "title": "Alpine A110 Cup",
    "track": "Twin Ring Motegi - Road Course",
@@ -5309,25 +5309,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-26T23:27:01Z",
-   "found": 5,
-   "lastOk": "2026-11-26T23:27:01Z",
+   "checked": "2026-11-26T23:42:06Z",
+   "found": 3,
+   "lastOk": "2026-11-26T23:42:06Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-26T23:32:04Z",
-   "feedUpdated": "2026-11-26T21:52:06Z",
+   "checked": "2026-11-26T23:47:10Z",
+   "feedUpdated": "2026-11-26T22:52:08Z",
    "found": 7,
-   "lastOk": "2026-11-26T23:32:04Z",
+   "lastOk": "2026-11-26T23:47:10Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-26T23:11:55Z",
-    "found": 1,
+    "checked": "2026-11-26T23:42:06Z",
+    "found": 2,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-26T23:32:04Z",
+ "updated": "2026-11-26T23:47:10Z",
  "version": 1
 }
