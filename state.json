@@ -5529,10 +5529,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-26T01:12:47Z",
+   "checked": "2026-11-26T01:17:51Z",
    "feedUpdated": "2026-11-25T23:51:23Z",
    "found": 7,
-   "lastOk": "2026-11-26T01:12:47Z",
+   "lastOk": "2026-11-26T01:17:51Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-26T00:57:41Z",
@@ -5542,6 +5542,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-26T01:12:47Z",
+ "updated": "2026-11-26T01:17:51Z",
  "version": 1
 }
