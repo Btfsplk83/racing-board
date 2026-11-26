@@ -5327,10 +5327,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-26T21:11:08Z",
+   "checked": "2026-11-26T21:16:12Z",
    "feedUpdated": "2026-11-26T19:52:02Z",
    "found": 7,
-   "lastOk": "2026-11-26T21:11:08Z",
+   "lastOk": "2026-11-26T21:16:12Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-26T21:11:08Z",
@@ -5340,6 +5340,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-26T21:11:08Z",
+ "updated": "2026-11-26T21:16:12Z",
  "version": 1
 }
