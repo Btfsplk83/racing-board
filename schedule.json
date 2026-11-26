@@ -1,20 +1,20 @@
 {
  "version": 2,
- "updated": "2026-11-26T23:52:12Z",
+ "updated": "2026-11-26T23:57:13Z",
  "sources": {
   "lmu": {
-   "checked": "2026-11-26T23:42:06Z",
-   "found": 3,
+   "ok": false,
+   "checked": "2026-11-26T23:57:13Z",
    "lastOk": "2026-11-26T23:42:06Z",
-   "ok": true
+   "error": "no race cards found; the page layout may have changed"
   },
   "rr": {
    "ok": true,
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-26T22:52:08Z",
-   "checked": "2026-11-26T23:52:12Z",
-   "lastOk": "2026-11-26T23:52:12Z",
+   "checked": "2026-11-26T23:57:13Z",
+   "lastOk": "2026-11-26T23:57:13Z",
    "serverCheck": {
     "checked": "2026-11-26T23:42:06Z",
     "found": 2,
@@ -480,7 +480,6 @@
    },
    "intervalMin": 90,
    "starts": [
-    "2026-11-26T11:55:00Z",
     "2026-11-26T13:25:00Z",
     "2026-11-26T14:55:00Z",
     "2026-11-26T16:25:00Z",
@@ -617,7 +616,7 @@
     "2026-11-27T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": true,
    "access": {
     "track": {
@@ -702,7 +701,7 @@
     "2026-11-27T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": false,
    "access": {
     "track": {
@@ -834,7 +833,7 @@
     "2026-11-27T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": false,
    "access": {
     "track": {
@@ -895,7 +894,7 @@
     "2026-11-27T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": false,
    "access": {
     "track": {
@@ -994,7 +993,7 @@
     "2026-11-27T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": false,
    "access": {
     "track": {
@@ -1057,7 +1056,7 @@
     "2026-11-27T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": false,
    "access": {
     "track": {
@@ -1124,7 +1123,7 @@
     "2026-11-27T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-26T23:52:12Z",
+   "lastSeen": "2026-11-26T23:57:13Z",
    "free": false,
    "access": {
     "track": {
