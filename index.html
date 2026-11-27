@@ -207,6 +207,10 @@ h2.seclbl::before{height:22px}
 .row.skin-acevo .cd,.row.skin-ams2 .cd{color:var(--gc)}
 .row.skin-acevo .at,.row.skin-ams2 .at,.row.skin-acevo .livetag,.row.skin-ams2 .livetag{text-align:center}
 .sblock.skin-acevo,.sblock.skin-ams2{border-left-color:var(--gc)}
+/* Favorite: the card's own left stripe turns gold, so there is one edge, not two side by side */
+.row.row[data-fav="1"]:not(.hero) .stripe{background:var(--fav)}
+.row[data-fav="1"]:not(.hero) .favedge,.sblock .favedge{display:none}
+.sblock.sblock[data-fav="1"]{border-left-color:var(--fav)}
 .skin-acevo .tg[data-state="next"],.skin-ams2 .tg[data-state="next"]{border-color:var(--gc)}
 .skin-acevo .tg[data-state="running"],.skin-ams2 .tg[data-state="running"]{background:var(--gd);border-color:var(--gd)}
 .tgrid.dates{grid-template-columns:repeat(2,1fr)}
