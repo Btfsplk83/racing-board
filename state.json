@@ -1,8 +1,8 @@
 {
  "rrByTrack": true,
  "rrFeed": {
-  "feedUpdated": "2026-11-27T02:52:16Z",
-  "fetched": "2026-11-27T02:54:24Z",
+  "feedUpdated": "2026-11-27T03:52:18Z",
+  "fetched": "2026-11-27T03:54:44Z",
   "series": [
    {
     "anchors": [
@@ -3503,7 +3503,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T12:25:00Z",
     "2026-11-24T13:55:00Z",
@@ -3602,7 +3602,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:55:00Z",
     "2026-11-24T13:25:00Z",
@@ -3688,7 +3688,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:25:00Z",
     "2026-11-24T12:55:00Z",
@@ -3757,7 +3757,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:30:00Z",
     "2026-11-24T12:15:00Z",
@@ -3902,7 +3902,6 @@
    "id": "lmu-beginner-lmp3-fixed-bahrain-wec-2023",
    "lastSeen": "2026-11-24T06:29:43Z",
    "starts": [
-    "2026-11-24T03:45:00Z",
     "2026-11-24T04:30:00Z",
     "2026-11-24T05:15:00Z",
     "2026-11-24T06:00:00Z",
@@ -3921,7 +3920,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:15:00Z",
     "2026-11-24T12:00:00Z",
@@ -4063,7 +4062,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:45:00Z",
     "2026-11-24T12:30:00Z",
@@ -4190,7 +4189,6 @@
    "id": "lmu-intermediate-elms-sprint-trophy-interlagos-2024",
    "lastSeen": "2026-11-24T06:29:43Z",
    "starts": [
-    "2026-11-24T03:50:00Z",
     "2026-11-24T04:50:00Z",
     "2026-11-24T05:50:00Z",
     "2026-11-24T06:50:00Z",
@@ -4207,7 +4205,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:50:00Z",
     "2026-11-24T12:50:00Z",
@@ -4304,7 +4302,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:10:00Z",
     "2026-11-24T12:10:00Z",
@@ -4416,7 +4414,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-27T03:39:41Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "starts": [
     "2026-11-24T11:30:00Z",
     "2026-11-24T12:30:00Z",
@@ -4830,26 +4828,25 @@
    "firstSeen": "2026-11-23T07:54:59Z",
    "game": "rr",
    "id": "rr-circuit-zolder-grand-prix",
-   "lastSeen": "2026-11-27T02:54:24Z",
+   "lastSeen": "2026-11-27T03:54:44Z",
    "pool": {
     "carIds": {
-     "13265": "2026-11-27T00:42:36Z",
-     "13312": "2026-11-27T02:54:24Z",
+     "13265": "2026-11-27T03:54:44Z",
+     "13312": "2026-11-27T03:54:44Z",
      "13323": "2026-11-27T00:42:36Z"
     },
     "cars": {
-     "AMG-Mercedes CLK-DTM 2002": "2026-11-27T00:42:36Z",
-     "Abt-Audi TT-R": "2026-11-27T02:54:24Z",
+     "AMG-Mercedes CLK-DTM 2002": "2026-11-27T03:54:44Z",
+     "Abt-Audi TT-R": "2026-11-27T03:54:44Z",
      "Opel Astra V8 Coup\u00e9": "2026-11-27T00:42:36Z"
     },
     "classes": {
-     "DTM 2002": "2026-11-27T02:54:24Z"
+     "DTM 2002": "2026-11-27T03:54:44Z"
     }
    },
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-24T03:45:00Z",
     "2026-11-24T05:45:00Z",
     "2026-11-24T10:45:00Z",
     "2026-11-24T11:45:00Z",
@@ -4882,7 +4879,8 @@
     "2026-11-26T22:45:00Z",
     "2026-11-26T23:45:00Z",
     "2026-11-27T00:45:00Z",
-    "2026-11-27T02:45:00Z"
+    "2026-11-27T02:45:00Z",
+    "2026-11-27T03:45:00Z"
    ],
    "title": "DTM 2002",
    "track": "Circuit Zolder - Grand Prix",
@@ -5492,25 +5490,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-27T03:39:41Z",
+   "checked": "2026-11-27T03:54:44Z",
    "found": 9,
-   "lastOk": "2026-11-27T03:39:41Z",
+   "lastOk": "2026-11-27T03:54:44Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T03:49:42Z",
-   "feedUpdated": "2026-11-27T02:52:16Z",
+   "checked": "2026-11-27T03:54:44Z",
+   "feedUpdated": "2026-11-27T03:52:18Z",
    "found": 7,
-   "lastOk": "2026-11-27T03:49:42Z",
+   "lastOk": "2026-11-27T03:54:44Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-27T03:24:35Z",
+    "checked": "2026-11-27T03:54:44Z",
     "found": 1,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-27T03:49:42Z",
+ "updated": "2026-11-27T03:54:44Z",
  "version": 1
 }
