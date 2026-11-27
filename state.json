@@ -5618,10 +5618,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T16:41:07Z",
+   "checked": "2026-11-27T16:46:09Z",
    "feedUpdated": "2026-11-27T15:52:42Z",
    "found": 7,
-   "lastOk": "2026-11-27T16:41:07Z",
+   "lastOk": "2026-11-27T16:46:09Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-27T16:36:04Z",
@@ -5635,6 +5635,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-27T16:41:07Z",
+ "updated": "2026-11-27T16:46:09Z",
  "version": 1
 }
