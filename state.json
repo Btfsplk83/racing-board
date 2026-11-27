@@ -1,8 +1,8 @@
 {
  "rrByTrack": true,
  "rrFeed": {
-  "feedUpdated": "2026-11-26T22:52:08Z",
-  "fetched": "2026-11-26T23:42:06Z",
+  "feedUpdated": "2026-11-26T23:52:10Z",
+  "fetched": "2026-11-27T00:42:36Z",
   "series": [
    {
     "anchors": [
@@ -3503,7 +3503,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T12:25:00Z",
     "2026-11-24T13:55:00Z",
@@ -3606,7 +3606,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:55:00Z",
     "2026-11-24T13:25:00Z",
@@ -3693,7 +3693,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:25:00Z",
     "2026-11-24T12:55:00Z",
@@ -3762,7 +3762,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:30:00Z",
     "2026-11-24T12:15:00Z",
@@ -3933,7 +3933,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:15:00Z",
     "2026-11-24T12:00:00Z",
@@ -4079,7 +4079,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:45:00Z",
     "2026-11-24T12:30:00Z",
@@ -4225,7 +4225,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:50:00Z",
     "2026-11-24T12:50:00Z",
@@ -4322,7 +4322,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:10:00Z",
     "2026-11-24T12:10:00Z",
@@ -4437,7 +4437,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-27T00:22:28Z",
+   "lastSeen": "2026-11-27T00:37:34Z",
    "starts": [
     "2026-11-24T11:30:00Z",
     "2026-11-24T12:30:00Z",
@@ -4850,20 +4850,20 @@
    "firstSeen": "2026-11-23T07:54:59Z",
    "game": "rr",
    "id": "rr-circuit-zolder-grand-prix",
-   "lastSeen": "2026-11-26T23:42:06Z",
+   "lastSeen": "2026-11-27T00:42:36Z",
    "pool": {
     "carIds": {
-     "13265": "2026-11-26T23:42:06Z",
-     "13312": "2026-11-26T23:42:06Z",
-     "13323": "2026-11-26T23:42:06Z"
+     "13265": "2026-11-27T00:42:36Z",
+     "13312": "2026-11-27T00:42:36Z",
+     "13323": "2026-11-27T00:42:36Z"
     },
     "cars": {
-     "AMG-Mercedes CLK-DTM 2002": "2026-11-26T23:42:06Z",
-     "Abt-Audi TT-R": "2026-11-26T23:42:06Z",
-     "Opel Astra V8 Coup\u00e9": "2026-11-26T23:42:06Z"
+     "AMG-Mercedes CLK-DTM 2002": "2026-11-27T00:42:36Z",
+     "Abt-Audi TT-R": "2026-11-27T00:42:36Z",
+     "Opel Astra V8 Coup\u00e9": "2026-11-27T00:42:36Z"
     },
     "classes": {
-     "DTM 2002": "2026-11-26T23:42:06Z"
+     "DTM 2002": "2026-11-27T00:42:36Z"
     }
    },
    "practiceMin": 5,
@@ -4903,7 +4903,8 @@
     "2026-11-26T04:45:00Z",
     "2026-11-26T05:45:00Z",
     "2026-11-26T22:45:00Z",
-    "2026-11-26T23:45:00Z"
+    "2026-11-26T23:45:00Z",
+    "2026-11-27T00:45:00Z"
    ],
    "title": "DTM 2002",
    "track": "Circuit Zolder - Grand Prix",
@@ -4992,20 +4993,20 @@
    "firstSeen": "2026-11-23T14:28:07Z",
    "game": "rr",
    "id": "rr-hockenheimring-modern-grand-prix",
-   "lastSeen": "2026-11-26T22:41:42Z",
+   "lastSeen": "2026-11-27T00:42:36Z",
    "pool": {
     "carIds": {
-     "5051": "2026-11-26T22:41:42Z"
+     "5051": "2026-11-27T00:42:36Z"
     },
     "cars": {
-     "Tatuus F4": "2026-11-26T22:41:42Z"
+     "Tatuus F4": "2026-11-27T00:42:36Z"
     },
     "classes": {
-     "Tatuus F4 Cup": "2026-11-26T22:41:42Z"
+     "Tatuus F4 Cup": "2026-11-27T00:42:36Z"
     }
    },
    "practiceMin": 5,
-   "servers": 4,
+   "servers": 2,
    "starts": [
     "2026-11-24T02:30:00Z",
     "2026-11-24T04:30:00Z",
@@ -5028,7 +5029,8 @@
     "2026-11-26T12:30:00Z",
     "2026-11-26T14:30:00Z",
     "2026-11-26T20:30:00Z",
-    "2026-11-26T22:30:00Z"
+    "2026-11-26T22:30:00Z",
+    "2026-11-27T00:30:00Z"
    ],
    "title": "Tatuus F4 Cup",
    "track": "Hockenheimring - Modern - Grand Prix",
@@ -5513,25 +5515,25 @@
  },
  "sources": {
   "lmu": {
-   "checked": "2026-11-27T00:22:28Z",
+   "checked": "2026-11-27T00:37:34Z",
    "found": 9,
-   "lastOk": "2026-11-27T00:22:28Z",
+   "lastOk": "2026-11-27T00:37:34Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T00:32:33Z",
-   "feedUpdated": "2026-11-26T22:52:08Z",
+   "checked": "2026-11-27T00:47:38Z",
+   "feedUpdated": "2026-11-26T23:52:10Z",
    "found": 7,
-   "lastOk": "2026-11-27T00:32:33Z",
+   "lastOk": "2026-11-27T00:47:38Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-27T00:12:21Z",
+    "checked": "2026-11-27T00:42:36Z",
     "found": 2,
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-27T00:32:33Z",
+ "updated": "2026-11-27T00:47:38Z",
  "version": 1
 }
