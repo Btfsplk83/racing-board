@@ -3650,7 +3650,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-27T17:41:38Z",
+   "lastSeen": "2026-11-27T17:56:45Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3672,7 +3672,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-27T17:41:38Z",
+   "lastSeen": "2026-11-27T17:56:45Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3694,7 +3694,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-27T17:41:38Z",
+   "lastSeen": "2026-11-27T17:56:45Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3716,13 +3716,14 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-27T17:41:38Z",
+   "lastSeen": "2026-11-27T17:56:45Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
     "2026-11-27T17:15:00Z",
     "2026-11-27T17:45:00Z",
-    "2026-11-27T18:15:00Z"
+    "2026-11-27T18:15:00Z",
+    "2026-11-27T18:45:00Z"
    ],
    "title": "Roadster Challenge",
    "track": "Laguna Seca - GP",
@@ -3739,7 +3740,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-27T17:41:38Z",
+   "lastSeen": "2026-11-27T17:56:45Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -3843,7 +3844,6 @@
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
    "lastSeen": "2026-11-27T17:51:42Z",
    "starts": [
-    "2026-11-24T17:55:00Z",
     "2026-11-24T19:25:00Z",
     "2026-11-24T20:55:00Z",
     "2026-11-24T22:25:00Z",
@@ -5608,9 +5608,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-27T17:41:38Z",
+   "checked": "2026-11-27T17:56:45Z",
    "found": 5,
-   "lastOk": "2026-11-27T17:41:38Z",
+   "lastOk": "2026-11-27T17:56:45Z",
    "ok": true
   },
   "ams2": {
@@ -5626,10 +5626,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T17:51:42Z",
+   "checked": "2026-11-27T17:56:45Z",
    "feedUpdated": "2026-11-27T16:52:44Z",
    "found": 7,
-   "lastOk": "2026-11-27T17:51:42Z",
+   "lastOk": "2026-11-27T17:56:45Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-27T17:36:35Z",
@@ -5642,6 +5642,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-27T17:51:42Z",
+ "updated": "2026-11-27T17:56:45Z",
  "version": 1
 }
