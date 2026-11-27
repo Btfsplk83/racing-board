@@ -5672,10 +5672,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T22:47:06Z",
+   "checked": "2026-11-27T22:52:09Z",
    "feedUpdated": "2026-11-27T21:52:53Z",
    "found": 7,
-   "lastOk": "2026-11-27T22:47:06Z",
+   "lastOk": "2026-11-27T22:52:09Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-27T22:32:01Z",
@@ -5690,6 +5690,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-27T22:47:06Z",
+ "updated": "2026-11-27T22:52:09Z",
  "version": 1
 }
