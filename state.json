@@ -115,8 +115,8 @@
  },
  "rrByTrack": true,
  "rrFeed": {
-  "feedUpdated": "2026-11-27T15:52:42Z",
-  "fetched": "2026-11-27T16:36:04Z",
+  "feedUpdated": "2026-11-27T16:52:44Z",
+  "fetched": "2026-11-27T17:36:35Z",
   "series": [
    {
     "anchors": [
@@ -3627,6 +3627,11 @@
    "sec": 256,
    "seen": "2026-11-27T16:36:04Z"
   },
+  "Twin Ring Motegi - Road Course": {
+   "practiceMin": 5,
+   "sec": 256,
+   "seen": "2026-11-27T17:36:35Z"
+  },
   "Watkins Glen International - Grand Prix with Inner Loop": {
    "practiceMin": 5,
    "sec": 249,
@@ -3645,11 +3650,12 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-27T17:26:31Z",
+   "lastSeen": "2026-11-27T17:41:38Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
-    "2026-11-27T18:30:00Z"
+    "2026-11-27T18:30:00Z",
+    "2026-11-27T19:30:00Z"
    ],
    "title": "Fanatec Eifel Trophy",
    "track": "Nurburgring - 24h",
@@ -3666,11 +3672,12 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-27T17:26:31Z",
+   "lastSeen": "2026-11-27T17:41:38Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
-    "2026-11-27T18:10:00Z"
+    "2026-11-27T18:10:00Z",
+    "2026-11-27T18:50:00Z"
    ],
    "title": "GT3 Sprint Cup",
    "track": "Suzuka - GP",
@@ -3687,7 +3694,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-27T17:26:31Z",
+   "lastSeen": "2026-11-27T17:41:38Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3709,7 +3716,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-27T17:26:31Z",
+   "lastSeen": "2026-11-27T17:41:38Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3732,12 +3739,13 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-27T17:26:31Z",
+   "lastSeen": "2026-11-27T17:41:38Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
     "2026-11-27T17:30:00Z",
-    "2026-11-27T18:00:00Z"
+    "2026-11-27T18:00:00Z",
+    "2026-11-27T18:30:00Z"
    ],
    "title": "Vintage Trophy",
    "track": "Watkins Glen International - Short",
@@ -3748,7 +3756,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T18:25:00Z",
     "2026-11-24T19:55:00Z",
@@ -3833,7 +3841,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T17:55:00Z",
     "2026-11-24T19:25:00Z",
@@ -3909,7 +3917,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T18:55:00Z",
     "2026-11-24T20:25:00Z",
@@ -3973,9 +3981,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
-    "2026-11-24T17:30:00Z",
     "2026-11-24T18:15:00Z",
     "2026-11-24T19:00:00Z",
     "2026-11-24T19:45:00Z",
@@ -4109,7 +4116,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T18:00:00Z",
     "2026-11-24T18:45:00Z",
@@ -4233,7 +4240,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T17:45:00Z",
     "2026-11-24T18:30:00Z",
@@ -4361,7 +4368,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T17:50:00Z",
     "2026-11-24T18:50:00Z",
@@ -4452,7 +4459,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
     "2026-11-24T18:10:00Z",
     "2026-11-24T19:10:00Z",
@@ -4550,9 +4557,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-27T17:21:30Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
    "starts": [
-    "2026-11-24T17:30:00Z",
     "2026-11-24T18:30:00Z",
     "2026-11-24T19:30:00Z",
     "2026-11-24T20:30:00Z",
@@ -5398,20 +5404,21 @@
    "firstSeen": "2026-11-23T13:27:47Z",
    "game": "rr",
    "id": "rr-twin-ring-motegi-road-course",
-   "lastSeen": "2026-11-27T15:35:36Z",
+   "lastSeen": "2026-11-27T17:36:35Z",
+   "leadSec": 256,
    "pool": {
     "carIds": {
-     "13394": "2026-11-27T15:35:36Z"
+     "13394": "2026-11-27T17:36:35Z"
     },
     "cars": {
-     "Alpine A110 Cup": "2026-11-27T15:35:36Z"
+     "Alpine A110 Cup": "2026-11-27T17:36:35Z"
     },
     "classes": {
-     "Alpine A110 Cup": "2026-11-27T15:35:36Z"
+     "Alpine A110 Cup": "2026-11-27T17:36:35Z"
     }
    },
    "practiceMin": 5,
-   "servers": 6,
+   "servers": 7,
    "starts": [
     "2026-11-24T21:30:00Z",
     "2026-11-25T01:30:00Z",
@@ -5429,7 +5436,8 @@
     "2026-11-26T21:30:00Z",
     "2026-11-26T23:30:00Z",
     "2026-11-27T13:30:00Z",
-    "2026-11-27T15:30:00Z"
+    "2026-11-27T15:30:00Z",
+    "2026-11-27T17:30:00Z"
    ],
    "title": "Alpine A110 Cup",
    "track": "Twin Ring Motegi - Road Course",
@@ -5602,9 +5610,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-27T17:26:31Z",
+   "checked": "2026-11-27T17:41:38Z",
    "found": 5,
-   "lastOk": "2026-11-27T17:26:31Z",
+   "lastOk": "2026-11-27T17:41:38Z",
    "ok": true
   },
   "ams2": {
@@ -5614,29 +5622,28 @@
    "ok": true
   },
   "lmu": {
-   "checked": "2026-11-27T17:21:30Z",
+   "checked": "2026-11-27T17:36:35Z",
    "found": 9,
-   "lastOk": "2026-11-27T17:21:30Z",
+   "lastOk": "2026-11-27T17:36:35Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T17:31:33Z",
-   "feedUpdated": "2026-11-27T15:52:42Z",
+   "checked": "2026-11-27T17:41:38Z",
+   "feedUpdated": "2026-11-27T16:52:44Z",
    "found": 7,
-   "lastOk": "2026-11-27T17:31:33Z",
+   "lastOk": "2026-11-27T17:41:38Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-27T17:06:17Z",
-    "found": 2,
+    "checked": "2026-11-27T17:36:35Z",
+    "found": 1,
     "leadSec": {
-     "Circuit Zandvoort - Modern - Grand Prix": 256,
-     "Watkins Glen International - Grand Prix with Inner Loop": 249
+     "Twin Ring Motegi - Road Course": 256
     },
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-27T17:31:33Z",
+ "updated": "2026-11-27T17:41:38Z",
  "version": 1
 }
