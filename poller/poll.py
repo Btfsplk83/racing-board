@@ -9,6 +9,9 @@ cached in state.json. The live ranked server list is the fallback: it runs every
 pass when the feed is unusable, and every RR_CHECK_EVERY otherwise as a cross-check.
 
 LMU is fetched every LMU_EVERY (and right after the Tuesday reset).
+AC Evo daily races come from acevo.gg every ACEVO_EVERY, the same way as LMU.
+League events (config.json "leagues") come from the JustRace API every JR_EVERY
+and are cached in state.json as jrFeed.
 LMU and the RaceRoom fallback only show races that are about to start or are
 running, so each run adds the starts it sees and the page projects the rest
 from the interval between them.
@@ -33,15 +36,21 @@ LMU_URL = "https://racecontrol.gg/"
 RR_SERVERS_URL = "https://game.raceroom.com/multiplayer-rating/servers/"
 RR_DATA_URL = "https://raw.githubusercontent.com/sector3studios/r3e-spectator-overlay/master/r3e-data.json"
 RR_FEED_URL = "https://r3e-leaderboards.info/cache/ranked_series.json.gz"
+ACEVO_URL = "https://acevo.gg/daily-races"
+JR_API = "https://www.justrace.net/apiv3"
+JR_GAMES = {4: "ams2"}                  # JustRace game ids the board shows
 
 LMU_EVERY = timedelta(minutes=15)       # racecontrol.gg lists ~6 h of starts, so this misses none
 RR_FEED_EVERY = timedelta(minutes=60)   # refetch the feed this often (it changes about daily)
 RR_CHECK_EVERY = timedelta(minutes=30)  # server-list cross-check while the feed works
+ACEVO_EVERY = timedelta(minutes=15)     # acevo.gg shows the next two starts per series
+JR_EVERY = timedelta(minutes=60)        # league calendars change rarely
+JR_AHEAD = timedelta(days=35)           # league events this far ahead go into schedule.json
 PAST = timedelta(hours=2)               # feed rows: starts from this long before UTC midnight...
 AHEAD = timedelta(hours=24)             # ...to this long after the next one (the page shows 24 h)
 
 KEEP_STARTS = timedelta(days=3)      # how far back observed starts are kept
-ACTIVE = {"lmu": timedelta(hours=6), "rr": timedelta(hours=8)}  # unseen this long = out of rotation
+ACTIVE = {"lmu": timedelta(hours=6), "rr": timedelta(hours=8), "acevo": timedelta(hours=6)}  # unseen this long = out of rotation
 DROP_AFTER = timedelta(days=8)       # forget a series entirely after this
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -195,8 +204,10 @@ def poll_rr():
         c = combos.setdefault(sid, {
             "game": "rr", "id": sid, "classes": set(), "cars": set(), "carIds": set(),
             "track": track, "trackId": tracks[0][2], "durationMin": st.get("Race1Duration") or None,
-            "practiceMin": st.get("PracticeDuration") or None, "starts": set(), "servers": 0,
+            "practiceMin": st.get("PracticeDuration") or None, "starts": set(), "servers": 0, "leadSec": 0,
         })
+        # How long before the slot this server opened. Seen 2026-11-27: 256 s for 5-min-practice series.
+        c["leadSec"] = max(c["leadSec"], int((start - created).total_seconds()))
         c["classes"].update(classes)
         c["cars"].update(cars)
         c["carIds"].update(car_ids)
@@ -398,6 +409,165 @@ def rr_migrate(state):
     state["rrByTrack"] = True
 
 
+# ---------- AC Evo (acevo.gg daily races, run on SimGrid) ----------
+
+def acevo_len(card, label):
+    """('10 min' style) value of a session tile on an event card -> (number, unit) or None."""
+    m = re.search(r'title-400[^>]*>\s*(\d+)\s*<span[^>]*>\s*(min|laps?)\s*</span>\s*</span>\s*<span[^>]*>\s*' + label + r'\s*<',
+                  card, re.I)
+    return (int(m[1]), m[2].lower().rstrip("s")) if m else None
+
+
+def acevo_dd(card, label):
+    m = re.search(r"</i>\s*" + label + r"\s*</dt>\s*<dd>(.*?)</dd>", card, re.S | re.I)
+    return text(m[1]) if m else ""
+
+
+def poll_acevo():
+    page = fetch(ACEVO_URL)
+    out = []
+    for c in page.split('class="event-card')[1:]:
+        title = re.search(r'<h3[^>]*>\s*<a href="/events/(\d+)">(.*?)</a>', c, re.S)
+        track, cls = acevo_dd(c, "Track"), acevo_dd(c, "Class")
+        starts = sorted(set(re.findall(r'<time datetime="(\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ)"', c)))
+        if not (title and track and starts):
+            continue
+        name = text(title[2])
+        badges = [text(b) for b in re.findall(r'class="badge badge-overlay">(.*?)</span>', c, re.S)]
+        sess = [(k, acevo_len(c, k)) for k in ("Practice", "Qualifying", "Race")]
+        sess = [(k, v) for k, v in sess if v]
+        mins = [v[0] for _, v in sess if v[1] == "min"]
+        out.append({
+            "game": "acevo",
+            "id": "acevo-" + slug(name + "-" + track),
+            "title": name,
+            "track": track,
+            "classes": [cls] if cls else [],
+            "kind": badges[0] if badges else "",
+            "free": any(b.lower() == "free" for b in badges),
+            # Whole event (practice + qualifying + race) when every session is timed, so "running" covers the grid.
+            "durationMin": sum(mins) if len(mins) == len(sess) and mins else None,
+            "format": " · ".join(f"{k[0]} {v[0]} {v[1]}{'s' if v[1] == 'lap' and v[0] != 1 else ''}" for k, v in sess),
+            "url": "https://acevo.gg/events/" + title[1],
+            "starts": starts,
+        })
+    if not out:
+        raise RuntimeError("no event cards found; the page layout may have changed")
+    return out
+
+
+def acevo_due(prev, when):
+    if not prev.get("ok") or not prev.get("checked"):
+        return True
+    return when - parse_iso(prev["checked"]) >= ACEVO_EVERY - timedelta(minutes=2)
+
+
+# ---------- League events (JustRace) ----------
+
+def jr_call(path, body=None):
+    data = json.dumps(body).encode() if body is not None else None
+    req = urllib.request.Request(JR_API + path, data=data, headers={
+        "User-Agent": UA, "Accept": "application/json", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def jr_iso(s):
+    """'2026-12-04T13:43:00Z' or '...+00:00' -> datetime (UTC)."""
+    return datetime.fromisoformat(str(s).replace("Z", "+00:00")).astimezone(timezone.utc)
+
+
+def jr_names(game):
+    """id -> display name for tracks and classes, AMS2 only so far."""
+    if game != "ams2":
+        return {}, {}
+    tracks = {str(t["id"]): (t.get("extra_data") or {}).get("translated_name") or t.get("name", "")
+              for t in jr_call("/refdata/api/GetAms2Tracks")}
+    classes = {str(c["value"]): c.get("translated_name") or c.get("name", "")
+               for c in jr_call("/refdata/api/GetAms2Classes")}
+    return tracks, classes
+
+
+def jr_league(league, when, names):
+    sub = league["subdomain"]
+    com = jr_call("/community/api/GetCommunityBySubdomain/" + sub)
+    lname = league.get("name") or com.get("Name") or sub
+    seasons = jr_call("/season/api/GetFilteredSeasons", {
+        "ShowAll": True, "ShowExpired": False, "ShowIfNoSchedules": True, "SeasonIds": [],
+        "CommunityIds": [com["CommunityId"]], "GameIds": [], "SeriesIds": [], "CountryCodes": [],
+        "OnlyMatchingSeasonIds": False, "HardReload": False}).get("Seasons", [])
+    rows = []
+    for se in seasons:
+        game = JR_GAMES.get(se.get("GameId"))
+        if not game or se.get("IsHotlap") or jr_iso(se["EndDate"]) < when - timedelta(days=1):
+            continue
+        if game not in names:
+            names[game] = jr_names(game)
+        tracks, classes = names[game]
+        d = jr_call(f"/season/api/GetSeasonSchedules/{se['SeasonID']}/{se['GameId']}/false/false")
+        sess = {}
+        for x in d.get("ScheduleSessions", []):
+            sess.setdefault(x["ServerScheduleId"], []).append(x)
+        races = []
+        for e in d.get("ServerScheduleDetails", []):
+            ss, par = e.get("ServerSchedule") or {}, e.get("ServerScheduleParam") or {}
+            parts = sess.get(e["ServerScheduleId"], [])
+            if not any(x.get("SessionTypeName") == "Race" for x in parts) and not ss.get("RaceDuration"):
+                continue  # practice servers and hot-lap windows
+            races.append((jr_iso(e["ScheduleStartTime"]), e, ss, par, parts))
+        races.sort(key=lambda r: r[0])
+        for n, (start, e, ss, par, parts) in enumerate(races, 1):
+            if not (when - timedelta(hours=6) <= start <= when + JR_AHEAD):
+                continue
+            tid = str(par.get("TrackName") or ss.get("TrackList") or "").split(",")[0]
+            cls = [classes.get(c, "") for c in str(par.get("CarClassList") or ss.get("ClassList") or "").split(",") if c]
+            timed = [x for x in parts if x.get("SessionDurationTypeName") == "Mins"]
+            fmt = " · ".join(f"{x['SessionTypeName'][0]} {x['SessionDuration']} "
+                             f"{'min' if x.get('SessionDurationTypeName') == 'Mins' else 'laps'}" for x in parts)
+            rows.append({
+                "game": game, "id": f"{game}-jr-{e['ServerScheduleId']}",
+                "title": se.get("Name", ""), "league": lname, "round": n,
+                "eventName": par.get("EventName", ""),
+                "track": tracks.get(tid) or par.get("EventName", ""),
+                "classes": [c for c in cls if c],
+                "durationMin": sum(x["SessionDuration"] for x in timed) if parts and len(timed) == len(parts) else None,
+                "format": fmt,
+                "url": f"https://{sub}.justrace.net/en/events",
+                "starts": [iso(start)],
+            })
+    return rows
+
+
+def jr_refresh(state, when):
+    """League events change rarely, so they are fetched every JR_EVERY and cached in state.json.
+    On failure the cache is kept and the page still has the dates."""
+    cache = state.get("jrFeed") or {}
+    leagues = [x for x in load_config().get("leagues", []) if isinstance(x, dict) and x.get("subdomain")]
+    if not leagues:
+        state.pop("jrFeed", None)
+        return {}
+    if cache.get("fetched") and when - parse_iso(cache["fetched"]) < JR_EVERY - timedelta(minutes=2):
+        return cache
+    cache["fetched"] = iso(when)
+    try:
+        rows, names = [], {}
+        for lg in leagues:
+            rows += jr_league(lg, when, names)
+        cache["rows"] = rows
+        cache["lastOk"] = iso(when)
+        cache.pop("error", None)
+    except Exception as e:
+        cache["error"] = str(e)[:200]
+        print(f"leagues: FAILED {e}", file=sys.stderr)
+    state["jrFeed"] = cache
+    return cache
+
+
+def jr_rows(cache, when):
+    lo = when - timedelta(hours=6)
+    return [r for r in cache.get("rows", []) if any(parse_iso(s) >= lo for s in r["starts"])]
+
+
 # ---------- merge + output ----------
 
 def infer_interval(starts):
@@ -588,8 +758,9 @@ def rr_access(s, cat):
     return acc
 
 
-def build_schedule(state, when, sources, rr_rows):
-    """rr_rows: RaceRoom rows from the feed. When there are any, they replace the server-list series."""
+def build_schedule(state, when, sources, rr_rows, league_rows=()):
+    """rr_rows: RaceRoom rows from the feed. When there are any, they replace the server-list series.
+    league_rows: one row per league race (JustRace), each with a single start."""
     free = load_free()
     names = load_series_names()
     cats = {g: load_catalog(g) for g in ("lmu", "rr")}
@@ -599,7 +770,7 @@ def build_schedule(state, when, sources, rr_rows):
         row["free"] = any(c.lower() in free for c in row["classes"])
         if cats["rr"]:
             row["access"] = rr_access(row, cats["rr"])
-        for k in ("trackId", "carIds", "practiceMin"):
+        for k in ("trackId", "carIds"):
             row.pop(k, None)
         out.append(row)
     for s in state.get("series", {}).values():
@@ -607,13 +778,15 @@ def build_schedule(state, when, sources, rr_rows):
             continue
         if s["game"] == "rr" and rr_rows:
             continue
-        row = {k: s[k] for k in ("game", "id", "title", "track", "durationMin") if k in s}
+        row = {k: s[k] for k in ("game", "id", "title", "track", "durationMin", "practiceMin") if k in s and s[k] is not None}
         cat = cats.get(s["game"])
         if s["game"] == "lmu":
             row["tier"] = s.get("tier")
             row["classes"] = []
             if cat:
                 row["classes"], row["access"] = lmu_access(s, cat)
+        elif s["game"] == "acevo":
+            row.update({k: s[k] for k in ("classes", "kind", "free", "format", "url") if k in s})
         else:
             row["classes"] = s.get("classes", [])
             row["cars"] = s.get("cars", [])
@@ -628,7 +801,9 @@ def build_schedule(state, when, sources, rr_rows):
         row["starts"] = [x for x in s["starts"] if parse_iso(x) >= lo]
         row["lastSeen"] = s["lastSeen"]
         out.append(row)
-    out.sort(key=lambda r: (r["game"], r["title"]))
+    for row in league_rows:
+        out.append(dict(row, event=True, lastSeen=iso(when)))
+    out.sort(key=lambda r: (r["game"], r["title"], r["starts"][:1]))
     packs = {g: public_packs(c) if c else [] for g, c in cats.items()}
     return {"version": 2, "updated": iso(when), "sources": sources, "packs": packs, "series": out}
 
@@ -692,7 +867,12 @@ def main():
         try:
             seen = poll_rr()
             merge(state, seen, "rr", when)
-            check = {"checked": iso(when), "found": len(seen)}
+            check = {"checked": iso(when), "found": len(seen),
+                     "leadSec": {s["track"]: s["leadSec"] for s in seen}}
+            # Latest lead per track, kept across checks, to confirm the page's "opens early" rule per series.
+            leads = state.setdefault("rrLeadSec", {})
+            for s in seen:
+                leads[s["track"]] = {"sec": s["leadSec"], "practiceMin": s.get("practiceMin"), "seen": iso(when)}
             if rr_rows:
                 check["mismatch"] = rr_cross_check(seen, rr_rows)[:20]
                 if check["mismatch"]:
@@ -716,13 +896,37 @@ def main():
     sources["rr"] = src
     print(f"rr: {src.get('found', 0)} series via {src.get('via', 'nothing')}")
 
+    prev = sources.get("acevo", {})
+    if acevo_due(prev, when):
+        try:
+            seen = poll_acevo()
+            merge(state, seen, "acevo", when)
+            sources["acevo"] = {"ok": True, "checked": iso(when), "lastOk": iso(when), "found": len(seen)}
+            print(f"acevo: {len(seen)} series")
+        except Exception as e:
+            sources["acevo"] = {"ok": False, "checked": iso(when), "lastOk": prev.get("lastOk"), "error": str(e)[:200]}
+            print(f"acevo: FAILED {e}", file=sys.stderr)
+    else:
+        print("acevo: skipped, checked " + prev["checked"])
+
+    jr = jr_refresh(state, when)
+    league_rows = jr_rows(jr, when)
+    if jr:
+        sources["ams2"] = {"ok": not jr.get("error"), "checked": jr.get("fetched"), "lastOk": jr.get("lastOk"),
+                           "found": len(league_rows)}
+        if jr.get("error"):
+            sources["ams2"]["error"] = jr["error"]
+        print(f"leagues: {len(league_rows)} upcoming races")
+    else:
+        sources.pop("ams2", None)
+
     state["sources"] = sources
     state["updated"] = iso(when)
 
     with open(state_path, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=1, sort_keys=True)
     with open(os.path.join(a.out, "schedule.json"), "w", encoding="utf-8") as f:
-        json.dump(build_schedule(state, when, sources, rr_rows), f, indent=1)
+        json.dump(build_schedule(state, when, sources, rr_rows, league_rows), f, indent=1)
     if not any(v.get("ok") for v in sources.values()):
         sys.exit(1)
 

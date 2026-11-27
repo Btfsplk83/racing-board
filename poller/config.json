@@ -9,5 +9,12 @@
     "Circuit Zandvoort - Modern - Grand Prix": "GT3 Sprint Series",
     "Nürburgring - Nordschleife - NLS": "Nordschleife Trophy",
     "Autodromo di Monza - Grand Prix": "Tatuus F4"
-  }
+  },
+  "leagues": [
+    {
+      "_note": "League events from JustRace. subdomain is the part before .justrace.net.",
+      "subdomain": "chillapexracing",
+      "name": "Chill Apex Racing"
+    }
+  ]
 }

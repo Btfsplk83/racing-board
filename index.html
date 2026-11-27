@@ -13,6 +13,7 @@
   --ok:#5fd08f; --ok-dk:#17703f; --warn:#ffb547; --warn-ink:#1a1204; --fav:#ffc83d; --fav-dk:#8a6200;
   --plate:#f2f4f7; --ink:#12161f; --ink2:#4a5568; --plate-line:#c7ccd6; --tile:rgba(128,140,160,.2);
   --hatch-lmu:rgba(255,255,255,.5); --hatch-rr:rgba(18,22,31,.65); --shadow:rgba(0,0,0,.7);
+  --evo:#2ec4b6; --evo-dk:#12726a; --evo-wash:#0e3836; --ams:#ff8a3d; --ams-dk:#a84a12; --ams-wash:#45230f;
   --sr-bronze:#cd8a4b; --sr-silver:#c3cad6; --sr-gold:#e6b422;
   --c-hy:#c4122f; --c-p2:#2f6bd8; --c-p3:#7a3fc4; --c-gt3:#1a7a42; --c-gte:#ee7d22; --c-x:#46526d;
   --ang:130deg;
@@ -198,6 +199,26 @@ h2.seclbl::before{height:22px}
 .sblock{position:relative;background:var(--surface);padding:var(--s3) 14px 10px 18px;border-left:6px solid var(--lmu)}
 .sblock.skin-lmu{background:linear-gradient(var(--ang),var(--lmu-wash) 0,var(--surface) 55%)}
 .sblock.skin-rr{border-left-color:var(--rrred)}
+/* AC Evo (teal) and AMS2 league (orange): dark card, colour wash, outlined countdown */
+.row.skin-acevo,.sblock.skin-acevo{background:linear-gradient(var(--ang),var(--evo-wash) 0,var(--surface) 55%);--gc:var(--evo);--gd:var(--evo-dk)}
+.row.skin-ams2,.sblock.skin-ams2{background:linear-gradient(var(--ang),var(--ams-wash) 0,var(--surface) 55%);--gc:var(--ams);--gd:var(--ams-dk)}
+.row.skin-acevo .stripe,.row.skin-ams2 .stripe{background:var(--gc)}
+.row.skin-acevo .cdbox,.row.skin-ams2 .cdbox{border:2px solid var(--gc);padding:var(--s1) var(--s3);text-align:center}
+.row.skin-acevo .cd,.row.skin-ams2 .cd{color:var(--gc)}
+.row.skin-acevo .at,.row.skin-ams2 .at,.row.skin-acevo .livetag,.row.skin-ams2 .livetag{text-align:center}
+.sblock.skin-acevo,.sblock.skin-ams2{border-left-color:var(--gc)}
+.skin-acevo .tg[data-state="next"],.skin-ams2 .tg[data-state="next"]{border-color:var(--gc)}
+.skin-acevo .tg[data-state="running"],.skin-ams2 .tg[data-state="running"]{background:var(--gd);border-color:var(--gd)}
+.tgrid.dates{grid-template-columns:repeat(2,1fr)}
+.pill.gtag{background:var(--gd);color:var(--white);clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.pill.gcls{border:1px solid var(--muted);padding:1px var(--s2)}
+.chip.evo[aria-pressed="true"]{background:var(--evo-dk);color:var(--white)}
+.chip.ams[aria-pressed="true"]{background:var(--ams-dk);color:var(--white)}
+/* Text marks for games without a logo file */
+.gmark.txt{height:auto;padding:3px 6px;font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-xs);letter-spacing:.06em;line-height:1;color:var(--white);background:var(--gd,var(--c-x));vertical-align:4px}
+/* Where each source comes from and how often it is checked */
+.srclist{display:flex;flex-direction:column;gap:var(--s1);margin:0;padding:0;list-style:none;font-size:var(--t-sm);color:var(--muted)}
+.srclist b{color:var(--fg);font-weight:600}
 .sblock.locked .track,.sblock.locked .meta,.sblock.locked .badges,.sblock.locked .tgrid{opacity:.75}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:var(--t-sm)}
@@ -300,7 +321,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 <main>
   <header>
     <i class="hp hp-r" aria-hidden="true"></i><i class="hp hp-b" aria-hidden="true"></i>
-    <div class="crumb">LMU / RaceRoom &middot; Daily races</div>
+    <div class="crumb">Daily races &middot; League events</div>
     <h1>Dailies Board</h1>
   </header>
 
@@ -320,9 +341,11 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 
   <section class="bar sticky" id="filters" aria-label="Filters">
     <div class="frow" role="group" aria-label="Games and favorites">
-      <button class="chip lmu" id="gLmu" type="button">LMU</button>
-      <button class="chip rr" id="gRr" type="button">RaceRoom</button>
-      <button class="chip fav" id="favBtn" type="button">&#9733; Favorites</button>
+      <button class="chip lmu" id="gLmu" type="button" aria-label="LMU">LMU</button>
+      <button class="chip rr" id="gRr" type="button" aria-label="RaceRoom"><span class="tfull">RaceRoom</span><span class="tshort">RR</span></button>
+      <button class="chip evo" id="gEvo" type="button" aria-label="AC Evo"><span class="tfull">AC Evo</span><span class="tshort">EVO</span></button>
+      <button class="chip ams" id="gAms" type="button" aria-label="Chill Apex Racing (AMS2 league)"><span class="tfull">Chill Apex</span><span class="tshort">AMS2</span></button>
+      <button class="chip fav" id="favBtn" type="button" aria-label="Favorites only">&#9733;<span class="tfull"> Favorites</span></button>
     </div>
     <div class="frow">
       <span id="tierChips" class="frow" role="group" aria-label="LMU tier"></span>
@@ -344,8 +367,17 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   <div class="links">
     <a href="https://racecontrol.gg/" target="_blank" rel="noopener">LMU on RaceControl</a>
     <a href="https://game.raceroom.com/multiplayer-rating/" target="_blank" rel="noopener">RaceRoom ranked</a>
+    <a href="https://acevo.gg/daily-races" target="_blank" rel="noopener">AC Evo daily races</a>
+    <a href="https://chillapexracing.justrace.net/en/events" target="_blank" rel="noopener">Chill Apex on JustRace</a>
   </div>
-  <p class="note">LMU times come from racecontrol.gg. RaceRoom times come from the ranked timetable on r3e-leaderboards.info, checked against the live ranked servers. If that site is down, the board falls back to the servers alone. LMU is checked every 15 minutes.</p>
+  <h2 class="seclbl">Sources</h2>
+  <ul class="srclist">
+    <li><b>LMU:</b> racecontrol.gg, checked every 15 min and right after the Tuesday reset.</li>
+    <li><b>RaceRoom:</b> ranked timetable on r3e-leaderboards.info, checked hourly. Live ranked servers are checked every 30 min, and every 5 min if the timetable is down. Times shown are when servers open, a few minutes before the race slot.</li>
+    <li><b>AC Evo:</b> acevo.gg daily races, checked every 15 min.</li>
+    <li><b>Chill Apex:</b> league calendar on JustRace, checked hourly. Shows races up to 15 days ahead.</li>
+  </ul>
+  <p class="note">Tap the status line at the top to see when each source was last checked.</p>
 </main>
 
 <script>
@@ -357,6 +389,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   var THEMES=["mixed","lmu","rr"];
   var FAVKINDS=["series","race","cls","track"];
   var FAVLABEL={series:"Series",race:"Race",cls:"Class",track:"Track"};
+  var GAMENAME={lmu:"LMU",rr:"RaceRoom",acevo:"AC Evo",ams2:"Chill Apex"};
   var PKEY="dailiesBoard.prefs.v3", OLDKEY="dailiesBoard.prefs.v2";
   var src=new URLSearchParams(location.search).get("src")||"schedule.json";
   var data=null, rows=[];
@@ -382,6 +415,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   if(!Array.isArray(p.tiers))p.tiers=TIERS.slice();
   if(typeof p.lmu!=="boolean")p.lmu=true;
   if(typeof p.rr!=="boolean")p.rr=true;
+  if(typeof p.acevo!=="boolean")p.acevo=true;
+  if(typeof p.ams2!=="boolean")p.ams2=true;
   if(typeof p.hideLocked!=="boolean")p.hideLocked=false;
   if(RANKS.indexOf(p.rank)<0)p.rank="Bronze";
   function rankTiers(r){return TIERS.slice(0,Math.max(1,RANKS.indexOf(r)+1))}
@@ -427,7 +462,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
       Object.keys(p.fav[kind]).filter(function(k){return p.fav[kind][k]===true}).forEach(function(k){
         var name=k,i;
         if(kind==="series"){
-          for(i=0;i<ser.length;i++)if(seriesKey(ser[i])===k){name=ser[i].title+" ("+(ser[i].game==="lmu"?"LMU":"RaceRoom")+")";break}
+          for(i=0;i<ser.length;i++)if(seriesKey(ser[i])===k){name=ser[i].title+" ("+(GAMENAME[ser[i].game]||ser[i].game)+")";break}
           if(name===k)name=k.replace(/^[a-z]+:/,"");
         }else if(kind==="race"){
           for(i=0;i<ser.length;i++)if(raceKey(ser[i])===k){name=ser[i].title+" at "+ser[i].track;break}
@@ -445,12 +480,19 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(d<=now)d=new Date(d.getTime()+7*864e5);
     return d;
   }
+  /* RaceRoom ranked servers open about practiceMin - 1 minutes before the slot (seen 2026-11-27: 4:16 early with
+     5 min practice), and joining closes when practice ends. So RaceRoom times on the page are server-open times. */
+  function openLead(s){return s.game==="rr"&&s.practiceMin>1?(s.practiceMin-1)*6e4:0}
+  function runMs(s){return s.durationMin?(s.durationMin+(openLead(s)?s.practiceMin+2:0))*6e4:0}
+  /* League events (one start each) show this far ahead. */
+  var EVENT_DAYS=15;
   /* Starts: observed ones first, then projected from the interval, up to 24 h ahead.
      past holds starts from the last 2 h (observed, plus projected between observed ones), oldest first. */
   function upcoming(s,now){
-    var nowT=now.getTime(),horizon=nowT+864e5,limit=s.game==="lmu"?Math.min(horizon,nextLmuReset(now).getTime()):horizon;
+    var nowT=now.getTime(),horizon=nowT+(s.event?EVENT_DAYS:1)*864e5,limit=s.game==="lmu"?Math.min(horizon,nextLmuReset(now).getTime()):horizon;
     var until=Date.parse(s.until);if(!isNaN(until))limit=Math.min(limit,until);
-    var seen=(s.starts||[]).map(function(x){return Date.parse(x)}).filter(function(t){return !isNaN(t)}).sort(function(a,b){return a-b});
+    var lead=openLead(s);
+    var seen=(s.starts||[]).map(function(x){return Date.parse(x)-lead}).filter(function(t){return !isNaN(t)}).sort(function(a,b){return a-b});
     var out=seen.filter(function(t){return t>nowT&&t<limit});
     var iv=s.intervalMin*6e4;
     if(iv&&seen.length){
@@ -460,7 +502,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
       for(;t<limit&&out.length<40;t+=iv)out.push(t);
     }
     var last=seen.filter(function(t){return t<=nowT}).pop();
-    var running=last&&s.durationMin&&nowT<last+s.durationMin*6e4?last:null;
+    var running=last&&runMs(s)&&nowT<last+runMs(s)?last:null;
     var lo=nowT-72e5,past=seen.filter(function(t){return t<=nowT&&t>lo});
     function addPast(t){
       for(var i=0;i<past.length;i++)if(Math.abs(past[i]-t)<6e4)return;
@@ -534,22 +576,28 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   }
   function visible(s){
     if(s.game==="lmu")return p.lmu&&p.tiers.indexOf(s.tier)>-1;
-    return p.rr;
+    if(s.game==="rr")return p.rr;
+    if(s.game==="acevo")return p.acevo;
+    if(s.game==="ams2")return p.ams2;
+    return false;
   }
   function fmtCd(ms){
     var s=Math.max(0,Math.floor(ms/1000)),h=Math.floor(s/3600),m=Math.floor(s%3600/60),r=s%60;
+    if(h>=24)return Math.floor(h/24)+"d "+(h%24)+"h";
     var z=function(n){return n<10?"0"+n:""+n};
     return (h?h+":":"")+z(m)+":"+z(r);
   }
   function fmtHero(ms){
     var s=Math.max(0,Math.floor(ms/1000)),h=Math.floor(s/3600),m=Math.floor(s%3600/60),r=s%60;
+    if(h>=24)return Math.floor(h/24)+" D "+(h%24)+" H";
     var z=function(n){return n<10?"0"+n:""+n};
     return h?z(h)+" H "+z(m)+" MIN":z(m)+" MIN "+z(r)+" S";
   }
   function fmtTime(t){return new Date(t).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}
   function fmtAt(t){
     var d=new Date(t),now=new Date(),tm=new Date(now.getTime()+864e5);
-    var day=d.toDateString()===now.toDateString()?"Today":d.toDateString()===tm.toDateString()?"Tomorrow":d.toLocaleDateString([],{weekday:"short"});
+    var day=d.toDateString()===now.toDateString()?"Today":d.toDateString()===tm.toDateString()?"Tomorrow":
+      d.toLocaleDateString([],t-now.getTime()>5*864e5?{weekday:"short",month:"short",day:"numeric"}:{weekday:"short"});
     return day+" "+fmtTime(t);
   }
   function everyText(m){return "Every "+(m%60===0?(m/60===1?"hour":m/60+" h"):m+" min")}
@@ -586,7 +634,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     }
     txt.textContent="Updated "+ago(data.updated);
     var bad=[],msgs=[];
-    [["lmu","LMU"],["rr","RaceRoom"]].forEach(function(g){
+    [["lmu","LMU"],["rr","RaceRoom"],["acevo","AC Evo"],["ams2","Chill Apex"]].forEach(function(g){
       var s=(data.sources||{})[g[0]];if(!s)return;
       if(s.ok)det.appendChild(el("span","",g[1]+" checked "+ago(s.checked||s.lastOk||data.updated)));
       else{
@@ -616,6 +664,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     });
     $("gLmu").setAttribute("aria-pressed",p.lmu);
     $("gRr").setAttribute("aria-pressed",p.rr);
+    $("gEvo").setAttribute("aria-pressed",p.acevo);
+    $("gAms").setAttribute("aria-pressed",p.ams2);
     $("favBtn").setAttribute("aria-pressed",p.favOnly);
     $("hideBtn").setAttribute("aria-pressed",p.hideLocked);
     $("hideBtn").hidden=!hasPacks();
@@ -745,7 +795,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
       /* RaceRoom combo seen once: no repeat interval yet, so show when it last ran (within 12 h). */
       var lastRan=null;
       if(!live&&!any&&s.game==="rr"&&!s.intervalMin){
-        (s.starts||[]).forEach(function(x){var t=Date.parse(x);if(t<=now.getTime()&&t>now.getTime()-432e5&&(!lastRan||t>lastRan))lastRan=t});
+        (s.starts||[]).forEach(function(x){var t=Date.parse(x)-openLead(s);if(t<=now.getTime()&&t>now.getTime()-432e5&&(!lastRan||t>lastRan))lastRan=t});
       }
       if(!live&&!any&&!lastRan)return;
       if(p.favOnly&&!fav)return;
@@ -760,7 +810,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(p.favOnly)return "No favorites to show. Star a race to keep it here.";
     return "Nothing coming up for these filters. Turn on another tier or game, or show locked races.";
   }
-  function endOf(x){return x.u.running&&x.s.durationMin?x.u.running+x.s.durationMin*6e4:0}
+  function endOf(x){return x.u.running&&runMs(x.s)?x.u.running+runMs(x.s):0}
 
   function starBtn(s,key){
     var on=p.fav.series[seriesKey(s)]===true;
@@ -776,7 +826,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   }
   /* Official game logos, used only to label which game a race is */
   var MARKS={lmu:["marks/lmu.svg","Le Mans Ultimate",41],rr:["marks/rr.png","RaceRoom",37]};
+  var TEXTMARKS={acevo:["EVO","Assetto Corsa Evo"],ams2:["AMS2","Automobilista 2"]};
   function gameMark(g){
+    if(TEXTMARKS[g]){var tm=el("span","gmark txt "+g,TEXTMARKS[g][0]);tm.title=TEXTMARKS[g][1];tm.setAttribute("aria-label",TEXTMARKS[g][1]);tm.setAttribute("role","img");return tm}
     var m=MARKS[g]||MARKS.lmu,i=el("img","gmark "+(MARKS[g]?g:"lmu"));
     i.src=m[0];i.alt=m[1];i.width=m[2];i.height=20;i.decoding="async";
     return i;
@@ -806,6 +858,13 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return row.childNodes.length?row:null;
   }
   function metaRow(s){
+    if(s.game==="acevo"||s.game==="ams2"){
+      var gm=el("div","meta");
+      if(s.game==="ams2"&&s.league)gm.appendChild(el("span","pill gtag",s.league+(s.round?" · Round "+s.round:"")));
+      if(s.game==="acevo"&&s.kind)gm.appendChild(el("span","pill gtag",s.kind));
+      (s.classes||[]).forEach(function(c){gm.appendChild(el("span","pill gcls",c))});
+      return gm.childNodes.length?gm:null;
+    }
     if(s.game!=="rr")return null;
     var meta=el("div","meta");
     if(s.free)meta.appendChild(el("span","pill free ribbon","Free this week"));
@@ -818,15 +877,15 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return rs;
   }
   /* Time grid shared by SCHEDULE and the expanded card. States: past (dimmed), running, next (outlined), later. */
-  function timeGrid(past,runT,nextArr){
-    var g=el("div","tgrid num");g.setAttribute("role","list");
+  function timeGrid(past,runT,nextArr,dates){
+    var g=el("div","tgrid num"+(dates?" dates":""));g.setAttribute("role","list");
     var all=[];
     past.forEach(function(t){if(t!==runT)all.push([t,"past"])});
     if(runT)all.push([runT,"running"]);
     nextArr.forEach(function(t,i){all.push([t,i===0?"next":"later"])});
     all.sort(function(a,b){return a[0]-b[0]});
     all.forEach(function(a){
-      var c=el("span","tg",fmtTime(a[0]));
+      var c=el("span","tg",dates?fmtAt(a[0]):fmtTime(a[0]));
       c.setAttribute("role","listitem");c.setAttribute("data-state",a[1]);
       c.setAttribute("aria-label",(a[1]==="next"?"Next start ":a[1]==="running"?"Running, started ":a[1]==="past"?"Started ":"")+fmtAt(a[0]));
       g.appendChild(c);
@@ -846,20 +905,30 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   }
   function fillDetail(det,x){
     var s=x.s;
-    det.appendChild(el("div","dlabel","Start times, next 24 hours"));
-    if(x.u.next.length||x.u.running)det.appendChild(timeGrid([],x.u.running,x.u.next));
+    det.appendChild(el("div","dlabel",s.event?"Start":openLead(s)?"Server opens, next 24 hours":"Start times, next 24 hours"));
+    if(x.u.next.length||x.u.running)det.appendChild(timeGrid([],x.u.running,x.u.next,!!s.event));
     else det.appendChild(el("p","note","No more starts in the next 24 hours."));
     var f=el("div","facts");
     if(s.game==="lmu")fact(f,"Tier",s.tier);
-    fact(f,"Race length",s.durationMin?s.durationMin+" min":"");
+    if(s.league)fact(f,"League",s.league+(s.round?", round "+s.round:""));
+    if(s.eventName&&s.eventName!==s.track)fact(f,"Event",s.eventName);
+    if(openLead(s))fact(f,"Joining","Servers open "+(s.practiceMin-1)+" min early for "+s.practiceMin+" min of practice. Join before practice ends.");
+    if(s.format)fact(f,"Sessions",s.format);
+    else fact(f,"Race length",s.durationMin?s.durationMin+" min":"");
     fact(f,"Interval",s.intervalMin?everyText(s.intervalMin):"");
     fact(f,"Classes",(s.classes||[]).join(", "));
     if(s.game==="rr"&&Array.isArray(s.cars)){
       fact(f,"Cars",s.cars.map(function(c){return typeof c==="string"?c:(c&&c.name)||""}).filter(function(c){return c}).join(", "));
     }
     if(x.locked)fact(f,"Needs",x.locked.reasons.join(" · ")+(x.locked.unsure?" (unconfirmed)":""));
-    else fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
+    else if(s.game==="lmu"||s.game==="rr")fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
+    if(s.game==="acevo")fact(f,"Entry",s.free?"Free, open to all":"Check acevo.gg");
     det.appendChild(f);
+    if(/^https:\/\//.test(String(s.url||""))){
+      var lk=el("a","",s.game==="ams2"?"Sign up on JustRace":"Open on acevo.gg");
+      lk.href=s.url;lk.target="_blank";lk.rel="noopener";
+      var lp=el("p","note");lp.appendChild(lk);det.appendChild(lp);
+    }
     det.appendChild(el("div","dlabel","Favorites"));
     var fc=el("div","favchips");
     var tn=trackKey(s),k=x.key;
@@ -902,7 +971,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     var w=el("div","when");
     var box=el("div","cdbox");
     var seenOnce=!x.t&&!x.live&&x.lastRan;
-    var lbl=x.locked?"":x.hero?"Next RaceRoom race":x.live?"Running":seenOnce?"Last ran":"Starts in";
+    var lbl=x.locked?"":x.hero?"Next RaceRoom race":x.live?"Running":seenOnce?"Last ran":openLead(s)?"Opens in":"Starts in";
     if(lbl)box.appendChild(el("div","cdlbl",lbl));
     var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":seenOnce?fmtTime(x.lastRan):(x.t?"":"Running"));box.appendChild(cd);
     w.appendChild(box);
@@ -943,7 +1012,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     li.appendChild(el("div","track",s.track));
     var mr=metaRow(s);if(mr)li.appendChild(mr);
     if(x.live)li.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
-    li.appendChild(timeGrid(x.u.past,x.u.running,x.u.next));
+    li.appendChild(timeGrid(x.u.past,x.u.running,x.u.next,!!s.event));
     if(x.locked)li.appendChild(reasonLine(x));
     rows.push({cd:null,t:x.t||0,e:endOf(x)});
     return li;
@@ -951,7 +1020,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   var reduce=false;try{reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches}catch(e){}
   var shown={},lastSig="",animIdx=0,lockSeen={},runSeen={},busy=false,lastChip=null;
   function beginRender(){
-    var s=p.view+"|"+p.lmu+p.rr+p.favOnly+p.hideLocked;
+    var s=p.view+"|"+p.lmu+p.rr+p.acevo+p.ams2+p.favOnly+p.hideLocked;
     if(s!==lastSig){lastSig=s;shown={}}
     animIdx=0;
   }
@@ -1025,6 +1094,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 
   $("gLmu").onclick=function(){p.lmu=!p.lmu;savePrefs();renderAll()};
   $("gRr").onclick=function(){p.rr=!p.rr;savePrefs();renderAll()};
+  $("gEvo").onclick=function(){p.acevo=!p.acevo;savePrefs();renderAll()};
+  $("gAms").onclick=function(){p.ams2=!p.ams2;savePrefs();renderAll()};
   $("favBtn").onclick=function(){p.favOnly=!p.favOnly;savePrefs();renderAll()};
   $("hideBtn").onclick=function(){p.hideLocked=!p.hideLocked;savePrefs();renderAll()};
   $("ownBtn").onclick=function(){
