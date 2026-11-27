@@ -1,7 +1,19 @@
 {
  "version": 2,
- "updated": "2026-11-27T16:10:48Z",
+ "updated": "2026-11-27T16:15:57Z",
  "sources": {
+  "acevo": {
+   "checked": "2026-11-27T16:10:48Z",
+   "found": 5,
+   "lastOk": "2026-11-27T16:10:48Z",
+   "ok": true
+  },
+  "ams2": {
+   "ok": true,
+   "checked": "2026-11-27T16:10:48Z",
+   "lastOk": "2026-11-27T16:10:48Z",
+   "found": 6
+  },
   "lmu": {
    "checked": "2026-11-27T16:05:46Z",
    "found": 9,
@@ -13,25 +25,13 @@
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-27T14:52:40Z",
-   "checked": "2026-11-27T16:10:48Z",
-   "lastOk": "2026-11-27T16:10:48Z",
+   "checked": "2026-11-27T16:15:57Z",
+   "lastOk": "2026-11-27T16:15:57Z",
    "serverCheck": {
     "checked": "2026-11-27T16:05:46Z",
     "found": 1,
     "mismatch": []
    }
-  },
-  "acevo": {
-   "ok": true,
-   "checked": "2026-11-27T16:10:48Z",
-   "lastOk": "2026-11-27T16:10:48Z",
-   "found": 5
-  },
-  "ams2": {
-   "ok": true,
-   "checked": "2026-11-27T16:10:48Z",
-   "lastOk": "2026-11-27T16:10:48Z",
-   "found": 6
   }
  },
  "packs": {
@@ -285,124 +285,124 @@
    "lastSeen": "2026-11-27T16:10:48Z"
   },
   {
-   "game": "ams2",
-   "id": "ams2-jr-765173",
-   "title": "Casual Riders",
-   "league": "Chill Apex Racing",
-   "round": 2,
-   "eventName": "F1 V8 Gen 1 Spa",
-   "track": "Spa-Francorchamps Historic 1970",
    "classes": [
     "Formula V8 Gen1"
    ],
    "durationMin": 36,
+   "eventName": "F1 V8 Gen 1 Spa",
    "format": "Q 14 min \u00b7 R 22 min",
-   "url": "https://chillapexracing.justrace.net/en/events",
+   "game": "ams2",
+   "id": "ams2-jr-765173",
+   "league": "Chill Apex Racing",
+   "round": 2,
    "starts": [
     "2026-11-27T13:42:00Z"
    ],
+   "title": "Casual Riders",
+   "track": "Spa-Francorchamps Historic 1970",
+   "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T16:10:48Z"
+   "lastSeen": "2026-11-27T16:15:57Z"
   },
   {
-   "game": "ams2",
-   "id": "ams2-jr-765247",
-   "title": "Casual Riders",
-   "league": "Chill Apex Racing",
-   "round": 3,
-   "eventName": "F1 V8 Gen 1 Le Mans",
-   "track": "Circuit des 24 Heures du Mans",
    "classes": [
     "Formula V8 Gen1"
    ],
    "durationMin": 36,
+   "eventName": "F1 V8 Gen 1 Le Mans",
    "format": "Q 14 min \u00b7 R 22 min",
-   "url": "https://chillapexracing.justrace.net/en/events",
+   "game": "ams2",
+   "id": "ams2-jr-765247",
+   "league": "Chill Apex Racing",
+   "round": 3,
    "starts": [
     "2026-12-11T13:42:00Z"
    ],
+   "title": "Casual Riders",
+   "track": "Circuit des 24 Heures du Mans",
+   "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T16:10:48Z"
+   "lastSeen": "2026-11-27T16:15:57Z"
   },
   {
-   "game": "ams2",
-   "id": "ams2-jr-764760",
-   "title": "Coupe GT4",
-   "league": "Chill Apex Racing",
-   "round": 5,
-   "eventName": "Spa",
-   "track": "Spa-Francorchamps 2022",
    "classes": [
     "GT4"
    ],
    "durationMin": 33,
+   "eventName": "Spa",
    "format": "Q 8 min \u00b7 R 25 min",
-   "url": "https://chillapexracing.justrace.net/en/events",
+   "game": "ams2",
+   "id": "ams2-jr-764760",
+   "league": "Chill Apex Racing",
+   "round": 5,
    "starts": [
     "2026-12-07T21:00:00Z"
    ],
+   "title": "Coupe GT4",
+   "track": "Spa-Francorchamps 2022",
+   "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T16:10:48Z"
+   "lastSeen": "2026-11-27T16:15:57Z"
   },
   {
-   "game": "ams2",
-   "id": "ams2-jr-764761",
-   "title": "Coupe GT4",
-   "league": "Chill Apex Racing",
-   "round": 6,
-   "eventName": "Silverstone 1991",
-   "track": "Silverstone Historic 1991",
    "classes": [
     "GT4"
    ],
    "durationMin": 33,
+   "eventName": "Silverstone 1991",
    "format": "Q 8 min \u00b7 R 25 min",
-   "url": "https://chillapexracing.justrace.net/en/events",
+   "game": "ams2",
+   "id": "ams2-jr-764761",
+   "league": "Chill Apex Racing",
+   "round": 6,
    "starts": [
     "2026-12-14T21:00:00Z"
    ],
+   "title": "Coupe GT4",
+   "track": "Silverstone Historic 1991",
+   "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T16:10:48Z"
+   "lastSeen": "2026-11-27T16:15:57Z"
   },
   {
-   "game": "ams2",
-   "id": "ams2-jr-765844",
-   "title": "World Tour Events",
-   "league": "Chill Apex Racing",
-   "round": 1,
-   "eventName": "World Tour Brands Hatch Indy",
-   "track": "Brands Hatch Indy",
    "classes": [
     "Mini JCW UK"
    ],
    "durationMin": 36,
+   "eventName": "World Tour Brands Hatch Indy",
    "format": "Q 14 min \u00b7 R 22 min",
-   "url": "https://chillapexracing.justrace.net/en/events",
+   "game": "ams2",
+   "id": "ams2-jr-765844",
+   "league": "Chill Apex Racing",
+   "round": 1,
    "starts": [
     "2026-12-04T13:43:00Z"
    ],
+   "title": "World Tour Events",
+   "track": "Brands Hatch Indy",
+   "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T16:10:48Z"
+   "lastSeen": "2026-11-27T16:15:57Z"
   },
   {
-   "game": "ams2",
-   "id": "ams2-jr-765848",
-   "title": "World Tour Events",
-   "league": "Chill Apex Racing",
-   "round": 2,
-   "eventName": "World Tour Kyalami Historic",
-   "track": "Kyalami Historic 1976",
    "classes": [
     "GT5"
    ],
    "durationMin": 36,
+   "eventName": "World Tour Kyalami Historic",
    "format": "Q 14 min \u00b7 R 22 min",
-   "url": "https://chillapexracing.justrace.net/en/events",
+   "game": "ams2",
+   "id": "ams2-jr-765848",
+   "league": "Chill Apex Racing",
+   "round": 2,
    "starts": [
     "2026-12-18T13:43:00Z"
    ],
+   "title": "World Tour Events",
+   "track": "Kyalami Historic 1976",
+   "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T16:10:48Z"
+   "lastSeen": "2026-11-27T16:15:57Z"
   },
   {
    "game": "lmu",
@@ -702,7 +702,6 @@
    },
    "intervalMin": 45,
    "starts": [
-    "2026-11-27T04:15:00Z",
     "2026-11-27T05:00:00Z",
     "2026-11-27T05:45:00Z",
     "2026-11-27T06:30:00Z",
@@ -918,7 +917,7 @@
     "2026-11-28T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": true,
    "access": {
     "track": {
@@ -1004,7 +1003,7 @@
     "2026-11-28T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": false,
    "access": {
     "track": {
@@ -1137,7 +1136,7 @@
     "2026-11-28T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": false,
    "access": {
     "track": {
@@ -1199,7 +1198,7 @@
     "2026-11-28T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": false,
    "access": {
     "track": {
@@ -1299,7 +1298,7 @@
     "2026-11-28T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": false,
    "access": {
     "track": {
@@ -1363,7 +1362,7 @@
     "2026-11-28T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": false,
    "access": {
     "track": {
@@ -1431,7 +1430,7 @@
     "2026-11-28T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T16:10:48Z",
+   "lastSeen": "2026-11-27T16:15:57Z",
    "free": false,
    "access": {
     "track": {
