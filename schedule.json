@@ -1,11 +1,11 @@
 {
  "version": 2,
- "updated": "2026-11-27T23:32:31Z",
+ "updated": "2026-11-27T23:47:36Z",
  "sources": {
   "acevo": {
    "ok": true,
-   "checked": "2026-11-27T23:32:31Z",
-   "lastOk": "2026-11-27T23:32:31Z",
+   "checked": "2026-11-27T23:47:36Z",
+   "lastOk": "2026-11-27T23:47:36Z",
    "found": 5
   },
   "ams2": {
@@ -16,23 +16,23 @@
   },
   "lmu": {
    "ok": true,
-   "checked": "2026-11-27T23:32:31Z",
-   "lastOk": "2026-11-27T23:32:31Z",
-   "found": 3
+   "checked": "2026-11-27T23:47:36Z",
+   "lastOk": "2026-11-27T23:47:36Z",
+   "found": 2
   },
   "rr": {
    "ok": true,
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-27T22:52:55Z",
-   "checked": "2026-11-27T23:32:31Z",
-   "lastOk": "2026-11-27T23:32:31Z",
+   "checked": "2026-11-27T23:47:36Z",
+   "lastOk": "2026-11-27T23:47:36Z",
    "serverCheck": {
     "checked": "2026-11-27T23:32:31Z",
     "found": 2,
     "leadSec": {
-     "Twin Ring Motegi - Road Course": 256,
-     "Salzburgring - Grand Prix": 256
+     "Salzburgring - Grand Prix": 256,
+     "Twin Ring Motegi - Road Course": 256
     },
     "mismatch": []
    }
@@ -212,7 +212,7 @@
     "2026-11-28T00:30:00Z",
     "2026-11-28T01:30:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "acevo",
@@ -240,7 +240,7 @@
     "2026-11-28T00:10:00Z",
     "2026-11-28T00:50:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "acevo",
@@ -267,7 +267,7 @@
     "2026-11-28T00:00:00Z",
     "2026-11-28T00:40:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "acevo",
@@ -294,9 +294,10 @@
     "2026-11-27T22:45:00Z",
     "2026-11-27T23:15:00Z",
     "2026-11-27T23:45:00Z",
-    "2026-11-28T00:15:00Z"
+    "2026-11-28T00:15:00Z",
+    "2026-11-28T00:45:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "acevo",
@@ -325,7 +326,7 @@
     "2026-11-28T00:00:00Z",
     "2026-11-28T00:30:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "classes": [
@@ -345,7 +346,7 @@
    "track": "Circuit des 24 Heures du Mans",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "classes": [
@@ -365,7 +366,7 @@
    "track": "Spa-Francorchamps 2022",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "classes": [
@@ -385,7 +386,7 @@
    "track": "Silverstone Historic 1991",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "classes": [
@@ -405,7 +406,7 @@
    "track": "Brands Hatch Indy",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "classes": [
@@ -425,7 +426,7 @@
    "track": "Kyalami Historic 1976",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "lmu",
@@ -473,7 +474,7 @@
     "2026-11-27T22:50:00Z",
     "2026-11-27T23:50:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "lmu",
@@ -686,7 +687,6 @@
    },
    "intervalMin": 45,
    "starts": [
-    "2026-11-27T11:45:00Z",
     "2026-11-27T12:30:00Z",
     "2026-11-27T13:15:00Z",
     "2026-11-27T14:00:00Z",
@@ -746,7 +746,7 @@
     "2026-11-27T22:25:00Z",
     "2026-11-27T23:55:00Z"
    ],
-   "lastSeen": "2026-11-27T23:32:31Z"
+   "lastSeen": "2026-11-27T23:47:36Z"
   },
   {
    "game": "lmu",
@@ -874,7 +874,7 @@
     "2026-11-28T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": true,
    "access": {
     "track": {
@@ -960,7 +960,7 @@
     "2026-11-28T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": false,
    "access": {
     "track": {
@@ -1093,7 +1093,7 @@
     "2026-11-28T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": false,
    "access": {
     "track": {
@@ -1155,7 +1155,7 @@
     "2026-11-28T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": false,
    "access": {
     "track": {
@@ -1255,7 +1255,7 @@
     "2026-11-28T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": false,
    "access": {
     "track": {
@@ -1319,7 +1319,7 @@
     "2026-11-28T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": false,
    "access": {
     "track": {
@@ -1387,7 +1387,7 @@
     "2026-11-28T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-27T23:32:31Z",
+   "lastSeen": "2026-11-27T23:47:36Z",
    "free": false,
    "access": {
     "track": {
