@@ -3733,7 +3733,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T16:55:00Z",
     "2026-11-24T18:25:00Z",
@@ -3819,7 +3819,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T17:55:00Z",
     "2026-11-24T19:25:00Z",
@@ -3895,7 +3895,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T17:25:00Z",
     "2026-11-24T18:55:00Z",
@@ -3960,9 +3960,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
-    "2026-11-24T16:45:00Z",
     "2026-11-24T17:30:00Z",
     "2026-11-24T18:15:00Z",
     "2026-11-24T19:00:00Z",
@@ -4097,7 +4096,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T17:15:00Z",
     "2026-11-24T18:00:00Z",
@@ -4222,7 +4221,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T17:00:00Z",
     "2026-11-24T17:45:00Z",
@@ -4351,9 +4350,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
-    "2026-11-24T16:50:00Z",
     "2026-11-24T17:50:00Z",
     "2026-11-24T18:50:00Z",
     "2026-11-24T19:50:00Z",
@@ -4443,7 +4441,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T17:10:00Z",
     "2026-11-24T18:10:00Z",
@@ -4542,7 +4540,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-27T16:36:04Z",
+   "lastSeen": "2026-11-27T16:51:11Z",
    "starts": [
     "2026-11-24T17:30:00Z",
     "2026-11-24T18:30:00Z",
@@ -5612,16 +5610,16 @@
    "ok": true
   },
   "lmu": {
-   "checked": "2026-11-27T16:36:04Z",
+   "checked": "2026-11-27T16:51:11Z",
    "found": 9,
-   "lastOk": "2026-11-27T16:36:04Z",
+   "lastOk": "2026-11-27T16:51:11Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-27T16:46:09Z",
+   "checked": "2026-11-27T16:51:11Z",
    "feedUpdated": "2026-11-27T15:52:42Z",
    "found": 7,
-   "lastOk": "2026-11-27T16:46:09Z",
+   "lastOk": "2026-11-27T16:51:11Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-27T16:36:04Z",
@@ -5635,6 +5633,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-27T16:46:09Z",
+ "updated": "2026-11-27T16:51:11Z",
  "version": 1
 }
