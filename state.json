@@ -3607,12 +3607,12 @@
   "Guia Circuit - Grand Prix": {
    "practiceMin": 15,
    "sec": 238,
-   "seen": "2026-11-28T08:10:09Z"
+   "seen": "2026-11-28T08:40:23Z"
   },
   "Hockenheimring - Modern - Grand Prix": {
    "practiceMin": 5,
    "sec": 256,
-   "seen": "2026-11-28T06:39:10Z"
+   "seen": "2026-11-28T08:40:23Z"
   },
   "N\u00fcrburgring - Nordschleife - NLS": {
    "practiceMin": 10,
@@ -3652,7 +3652,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3687,7 +3687,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3720,7 +3720,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3734,7 +3734,8 @@
     "2026-11-28T01:20:00Z",
     "2026-11-28T08:00:00Z",
     "2026-11-28T08:40:00Z",
-    "2026-11-28T09:20:00Z"
+    "2026-11-28T09:20:00Z",
+    "2026-11-28T10:00:00Z"
    ],
    "title": "GT4 Super Sprint",
    "track": "Imola - GP",
@@ -3751,7 +3752,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3785,7 +3786,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -3810,7 +3811,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T09:25:00Z",
     "2026-11-25T10:55:00Z",
@@ -3901,7 +3902,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T08:55:00Z",
     "2026-11-25T10:25:00Z",
@@ -3983,7 +3984,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T09:55:00Z",
     "2026-11-25T11:25:00Z",
@@ -4053,7 +4054,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T09:15:00Z",
     "2026-11-25T10:00:00Z",
@@ -4200,7 +4201,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T09:00:00Z",
     "2026-11-25T09:45:00Z",
@@ -4336,9 +4337,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
-    "2026-11-25T08:45:00Z",
     "2026-11-25T09:30:00Z",
     "2026-11-25T10:15:00Z",
     "2026-11-25T11:00:00Z",
@@ -4476,7 +4476,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T08:50:00Z",
     "2026-11-25T09:50:00Z",
@@ -4576,7 +4576,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T09:10:00Z",
     "2026-11-25T10:10:00Z",
@@ -4683,7 +4683,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-28T08:30:18Z",
+   "lastSeen": "2026-11-28T08:45:24Z",
    "starts": [
     "2026-11-25T09:30:00Z",
     "2026-11-25T10:30:00Z",
@@ -5047,7 +5047,6 @@
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-25T08:45:00Z",
     "2026-11-25T09:45:00Z",
     "2026-11-25T15:45:00Z",
     "2026-11-25T16:45:00Z",
@@ -5114,34 +5113,34 @@
    "firstSeen": "2026-11-28T08:10:09Z",
    "game": "rr",
    "id": "rr-guia-circuit-grand-prix",
-   "lastSeen": "2026-11-28T08:10:09Z",
+   "lastSeen": "2026-11-28T08:40:23Z",
    "leadSec": 238,
    "pool": {
     "carIds": {
-     "12319": "2026-11-28T08:10:09Z",
-     "12405": "2026-11-28T08:10:09Z",
-     "13572": "2026-11-28T08:10:09Z",
-     "13594": "2026-11-28T08:10:09Z",
-     "13597": "2026-11-28T08:10:09Z",
-     "13603": "2026-11-28T08:10:09Z",
-     "13617": "2026-11-28T08:10:09Z",
-     "13620": "2026-11-28T08:10:09Z",
-     "9603": "2026-11-28T08:10:09Z"
+     "12319": "2026-11-28T08:40:23Z",
+     "12405": "2026-11-28T08:40:23Z",
+     "13572": "2026-11-28T08:40:23Z",
+     "13594": "2026-11-28T08:40:23Z",
+     "13597": "2026-11-28T08:40:23Z",
+     "13603": "2026-11-28T08:40:23Z",
+     "13617": "2026-11-28T08:40:23Z",
+     "13620": "2026-11-28T08:40:23Z",
+     "9603": "2026-11-28T08:40:23Z"
     },
     "cars": {
-     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T08:10:09Z",
-     "Audi R8 LMS GT3 EVO II": "2026-11-28T08:10:09Z",
-     "BMW M4 GT3 EVO DTM": "2026-11-28T08:10:09Z",
-     "Ferrari 296 GT3": "2026-11-28T08:10:09Z",
-     "Lamborghini Temerario GT3 DTM": "2026-11-28T08:10:09Z",
-     "McLaren 720S GT3 EVO DTM": "2026-11-28T08:10:09Z",
-     "Mercedes-AMG GT3 2020": "2026-11-28T08:10:09Z",
-     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T08:10:09Z",
-     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T08:10:09Z"
+     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T08:40:23Z",
+     "Audi R8 LMS GT3 EVO II": "2026-11-28T08:40:23Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-28T08:40:23Z",
+     "Ferrari 296 GT3": "2026-11-28T08:40:23Z",
+     "Lamborghini Temerario GT3 DTM": "2026-11-28T08:40:23Z",
+     "McLaren 720S GT3 EVO DTM": "2026-11-28T08:40:23Z",
+     "Mercedes-AMG GT3 2020": "2026-11-28T08:40:23Z",
+     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T08:40:23Z",
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T08:40:23Z"
     },
     "classes": {
-     "DTM 2026": "2026-11-28T08:10:09Z",
-     "GTR 3": "2026-11-28T08:10:09Z"
+     "DTM 2026": "2026-11-28T08:40:23Z",
+     "GTR 3": "2026-11-28T08:40:23Z"
     }
    },
    "practiceMin": 15,
@@ -5236,17 +5235,17 @@
    "firstSeen": "2026-11-23T14:28:07Z",
    "game": "rr",
    "id": "rr-hockenheimring-modern-grand-prix",
-   "lastSeen": "2026-11-28T06:39:10Z",
+   "lastSeen": "2026-11-28T08:40:23Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "5051": "2026-11-28T06:39:10Z"
+     "5051": "2026-11-28T08:40:23Z"
     },
     "cars": {
-     "Tatuus F4": "2026-11-28T06:39:10Z"
+     "Tatuus F4": "2026-11-28T08:40:23Z"
     },
     "classes": {
-     "Tatuus F4 Cup": "2026-11-28T06:39:10Z"
+     "Tatuus F4 Cup": "2026-11-28T08:40:23Z"
     }
    },
    "practiceMin": 5,
@@ -5273,7 +5272,8 @@
     "2026-11-28T00:30:00Z",
     "2026-11-28T02:30:00Z",
     "2026-11-28T04:30:00Z",
-    "2026-11-28T06:30:00Z"
+    "2026-11-28T06:30:00Z",
+    "2026-11-28T08:30:00Z"
    ],
    "title": "Tatuus F4 Cup",
    "track": "Hockenheimring - Modern - Grand Prix",
@@ -5884,9 +5884,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T08:30:18Z",
+   "checked": "2026-11-28T08:45:24Z",
    "found": 5,
-   "lastOk": "2026-11-28T08:30:18Z",
+   "lastOk": "2026-11-28T08:45:24Z",
    "ok": true
   },
   "ams2": {
@@ -5896,24 +5896,23 @@
    "ok": true
   },
   "lmu": {
-   "checked": "2026-11-28T08:30:18Z",
+   "checked": "2026-11-28T08:45:24Z",
    "found": 9,
-   "lastOk": "2026-11-28T08:30:18Z",
+   "lastOk": "2026-11-28T08:45:24Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T08:30:18Z",
+   "checked": "2026-11-28T08:45:24Z",
    "feedUpdated": "2026-11-28T07:53:13Z",
    "found": 7,
-   "lastOk": "2026-11-28T08:30:18Z",
+   "lastOk": "2026-11-28T08:45:24Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-28T08:10:09Z",
-    "found": 3,
+    "checked": "2026-11-28T08:40:23Z",
+    "found": 2,
     "leadSec": {
-     "Circuit Zandvoort - Modern - Grand Prix": 248,
      "Guia Circuit - Grand Prix": 238,
-     "Watkins Glen International - Grand Prix with Inner Loop": 256
+     "Hockenheimring - Modern - Grand Prix": 256
     },
     "mismatch": [
      "Guia Circuit - Grand Prix 08:00Z"
@@ -5922,6 +5921,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T08:30:18Z",
+ "updated": "2026-11-28T08:45:24Z",
  "version": 1
 }
