@@ -897,9 +897,11 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   /* Items for both views: same filters, same ordering (running, upcoming, locked; favorites first; then time). */
   var STATE_RANK={running:0,upcoming:1,locked:2};
   function sortT(x){if(!x.t&&!x.started&&x.lastRan)return 8e15-(Date.now()-x.lastRan);return x.started||x.t||x.u.past[x.u.past.length-1]||8e15}
+  /* LFM series marked daily (a race every couple of hours, all day) count as dailies, not events. */
+  function isEvent(s){return s.event===true&&s.daily!==true}
   function collect(now,sched,ev){
     var items=[];
-    (data.series||[]).filter(visible).filter(function(s){return !!s.event===!!ev}).forEach(function(s){
+    (data.series||[]).filter(visible).filter(function(s){return isEvent(s)===!!ev}).forEach(function(s){
       var u=upcoming(s,now),acc=evalAccess(s),fav=isFav(s);
       var any=u.next.length>0||(sched&&u.past.length>0);
       var live=acc.ok&&!!u.running;
