@@ -1,12 +1,12 @@
 {
  "version": 2,
- "updated": "2026-11-28T02:14:02Z",
+ "updated": "2026-11-28T02:19:04Z",
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T02:03:50Z",
-   "found": 5,
-   "lastOk": "2026-11-28T02:03:50Z",
-   "ok": true
+   "ok": true,
+   "checked": "2026-11-28T02:19:04Z",
+   "lastOk": "2026-11-28T02:19:04Z",
+   "found": 5
   },
   "ams2": {
    "ok": true,
@@ -25,8 +25,8 @@
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-28T01:53:01Z",
-   "checked": "2026-11-28T02:14:02Z",
-   "lastOk": "2026-11-28T02:14:02Z",
+   "checked": "2026-11-28T02:19:04Z",
+   "lastOk": "2026-11-28T02:19:04Z",
    "serverCheck": {
     "checked": "2026-11-28T02:03:50Z",
     "found": 4,
@@ -218,7 +218,7 @@
     "2026-11-28T02:30:00Z",
     "2026-11-28T03:30:00Z"
    ],
-   "lastSeen": "2026-11-28T02:03:50Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "game": "acevo",
@@ -247,9 +247,10 @@
     "2026-11-28T00:50:00Z",
     "2026-11-28T01:30:00Z",
     "2026-11-28T02:10:00Z",
-    "2026-11-28T02:50:00Z"
+    "2026-11-28T02:50:00Z",
+    "2026-11-28T09:30:00Z"
    ],
-   "lastSeen": "2026-11-28T02:03:50Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "game": "acevo",
@@ -279,7 +280,7 @@
     "2026-11-28T08:00:00Z",
     "2026-11-28T08:40:00Z"
    ],
-   "lastSeen": "2026-11-28T02:03:50Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "game": "acevo",
@@ -313,7 +314,7 @@
     "2026-11-28T10:15:00Z",
     "2026-11-28T10:45:00Z"
    ],
-   "lastSeen": "2026-11-28T02:03:50Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "game": "acevo",
@@ -344,7 +345,7 @@
     "2026-11-28T10:00:00Z",
     "2026-11-28T10:30:00Z"
    ],
-   "lastSeen": "2026-11-28T02:03:50Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "classes": [
@@ -364,7 +365,7 @@
    "track": "Circuit des 24 Heures du Mans",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T02:14:02Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "classes": [
@@ -384,7 +385,7 @@
    "track": "Spa-Francorchamps 2022",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T02:14:02Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "classes": [
@@ -404,7 +405,7 @@
    "track": "Silverstone Historic 1991",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T02:14:02Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "classes": [
@@ -424,7 +425,7 @@
    "track": "Brands Hatch Indy",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T02:14:02Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "classes": [
@@ -444,7 +445,7 @@
    "track": "Kyalami Historic 1976",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T02:14:02Z"
+   "lastSeen": "2026-11-28T02:19:04Z"
   },
   {
    "game": "lmu",
@@ -741,7 +742,6 @@
    },
    "intervalMin": 45,
    "starts": [
-    "2026-11-27T14:15:00Z",
     "2026-11-27T15:00:00Z",
     "2026-11-27T15:45:00Z",
     "2026-11-27T16:30:00Z",
@@ -1083,7 +1083,7 @@
     "2026-11-29T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": true,
    "access": {
     "track": {
@@ -1169,7 +1169,7 @@
     "2026-11-29T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1302,7 +1302,7 @@
     "2026-11-29T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1364,7 +1364,7 @@
     "2026-11-29T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1464,7 +1464,7 @@
     "2026-11-29T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1528,7 +1528,7 @@
     "2026-11-29T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": false,
    "access": {
     "track": {
@@ -1596,7 +1596,7 @@
     "2026-11-29T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T02:14:02Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "free": false,
    "access": {
     "track": {

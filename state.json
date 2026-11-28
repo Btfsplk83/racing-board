@@ -3647,7 +3647,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3675,7 +3675,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3689,7 +3689,8 @@
     "2026-11-28T00:50:00Z",
     "2026-11-28T01:30:00Z",
     "2026-11-28T02:10:00Z",
-    "2026-11-28T02:50:00Z"
+    "2026-11-28T02:50:00Z",
+    "2026-11-28T09:30:00Z"
    ],
    "title": "GT3 Sprint Cup",
    "track": "Suzuka - GP",
@@ -3706,7 +3707,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3736,7 +3737,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3770,7 +3771,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:19:04Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -4209,7 +4210,6 @@
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
    "lastSeen": "2026-11-28T02:09:01Z",
    "starts": [
-    "2026-11-25T02:15:00Z",
     "2026-11-25T03:00:00Z",
     "2026-11-25T03:45:00Z",
     "2026-11-25T04:30:00Z",
@@ -4608,7 +4608,6 @@
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
    "lastSeen": "2026-11-28T02:09:01Z",
    "starts": [
-    "2026-11-25T02:10:00Z",
     "2026-11-25T03:10:00Z",
     "2026-11-25T04:10:00Z",
     "2026-11-25T05:10:00Z",
@@ -5470,7 +5469,6 @@
    "practiceMin": 5,
    "servers": 4,
    "starts": [
-    "2026-11-25T02:15:00Z",
     "2026-11-25T05:15:00Z",
     "2026-11-25T07:15:00Z",
     "2026-11-25T08:15:00Z",
@@ -5859,9 +5857,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T02:03:50Z",
+   "checked": "2026-11-28T02:19:04Z",
    "found": 5,
-   "lastOk": "2026-11-28T02:03:50Z",
+   "lastOk": "2026-11-28T02:19:04Z",
    "ok": true
   },
   "ams2": {
@@ -5877,10 +5875,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T02:14:02Z",
+   "checked": "2026-11-28T02:19:04Z",
    "feedUpdated": "2026-11-28T01:53:01Z",
    "found": 7,
-   "lastOk": "2026-11-28T02:14:02Z",
+   "lastOk": "2026-11-28T02:19:04Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-28T02:03:50Z",
@@ -5898,6 +5896,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T02:14:02Z",
+ "updated": "2026-11-28T02:19:04Z",
  "version": 1
 }
