@@ -1,41 +1,43 @@
 {
  "version": 2,
- "updated": "2026-11-28T09:00:33Z",
+ "updated": "2026-11-28T09:10:45Z",
  "sources": {
   "acevo": {
-   "ok": true,
    "checked": "2026-11-28T09:00:33Z",
+   "found": 5,
    "lastOk": "2026-11-28T09:00:33Z",
-   "found": 5
+   "ok": true
   },
   "ams2": {
    "ok": true,
-   "checked": "2026-11-28T08:04:59Z",
-   "lastOk": "2026-11-28T08:04:59Z",
+   "checked": "2026-11-28T09:05:36Z",
+   "lastOk": "2026-11-28T09:05:36Z",
    "found": 5
   },
   "lmu": {
-   "ok": true,
    "checked": "2026-11-28T09:00:33Z",
+   "found": 9,
    "lastOk": "2026-11-28T09:00:33Z",
-   "found": 9
+   "ok": true
   },
   "rr": {
    "ok": true,
    "via": "feed",
    "found": 7,
-   "feedUpdated": "2026-11-28T07:53:13Z",
-   "checked": "2026-11-28T09:00:33Z",
-   "lastOk": "2026-11-28T09:00:33Z",
+   "feedUpdated": "2026-11-28T08:53:15Z",
+   "checked": "2026-11-28T09:10:45Z",
+   "lastOk": "2026-11-28T09:10:45Z",
    "serverCheck": {
-    "checked": "2026-11-28T08:40:23Z",
-    "found": 2,
+    "checked": "2026-11-28T09:10:45Z",
+    "found": 3,
     "leadSec": {
-     "Guia Circuit - Grand Prix": 238,
-     "Hockenheimring - Modern - Grand Prix": 256
+     "Watkins Glen International - Grand Prix with Inner Loop": 256,
+     "WeatherTech Raceway Laguna Seca - Modern - Grand Prix": 248,
+     "Guia Circuit - Grand Prix": 238
     },
     "mismatch": [
-     "Guia Circuit - Grand Prix 08:00Z"
+     "Guia Circuit - Grand Prix 08:00Z",
+     "WeatherTech Raceway Laguna Seca - Modern - Grand Prix 09:00Z"
     ]
    }
   }
@@ -347,7 +349,7 @@
    "track": "Circuit des 24 Heures du Mans",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T09:00:33Z"
+   "lastSeen": "2026-11-28T09:10:45Z"
   },
   {
    "classes": [
@@ -367,7 +369,7 @@
    "track": "Spa-Francorchamps 2022",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T09:00:33Z"
+   "lastSeen": "2026-11-28T09:10:45Z"
   },
   {
    "classes": [
@@ -387,7 +389,7 @@
    "track": "Silverstone Historic 1991",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T09:00:33Z"
+   "lastSeen": "2026-11-28T09:10:45Z"
   },
   {
    "classes": [
@@ -407,7 +409,7 @@
    "track": "Brands Hatch Indy",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T09:00:33Z"
+   "lastSeen": "2026-11-28T09:10:45Z"
   },
   {
    "classes": [
@@ -427,7 +429,7 @@
    "track": "Kyalami Historic 1976",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T09:00:33Z"
+   "lastSeen": "2026-11-28T09:10:45Z"
   },
   {
    "game": "lmu",
@@ -642,7 +644,6 @@
    },
    "intervalMin": 60,
    "starts": [
-    "2026-11-27T21:10:00Z",
     "2026-11-27T22:10:00Z",
     "2026-11-27T23:10:00Z",
     "2026-11-28T01:10:00Z",
@@ -1004,7 +1005,7 @@
     "2026-11-29T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": true,
    "access": {
     "track": {
@@ -1090,7 +1091,7 @@
     "2026-11-29T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": false,
    "access": {
     "track": {
@@ -1223,7 +1224,7 @@
     "2026-11-29T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": false,
    "access": {
     "track": {
@@ -1285,7 +1286,7 @@
     "2026-11-29T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": false,
    "access": {
     "track": {
@@ -1385,7 +1386,7 @@
     "2026-11-29T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": false,
    "access": {
     "track": {
@@ -1449,7 +1450,7 @@
     "2026-11-29T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": false,
    "access": {
     "track": {
@@ -1517,7 +1518,7 @@
     "2026-11-29T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T09:00:33Z",
+   "lastSeen": "2026-11-28T09:10:45Z",
    "free": false,
    "access": {
     "track": {
