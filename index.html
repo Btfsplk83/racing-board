@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dailies Board</title>
-<meta name="description" content="Le Mans Ultimate and RaceRoom daily races in one list, in your time zone.">
+<meta name="description" content="Le Mans Ultimate, RaceRoom and AC Evo daily races plus league events in one place, in your time zone.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap">
 <style>
 :root{
@@ -51,9 +51,34 @@ h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;li
   font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-lg);letter-spacing:.08em;text-transform:uppercase;
   border-bottom:4px solid transparent;margin-bottom:-1px}
 .tab[aria-selected="true"]{color:var(--white);border-bottom-color:var(--lmu)}
-/* Sticky filter row */
+/* Sticky filter row: one Filters button with a summary, and My content. The chips drop down from it. */
 .bar{display:flex;flex-direction:column;gap:6px;background:var(--surface);padding:var(--s2) 10px}
 .bar.sticky{position:sticky;top:0;z-index:20;box-shadow:0 6px 10px -6px var(--shadow)}
+.barrow{display:flex;gap:var(--s2);align-items:stretch}
+.barrow .chip{min-height:44px}
+.filtbtn{flex:1;min-width:0;display:flex;align-items:center;gap:var(--s3);min-height:44px;padding:var(--s1) var(--s4) var(--s1) var(--s4);border:none;cursor:pointer;
+  background:var(--surface2);color:var(--fg);font:inherit;text-align:left;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.filtbtn[aria-expanded="true"]{background:var(--surface3)}
+.filtbtn .fl{flex:none;font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.08em;text-transform:uppercase}
+.filtbtn .fs{flex:1;min-width:0;font-size:14px;line-height:1.25;color:var(--muted);overflow-wrap:anywhere}
+.filtbtn .chev{flex:none;width:8px;height:8px;margin:-3px 2px 0 0;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.filtbtn[aria-expanded="true"] .chev{transform:rotate(-135deg);margin-top:3px}
+.fpanel{position:absolute;left:0;right:0;top:100%;display:flex;flex-direction:column;gap:var(--s3);padding:var(--s3) 10px var(--s4);
+  background:var(--surface);border-top:1px solid var(--line);box-shadow:0 10px 14px -6px var(--shadow);max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px);overflow-y:auto;
+  animation:fpIn var(--d-mid) var(--ease)}
+@keyframes fpIn{from{opacity:0;transform:translateY(-6px)}}
+.fgroup{display:flex;flex-direction:column;gap:6px}
+.flbl{font-family:var(--f-head);font-style:italic;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* My content: setup drawer from the right edge, full width on a phone */
+dialog.drawer{position:fixed;inset:0 0 0 auto;margin:0;padding:0;width:min(520px,100vw);max-width:100%;height:100%;max-height:100%;border:none;
+  background:var(--surface);color:var(--fg);flex-direction:column}
+dialog.drawer[open]{display:flex;animation:drIn var(--d-card) var(--ease)}
+dialog.drawer::backdrop{background:rgba(5,8,14,.72)}
+@keyframes drIn{from{opacity:0;transform:translateX(40px)}}
+.dhead{flex:none;display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);background:var(--surface2)}
+.dhead h2{margin:0;display:flex;align-items:center;font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-lg);letter-spacing:.08em;text-transform:uppercase}
+.dhead h2::before{content:"";flex:none;width:4px;height:22px;background:var(--rrred);margin-right:var(--s2)}
+.dbody{flex:1;min-height:0;overflow-y:auto;padding:var(--s2) var(--s4) var(--s5);padding-right:max(var(--s4),env(safe-area-inset-right,0px));padding-bottom:max(var(--s5),env(safe-area-inset-bottom,0px))}
 .grp{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}
 .frow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .chip{font-family:var(--f-head);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:var(--t-md);
@@ -70,15 +95,12 @@ h1{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:46px;li
 .chip.fav[aria-pressed="true"],.chip.favchip[aria-pressed="true"]{background:var(--fav);color:var(--ink)}
 .chip.favchip{font-size:14px;padding:5px 18px;min-height:36px}
 .chip.mine{margin-left:auto}
-.tshort{display:none}
-.chip:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible,.head:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 4px var(--white)}
-details{background:var(--surface);padding:var(--s3);scroll-margin-top:120px}
-summary{cursor:pointer;min-height:36px;display:flex;align-items:center;font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-md);letter-spacing:.08em;text-transform:uppercase}
+.chip:focus-visible,a:focus-visible,button:focus-visible,.head:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--bg),inset 0 0 0 4px var(--white)}
 .note{font-size:var(--t-sm);color:var(--muted);margin:0}
 .sec{display:flex;flex-direction:column;gap:var(--s2);margin-top:14px}
 /* Section headings: small red bar plus caps label */
 .seclbl{display:flex;align-items:center;font-family:var(--f-head);font-style:italic;font-size:var(--t-md);text-transform:uppercase;letter-spacing:.1em;color:var(--fg);font-weight:700}
-.seclbl::before,summary::before{content:"";flex:none;width:4px;height:16px;background:var(--rrred);margin-right:var(--s2)}
+.seclbl::before{content:"";flex:none;width:4px;height:16px;background:var(--rrred);margin-right:var(--s2)}
 h2.seclbl{margin:var(--s1) 0 0;font-size:var(--t-lg)}
 h2.seclbl::before{height:22px}
 .sumline{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);align-items:center;margin-top:14px}
@@ -262,8 +284,6 @@ a{color:var(--fg)}
   .cd{font-size:24px}.title{font-size:21px}
   .row.skin-rr.hero .cd{font-size:40px}
   .row.skin-rr .when{padding:0 var(--s4) 0 22px}
-  .tfull{display:none}.tshort{display:inline}
-  .bar .chip.tier{padding:4px 10px}
 }
 /* Motion: one diagonal, one easing, transform/opacity/clip-path only */
 :root{--ease:cubic-bezier(.2,.8,.2,1);--d-card:220ms;--d-hdr:450ms;--d-sweep:600ms;--d-det:300ms;--d-chip:260ms;--d-fx:700ms;--d-mid:220ms;--step:40ms}
@@ -284,9 +304,10 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 @keyframes capIn{from{opacity:0;transform:translateX(28px)}}
 .tabs{position:relative}
 .tab[aria-selected="true"]{border-bottom-color:transparent}
-.tabs::after{content:"";position:absolute;left:0;bottom:-1px;height:4px;width:calc(50% - 2px);background:var(--lmu);pointer-events:none}
+.tabs::after{content:"";position:absolute;left:0;bottom:-1px;height:4px;width:calc((100% - 8px)/3);background:var(--lmu);pointer-events:none}
 .tabs.anim::after{transition:transform var(--d-mid) var(--ease)}
 .tabs[data-v="schedule"]::after{transform:translateX(calc(100% + 4px))}
+.tabs[data-v="events"]::after{transform:translateX(calc(200% + 8px))}
 .detail.wipe{animation:detIn var(--d-det) var(--ease)}
 @keyframes detIn{from{clip-path:polygon(0 0,0 0,-50% 100%,-50% 100%)}to{clip-path:polygon(0 0,200% 0,150% 100%,-50% 100%)}}
 .chip.wipe{animation:chipW var(--d-chip) var(--ease)}
@@ -319,19 +340,20 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 @keyframes pulse{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.3,1.7)}}
 /* Touch screens: 44px tap targets, 8px apart */
 @media (pointer:coarse){
-  .chip,.bar .chip,.chip.cls,.chip.mine,.chip.favchip,.linkbtn,summary,.statusbtn{min-height:44px}
+  .chip,.bar .chip,.chip.cls,.chip.mine,.chip.favchip,.linkbtn,.statusbtn{min-height:44px}
   .frow{gap:var(--s2)}
   .bar .chip.cls{padding:4px var(--s2)}
   .links a{display:inline-flex;align-items:center;min-height:44px}
 }
 /* Hover and press, mouse only: 150ms in, 120ms out, 90ms press */
 @media (hover:hover) and (pointer:fine){
-  .chip,.linkbtn,.tab,.star,.statusbtn,.row,a{transition:transform 120ms var(--ease),background-color 120ms var(--ease),color 120ms var(--ease),border-color 120ms var(--ease)}
+  .chip,.linkbtn,.tab,.star,.statusbtn,.filtbtn,.row,a{transition:transform 120ms var(--ease),background-color 120ms var(--ease),color 120ms var(--ease),border-color 120ms var(--ease)}
   .chip:hover,.linkbtn:hover{transform:translateY(-1px);transition-duration:150ms}
   .chip:active,.linkbtn:active{transform:translateY(1px) scale(.985);transition-duration:90ms}
   .chip[aria-disabled="true"]:hover,.chip[aria-disabled="true"]:active{transform:none}
   .chip:not([aria-pressed="true"]):not(.cls):not(.mine):not([aria-disabled="true"]):hover{background-color:var(--surface3);color:var(--fg)}
   .chip.cls:not([aria-pressed="true"]):hover,.chip.mine:hover,.linkbtn:hover{border-color:var(--fg)}
+  .filtbtn:not([aria-expanded="true"]):hover{background:var(--surface3)}
   .tab:not([aria-selected="true"]):hover,.statusbtn:hover,a:hover{color:var(--white)}
   .star:not([aria-pressed="true"]):hover{color:var(--fg)}
   .row.skin-rr .star:not([aria-pressed="true"]):hover,.row.skin-lmu.open .star:not([aria-pressed="true"]):hover{color:var(--ink)}
@@ -348,6 +370,10 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
 </head>
 <body>
 <div id="wipe" aria-hidden="true"><i class="wb"></i><i class="wr"></i></div>
+<dialog class="drawer" id="ownDlg" aria-labelledby="ownTitle">
+  <div class="dhead"><h2 id="ownTitle">My content</h2><button class="linkbtn" id="ownClose" type="button" aria-label="Close My content">Close</button></div>
+  <div class="dbody" id="ownBody"></div>
+</dialog>
 <main>
   <header>
     <i class="hp hp-r" aria-hidden="true"></i><i class="hp hp-b" aria-hidden="true"></i>
@@ -367,29 +393,41 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   <div class="tabs" id="tabs" role="tablist" aria-label="View">
     <button class="tab" id="tab-next" role="tab" type="button" aria-selected="true" aria-controls="viewPanel">Next</button>
     <button class="tab" id="tab-schedule" role="tab" type="button" aria-selected="false" aria-controls="viewPanel" tabindex="-1">Schedule</button>
+    <button class="tab" id="tab-events" role="tab" type="button" aria-selected="false" aria-controls="viewPanel" tabindex="-1">Events</button>
   </div>
 
   <section class="bar sticky" id="filters" aria-label="Filters">
-    <div class="frow" role="group" aria-label="Games and favorites">
-      <button class="chip lmu" id="gLmu" type="button" aria-label="LMU">LMU</button>
-      <button class="chip rr" id="gRr" type="button" aria-label="RaceRoom"><span class="tfull">RaceRoom</span><span class="tshort">RR</span></button>
-      <button class="chip evo" id="gEvo" type="button" aria-label="AC Evo"><span class="tfull">AC Evo</span><span class="tshort">EVO</span></button>
-      <button class="chip ams" id="gAms" type="button" aria-label="Automobilista 2 (LFM and Chill Apex)">AMS2</button>
-      <button class="chip ac" id="gAc" type="button" aria-label="Assetto Corsa">AC</button>
-      <button class="chip cls" id="lfmBtn" type="button" aria-label="Show LFM races">LFM</button>
-      <button class="chip fav" id="favBtn" type="button" aria-label="Favorites only">&#9733;<span class="tfull"> Favorites</span></button>
+    <div class="barrow">
+      <button class="filtbtn" id="filtBtn" type="button" aria-expanded="false" aria-controls="filtPanel">
+        <span class="fl">Filters</span><span class="fs" id="filtSum"></span><i class="chev" aria-hidden="true"></i>
+      </button>
+      <button class="chip cls mine" id="ownBtn" type="button" aria-haspopup="dialog">My content</button>
     </div>
-    <div class="frow">
-      <span id="tierChips" class="frow" role="group" aria-label="LMU tier"></span>
-      <button class="chip cls" id="hideBtn" type="button">Hide locked</button>
-      <button class="chip cls mine" id="ownBtn" type="button">My content</button>
+    <div class="fpanel" id="filtPanel" hidden>
+      <div class="fgroup">
+        <span class="flbl">Games</span>
+        <div class="frow" role="group" aria-label="Games">
+          <button class="chip lmu" id="gLmu" type="button">LMU</button>
+          <button class="chip rr" id="gRr" type="button">RaceRoom</button>
+          <button class="chip evo" id="gEvo" type="button">AC Evo</button>
+          <button class="chip ams" id="gAms" type="button" aria-label="Automobilista 2 (LFM and Chill Apex)">AMS2</button>
+          <button class="chip ac" id="gAc" type="button" aria-label="Assetto Corsa">AC</button>
+          <button class="chip cls" id="lfmBtn" type="button" aria-label="Show LFM races">LFM</button>
+        </div>
+      </div>
+      <div class="fgroup">
+        <span class="flbl">LMU tier</span>
+        <span id="tierChips" class="frow" role="group" aria-label="LMU tier"></span>
+      </div>
+      <div class="fgroup">
+        <span class="flbl">Show</span>
+        <div class="frow">
+          <button class="chip fav" id="favBtn" type="button" aria-label="Favorites only">&#9733; Favorites</button>
+          <button class="chip cls" id="hideBtn" type="button">Hide locked</button>
+        </div>
+      </div>
     </div>
   </section>
-
-  <details id="ownBox">
-    <summary>My content</summary>
-    <div id="ownBody"></div>
-  </details>
 
   <h2 class="seclbl" id="viewHead">Next up</h2>
   <section id="viewPanel" role="tabpanel" aria-labelledby="tab-next">
@@ -411,7 +449,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     <li><b>LFM:</b> official AMS2, RaceRoom, AC Evo and Assetto Corsa series on lowfuelmotorsport.com, checked every 30 min. LFM lists the next few races of each series for this week's track. The LFM chip hides or shows them all. AMS2 and AC races lock by the DLC LFM lists for the track and cars. Free AC mods don't lock a race.</li>
     <li><b>Chill Apex:</b> league calendar on JustRace, checked hourly. Shows races and hot lap windows up to 15 days ahead.</li>
   </ul>
-  <p class="note">Races more than 2 hours away, and locked races, show as one-line rows. Tap a row for details. Tap the status line at the top to see when each source was last checked.</p>
+  <p class="note">Next and Schedule list the daily races. Events lists LFM series, Chill Apex races and hot lap windows up to 15 days ahead. Races more than 2 hours away, and locked races, show as one-line rows. Tap a row for details. Tap the status line at the top to see when each source was last checked.</p>
 </main>
 
 <script>
@@ -419,7 +457,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   "use strict";
   var TIERS=["Beginner","Intermediate","Advanced"];
   var RANKS=["Bronze","Silver","Gold"];
-  var VIEWS=["next","schedule"];
+  var VIEWS=["next","schedule","events"];
+  var VIEWNAME={next:"Next up",schedule:"Schedule",events:"Events"};
   var THEMES=["mixed","lmu","rr"];
   var FAVKINDS=["series","race","cls","track"];
   var FAVLABEL={series:"Series",race:"Race",cls:"Class",track:"Track"};
@@ -702,12 +741,29 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     det.hidden=!(statusOpen&&det.childNodes.length>0);
     btn.setAttribute("aria-expanded",det.hidden?"false":"true");
   }
+  /* Collapsed Filters button: what is active, like "LMU, RR · Beginner". */
+  var GSHORT=[["lmu","LMU"],["rr","RR"],["acevo","EVO"],["ams2","AMS2"],["ac","AC"]];
+  function filterSummary(){
+    var on=GSHORT.filter(function(g){return p[g[0]]}),out=[];
+    out.push(on.length===GSHORT.length?"All games":on.length?on.map(function(g){return g[1]}).join(", "):"No games");
+    if(p.lmu)out.push(p.tiers.length===TIERS.length?"All tiers":p.tiers.length?TIERS.filter(function(t){return p.tiers.indexOf(t)>-1}).join(", "):"No tiers");
+    if(!p.lfm)out.push("No LFM");
+    if(p.favOnly)out.push("Favorites only");
+    if(p.hideLocked&&hasPacks())out.push("Locked hidden");
+    return out.join(" \u00b7 ");
+  }
+  var filtOpen=false;
+  function setFilt(open){
+    filtOpen=open;
+    $("filtPanel").hidden=!open;
+    $("filtBtn").setAttribute("aria-expanded",open?"true":"false");
+  }
   function renderFilters(){
     var box=$("tierChips");box.textContent="";
+    $("filtSum").textContent=filterSummary();
     TIERS.forEach(function(t){
-      var b=el("button","chip lmu tier");b.type="button";
-      b.appendChild(el("span","tfull",t));b.appendChild(el("span","tshort",t.slice(0,3)));
-      b.setAttribute("aria-label",t);b.setAttribute("aria-pressed",p.tiers.indexOf(t)>-1);
+      var b=el("button","chip lmu tier",t);b.type="button";
+      b.setAttribute("aria-pressed",p.tiers.indexOf(t)>-1);
       fid(b,"tier:"+t);
       b.onclick=function(){var i=p.tiers.indexOf(t);if(i>-1)p.tiers.splice(i,1);else p.tiers.push(t);p.tiersManual=true;savePrefs();renderAll()};
       box.appendChild(b);
@@ -728,7 +784,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
       b.setAttribute("aria-selected",on?"true":"false");
       b.tabIndex=on?0:-1;
     });
-    $("viewHead").textContent=p.view==="schedule"?"Schedule":"Next up";
+    $("viewHead").textContent=VIEWNAME[p.view];
     $("viewPanel").setAttribute("aria-labelledby","tab-"+p.view);
     $("tabs").setAttribute("data-v",p.view);
   }
@@ -841,9 +897,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   /* Items for both views: same filters, same ordering (running, upcoming, locked; favorites first; then time). */
   var STATE_RANK={running:0,upcoming:1,locked:2};
   function sortT(x){if(!x.t&&!x.started&&x.lastRan)return 8e15-(Date.now()-x.lastRan);return x.started||x.t||x.u.past[x.u.past.length-1]||8e15}
-  function collect(now,sched){
+  function collect(now,sched,ev){
     var items=[];
-    (data.series||[]).filter(visible).forEach(function(s){
+    (data.series||[]).filter(visible).filter(function(s){return !!s.event===!!ev}).forEach(function(s){
       var u=upcoming(s,now),acc=evalAccess(s),fav=isFav(s);
       var any=u.next.length>0||(sched&&u.past.length>0);
       var live=acc.ok&&!!u.running;
@@ -852,7 +908,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
       if(!live&&!any&&s.game==="rr"&&!s.intervalMin){
         (s.starts||[]).forEach(function(x){var t=Date.parse(x)-openLead(s);if(t<=now.getTime()&&t>now.getTime()-432e5&&(!lastRan||t>lastRan))lastRan=t});
       }
-      if(!live&&!any&&!lastRan)return;
+      /* A locked hot lap window that is open now has no later start but still belongs in Events, under Locked. */
+      if(!live&&!any&&!lastRan&&!(ev&&u.running))return;
       if(p.favOnly&&!fav)return;
       if(!acc.ok&&p.hideLocked&&!(p.favOnly&&fav))return;
       items.push({s:s,key:raceKey(s),u:u,fav:fav,locked:acc.ok?null:acc,live:live,started:live?u.running:null,
@@ -862,7 +919,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return items;
   }
   function emptyMsg(){
-    if(p.favOnly)return "No favorites to show. Star a race to keep it here.";
+    if(p.favOnly)return "No favorites in this view. Star a race to keep it here.";
+    if(p.view==="events")return "No events in the next "+EVENT_DAYS+" days for these filters. Turn on another game, show LFM races, or show locked races.";
     return "Nothing coming up for these filters. Turn on another tier or game, or show locked races.";
   }
   function endOf(x){return x.u.running&&runMs(x.s)?x.u.running+runMs(x.s):0}
@@ -1126,11 +1184,14 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     head.appendChild(el("span","stripe"));
     var m=el("div","main");
     m.appendChild(titleRow(s,x.key));
-    m.appendChild(el("div","track",(s.league?s.league+" · ":"")+s.track));
+    m.appendChild(el("div","track",(s.hotlap?"Hot lap · ":"")+(s.league?s.league+" · ":"")+s.track));
     var w=el("div","when");
     var cd=null;
-    if(x.t){
-      w.appendChild(el("div","at num",x.day===0||x.day===1?fmtTime(x.t):fmtAt(x.t)));
+    if(x.live){
+      w.appendChild(el("div","at num",s.hotlap?"Open":"Running"));
+      w.appendChild(el("div","incd num",s.hotlap?"until "+fmtAt(Date.parse(s.until)):"since "+fmtTime(x.started)));
+    }else if(x.t){
+      w.appendChild(el("div","at num",x.timeOnly||x.day===0||x.day===1?fmtTime(x.t):fmtAt(x.t)));
       cd=el("div","incd num",fmtIn(x.t-Date.now()));w.appendChild(cd);
     }else w.appendChild(el("div","at num",x.lastRan?"Ran "+fmtTime(x.lastRan):s.hotlap?"Open":"Running"));
     head.appendChild(m);head.appendChild(w);
@@ -1147,7 +1208,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     lockSeen[x.key]=!!x.locked;runSeen[x.key]=false;
     enter(li,x.key);
     if(x.key===openKey)syncCard(li);
-    if(x.t)rows.push({cd:cd,inc:true,t:x.t,p:x.locked?0:x.t-SOON});
+    if(x.live)rows.push({cd:null,t:0,e:endOf(x)});
+    else if(x.t)rows.push({cd:cd,inc:true,t:x.t,p:x.locked||x.evt?0:x.t-SOON});
     return li;
   }
   function buildBlock(x){
@@ -1202,7 +1264,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     beginRender();
     var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};detSeq=0;
     if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule…"));return}
-    var items=collect(now,false);
+    var items=collect(now,false,false);
     if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
     var hero=null;
     items.forEach(function(x){if(x.s.game==="rr"&&!x.s.event&&!x.locked&&x.t&&(!hero||x.t<hero.t))hero=x});
@@ -1231,11 +1293,58 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     beginRender();
     var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};
     if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule…"));return}
-    var items=collect(now,true);
+    var items=collect(now,true,false);
     if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
     items.forEach(function(x){list.appendChild(buildBlock(x))});
   }
-  function renderView(){if(p.view==="schedule")renderSchedule();else renderNext()}
+  /* Events: one-line rows grouped by day. Open hot lap windows and running races come first, locked ones last.
+     A series with starts on several days gets one row per day. */
+  function dayStart(t){var d=new Date(t);return new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()}
+  function dayTitle(d,today){
+    var n=Math.round((d-today)/864e5);
+    return n===0?"Today":n===1?"Tomorrow":new Date(d).toLocaleDateString([],{weekday:"short",month:"short",day:"numeric"});
+  }
+  function renderEvents(){
+    beginRender();
+    var now=new Date(),list=$("list");list.textContent="";rows=[];cardEls={};itemMap={};detSeq=0;
+    if(!data){list.appendChild(el("li","empty",loadErr||"Loading the schedule…"));return}
+    var items=collect(now,false,true);
+    if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
+    var today=dayStart(now.getTime()),openG=[],runG=[],lockG=[],days={};
+    items.forEach(function(x){
+      x.compact=true;x.evt=true;
+      if(x.locked){x.day=-1;lockG.push(x);return}
+      if(x.live){(x.s.hotlap?openG:runG).push(x);return}
+      var n=0,seen={};
+      x.u.next.forEach(function(t){
+        var d=dayStart(t);
+        if(seen[d])return;
+        seen[d]=true;
+        var e={},k;for(k in x)e[k]=x[k];
+        e.t=t;e.timeOnly=true;e.day=Math.round((d-today)/864e5);
+        if(n++)e.key=x.key+"#"+d;
+        (days[d]=days[d]||[]).push(e);
+      });
+    });
+    function group(title,arr){
+      if(!arr.length)return;
+      var h=el("li","daygrp");h.appendChild(el("h3","",title));list.appendChild(h);
+      arr.forEach(function(x){list.appendChild(buildCard(x))});
+    }
+    function until(x){var t=Date.parse(x.s.until);return isNaN(t)?8e15:t}
+    openG.sort(function(a,b){return until(a)-until(b)});
+    runG.sort(function(a,b){return a.started-b.started});
+    lockG.sort(function(a,b){return sortT(a)-sortT(b)});
+    group("Open now",openG);
+    group("Running now",runG);
+    Object.keys(days).map(Number).sort(function(a,b){return a-b}).forEach(function(d){
+      days[d].sort(function(a,b){return a.t-b.t||(b.fav?1:0)-(a.fav?1:0)});
+      group(dayTitle(d,today),days[d]);
+    });
+    group("Locked",lockG);
+    updateCd();
+  }
+  function renderView(){if(p.view==="schedule")renderSchedule();else if(p.view==="events")renderEvents();else renderNext()}
   function refreshView(){var f=captureFocus();renderView();restoreFocus(f)}
   /* Updates countdown text only. Returns true when a start or a running race has passed and the view needs a rebuild. */
   function updateCd(){
@@ -1266,13 +1375,22 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   $("lfmBtn").onclick=function(){p.lfm=!p.lfm;savePrefs();renderAll()};
   $("favBtn").onclick=function(){p.favOnly=!p.favOnly;savePrefs();renderAll()};
   $("hideBtn").onclick=function(){p.hideLocked=!p.hideLocked;savePrefs();renderAll()};
+  $("filtBtn").onclick=function(){setFilt(!filtOpen)};
+  /* The chip panel closes on a tap outside it (capture phase, so a chip that rebuilds itself still counts as inside) and on Escape. */
+  document.addEventListener("click",function(e){
+    if(filtOpen&&e.target&&e.target.closest&&!e.target.closest("#filters"))setFilt(false);
+  },true);
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"&&filtOpen&&!$("ownDlg").open){setFilt(false);$("filtBtn").focus()}
+  });
+  var dlg=$("ownDlg");
   $("ownBtn").onclick=function(){
-    sweep(function(){
-      var d=$("ownBox");d.open=true;d.scrollIntoView();
-      var s=d.querySelector("summary");
-      if(s){try{s.focus({preventScroll:true})}catch(e){s.focus()}}
-    });
+    setFilt(false);
+    if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");
+    $("ownClose").focus();
   };
+  $("ownClose").onclick=function(){if(dlg.close)dlg.close();else dlg.removeAttribute("open")};
+  dlg.addEventListener("click",function(e){if(e.target===dlg&&dlg.close)dlg.close()});
   $("statusBtn").onclick=function(){statusOpen=!statusOpen;renderStatus()};
   VIEWS.forEach(function(v){$("tab-"+v).onclick=function(){setView(v,false)}});
   $("tabs").onkeydown=function(e){
