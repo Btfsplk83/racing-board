@@ -3607,12 +3607,12 @@
   "Hockenheimring - Modern - Grand Prix": {
    "practiceMin": 5,
    "sec": 256,
-   "seen": "2026-11-28T00:33:06Z"
+   "seen": "2026-11-28T02:34:10Z"
   },
   "N\u00fcrburgring - Nordschleife - NLS": {
    "practiceMin": 10,
    "sec": 246,
-   "seen": "2026-11-28T02:03:50Z"
+   "seen": "2026-11-28T02:34:10Z"
   },
   "Salzburgring - Grand Prix": {
    "practiceMin": 5,
@@ -3632,7 +3632,7 @@
   "WeatherTech Raceway Laguna Seca - Modern - Grand Prix": {
    "practiceMin": 10,
    "sec": 256,
-   "seen": "2026-11-28T02:03:50Z"
+   "seen": "2026-11-28T02:34:10Z"
   }
  },
  "series": {
@@ -3647,7 +3647,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:19:04Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3658,7 +3658,8 @@
     "2026-11-28T00:30:00Z",
     "2026-11-28T01:30:00Z",
     "2026-11-28T02:30:00Z",
-    "2026-11-28T03:30:00Z"
+    "2026-11-28T03:30:00Z",
+    "2026-11-28T04:30:00Z"
    ],
    "title": "Fanatec Eifel Trophy",
    "track": "Nurburgring - 24h",
@@ -3675,7 +3676,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:19:04Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3707,7 +3708,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T02:19:04Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3737,7 +3738,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:19:04Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3771,7 +3772,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T02:19:04Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -3979,7 +3980,6 @@
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
    "lastSeen": "2026-11-28T02:24:07Z",
    "starts": [
-    "2026-11-25T02:25:00Z",
     "2026-11-25T03:55:00Z",
     "2026-11-25T05:25:00Z",
     "2026-11-25T06:55:00Z",
@@ -4054,7 +4054,6 @@
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
    "lastSeen": "2026-11-28T02:24:07Z",
    "starts": [
-    "2026-11-25T02:30:00Z",
     "2026-11-25T03:15:00Z",
     "2026-11-25T04:00:00Z",
     "2026-11-25T04:45:00Z",
@@ -4721,7 +4720,6 @@
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
    "lastSeen": "2026-11-28T02:24:07Z",
    "starts": [
-    "2026-11-25T02:30:00Z",
     "2026-11-25T03:30:00Z",
     "2026-11-25T04:30:00Z",
     "2026-11-25T05:30:00Z",
@@ -5207,23 +5205,22 @@
    "firstSeen": "2026-11-23T14:28:07Z",
    "game": "rr",
    "id": "rr-hockenheimring-modern-grand-prix",
-   "lastSeen": "2026-11-28T00:33:06Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "5051": "2026-11-28T00:33:06Z"
+     "5051": "2026-11-28T02:34:10Z"
     },
     "cars": {
-     "Tatuus F4": "2026-11-28T00:33:06Z"
+     "Tatuus F4": "2026-11-28T02:34:10Z"
     },
     "classes": {
-     "Tatuus F4 Cup": "2026-11-28T00:33:06Z"
+     "Tatuus F4 Cup": "2026-11-28T02:34:10Z"
     }
    },
    "practiceMin": 5,
-   "servers": 3,
+   "servers": 2,
    "starts": [
-    "2026-11-25T02:30:00Z",
     "2026-11-25T08:30:00Z",
     "2026-11-25T10:30:00Z",
     "2026-11-25T16:30:00Z",
@@ -5243,7 +5240,8 @@
     "2026-11-27T14:30:00Z",
     "2026-11-27T16:30:00Z",
     "2026-11-27T22:30:00Z",
-    "2026-11-28T00:30:00Z"
+    "2026-11-28T00:30:00Z",
+    "2026-11-28T02:30:00Z"
    ],
    "title": "Tatuus F4 Cup",
    "track": "Hockenheimring - Modern - Grand Prix",
@@ -5285,7 +5283,6 @@
   "rr-n-rburgring-nordschleife-nls": {
    "carIds": [
     5767,
-    6623,
     7162,
     8053,
     8201,
@@ -5304,8 +5301,7 @@
     "Lotus Evora GT4",
     "McLaren 570s GT4",
     "Mercedes AMG GT4 2020",
-    "Porsche 718 Cayman GT4 Clubsport",
-    "Porsche Cayman GT4 CS MR"
+    "Porsche 718 Cayman GT4 Clubsport"
    ],
    "classes": [
     "GTR 4"
@@ -5314,35 +5310,33 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-n-rburgring-nordschleife-nls",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "leadSec": 246,
    "pool": {
     "carIds": {
-     "10744": "2026-11-28T02:03:50Z",
-     "12509": "2026-11-28T02:03:50Z",
-     "13398": "2026-11-28T02:03:50Z",
-     "5767": "2026-11-28T02:03:50Z",
-     "6623": "2026-11-27T18:06:48Z",
-     "7162": "2026-11-28T02:03:50Z",
-     "8053": "2026-11-28T02:03:50Z",
-     "8201": "2026-11-28T02:03:50Z",
-     "8900": "2026-11-28T02:03:50Z",
-     "9644": "2026-11-28T02:03:50Z"
+     "10744": "2026-11-28T02:34:10Z",
+     "12509": "2026-11-28T02:34:10Z",
+     "13398": "2026-11-28T02:34:10Z",
+     "5767": "2026-11-28T02:34:10Z",
+     "7162": "2026-11-28T02:34:10Z",
+     "8053": "2026-11-28T02:34:10Z",
+     "8201": "2026-11-28T02:34:10Z",
+     "8900": "2026-11-28T02:34:10Z",
+     "9644": "2026-11-28T02:34:10Z"
     },
     "cars": {
-     "Alpine A110 GT4+": "2026-11-28T02:03:50Z",
-     "Audi R8 LMS GT4 2020": "2026-11-28T02:03:50Z",
-     "BMW M4 GT4 (F82)": "2026-11-28T02:03:50Z",
-     "BMW M4 GT4 (G82)": "2026-11-28T02:03:50Z",
-     "KTM X-Bow GT4": "2026-11-28T02:03:50Z",
-     "Lotus Evora GT4": "2026-11-28T02:03:50Z",
-     "McLaren 570s GT4": "2026-11-28T02:03:50Z",
-     "Mercedes AMG GT4 2020": "2026-11-28T02:03:50Z",
-     "Porsche 718 Cayman GT4 Clubsport": "2026-11-28T02:03:50Z",
-     "Porsche Cayman GT4 CS MR": "2026-11-27T18:06:48Z"
+     "Alpine A110 GT4+": "2026-11-28T02:34:10Z",
+     "Audi R8 LMS GT4 2020": "2026-11-28T02:34:10Z",
+     "BMW M4 GT4 (F82)": "2026-11-28T02:34:10Z",
+     "BMW M4 GT4 (G82)": "2026-11-28T02:34:10Z",
+     "KTM X-Bow GT4": "2026-11-28T02:34:10Z",
+     "Lotus Evora GT4": "2026-11-28T02:34:10Z",
+     "McLaren 570s GT4": "2026-11-28T02:34:10Z",
+     "Mercedes AMG GT4 2020": "2026-11-28T02:34:10Z",
+     "Porsche 718 Cayman GT4 Clubsport": "2026-11-28T02:34:10Z"
     },
     "classes": {
-     "GTR 4": "2026-11-28T02:03:50Z"
+     "GTR 4": "2026-11-28T02:34:10Z"
     }
    },
    "practiceMin": 10,
@@ -5783,64 +5777,64 @@
    "firstSeen": "2026-11-27T22:01:41Z",
    "game": "rr",
    "id": "rr-weathertech-raceway-laguna-seca-modern-grand-prix",
-   "lastSeen": "2026-11-28T02:03:50Z",
+   "lastSeen": "2026-11-28T02:34:10Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "11536": "2026-11-28T02:03:50Z",
-     "12090": "2026-11-28T02:03:50Z",
+     "11536": "2026-11-28T02:34:10Z",
+     "12090": "2026-11-28T02:34:10Z",
      "12319": "2026-11-27T22:01:41Z",
      "12405": "2026-11-28T01:03:18Z",
      "12790": "2026-11-27T22:01:41Z",
      "12792": "2026-11-28T01:03:18Z",
      "12800": "2026-11-27T22:01:41Z",
      "12807": "2026-11-27T22:01:41Z",
-     "13126": "2026-11-28T02:03:50Z",
+     "13126": "2026-11-28T02:34:10Z",
      "13137": "2026-11-28T01:03:18Z",
-     "13141": "2026-11-28T02:03:50Z",
+     "13141": "2026-11-28T02:34:10Z",
      "13150": "2026-11-28T01:03:18Z",
      "13160": "2026-11-27T22:01:41Z",
-     "13169": "2026-11-28T02:03:50Z",
+     "13169": "2026-11-28T02:34:10Z",
      "13172": "2026-11-27T22:01:41Z",
-     "13174": "2026-11-28T02:03:50Z",
-     "13190": "2026-11-28T02:03:50Z",
-     "13572": "2026-11-28T02:03:50Z",
-     "13591": "2026-11-28T02:03:50Z",
+     "13174": "2026-11-28T02:34:10Z",
+     "13190": "2026-11-28T02:34:10Z",
+     "13572": "2026-11-28T02:34:10Z",
+     "13591": "2026-11-28T02:34:10Z",
      "13594": "2026-11-28T01:03:18Z",
-     "13597": "2026-11-28T02:03:50Z",
+     "13597": "2026-11-28T02:34:10Z",
      "13603": "2026-11-28T01:03:18Z",
-     "13617": "2026-11-28T02:03:50Z",
-     "13620": "2026-11-28T02:03:50Z",
-     "9603": "2026-11-28T02:03:50Z"
+     "13617": "2026-11-28T02:34:10Z",
+     "13620": "2026-11-28T02:34:10Z",
+     "9603": "2026-11-28T02:34:10Z"
     },
     "cars": {
      "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T01:03:18Z",
      "Audi R8 LMS GT3 EVO II": "2026-11-27T22:01:41Z",
-     "Audi R8 LMS GT3 EVO II DTM": "2026-11-28T02:03:50Z",
-     "BMW M Hybrid V8": "2026-11-28T02:03:50Z",
-     "BMW M4 GT3": "2026-11-28T02:03:50Z",
+     "Audi R8 LMS GT3 EVO II DTM": "2026-11-28T02:34:10Z",
+     "BMW M Hybrid V8": "2026-11-28T02:34:10Z",
+     "BMW M4 GT3": "2026-11-28T02:34:10Z",
      "BMW M4 GT3 DTM": "2026-11-27T22:01:41Z",
-     "BMW M4 GT3 EVO DTM": "2026-11-28T02:03:50Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-28T02:34:10Z",
      "Ferrari 296 GT3": "2026-11-28T01:03:18Z",
-     "Ferrari 296 GT3 DTM": "2026-11-28T02:03:50Z",
-     "Ford Mustang GT3 EVO DTM": "2026-11-28T02:03:50Z",
+     "Ferrari 296 GT3 DTM": "2026-11-28T02:34:10Z",
+     "Ford Mustang GT3 EVO DTM": "2026-11-28T02:34:10Z",
      "Lamborghini Hurac\u00e1n GT3 EVO II DTM": "2026-11-27T22:01:41Z",
      "Lamborghini SC63": "2026-11-28T01:03:18Z",
      "Lamborghini Temerario GT3 DTM": "2026-11-28T01:03:18Z",
-     "McLaren 720S GT3 EVO DTM": "2026-11-28T02:03:50Z",
-     "Mercedes-AMG GT3 2020": "2026-11-28T02:03:50Z",
-     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T02:03:50Z",
-     "Porsche 911 GT3 R (992)": "2026-11-28T02:03:50Z",
+     "McLaren 720S GT3 EVO DTM": "2026-11-28T02:34:10Z",
+     "Mercedes-AMG GT3 2020": "2026-11-28T02:34:10Z",
+     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T02:34:10Z",
+     "Porsche 911 GT3 R (992)": "2026-11-28T02:34:10Z",
      "Porsche 911 GT3 R (992) DTM": "2026-11-28T01:03:18Z",
-     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T02:03:50Z",
-     "Porsche 963": "2026-11-28T02:03:50Z"
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T02:34:10Z",
+     "Porsche 963": "2026-11-28T02:34:10Z"
     },
     "classes": {
      "DTM 2024": "2026-11-28T01:03:18Z",
-     "DTM 2025": "2026-11-28T02:03:50Z",
-     "DTM 2026": "2026-11-28T02:03:50Z",
-     "GTR 3": "2026-11-28T02:03:50Z",
-     "Hypercars": "2026-11-28T02:03:50Z"
+     "DTM 2025": "2026-11-28T02:34:10Z",
+     "DTM 2026": "2026-11-28T02:34:10Z",
+     "GTR 3": "2026-11-28T02:34:10Z",
+     "Hypercars": "2026-11-28T02:34:10Z"
     }
    },
    "practiceMin": 10,
@@ -5857,9 +5851,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T02:19:04Z",
+   "checked": "2026-11-28T02:34:10Z",
    "found": 5,
-   "lastOk": "2026-11-28T02:19:04Z",
+   "lastOk": "2026-11-28T02:34:10Z",
    "ok": true
   },
   "ams2": {
@@ -5875,18 +5869,17 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T02:29:08Z",
+   "checked": "2026-11-28T02:34:10Z",
    "feedUpdated": "2026-11-28T01:53:01Z",
    "found": 7,
-   "lastOk": "2026-11-28T02:29:08Z",
+   "lastOk": "2026-11-28T02:34:10Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-28T02:03:50Z",
-    "found": 4,
+    "checked": "2026-11-28T02:34:10Z",
+    "found": 3,
     "leadSec": {
-     "Circuit Zolder - Grand Prix": 246,
+     "Hockenheimring - Modern - Grand Prix": 256,
      "N\u00fcrburgring - Nordschleife - NLS": 246,
-     "Watkins Glen International - Grand Prix with Inner Loop": 256,
      "WeatherTech Raceway Laguna Seca - Modern - Grand Prix": 256
     },
     "mismatch": [
@@ -5896,6 +5889,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T02:29:08Z",
+ "updated": "2026-11-28T02:34:10Z",
  "version": 1
 }
