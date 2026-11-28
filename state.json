@@ -3612,7 +3612,7 @@
   "Hockenheimring - Modern - Grand Prix": {
    "practiceMin": 5,
    "sec": 256,
-   "seen": "2026-11-28T14:38:29Z"
+   "seen": "2026-11-28T16:39:39Z"
   },
   "N\u00fcrburgring - Nordschleife - NLS": {
    "practiceMin": 10,
@@ -3652,7 +3652,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3676,7 +3676,8 @@
     "2026-11-28T14:30:00Z",
     "2026-11-28T15:30:00Z",
     "2026-11-28T16:30:00Z",
-    "2026-11-28T17:30:00Z"
+    "2026-11-28T17:30:00Z",
+    "2026-11-28T18:30:00Z"
    ],
    "title": "Fanatec Eifel Trophy",
    "track": "Nurburgring - 24h",
@@ -3693,7 +3694,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3734,7 +3735,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3757,7 +3758,8 @@
     "2026-11-28T15:20:00Z",
     "2026-11-28T16:00:00Z",
     "2026-11-28T16:40:00Z",
-    "2026-11-28T17:20:00Z"
+    "2026-11-28T17:20:00Z",
+    "2026-11-28T18:00:00Z"
    ],
    "title": "GT4 Super Sprint",
    "track": "Imola - GP",
@@ -3774,7 +3776,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3817,7 +3819,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -3839,7 +3841,8 @@
     "2026-11-28T15:30:00Z",
     "2026-11-28T16:00:00Z",
     "2026-11-28T16:30:00Z",
-    "2026-11-28T17:00:00Z"
+    "2026-11-28T17:00:00Z",
+    "2026-11-28T17:30:00Z"
    ],
    "title": "Vintage Trophy",
    "track": "Watkins Glen International - Short",
@@ -3850,7 +3853,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-25T16:55:00Z",
     "2026-11-25T18:25:00Z",
@@ -3936,9 +3939,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
-    "2026-11-25T16:25:00Z",
     "2026-11-25T17:55:00Z",
     "2026-11-25T19:25:00Z",
     "2026-11-25T20:55:00Z",
@@ -4013,7 +4015,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-25T17:25:00Z",
     "2026-11-25T18:55:00Z",
@@ -4078,7 +4080,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-25T16:45:00Z",
     "2026-11-25T17:30:00Z",
@@ -4215,9 +4217,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
-    "2026-11-25T16:30:00Z",
     "2026-11-25T17:15:00Z",
     "2026-11-25T18:00:00Z",
     "2026-11-25T18:45:00Z",
@@ -4341,7 +4342,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-25T17:00:00Z",
     "2026-11-25T17:45:00Z",
@@ -4470,7 +4471,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-25T16:50:00Z",
     "2026-11-25T17:50:00Z",
@@ -4562,7 +4563,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
     "2026-11-25T17:10:00Z",
     "2026-11-25T18:10:00Z",
@@ -4661,9 +4662,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-28T16:24:32Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "starts": [
-    "2026-11-25T16:30:00Z",
     "2026-11-25T17:30:00Z",
     "2026-11-25T18:30:00Z",
     "2026-11-25T19:30:00Z",
@@ -5205,23 +5205,22 @@
    "firstSeen": "2026-11-23T14:28:07Z",
    "game": "rr",
    "id": "rr-hockenheimring-modern-grand-prix",
-   "lastSeen": "2026-11-28T14:38:29Z",
+   "lastSeen": "2026-11-28T16:39:39Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "5051": "2026-11-28T14:38:29Z"
+     "5051": "2026-11-28T16:39:39Z"
     },
     "cars": {
-     "Tatuus F4": "2026-11-28T14:38:29Z"
+     "Tatuus F4": "2026-11-28T16:39:39Z"
     },
     "classes": {
-     "Tatuus F4 Cup": "2026-11-28T14:38:29Z"
+     "Tatuus F4 Cup": "2026-11-28T16:39:39Z"
     }
    },
    "practiceMin": 5,
-   "servers": 4,
+   "servers": 5,
    "starts": [
-    "2026-11-25T16:30:00Z",
     "2026-11-25T18:30:00Z",
     "2026-11-25T20:30:00Z",
     "2026-11-26T00:30:00Z",
@@ -5243,7 +5242,8 @@
     "2026-11-28T04:30:00Z",
     "2026-11-28T06:30:00Z",
     "2026-11-28T08:30:00Z",
-    "2026-11-28T14:30:00Z"
+    "2026-11-28T14:30:00Z",
+    "2026-11-28T16:30:00Z"
    ],
    "title": "Tatuus F4 Cup",
    "track": "Hockenheimring - Modern - Grand Prix",
@@ -5828,9 +5828,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T16:24:32Z",
+   "checked": "2026-11-28T16:39:39Z",
    "found": 5,
-   "lastOk": "2026-11-28T16:24:32Z",
+   "lastOk": "2026-11-28T16:39:39Z",
    "ok": true
   },
   "ams2": {
@@ -5840,28 +5840,28 @@
    "ok": true
   },
   "lmu": {
-   "checked": "2026-11-28T16:24:32Z",
+   "checked": "2026-11-28T16:39:39Z",
    "found": 9,
-   "lastOk": "2026-11-28T16:24:32Z",
+   "lastOk": "2026-11-28T16:39:39Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T16:34:37Z",
+   "checked": "2026-11-28T16:39:39Z",
    "feedUpdated": "2026-11-28T15:53:28Z",
    "found": 7,
-   "lastOk": "2026-11-28T16:34:37Z",
+   "lastOk": "2026-11-28T16:39:39Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-28T16:09:15Z",
+    "checked": "2026-11-28T16:39:39Z",
     "found": 1,
     "leadSec": {
-     "Watkins Glen International - Grand Prix with Inner Loop": 256
+     "Hockenheimring - Modern - Grand Prix": 256
     },
     "mismatch": []
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-28T16:34:37Z",
+ "updated": "2026-11-28T16:39:39Z",
  "version": 1
 }
