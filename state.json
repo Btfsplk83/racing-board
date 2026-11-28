@@ -3596,13 +3596,18 @@
  "rrLeadSec": {
   "Circuit Zandvoort - Modern - Grand Prix": {
    "practiceMin": 5,
-   "sec": 256,
-   "seen": "2026-11-28T01:33:39Z"
+   "sec": 248,
+   "seen": "2026-11-28T08:10:09Z"
   },
   "Circuit Zolder - Grand Prix": {
    "practiceMin": 5,
    "sec": 246,
    "seen": "2026-11-28T02:03:50Z"
+  },
+  "Guia Circuit - Grand Prix": {
+   "practiceMin": 15,
+   "sec": 238,
+   "seen": "2026-11-28T08:10:09Z"
   },
   "Hockenheimring - Modern - Grand Prix": {
    "practiceMin": 5,
@@ -3627,7 +3632,7 @@
   "Watkins Glen International - Grand Prix with Inner Loop": {
    "practiceMin": 5,
    "sec": 256,
-   "seen": "2026-11-28T07:09:33Z"
+   "seen": "2026-11-28T08:10:09Z"
   },
   "WeatherTech Raceway Laguna Seca - Modern - Grand Prix": {
    "practiceMin": 10,
@@ -4335,7 +4340,6 @@
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
    "lastSeen": "2026-11-28T07:59:55Z",
    "starts": [
-    "2026-11-25T08:00:00Z",
     "2026-11-25T08:45:00Z",
     "2026-11-25T09:30:00Z",
     "2026-11-25T10:15:00Z",
@@ -4576,7 +4580,6 @@
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
    "lastSeen": "2026-11-28T07:59:55Z",
    "starts": [
-    "2026-11-25T08:10:00Z",
     "2026-11-25T09:10:00Z",
     "2026-11-25T10:10:00Z",
     "2026-11-25T11:10:00Z",
@@ -4956,12 +4959,14 @@
    "carIds": [
     6310,
     6321,
-    6329
+    6329,
+    6334
    ],
    "cars": [
     "Chevrolet RML Cruze TC1 2017",
     "Honda Civic WTCC 2017",
-    "Lada Vesta WTCC 2017"
+    "Lada Vesta WTCC 2017",
+    "Volvo S60 Polestar TC1"
    ],
    "classes": [
     "WTCC 2017"
@@ -4970,21 +4975,23 @@
    "firstSeen": "2026-11-17T03:58:39Z",
    "game": "rr",
    "id": "rr-circuit-zandvoort-modern-grand-prix",
-   "lastSeen": "2026-11-28T01:33:39Z",
-   "leadSec": 256,
+   "lastSeen": "2026-11-28T08:10:09Z",
+   "leadSec": 248,
    "pool": {
     "carIds": {
-     "6310": "2026-11-28T01:33:39Z",
+     "6310": "2026-11-28T08:10:09Z",
      "6321": "2026-11-28T01:33:39Z",
-     "6329": "2026-11-28T01:33:39Z"
+     "6329": "2026-11-28T01:33:39Z",
+     "6334": "2026-11-28T08:10:09Z"
     },
     "cars": {
-     "Chevrolet RML Cruze TC1 2017": "2026-11-28T01:33:39Z",
+     "Chevrolet RML Cruze TC1 2017": "2026-11-28T08:10:09Z",
      "Honda Civic WTCC 2017": "2026-11-28T01:33:39Z",
-     "Lada Vesta WTCC 2017": "2026-11-28T01:33:39Z"
+     "Lada Vesta WTCC 2017": "2026-11-28T01:33:39Z",
+     "Volvo S60 Polestar TC1": "2026-11-28T08:10:09Z"
     },
     "classes": {
-     "WTCC 2017": "2026-11-28T01:33:39Z"
+     "WTCC 2017": "2026-11-28T08:10:09Z"
     }
    },
    "practiceMin": 5,
@@ -4998,7 +5005,8 @@
     "2026-11-26T21:00:00Z",
     "2026-11-27T01:00:00Z",
     "2026-11-27T17:00:00Z",
-    "2026-11-28T01:00:00Z"
+    "2026-11-28T01:00:00Z",
+    "2026-11-28T08:00:00Z"
    ],
    "title": "WTCC 2017",
    "track": "Circuit Zandvoort - Modern - Grand Prix",
@@ -5077,6 +5085,76 @@
    "title": "DTM 2002",
    "track": "Circuit Zolder - Grand Prix",
    "trackId": 1683
+  },
+  "rr-guia-circuit-grand-prix": {
+   "carIds": [
+    9603,
+    12319,
+    12405,
+    13572,
+    13594,
+    13597,
+    13603,
+    13617,
+    13620
+   ],
+   "cars": [
+    "Aston Martin Vantage AMR GT3 EVO DTM",
+    "Audi R8 LMS GT3 EVO II",
+    "BMW M4 GT3 EVO DTM",
+    "Ferrari 296 GT3",
+    "Lamborghini Temerario GT3 DTM",
+    "McLaren 720S GT3 EVO DTM",
+    "Mercedes-AMG GT3 2020",
+    "Mercedes-AMG GT3 2020 DTM",
+    "Porsche 911 GT3 R (992.2) DTM"
+   ],
+   "classes": [
+    "DTM 2026",
+    "GTR 3"
+   ],
+   "durationMin": 120,
+   "firstSeen": "2026-11-28T08:10:09Z",
+   "game": "rr",
+   "id": "rr-guia-circuit-grand-prix",
+   "lastSeen": "2026-11-28T08:10:09Z",
+   "leadSec": 238,
+   "pool": {
+    "carIds": {
+     "12319": "2026-11-28T08:10:09Z",
+     "12405": "2026-11-28T08:10:09Z",
+     "13572": "2026-11-28T08:10:09Z",
+     "13594": "2026-11-28T08:10:09Z",
+     "13597": "2026-11-28T08:10:09Z",
+     "13603": "2026-11-28T08:10:09Z",
+     "13617": "2026-11-28T08:10:09Z",
+     "13620": "2026-11-28T08:10:09Z",
+     "9603": "2026-11-28T08:10:09Z"
+    },
+    "cars": {
+     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T08:10:09Z",
+     "Audi R8 LMS GT3 EVO II": "2026-11-28T08:10:09Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-28T08:10:09Z",
+     "Ferrari 296 GT3": "2026-11-28T08:10:09Z",
+     "Lamborghini Temerario GT3 DTM": "2026-11-28T08:10:09Z",
+     "McLaren 720S GT3 EVO DTM": "2026-11-28T08:10:09Z",
+     "Mercedes-AMG GT3 2020": "2026-11-28T08:10:09Z",
+     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T08:10:09Z",
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T08:10:09Z"
+    },
+    "classes": {
+     "DTM 2026": "2026-11-28T08:10:09Z",
+     "GTR 3": "2026-11-28T08:10:09Z"
+    }
+   },
+   "practiceMin": 15,
+   "servers": 1,
+   "starts": [
+    "2026-11-28T08:00:00Z"
+   ],
+   "title": "DTM 2026 + GTR 3",
+   "track": "Guia Circuit - Grand Prix",
+   "trackId": 2122
   },
   "rr-hockenheimring-2001-grand-prix": {
    "carIds": [
@@ -5524,9 +5602,9 @@
     12790,
     12795,
     12800,
-    12807,
     13141,
     13150,
+    13160,
     13164,
     13172,
     13174,
@@ -5569,66 +5647,65 @@
    "firstSeen": "2026-11-23T12:57:37Z",
    "game": "rr",
    "id": "rr-watkins-glen-international-grand-prix-with-inner-loop",
-   "lastSeen": "2026-11-28T07:09:33Z",
+   "lastSeen": "2026-11-28T08:10:09Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "11536": "2026-11-28T06:08:57Z",
-     "12090": "2026-11-28T07:09:33Z",
-     "12319": "2026-11-28T07:09:33Z",
-     "12405": "2026-11-28T03:04:22Z",
+     "11536": "2026-11-28T08:10:09Z",
+     "12090": "2026-11-28T08:10:09Z",
+     "12319": "2026-11-28T08:10:09Z",
+     "12405": "2026-11-28T08:10:09Z",
      "12771": "2026-11-28T07:09:33Z",
      "12788": "2026-11-28T04:07:41Z",
      "12790": "2026-11-28T05:08:17Z",
      "12795": "2026-11-28T01:03:18Z",
      "12800": "2026-11-28T01:03:18Z",
-     "12807": "2026-11-28T00:02:43Z",
      "13141": "2026-11-28T07:09:33Z",
      "13150": "2026-11-28T07:09:33Z",
+     "13160": "2026-11-28T08:10:09Z",
      "13164": "2026-11-28T03:04:22Z",
-     "13172": "2026-11-28T06:08:57Z",
+     "13172": "2026-11-28T08:10:09Z",
      "13174": "2026-11-28T05:08:17Z",
      "13190": "2026-11-28T06:08:57Z",
-     "13572": "2026-11-28T07:09:33Z",
-     "13591": "2026-11-28T07:09:33Z",
-     "13594": "2026-11-28T06:08:57Z",
-     "13597": "2026-11-28T07:09:33Z",
-     "13603": "2026-11-28T04:07:41Z",
-     "13617": "2026-11-28T07:09:33Z",
+     "13572": "2026-11-28T08:10:09Z",
+     "13591": "2026-11-28T08:10:09Z",
+     "13594": "2026-11-28T08:10:09Z",
+     "13597": "2026-11-28T08:10:09Z",
+     "13603": "2026-11-28T08:10:09Z",
+     "13617": "2026-11-28T08:10:09Z",
      "13620": "2026-11-28T03:04:22Z",
-     "9603": "2026-11-28T06:08:57Z"
+     "9603": "2026-11-28T08:10:09Z"
     },
     "cars": {
-     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T04:07:41Z",
-     "Audi R8 LMS GT3 EVO II": "2026-11-28T07:09:33Z",
+     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T08:10:09Z",
+     "Audi R8 LMS GT3 EVO II": "2026-11-28T08:10:09Z",
      "Audi R8 LMS GT3 EVO II DTM": "2026-11-28T06:08:57Z",
-     "BMW M4 GT3": "2026-11-28T06:08:57Z",
+     "BMW M4 GT3": "2026-11-28T08:10:09Z",
      "BMW M4 GT3 DTM": "2026-11-28T05:08:17Z",
-     "BMW M4 GT3 EVO DTM": "2026-11-28T07:09:33Z",
-     "Ferrari 296 GT3": "2026-11-28T03:04:22Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-28T08:10:09Z",
+     "Ferrari 296 GT3": "2026-11-28T08:10:09Z",
      "Ferrari 296 GT3 DTM": "2026-11-28T07:09:33Z",
-     "Ford Mustang GT3 EVO DTM": "2026-11-28T07:09:33Z",
+     "Ford Mustang GT3 EVO DTM": "2026-11-28T08:10:09Z",
      "Lamborghini Hurac\u00e1n GT3 EVO II": "2026-11-28T07:09:33Z",
-     "Lamborghini Hurac\u00e1n GT3 EVO II DTM": "2026-11-28T01:03:18Z",
-     "Lamborghini Temerario GT3 DTM": "2026-11-28T06:08:57Z",
+     "Lamborghini Hurac\u00e1n GT3 EVO II DTM": "2026-11-28T08:10:09Z",
+     "Lamborghini Temerario GT3 DTM": "2026-11-28T08:10:09Z",
      "McLaren 720S GT3 EVO DTM": "2026-11-28T05:08:17Z",
-     "Mercedes-AMG GT3 2020": "2026-11-28T06:08:57Z",
-     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T07:09:33Z",
-     "Porsche 911 GT3 R (992)": "2026-11-28T07:09:33Z",
+     "Mercedes-AMG GT3 2020": "2026-11-28T08:10:09Z",
+     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T08:10:09Z",
+     "Porsche 911 GT3 R (992)": "2026-11-28T08:10:09Z",
      "Porsche 911 GT3 R (992) DTM": "2026-11-28T07:09:33Z",
-     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T07:09:33Z"
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T08:10:09Z"
     },
     "classes": {
      "DTM 2024": "2026-11-28T05:08:17Z",
-     "DTM 2025": "2026-11-28T07:09:33Z",
-     "DTM 2026": "2026-11-28T07:09:33Z",
-     "GTR 3": "2026-11-28T07:09:33Z"
+     "DTM 2025": "2026-11-28T08:10:09Z",
+     "DTM 2026": "2026-11-28T08:10:09Z",
+     "GTR 3": "2026-11-28T08:10:09Z"
     }
    },
    "practiceMin": 5,
-   "servers": 1,
+   "servers": 2,
    "starts": [
-    "2026-11-25T08:00:00Z",
     "2026-11-25T09:00:00Z",
     "2026-11-25T10:00:00Z",
     "2026-11-25T16:00:00Z",
@@ -5670,7 +5747,8 @@
     "2026-11-28T04:00:00Z",
     "2026-11-28T05:00:00Z",
     "2026-11-28T06:00:00Z",
-    "2026-11-28T07:00:00Z"
+    "2026-11-28T07:00:00Z",
+    "2026-11-28T08:00:00Z"
    ],
    "title": "DTM 2024 + DTM 2025 + DTM 2026 + GTR 3",
    "track": "Watkins Glen International - Grand Prix with Inner Loop",
@@ -5829,22 +5907,26 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T08:04:59Z",
+   "checked": "2026-11-28T08:10:09Z",
    "feedUpdated": "2026-11-28T07:53:13Z",
    "found": 7,
-   "lastOk": "2026-11-28T08:04:59Z",
+   "lastOk": "2026-11-28T08:10:09Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-28T07:39:48Z",
-    "found": 1,
+    "checked": "2026-11-28T08:10:09Z",
+    "found": 3,
     "leadSec": {
-     "Twin Ring Motegi - Road Course": 256
+     "Circuit Zandvoort - Modern - Grand Prix": 248,
+     "Guia Circuit - Grand Prix": 238,
+     "Watkins Glen International - Grand Prix with Inner Loop": 256
     },
-    "mismatch": []
+    "mismatch": [
+     "Guia Circuit - Grand Prix 08:00Z"
+    ]
    },
    "via": "feed"
   }
  },
- "updated": "2026-11-28T08:04:59Z",
+ "updated": "2026-11-28T08:10:09Z",
  "version": 1
 }
