@@ -8017,10 +8017,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T20:40:45Z",
+   "checked": "2026-11-28T20:45:48Z",
    "feedUpdated": "2026-11-28T19:53:36Z",
    "found": 7,
-   "lastOk": "2026-11-28T20:40:45Z",
+   "lastOk": "2026-11-28T20:45:48Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-28T20:25:30Z",
@@ -8037,6 +8037,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T20:40:45Z",
+ "updated": "2026-11-28T20:45:48Z",
  "version": 1
 }
