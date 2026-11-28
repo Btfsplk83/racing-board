@@ -3647,7 +3647,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:34:10Z",
+   "lastSeen": "2026-11-28T02:49:15Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3676,7 +3676,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:34:10Z",
+   "lastSeen": "2026-11-28T02:49:15Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3708,7 +3708,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T02:34:10Z",
+   "lastSeen": "2026-11-28T02:49:15Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3738,7 +3738,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T02:34:10Z",
+   "lastSeen": "2026-11-28T02:49:15Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3772,7 +3772,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T02:34:10Z",
+   "lastSeen": "2026-11-28T02:49:15Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -3797,7 +3797,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T03:25:00Z",
     "2026-11-25T04:55:00Z",
@@ -3892,7 +3892,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T02:55:00Z",
     "2026-11-25T04:25:00Z",
@@ -3978,7 +3978,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T03:55:00Z",
     "2026-11-25T05:25:00Z",
@@ -4052,7 +4052,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T03:15:00Z",
     "2026-11-25T04:00:00Z",
@@ -4207,7 +4207,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T03:00:00Z",
     "2026-11-25T03:45:00Z",
@@ -4351,9 +4351,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
-    "2026-11-25T02:45:00Z",
     "2026-11-25T03:30:00Z",
     "2026-11-25T04:15:00Z",
     "2026-11-25T05:00:00Z",
@@ -4499,7 +4498,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T02:50:00Z",
     "2026-11-25T03:50:00Z",
@@ -4605,7 +4604,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T03:10:00Z",
     "2026-11-25T04:10:00Z",
@@ -4718,7 +4717,7 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-28T02:24:07Z",
+   "lastSeen": "2026-11-28T02:39:13Z",
    "starts": [
     "2026-11-25T03:30:00Z",
     "2026-11-25T04:30:00Z",
@@ -5083,7 +5082,6 @@
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-25T02:45:00Z",
     "2026-11-25T05:45:00Z",
     "2026-11-25T06:45:00Z",
     "2026-11-25T08:45:00Z",
@@ -5851,9 +5849,9 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T02:34:10Z",
+   "checked": "2026-11-28T02:49:15Z",
    "found": 5,
-   "lastOk": "2026-11-28T02:34:10Z",
+   "lastOk": "2026-11-28T02:49:15Z",
    "ok": true
   },
   "ams2": {
@@ -5863,16 +5861,16 @@
    "ok": true
   },
   "lmu": {
-   "checked": "2026-11-28T02:24:07Z",
+   "checked": "2026-11-28T02:39:13Z",
    "found": 9,
-   "lastOk": "2026-11-28T02:24:07Z",
+   "lastOk": "2026-11-28T02:39:13Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T02:34:10Z",
+   "checked": "2026-11-28T02:49:15Z",
    "feedUpdated": "2026-11-28T01:53:01Z",
    "found": 7,
-   "lastOk": "2026-11-28T02:34:10Z",
+   "lastOk": "2026-11-28T02:49:15Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-28T02:34:10Z",
@@ -5889,6 +5887,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T02:34:10Z",
+ "updated": "2026-11-28T02:49:15Z",
  "version": 1
 }
