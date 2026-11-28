@@ -5846,10 +5846,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T16:24:32Z",
+   "checked": "2026-11-28T16:29:36Z",
    "feedUpdated": "2026-11-28T15:53:28Z",
    "found": 7,
-   "lastOk": "2026-11-28T16:24:32Z",
+   "lastOk": "2026-11-28T16:29:36Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-28T16:09:15Z",
@@ -5862,6 +5862,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T16:24:32Z",
+ "updated": "2026-11-28T16:29:36Z",
  "version": 1
 }
