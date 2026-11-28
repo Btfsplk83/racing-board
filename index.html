@@ -409,7 +409,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     <li><b>RaceRoom:</b> ranked timetable on r3e-leaderboards.info, checked hourly. Live ranked servers are checked every 30 min, and every 5 min if the timetable is down. Times shown are when servers open, a few minutes before the race slot.</li>
     <li><b>AC Evo:</b> acevo.gg daily races, checked every 15 min.</li>
     <li><b>LFM:</b> official AMS2, RaceRoom, AC Evo and Assetto Corsa series on lowfuelmotorsport.com, checked every 30 min. LFM lists the next few races of each series for this week's track. The LFM chip hides or shows them all. AMS2 and AC races lock by the DLC LFM lists for the track and cars. Free AC mods don't lock a race.</li>
-    <li><b>Chill Apex:</b> league calendar on JustRace, checked hourly. Shows races up to 15 days ahead.</li>
+    <li><b>Chill Apex:</b> league calendar on JustRace, checked hourly. Shows races and hot lap windows up to 15 days ahead.</li>
   </ul>
   <p class="note">Races more than 2 hours away, and locked races, show as one-line rows. Tap a row for details. Tap the status line at the top to see when each source was last checked.</p>
 </main>
@@ -915,6 +915,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   function metaRow(s){
     if(s.game==="acevo"||s.game==="ams2"||s.game==="ac"||s.source==="lfm"){
       var gm=el("div","meta");
+      if(s.hotlap)gm.appendChild(el("span","pill gtag","Hot lap"));
       if(s.league)gm.appendChild(el("span","pill gtag",s.league+(s.round?" · Round "+s.round:"")+(s.daily?" · Daily":"")));
       if(s.game==="acevo"&&s.kind)gm.appendChild(el("span","pill gtag",s.kind));
       (s.classes||[]).forEach(function(c){gm.appendChild(el("span","pill gcls",c))});
@@ -1013,7 +1014,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   }
   function fillDetail(det,x){
     var s=x.s;
-    det.appendChild(el("div","dlabel",s.event?(x.u.next.length>1?"Next starts":"Start"):openLead(s)?"Server opens, next 24 hours":"Start times, next 24 hours"));
+    det.appendChild(el("div","dlabel",s.hotlap?"Window opens":s.event?(x.u.next.length>1?"Next starts":"Start"):openLead(s)?"Server opens, next 24 hours":"Start times, next 24 hours"));
     if(x.u.next.length||x.u.running)det.appendChild(timeGrid([],x.u.running,x.u.next,!!s.event));
     else det.appendChild(el("p","note",s.event?"No upcoming start known.":"No more starts in the next 24 hours."));
     var f=el("div","facts");
@@ -1021,7 +1022,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(s.league)fact(f,"League",s.league+(s.round?", round "+s.round:""));
     if(s.eventName&&s.eventName!==s.track)fact(f,"Event",s.eventName);
     if(openLead(s))fact(f,"Joining","Servers open "+(s.practiceMin-1)+" min early for "+s.practiceMin+" min of practice. Join before practice ends.");
-    if(s.format)fact(f,"Sessions",s.format);
+    if(s.hotlap)fact(f,"Closes",fmtAt(Date.parse(s.until)));
+    else if(s.format)fact(f,"Sessions",s.format);
     else fact(f,"Race length",s.durationMin?s.durationMin+" min":"");
     fact(f,"Interval",s.intervalMin?everyText(s.intervalMin):"");
     fact(f,"Classes",(s.classes||[]).join(", "));
@@ -1080,13 +1082,13 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     var w=el("div","when");
     var box=el("div","cdbox");
     var seenOnce=!x.t&&!x.live&&x.lastRan;
-    var lbl=x.locked?"":x.hero?"Next RaceRoom race":x.live?"Running":seenOnce?"Last ran":openLead(s)?"Opens in":"Starts in";
+    var lbl=x.locked?"":x.hero?"Next RaceRoom race":x.live?(s.hotlap?"":"Running"):seenOnce?"Last ran":openLead(s)?"Opens in":"Starts in";
     if(lbl)box.appendChild(el("div","cdlbl",lbl));
-    var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":seenOnce?fmtTime(x.lastRan):(x.t?"":"Running"));box.appendChild(cd);
+    var cd=el("div",x.t&&!x.locked?"cd num":"cd word",x.locked?"Locked":seenOnce?fmtTime(x.lastRan):(x.t?"":s.hotlap?"Open":"Running"));box.appendChild(cd);
     w.appendChild(box);
     if(x.t)w.appendChild(el("div","at num",(x.live?"Next ":"")+fmtAt(x.t)));
     else if(seenOnce)w.appendChild(el("div","at",(x.locked?"Last ran "+fmtTime(x.lastRan)+". ":"")+"Next time not known yet"));
-    if(x.live)w.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
+    if(x.live)w.appendChild(el("div","livetag num",s.hotlap?"Open until "+fmtAt(Date.parse(s.until)):"Running since "+fmtTime(x.started)));
     head.appendChild(m);head.appendChild(w);
     head.onclick=function(e){
       if(e.target.closest&&e.target.closest("button"))return;
@@ -1130,7 +1132,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(x.t){
       w.appendChild(el("div","at num",x.day===0||x.day===1?fmtTime(x.t):fmtAt(x.t)));
       cd=el("div","incd num",fmtIn(x.t-Date.now()));w.appendChild(cd);
-    }else w.appendChild(el("div","at num",x.lastRan?"Ran "+fmtTime(x.lastRan):"Running"));
+    }else w.appendChild(el("div","at num",x.lastRan?"Ran "+fmtTime(x.lastRan):s.hotlap?"Open":"Running"));
     head.appendChild(m);head.appendChild(w);
     head.onclick=function(e){if(e.target.closest&&e.target.closest("button"))return;toggleCard(x.key)};
     head.onkeydown=function(e){
@@ -1157,7 +1159,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     li.appendChild(titleRow(s,x.key));
     li.appendChild(el("div","track",s.track));
     var mr=metaRow(s);if(mr)li.appendChild(mr);
-    if(x.live)li.appendChild(el("div","livetag num","Running since "+fmtTime(x.started)));
+    if(x.live)li.appendChild(el("div","livetag num",s.hotlap?"Open until "+fmtAt(Date.parse(s.until)):"Running since "+fmtTime(x.started)));
     li.appendChild(timeGrid(x.u.past,x.u.running,x.u.next,!!s.event));
     if(x.locked)li.appendChild(reasonLine(x));
     rows.push({cd:null,t:x.t||0,e:endOf(x)});

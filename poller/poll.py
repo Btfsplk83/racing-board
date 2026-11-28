@@ -530,8 +530,9 @@ def jr_league(league, when, names):
     rows = []
     for se in seasons:
         game = JR_GAMES.get(se.get("GameId"))
-        if not game or se.get("IsHotlap") or jr_iso(se["EndDate"]) < when - timedelta(days=1):
+        if not game or jr_iso(se["EndDate"]) < when - timedelta(days=1):
             continue
+        hot = bool(se.get("IsHotlap"))  # hot lap windows: a practice server open for days. The race season lists them too, so only this season emits them
         if game not in names:
             names[game] = jr_names(game)
         tracks, classes, dlc = names[game]
@@ -543,12 +544,16 @@ def jr_league(league, when, names):
         for e in d.get("ServerScheduleDetails", []):
             ss, par = e.get("ServerSchedule") or {}, e.get("ServerScheduleParam") or {}
             parts = sess.get(e["ServerScheduleId"], [])
-            if not any(x.get("SessionTypeName") == "Race" for x in parts) and not ss.get("RaceDuration"):
-                continue  # practice servers and hot-lap windows
+            is_race = any(x.get("SessionTypeName") == "Race" for x in parts) or ss.get("RaceDuration")
+            if hot != (not is_race):
+                continue  # plain practice servers (not hot laps) and hot laps listed in the race season
             races.append((jr_iso(e["ScheduleStartTime"]), e, ss, par, parts))
         races.sort(key=lambda r: r[0])
         for n, (start, e, ss, par, parts) in enumerate(races, 1):
-            if not (when - timedelta(hours=6) <= start <= when + JR_AHEAD):
+            close = jr_iso(ss["ToDateTime"]) if hot and ss.get("ToDateTime") else None
+            if hot and not close:
+                continue
+            if not ((close or start) >= when - timedelta(hours=6) and start <= when + JR_AHEAD):
                 continue
             tid = str(par.get("TrackName") or ss.get("TrackList") or "").split(",")[0]
             cids = [c for c in str(par.get("CarClassList") or ss.get("ClassList") or "").split(",") if c]
@@ -563,7 +568,7 @@ def jr_league(league, when, names):
             timed = [x for x in parts if x.get("SessionDurationTypeName") == "Mins"]
             fmt = " · ".join(f"{x['SessionTypeName'][0]} {x['SessionDuration']} "
                              f"{'min' if x.get('SessionDurationTypeName') == 'Mins' else 'laps'}" for x in parts)
-            rows.append({
+            row = {
                 "game": game, "id": f"{game}-jr-{e['ServerScheduleId']}",
                 "title": se.get("Name", ""), "league": lname, "round": n,
                 "eventName": par.get("EventName", ""),
@@ -574,7 +579,11 @@ def jr_league(league, when, names):
                 "url": f"https://{sub}.justrace.net/en/events",
                 "starts": [iso(start)],
                 **({"need": need} if need else {}),
-            })
+            }
+            if hot:  # open from start to until; the page says "Open" instead of "Running"
+                row.update(hotlap=True, until=iso(close), durationMin=int((close - start).total_seconds() // 60), format="")
+                row.pop("round")
+            rows.append(row)
     return rows
 
 
