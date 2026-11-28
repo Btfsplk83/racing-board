@@ -1,7 +1,7 @@
 {
  "jrFeed": {
-  "fetched": "2026-11-28T18:10:22Z",
-  "lastOk": "2026-11-28T18:10:22Z",
+  "fetched": "2026-11-28T20:25:30Z",
+  "lastOk": "2026-11-28T20:25:30Z",
   "rows": [
    {
     "classes": [
@@ -13,6 +13,20 @@
     "game": "ams2",
     "id": "ams2-jr-765844",
     "league": "Chill Apex Racing",
+    "need": {
+     "cars": {
+      "classes": [
+       "Mini JCW UK"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Brands Hatch Indy"
+     }
+    },
     "round": 1,
     "starts": [
      "2026-12-04T13:43:00Z"
@@ -31,6 +45,20 @@
     "game": "ams2",
     "id": "ams2-jr-765848",
     "league": "Chill Apex Racing",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT5"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Kyalami Historic 1976"
+     }
+    },
     "round": 2,
     "starts": [
      "2026-12-18T13:43:00Z"
@@ -49,6 +77,25 @@
     "game": "ams2",
     "id": "ams2-jr-765247",
     "league": "Chill Apex Racing",
+    "need": {
+     "cars": {
+      "classes": [
+       "Formula V8 Gen1"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 2697790,
+        "name": "Circuit des 24 Heures du Mans Pack"
+       }
+      ],
+      "free": false,
+      "name": "Circuit des 24 Heures du Mans"
+     }
+    },
     "round": 3,
     "starts": [
      "2026-12-11T13:42:00Z"
@@ -67,6 +114,30 @@
     "game": "ams2",
     "id": "ams2-jr-764760",
     "league": "Chill Apex Racing",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT4"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3"
+       }
+      ],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1386932,
+        "name": "Spa Pack"
+       }
+      ],
+      "free": false,
+      "name": "Spa-Francorchamps 2022"
+     }
+    },
     "round": 5,
     "starts": [
      "2026-12-07T21:00:00Z"
@@ -85,6 +156,30 @@
     "game": "ams2",
     "id": "ams2-jr-764761",
     "league": "Chill Apex Racing",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT4"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3"
+       }
+      ],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1386930,
+        "name": "Silverstone Pack"
+       }
+      ],
+      "free": false,
+      "name": "Silverstone Historic 1991"
+     }
+    },
     "round": 6,
     "starts": [
      "2026-12-14T21:00:00Z"
@@ -95,10 +190,2075 @@
    }
   ]
  },
+ "lfmFeed": {
+  "fetched": "2026-11-28T20:25:30Z",
+  "lastOk": "2026-11-28T20:25:30Z",
+  "rows": [
+   {
+    "cars": [
+     "Ginetta G55 GT4"
+    ],
+    "classes": [
+     "GT4"
+    ],
+    "daily": true,
+    "dlc": [],
+    "durationMin": 24,
+    "format": "P 2 min \u00b7 Q 7 min \u00b7 R 15 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1112",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT4"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Cascavel"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T22:15:00Z",
+     "2026-11-28T23:00:00Z",
+     "2026-11-28T23:45:00Z",
+     "2026-11-29T11:00:00Z"
+    ],
+    "title": "Daily Tin Top",
+    "track": "Cascavel",
+    "url": "https://lowfuelmotorsport.com/series/s24-daily-tin-top",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Alpine A110 GT4 Evo",
+     "Aston Martin Vantage GT3 Evo",
+     "Aston Martin Vantage GT4 Evo",
+     "Audi R8 GT3 evo II",
+     "Audi R8 LMS GT4",
+     "BMW M4 GT3",
+     "BMW M4 GT4",
+     "Chevrolet Camaro GT4.R",
+     "Corvette Z06 GT3",
+     "Ginetta G55 GT4",
+     "Lamborghini Huracan GT3 EVO 2",
+     "McLaren 570S GT4",
+     "McLaren 720S GT3 Evo",
+     "Mercedes-AMG GT3 Evo",
+     "Mercedes-AMG GT4",
+     "Porsche 992 GT3 R",
+     "Porsche Cayman GT4 Clubsport MR"
+    ],
+    "classes": [
+     "GT3 Gen2",
+     "GT4"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 71,
+    "format": "P 1 min \u00b7 Q 15 min \u00b7 R 55 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1139",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT3 Gen2",
+       "GT4"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3",
+        "url": "https://store.steampowered.com/app/3532160/Automobilista_2__Endurance_Pack_Pt3/?curator_clanid=35138208"
+       },
+       {
+        "appid": 3022990,
+        "name": "Endurance Pack Pt2",
+        "url": "https://store.steampowered.com/app/3022990/Automobilista_2__Endurance_Pack_Pt2/?curator_clanid=35138208"
+       },
+       {
+        "appid": 2697800,
+        "name": "Endurance Pack Pt1",
+        "url": "https://store.steampowered.com/app/2697800/Automobilista_2__Endurance_Pack_Pt1/"
+       },
+       {
+        "appid": 3023000,
+        "name": "Lamborghini Dream Pack Pt1",
+        "url": "https://store.steampowered.com/app/3023000/Automobilista_2__Lamborghini_Dream_Pack_Pt1/"
+       }
+      ],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 3895690,
+        "name": "N\u00fcrburgring 2025",
+        "url": "https://store.steampowered.com/app/3895690/Automobilista_2__Nrburgring_2025/?curator_clanid=35138208"
+       }
+      ],
+      "free": false,
+      "name": "Nordschleife 24 Hour 2025"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-12T17:15:00Z"
+    ],
+    "title": "Nordschleife Sprint Cup",
+    "track": "Nordschleife 24 Hour 2025",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2nordschleife",
+    "week": 5
+   },
+   {
+    "cars": [
+     "Formula Trainer"
+    ],
+    "classes": [
+     "F-Trainer"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 24,
+    "format": "P 2 min \u00b7 Q 7 min \u00b7 R 15 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1113",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "F-Trainer"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1377650,
+        "name": "Hockenheimring Pack",
+        "url": "https://store.steampowered.com/app/1377650/Automobilista_2__Hockenheimring_Pack/"
+       }
+      ],
+      "free": false,
+      "name": "Hockenheim Short B"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T20:45:00Z",
+     "2026-11-28T21:30:00Z",
+     "2026-11-29T20:00:00Z",
+     "2026-11-29T20:45:00Z"
+    ],
+    "title": "Formula Trainer",
+    "track": "Hockenheim Short B",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2-f-trainer",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage GT3 Evo",
+     "Audi R8 GT3 evo II",
+     "BMW M4 GT3",
+     "Corvette Z06 GT3",
+     "Lamborghini Huracan GT3 EVO 2",
+     "McLaren 720S GT3 Evo",
+     "Mercedes-AMG GT3 Evo",
+     "Porsche 992 GT3 R"
+    ],
+    "classes": [
+     "GT3 Gen2"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 26,
+    "format": "P 1 min \u00b7 Q 10 min \u00b7 R 15 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1114",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT3 Gen2"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3",
+        "url": "https://store.steampowered.com/app/3532160/Automobilista_2__Endurance_Pack_Pt3/?curator_clanid=35138208"
+       },
+       {
+        "appid": 3022990,
+        "name": "Endurance Pack Pt2",
+        "url": "https://store.steampowered.com/app/3022990/Automobilista_2__Endurance_Pack_Pt2/?curator_clanid=35138208"
+       },
+       {
+        "appid": 2697800,
+        "name": "Endurance Pack Pt1",
+        "url": "https://store.steampowered.com/app/2697800/Automobilista_2__Endurance_Pack_Pt1/"
+       },
+       {
+        "appid": 3023000,
+        "name": "Lamborghini Dream Pack Pt1",
+        "url": "https://store.steampowered.com/app/3023000/Automobilista_2__Lamborghini_Dream_Pack_Pt1/"
+       }
+      ],
+      "free": false
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1648062,
+        "name": "Racin' USA Pack Pt2",
+        "url": "https://store.steampowered.com/app/1648062/Automobilista_2__Racin_USA_Pack_Pt2/"
+       }
+      ],
+      "free": false,
+      "name": "Watkins Glen GP (Inner Loop)"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-30T20:00:00Z",
+     "2026-11-30T20:45:00Z",
+     "2026-11-30T21:30:00Z",
+     "2026-12-02T20:00:00Z"
+    ],
+    "title": "GT3 Sprint Series",
+    "track": "Watkins Glen GP (Inner Loop)",
+    "url": "https://lowfuelmotorsport.com/series/s24-gt3-sprint-ams2",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage GT3 Evo",
+     "Audi R8 GT3 evo II",
+     "BMW M4 GT3",
+     "Corvette Z06 GT3",
+     "Lamborghini Huracan GT3 EVO 2",
+     "McLaren 720S GT3 Evo",
+     "Mercedes-AMG GT3 Evo",
+     "Porsche 992 GT3 R"
+    ],
+    "classes": [
+     "GT3 Gen2"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 71,
+    "format": "P 1 min \u00b7 Q 10 min \u00b7 R 60 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1115",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT3 Gen2"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3",
+        "url": "https://store.steampowered.com/app/3532160/Automobilista_2__Endurance_Pack_Pt3/?curator_clanid=35138208"
+       },
+       {
+        "appid": 3022990,
+        "name": "Endurance Pack Pt2",
+        "url": "https://store.steampowered.com/app/3022990/Automobilista_2__Endurance_Pack_Pt2/?curator_clanid=35138208"
+       },
+       {
+        "appid": 2697800,
+        "name": "Endurance Pack Pt1",
+        "url": "https://store.steampowered.com/app/2697800/Automobilista_2__Endurance_Pack_Pt1/"
+       },
+       {
+        "appid": 3023000,
+        "name": "Lamborghini Dream Pack Pt1",
+        "url": "https://store.steampowered.com/app/3023000/Automobilista_2__Lamborghini_Dream_Pack_Pt1/"
+       }
+      ],
+      "free": false
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1648062,
+        "name": "Racin' USA Pack Pt2",
+        "url": "https://store.steampowered.com/app/1648062/Automobilista_2__Racin_USA_Pack_Pt2/"
+       }
+      ],
+      "free": false,
+      "name": "Watkins Glen GP (Inner Loop)"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-01T20:00:00Z"
+    ],
+    "title": "GT3 Endurance Series",
+    "track": "Watkins Glen GP (Inner Loop)",
+    "url": "https://lowfuelmotorsport.com/series/s24-gt3-endu-ams2",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage GT3 Evo",
+     "Audi R8 GT3 evo II",
+     "BMW M4 GT3",
+     "Corvette Z06 GT3",
+     "Lamborghini Huracan GT3 EVO 2",
+     "Ligier JS P217",
+     "McLaren 720S GT3 Evo",
+     "Mercedes-AMG GT3 Evo",
+     "Oreca 07",
+     "Porsche 992 GT3 R"
+    ],
+    "classes": [
+     "GT3 Gen2",
+     "LMP2 Gen1"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 23,
+    "format": "P 1 min \u00b7 Q 7 min \u00b7 R 15 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1116",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT3 Gen2",
+       "LMP2 Gen1"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3",
+        "url": "https://store.steampowered.com/app/3532160/Automobilista_2__Endurance_Pack_Pt3/?curator_clanid=35138208"
+       },
+       {
+        "appid": 3022990,
+        "name": "Endurance Pack Pt2",
+        "url": "https://store.steampowered.com/app/3022990/Automobilista_2__Endurance_Pack_Pt2/?curator_clanid=35138208"
+       },
+       {
+        "appid": 2697800,
+        "name": "Endurance Pack Pt1",
+        "url": "https://store.steampowered.com/app/2697800/Automobilista_2__Endurance_Pack_Pt1/"
+       },
+       {
+        "appid": 3023000,
+        "name": "Lamborghini Dream Pack Pt1",
+        "url": "https://store.steampowered.com/app/3023000/Automobilista_2__Lamborghini_Dream_Pack_Pt1/"
+       }
+      ],
+      "free": false
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Cascais"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T21:30:00Z",
+     "2026-11-28T22:15:00Z"
+    ],
+    "title": "Multiclass Sprint",
+    "track": "Cascais",
+    "url": "https://lowfuelmotorsport.com/series/s24-gt3-lmp2-sprint-ams2",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage GT3 Evo",
+     "Audi R8 GT3 evo II",
+     "BMW M4 GT3",
+     "Corvette Z06 GT3",
+     "Lamborghini Huracan GT3 EVO 2",
+     "Ligier JS P217",
+     "McLaren 720S GT3 Evo",
+     "Mercedes-AMG GT3 Evo",
+     "Oreca 07",
+     "Porsche 992 GT3 R"
+    ],
+    "classes": [
+     "GT3 Gen2",
+     "LMP2 Gen1"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 76,
+    "format": "P 1 min \u00b7 Q 15 min \u00b7 R 60 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1117",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT3 Gen2",
+       "LMP2 Gen1"
+      ],
+      "dlc": [
+       {
+        "appid": 3532160,
+        "name": "Endurance Pack Pt.3",
+        "url": "https://store.steampowered.com/app/3532160/Automobilista_2__Endurance_Pack_Pt3/?curator_clanid=35138208"
+       },
+       {
+        "appid": 3022990,
+        "name": "Endurance Pack Pt2",
+        "url": "https://store.steampowered.com/app/3022990/Automobilista_2__Endurance_Pack_Pt2/?curator_clanid=35138208"
+       },
+       {
+        "appid": 2697800,
+        "name": "Endurance Pack Pt1",
+        "url": "https://store.steampowered.com/app/2697800/Automobilista_2__Endurance_Pack_Pt1/"
+       },
+       {
+        "appid": 3023000,
+        "name": "Lamborghini Dream Pack Pt1",
+        "url": "https://store.steampowered.com/app/3023000/Automobilista_2__Lamborghini_Dream_Pack_Pt1/"
+       }
+      ],
+      "free": false
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Cascais"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-29T17:00:00Z"
+    ],
+    "title": "Multiclass Endurance",
+    "track": "Cascais",
+    "url": "https://lowfuelmotorsport.com/series/s24-gt3-lmp2-endu-ams2",
+    "week": 7
+   },
+   {
+    "cars": [
+     "McLaren F1 GTR",
+     "Mercedes-Benz CLK LM",
+     "Nissan R390 GT1",
+     "Panoz Esperante GTR-1",
+     "Porsche 911 GT1-98"
+    ],
+    "classes": [
+     "GT1"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 72,
+    "format": "P 2 min \u00b7 Q 10 min \u00b7 R 60 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1118",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT1"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1377650,
+        "name": "Hockenheimring Pack",
+        "url": "https://store.steampowered.com/app/1377650/Automobilista_2__Hockenheimring_Pack/"
+       }
+      ],
+      "free": false,
+      "name": "Hockenheim Historic 1988"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-05T19:45:00Z"
+    ],
+    "title": "GT Historic Endurance",
+    "track": "Hockenheim Historic 1988",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2-gt1-endu",
+    "week": 8
+   },
+   {
+    "cars": [
+     "McLaren F1 GTR",
+     "Mercedes-Benz CLK LM",
+     "Nissan R390 GT1",
+     "Panoz Esperante GTR-1",
+     "Porsche 911 GT1-98"
+    ],
+    "classes": [
+     "GT1"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 24,
+    "format": "P 2 min \u00b7 Q 7 min \u00b7 R 15 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1119",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT1"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1377650,
+        "name": "Hockenheimring Pack",
+        "url": "https://store.steampowered.com/app/1377650/Automobilista_2__Hockenheimring_Pack/"
+       }
+      ],
+      "free": false,
+      "name": "Hockenheim Historic 1988"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-03T20:00:00Z",
+     "2026-12-03T20:45:00Z",
+     "2026-12-03T21:30:00Z",
+     "2026-12-04T20:00:00Z"
+    ],
+    "title": "GT Historic Sprint",
+    "track": "Hockenheim Historic 1988",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2-gt1-sprint",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin DBR9",
+     "Chevrolet Corvette C5-R",
+     "Dodge Viper GTS-R",
+     "Lamborghini Murcielago R-GT",
+     "Lister Storm GTM",
+     "Maserati MC12 GT1",
+     "Milano GT55",
+     "Saleen S7-R GT1"
+    ],
+    "classes": [
+     "GT1 05"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 72,
+    "format": "P 2 min \u00b7 Q 10 min \u00b7 R 60 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1120",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT1 05"
+      ],
+      "dlc": [
+       {
+        "appid": 4044660,
+        "name": "Historical Endurance Pack Pt1",
+        "url": "https://store.steampowered.com/app/4044660/Automobilista_2__Historical_Endurance_Pack_Pt1/"
+       },
+       {
+        "appid": 3532180,
+        "name": "Lamborghini Dream Pack Pt2",
+        "url": "https://store.steampowered.com/app/3532180/Automobilista_2__Lamborghini_Dream_Pack_Pt2/"
+       }
+      ],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Circuit des 24 Heures du Mans Historic 2005"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-29T19:00:00Z"
+    ],
+    "title": "Mabix GT1 Worldcup",
+    "track": "Circuit des 24 Heures du Mans Historic 2005",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2-gt12005",
+    "week": 6
+   },
+   {
+    "cars": [
+     "Formula V10 Gen2",
+     "Formula V10 Gen2 (M)"
+    ],
+    "classes": [
+     "F-V10 Gen2"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 32,
+    "format": "P 2 min \u00b7 Q 10 min \u00b7 R 20 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1121",
+    "league": "LFM",
+    "license": "Rookie, SR E2",
+    "need": {
+     "cars": {
+      "classes": [
+       "F-V10 Gen2"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1386931,
+        "name": "N\u00fcrburgring Pack",
+        "url": "https://store.steampowered.com/app/1386931/Automobilista_2__Nrburgring_Pack/"
+       }
+      ],
+      "free": false,
+      "name": "N\u00fcrburgring GP 2020"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-02T20:00:00Z",
+     "2026-12-02T21:00:00Z"
+    ],
+    "title": "F1 V10 gen2 - Sprint",
+    "track": "N\u00fcrburgring GP 2020",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2-formulav10gen2-sprint",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Formula V10 Gen2",
+     "Formula V10 Gen2 (M)"
+    ],
+    "classes": [
+     "F-V10 Gen2"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 32,
+    "format": "P 2 min \u00b7 Q 10 min \u00b7 R 20 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1122",
+    "league": "LFM",
+    "license": "Rookie, SR E2",
+    "need": {
+     "cars": {
+      "classes": [
+       "F-V10 Gen2"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 1386931,
+        "name": "N\u00fcrburgring Pack",
+        "url": "https://store.steampowered.com/app/1386931/Automobilista_2__Nrburgring_Pack/"
+       }
+      ],
+      "free": false,
+      "name": "N\u00fcrburgring GP 2020"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-03T20:00:00Z"
+    ],
+    "title": "F1 V10 gen2",
+    "track": "N\u00fcrburgring GP 2020",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams2-formulav10gen2",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Chevrolet Cruze Stock Car 2019"
+    ],
+    "classes": [
+     "StockCarV8"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 40,
+    "format": "P 2 min \u00b7 Q 8 min \u00b7 R 30 min",
+    "game": "ams2",
+    "id": "ams2-lfm-1141",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "need": {
+     "cars": {
+      "classes": [
+       "StockCarV8"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Campo Grande"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-05T17:15:00Z",
+     "2026-12-05T18:25:00Z"
+    ],
+    "title": "Tour de Brazil",
+    "track": "Campo Grande",
+    "url": "https://lowfuelmotorsport.com/series/s24-ams-brazil",
+    "week": 4
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage AMR GT3 EVO DTM",
+     "Audi R8 LMS GT3 EVO II DTM",
+     "BMW M4 GT3 EVO DTM",
+     "Ferrari 296 GT3 DTM",
+     "Ford Mustang GT3 EVO DTM",
+     "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+     "Lamborghini Temerario GT3 DTM",
+     "McLaren 720S GT3 EVO DTM",
+     "Mercedes-AMG GT3 2020 DTM",
+     "Porsche 911 GT3 R (992) DTM",
+     "Porsche 911 GT3 R (992.2) DTM"
+    ],
+    "classes": [
+     "GT3"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "DTM 2025 Cars",
+      "url": "https://game.raceroom.com/store/cars/dtm-2025"
+     },
+     {
+      "name": "Nordschleife Track",
+      "url": "https://game.raceroom.com/store/tracks/all/nordschleife"
+     }
+    ],
+    "durationMin": 41,
+    "format": "P 4 min \u00b7 Q 17 min \u00b7 R 20 min",
+    "game": "rr",
+    "id": "rr-lfm-1123",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "source": "lfm",
+    "starts": [
+     "2026-12-02T16:00:00Z",
+     "2026-12-02T17:00:00Z",
+     "2026-12-02T18:00:00Z"
+    ],
+    "title": "Eifel Sprint Cup",
+    "track": "Nordschleife / NLS",
+    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage AMR GT3 EVO DTM",
+     "Audi R8 LMS GT3 EVO II DTM",
+     "BMW M4 GT3 EVO DTM",
+     "Ferrari 296 GT3 DTM",
+     "Ford Mustang GT3 EVO DTM",
+     "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+     "Lamborghini Temerario GT3 DTM",
+     "McLaren 720S GT3 EVO DTM",
+     "Mercedes-AMG GT3 2020 DTM",
+     "Porsche 911 GT3 R (992) DTM",
+     "Porsche 911 GT3 R (992.2) DTM"
+    ],
+    "classes": [
+     "GT3"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "DTM 2025 Cars",
+      "url": "https://game.raceroom.com/store/cars/dtm-2025"
+     },
+     {
+      "name": "Nordschleife Track",
+      "url": "https://game.raceroom.com/store/tracks/all/nordschleife"
+     }
+    ],
+    "durationMin": 69,
+    "format": "P 4 min \u00b7 Q 20 min \u00b7 R 45 min",
+    "game": "rr",
+    "id": "rr-lfm-1124",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "source": "lfm",
+    "starts": [
+     "2026-12-02T19:00:00Z"
+    ],
+    "title": "Eifel Sprint Cup+",
+    "track": "Nordschleife / NLS",
+    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint-plus",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Audi R8 LMS Ultra",
+     "BMW Z4 GT3",
+     "Bentley Continental GT3",
+     "Chevrolet Camaro GT3",
+     "Chevrolet Corvette Z06.R GT3 GTM15",
+     "Mercedes-Benz SLS AMG GT3",
+     "Nissan GT-R GT3"
+    ],
+    "classes": [
+     "ADAC GT Masters 2015"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "ADAC GT Masters 2015 Cars",
+      "url": "https://game.raceroom.com/store/cars/adac-gt-masters-2015"
+     },
+     {
+      "name": "Nordschleife Track",
+      "url": "https://game.raceroom.com/store/tracks/all/nordschleife"
+     }
+    ],
+    "durationMin": 41,
+    "format": "P 4 min \u00b7 Q 17 min \u00b7 R 20 min",
+    "game": "rr",
+    "id": "rr-lfm-1125",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "source": "lfm",
+    "starts": [
+     "2026-11-29T16:00:00Z",
+     "2026-11-29T17:00:00Z",
+     "2026-11-29T18:00:00Z"
+    ],
+    "title": "Retro Eifel Sprint Cup",
+    "track": "Nordschleife / NLS",
+    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint-retro",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Audi R8 LMS Ultra",
+     "BMW Z4 GT3",
+     "Bentley Continental GT3",
+     "Chevrolet Camaro GT3",
+     "Chevrolet Corvette Z06.R GT3 GTM15",
+     "Mercedes-Benz SLS AMG GT3",
+     "Nissan GT-R GT3"
+    ],
+    "classes": [
+     "ADAC GT Masters 2015"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "ADAC GT Masters 2015 Cars",
+      "url": "https://game.raceroom.com/store/cars/adac-gt-masters-2015"
+     },
+     {
+      "name": "Nordschleife Track",
+      "url": "https://game.raceroom.com/store/tracks/all/nordschleife"
+     }
+    ],
+    "durationMin": 69,
+    "format": "P 4 min \u00b7 Q 20 min \u00b7 R 45 min",
+    "game": "rr",
+    "id": "rr-lfm-1126",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "source": "lfm",
+    "starts": [
+     "2026-11-29T19:00:00Z"
+    ],
+    "title": "Retro Eifel Sprint Cup+",
+    "track": "Nordschleife / NLS",
+    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint-plus-retro",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Alpine A110 GT4+",
+     "Audi R8 LMS GT4 2020",
+     "BMW M4 GT4 (F82)",
+     "BMW M4 GT4 (G82)",
+     "KTM X-Bow GT4",
+     "Lotus Evora GT4",
+     "McLaren 570s GT4",
+     "Mercedes AMG GT4 2020",
+     "Porsche 718 Cayman GT4 Clubsport",
+     "Porsche Cayman GT4 CS MR"
+    ],
+    "classes": [
+     "GTR 4"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "GTR 4 Cars",
+      "url": "https://game.raceroom.com/store/cars/gtr-4"
+     },
+     {
+      "name": "Silverstone Circuit Track",
+      "url": "https://game.raceroom.com/store/tracks/all/silverstone-circuit"
+     }
+    ],
+    "durationMin": 46,
+    "format": "P 4 min \u00b7 Q 12 min \u00b7 R 30 min",
+    "game": "rr",
+    "id": "rr-lfm-1127",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-11-30T19:00:00Z"
+    ],
+    "title": "GT4 Championship",
+    "track": "Silverstone Circuit / National",
+    "url": "https://lowfuelmotorsport.com/series/gt4-r3e-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Alfa Romeo 156 Super Touring",
+     "Audi A4 Super Touring 1995",
+     "BMW 320i E36 Super Touring",
+     "Ford Mondeo Super Touring",
+     "Honda Accord Super Touring",
+     "Opel Vectra Super Touring",
+     "Peugeot 406 Super Touring 1998",
+     "Renault Laguna Super Touring",
+     "Volvo 850 Super Touring",
+     "Volvo S40 Super Touring"
+    ],
+    "classes": [
+     "Super Touring"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "Super Touring Cars",
+      "url": "https://game.raceroom.com/store/cars/super-touring"
+     },
+     {
+      "name": "Salzburgring Track",
+      "url": "https://game.raceroom.com/store/tracks/all/salzburgring"
+     }
+    ],
+    "durationMin": 34,
+    "format": "P 4 min \u00b7 Q 10 min \u00b7 R 20 min",
+    "game": "rr",
+    "id": "rr-lfm-1128",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-01T19:00:00Z",
+     "2026-12-01T19:45:00Z"
+    ],
+    "title": "Touring Legends",
+    "track": "Salzburgring / Grand Prix",
+    "url": "https://lowfuelmotorsport.com/series/stw-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage AMR GT3 EVO DTM",
+     "Audi R8 LMS GT3 EVO II DTM",
+     "BMW M4 GT3 EVO DTM",
+     "Ferrari 296 GT3 DTM",
+     "Ford Mustang GT3 EVO DTM",
+     "Lamborghini Hurac\u00e1n GT3 EVO II DTM",
+     "Lamborghini Temerario GT3 DTM",
+     "McLaren 720S GT3 EVO DTM",
+     "Mercedes-AMG GT3 2020 DTM",
+     "Porsche 911 GT3 R (992) DTM",
+     "Porsche 911 GT3 R (992.2) DTM"
+    ],
+    "classes": [
+     "GT3"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "DTM 2025 Cars",
+      "url": "https://game.raceroom.com/store/cars/dtm-2025"
+     },
+     {
+      "name": "Silverstone Circuit Track",
+      "url": "https://game.raceroom.com/store/tracks/all/silverstone-circuit"
+     }
+    ],
+    "durationMin": 34,
+    "format": "P 4 min \u00b7 Q 10 min \u00b7 R 20 min",
+    "game": "rr",
+    "id": "rr-lfm-1129",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-03T19:00:00Z",
+     "2026-12-03T19:45:00Z"
+    ],
+    "title": "GT3 Sprint",
+    "track": "Silverstone Circuit / Grand Prix",
+    "url": "https://lowfuelmotorsport.com/series/r3e-gt3-sprint-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Tatuus F4"
+    ],
+    "classes": [
+     "Tatuus F4 Cup"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "FR3 Cup Cars",
+      "url": "https://game.raceroom.com/store/cars/fr3-cup"
+     },
+     {
+      "name": "Tatuus F4 Cup Cars",
+      "url": "https://game.raceroom.com/store/cars/tatuus-f4-cup"
+     },
+     {
+      "name": "Red Bull Ring Spielberg Track",
+      "url": "https://game.raceroom.com/store/tracks/all/red-bull-ring-spielberg"
+     }
+    ],
+    "durationMin": 34,
+    "format": "P 4 min \u00b7 Q 10 min \u00b7 R 20 min",
+    "game": "rr",
+    "id": "rr-lfm-1130",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-04T19:00:00Z",
+     "2026-12-04T19:45:00Z"
+    ],
+    "title": "Open Wheel Cup",
+    "track": "Red Bull Ring Spielberg / Grand Prix Circuit",
+    "url": "https://lowfuelmotorsport.com/series/r3e-openwheel-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage AMR GT3 EVO DTM",
+     "Audi RS 3 LMS 2021",
+     "BMW M4 GT3 EVO DTM",
+     "CUPRA Leon Competici\u00f3n",
+     "Ford Mustang GT3 EVO DTM",
+     "Honda Civic TCR",
+     "Hyundai Elantra TCR 2022",
+     "Lamborghini Temerario GT3 DTM",
+     "Lynk & Co 03 TCR",
+     "McLaren 720S GT3 EVO DTM",
+     "Mercedes-AMG GT3 2020 DTM",
+     "Porsche 911 GT3 R (992.2) DTM"
+    ],
+    "classes": [
+     "DTM 2026",
+     "WTCR 2022"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "WTCR 2022 Cars",
+      "url": "https://game.raceroom.com/store/cars/wtcr-2022"
+     }
+    ],
+    "durationMin": 84,
+    "format": "P 4 min \u00b7 Q 20 min \u00b7 R 60 min",
+    "game": "rr",
+    "id": "rr-lfm-1131",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-05T18:00:00Z"
+    ],
+    "title": "Endurance Cup",
+    "track": "Spa-Francorchamps / Grand Prix",
+    "url": "https://lowfuelmotorsport.com/series/r3e-endurance-cup",
+    "week": 3
+   },
+   {
+    "cars": [
+     "Audi R8 LMS Ultra",
+     "BMW Z4 GT3",
+     "Bentley Continental GT3",
+     "Chevrolet Camaro GT3",
+     "Chevrolet Corvette Z06.R GT3 GTM15",
+     "Chevrolet RML Cruze TC1 2017",
+     "Citroen C Elysee WTCC 2017",
+     "Honda Civic WTCC 2017",
+     "Lada Vesta WTCC 2017",
+     "Mercedes-Benz SLS AMG GT3",
+     "Nissan GT-R GT3",
+     "Volvo S60 Polestar TC1"
+    ],
+    "classes": [
+     "ADAC GT Masters 2015",
+     "WTCC 2017"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "ADAC GT Masters 2015 Cars",
+      "url": "https://game.raceroom.com/store/cars/adac-gt-masters-2015"
+     },
+     {
+      "name": "WTCC 2017 Cars",
+      "url": "https://game.raceroom.com/store/cars/wtcc-2017"
+     },
+     {
+      "name": "Imola Track",
+      "url": "https://game.raceroom.com/store/tracks/all/imola"
+     }
+    ],
+    "durationMin": 84,
+    "format": "P 4 min \u00b7 Q 20 min \u00b7 R 60 min",
+    "game": "rr",
+    "id": "rr-lfm-1132",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-12T18:00:00Z"
+    ],
+    "title": "Retro Endurance Cup",
+    "track": "Imola / Grand Prix",
+    "url": "https://lowfuelmotorsport.com/series/r3e-retro-endurance-cup",
+    "week": 4
+   },
+   {
+    "cars": [
+     "Audi R8 LMS GT3 Evo II - GT3",
+     "BMW M4 GT3 Evo - GT3",
+     "Ferrari 296 GT3 - GT3",
+     "Ford Mustang GT3 - GT3",
+     "KTM X-Bow GT4 - GT4"
+    ],
+    "classes": [
+     "GT3"
+    ],
+    "daily": true,
+    "dlc": [],
+    "durationMin": 36,
+    "format": "P 2 min \u00b7 Q 9 min \u00b7 R 25 min",
+    "game": "acevo",
+    "id": "acevo-lfm-1133",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T21:00:00Z",
+     "2026-11-28T23:00:00Z",
+     "2026-11-29T01:00:00Z",
+     "2026-11-29T03:00:00Z"
+    ],
+    "title": "GT3 Sprint Cup [BETA]",
+    "track": "Watkins Glen International / GP Inner Loop",
+    "url": "https://lowfuelmotorsport.com/series/acevo-gt3-sprint-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Audi R8 LMS GT3 Evo II - GT3",
+     "Audi R8 LMS GT4 Evo - GT4",
+     "BMW M2 CS Racing - 450",
+     "BMW M4 GT3 Evo - GT3",
+     "Ferrari 296 GT3 - GT3",
+     "Ford Mustang GT3 - GT3",
+     "KTM X-Bow GT4 - GT4",
+     "Porsche 718 Cayman GT4 Clubsport - GT4"
+    ],
+    "classes": [
+     "GT3",
+     "GT4",
+     "M2CS 450"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 83,
+    "format": "P 3 min \u00b7 Q 20 min \u00b7 R 60 min",
+    "game": "acevo",
+    "id": "acevo-lfm-1134",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-01T19:15:00Z",
+     "2026-12-03T19:15:00Z",
+     "2026-12-05T19:15:00Z"
+    ],
+    "title": "NOS Sprint",
+    "track": "Nurburgring / 24h",
+    "url": "https://lowfuelmotorsport.com/series/s24-acevo-nos",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Audi R8 LMS GT4 Evo - GT4",
+     "BMW M2 CS Racing - 450",
+     "KTM X-Bow GT4 - GT4",
+     "Porsche 718 Cayman GT4 Clubsport - GT4"
+    ],
+    "classes": [
+     "GT4",
+     "M2CS 450"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 36,
+    "format": "P 2 min \u00b7 Q 9 min \u00b7 R 25 min",
+    "game": "acevo",
+    "id": "acevo-lfm-1135",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-11-29T18:15:00Z",
+     "2026-11-29T19:15:00Z",
+     "2026-11-29T20:15:00Z",
+     "2026-11-29T21:15:00Z"
+    ],
+    "title": "GT4/TCX Sprint Series [BETA]",
+    "track": "Circuit Of The Americas / GP",
+    "url": "https://lowfuelmotorsport.com/series/acevo-gt4tcx-sprint-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Porsche 911 GT3 Cup (992) - ABS TC"
+    ],
+    "classes": [
+     "PCup"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 41,
+    "format": "P 2 min \u00b7 Q 9 min \u00b7 R 30 min",
+    "game": "acevo",
+    "id": "acevo-lfm-1136",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-11-30T18:15:00Z",
+     "2026-11-30T19:15:00Z",
+     "2026-11-30T20:15:00Z",
+     "2026-11-30T21:15:00Z"
+    ],
+    "title": "Porsche Cup Series [BETA]",
+    "track": "Watkins Glen International / GP",
+    "url": "https://lowfuelmotorsport.com/series/acevo-Pcup-sprint-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Audi R8 LMS GT3 Evo II - GT3",
+     "BMW M4 GT3 Evo - GT3",
+     "Ferrari 296 GT3 - GT3",
+     "Ford Mustang GT3 - GT3"
+    ],
+    "classes": [
+     "GT3"
+    ],
+    "daily": false,
+    "dlc": [],
+    "durationMin": 42,
+    "format": "P 2 min \u00b7 Q 10 min \u00b7 R 30 min",
+    "game": "acevo",
+    "id": "acevo-lfm-1137",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "source": "lfm",
+    "starts": [
+     "2026-12-02T18:15:00Z",
+     "2026-12-02T19:15:00Z",
+     "2026-12-02T20:15:00Z",
+     "2026-12-02T21:15:00Z"
+    ],
+    "title": "TOSS [BETA]",
+    "track": "Circuit de Spa Francorchamps / GP",
+    "url": "https://lowfuelmotorsport.com/series/acevo-toss-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Trabant 601"
+    ],
+    "classes": [
+     "Trabant"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "TMM Trabant 601",
+      "url": "https://www.overtake.gg/downloads/trabant-601-rs-cup.58226/"
+     },
+     {
+      "name": "Lausitzring",
+      "url": "https://www.overtake.gg/downloads/lausitzring.24824/"
+     }
+    ],
+    "durationMin": 32,
+    "format": "P 2 min \u00b7 Q 10 min \u00b7 R 20 min",
+    "game": "ac",
+    "id": "ac-lfm-1101",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "need": {
+     "cars": {
+      "classes": [
+       "Trabant"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Lausitzring"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-04T17:00:00Z"
+    ],
+    "title": "Trabant Cup",
+    "track": "Lausitzring",
+    "url": "https://lowfuelmotorsport.com/series/s24-trabant-cup",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Toyota GT 86"
+    ],
+    "classes": [
+     "GT86"
+    ],
+    "daily": true,
+    "dlc": [
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "Alfa Romeo SZ pack",
+      "url": "https://www.patreon.com/u50283907/posts/alfa-romeo-sz-65094569"
+     },
+     {
+      "name": "Ready To Race Pack",
+      "url": "https://store.steampowered.com/app/619680/Assetto_Corsa__Ready_To_Race_Pack/"
+     },
+     {
+      "name": "Caterham 420R / R300 racecars",
+      "url": "https://www.overtake.gg/downloads/caterham-420r-r300-racecars.23519/"
+     },
+     {
+      "name": "AC FRIENDS LMP3 Pack (LFM)"
+     },
+     {
+      "name": "SMP BR03",
+      "url": "https://www.overtake.gg/downloads/br03.48030/"
+     },
+     {
+      "name": "Toyota Altezza Cup",
+      "url": "https://mega.nz/file/wZ0WRBQB#h3fNcgYa9rXHFRj5IZ1YF4nvLaqq-Vxz8ZZ0Dxqj3zk"
+     },
+     {
+      "name": "BMW 318Ti Cup",
+      "url": "https://api.livery.lowfuelmotorsport.com/api/v1/content/lfm/30154/download"
+     },
+     {
+      "name": "Porsche Pack II",
+      "url": "https://store.steampowered.com/app/540710/Assetto_Corsa__Porsche_Pack_II/"
+     },
+     {
+      "name": "Dream Pack I",
+      "url": "https://store.steampowered.com/app/347990/Dream_Pack_1/"
+     },
+     {
+      "name": "BARC Pickup Trucks",
+      "url": "https://www.overtake.gg/downloads/barc-pickup-trucks.61911/"
+     },
+     {
+      "name": "Renault Clio Cup V Phase 2 version 1.0"
+     },
+     {
+      "name": "Okayama",
+      "url": "https://www.overtake.gg/downloads/okayama-international-circuit.15846/"
+     }
+    ],
+    "durationMin": 23,
+    "format": "Q 8 min \u00b7 R 15 min",
+    "game": "ac",
+    "id": "ac-lfm-1102",
+    "league": "LFM",
+    "license": "Rookie, SR E3",
+    "need": {
+     "cars": {
+      "classes": [
+       "GT86"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Okayama GP"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T21:00:00Z",
+     "2026-11-28T23:00:00Z",
+     "2026-11-29T01:00:00Z",
+     "2026-11-29T03:00:00Z"
+    ],
+    "title": "Daily Dash",
+    "track": "Okayama GP",
+    "url": "https://lowfuelmotorsport.com/series/s24-daily-dash-ac",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Alpine A424 LMDh",
+     "Aston Martin Vantage GT3 Evo",
+     "Audi R8 LMS Evo II GT3",
+     "BMW M Hybrid V8 LmDh",
+     "BMW M4 GT3",
+     "Bentley Continental GT3",
+     "Cadillac V-Series R LMDh",
+     "Corvette Z06 GT3R",
+     "Ferrari 296 GT3",
+     "Ferrari 499P LMH",
+     "Ford Mustang GT3",
+     "Honda NSX GT3 Evo",
+     "Lamborghini Huracan GT3 Evo II",
+     "Lamborghini SC63 LMDh",
+     "Lexus RCF GT3",
+     "McLaren 720s GT3 Evo",
+     "Mercedes AMG GT3 Evo",
+     "Nissan GTR GT3",
+     "Peugeot 9X8 LMH",
+     "Porsche 963 LMDh",
+     "Porsche 992 GT3R",
+     "Toyota GR010 LMH"
+    ],
+    "classes": [
+     "ACF HY",
+     "ACF GT3"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "ACF Hypercars LFM"
+     },
+     {
+      "name": "ACF LFM GT3 Pack"
+     },
+     {
+      "name": "Silverstone GP LFM Rolling Start",
+      "url": "https://api.livery.lowfuelmotorsport.com/api/v1/content/lfm/1413/download"
+     }
+    ],
+    "durationMin": 60,
+    "format": "Q 15 min \u00b7 R 45 min",
+    "game": "ac",
+    "id": "ac-lfm-1103",
+    "league": "LFM",
+    "license": "Iron, SR D2",
+    "need": {
+     "cars": {
+      "classes": [
+       "ACF HY",
+       "ACF GT3"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Silverstone GP LFM Rolling Start"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-29T19:15:00Z"
+    ],
+    "title": "Sportscar Series",
+    "track": "Silverstone GP LFM Rolling Start",
+    "url": "https://lowfuelmotorsport.com/series/ac-scs-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "ACF Supra GT4 Cup Evo"
+    ],
+    "classes": [
+     "ACF Supra"
+    ],
+    "daily": true,
+    "dlc": [
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "ACF LFM Toyota Supra GT4 Cup EVO"
+     },
+     {
+      "name": "Adelaide Street Circuit LFM",
+      "url": "https://api.livery.lowfuelmotorsport.com/api/v1/content/lfm/1407/download"
+     }
+    ],
+    "durationMin": 30,
+    "format": "Q 10 min \u00b7 R 20 min",
+    "game": "ac",
+    "id": "ac-lfm-1104",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "ACF Supra"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Adelaide Street Circuit LFM"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T21:00:00Z",
+     "2026-11-28T23:00:00Z",
+     "2026-11-29T01:00:00Z",
+     "2026-11-29T03:00:00Z"
+    ],
+    "title": "Supra Cup",
+    "track": "Adelaide Street Circuit LFM",
+    "url": "https://lowfuelmotorsport.com/series/ac-gt4supra-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "ACF Porsche 992 Cup 2021"
+    ],
+    "classes": [
+     "PCUP"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "ACF Porsche 992 GT3 Cup"
+     },
+     {
+      "name": "Estoril LFM"
+     }
+    ],
+    "durationMin": 40,
+    "format": "Q 15 min \u00b7 R 25 min",
+    "game": "ac",
+    "id": "ac-lfm-1105",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "need": {
+     "cars": {
+      "classes": [
+       "PCUP"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Estoril LFM"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-30T18:00:00Z",
+     "2026-12-03T18:00:00Z"
+    ],
+    "title": "Porsche Cup",
+    "track": "Estoril LFM",
+    "url": "https://lowfuelmotorsport.com/series/ac-pcup-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Tatuus FA01"
+    ],
+    "classes": [
+     "F4"
+    ],
+    "daily": true,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "Losail International Circuit",
+      "url": "https://www.overtake.gg/downloads/losail-2023.54547/"
+     },
+     {
+      "name": "Losail LFM"
+     },
+     {
+      "name": "Losail International Circuit;Losail LFM"
+     }
+    ],
+    "durationMin": 32,
+    "format": "Q 12 min \u00b7 R 20 min",
+    "game": "ac",
+    "id": "ac-lfm-1106",
+    "league": "LFM",
+    "license": "Rookie, SR E3",
+    "need": {
+     "cars": {
+      "classes": [
+       "F4"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Losail"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T22:20:00Z",
+     "2026-11-29T00:20:00Z",
+     "2026-11-29T02:20:00Z",
+     "2026-11-29T04:20:00Z"
+    ],
+    "title": "Open Wheel Championship",
+    "track": "Losail",
+    "url": "https://lowfuelmotorsport.com/series/ac-f4-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Mazda MX5 Cup"
+    ],
+    "classes": [
+     "MX5 Cup"
+    ],
+    "daily": true,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "Japanese Pack",
+      "url": "https://store.steampowered.com/app/467980/Assetto_corsa__Japanese_Pack/"
+     },
+     {
+      "name": "Autodrom Most 1.5"
+     }
+    ],
+    "durationMin": 30,
+    "format": "Q 10 min \u00b7 R 20 min",
+    "game": "ac",
+    "id": "ac-lfm-1107",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "MX5 Cup"
+      ],
+      "dlc": [
+       {
+        "appid": 467980,
+        "name": "Japanese Pack",
+        "url": "https://store.steampowered.com/app/467980/Assetto_corsa__Japanese_Pack/"
+       }
+      ],
+      "free": false
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Autodrom Most (No Chicane)"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T22:20:00Z",
+     "2026-11-29T00:20:00Z",
+     "2026-11-29T02:20:00Z",
+     "2026-11-29T04:20:00Z"
+    ],
+    "title": "Mazda Cup",
+    "track": "Autodrom Most (No Chicane)",
+    "url": "https://lowfuelmotorsport.com/series/ac-mazda-cup-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Audi RS3 LMS 2024",
+     "Cupra Leon TCR",
+     "Hyundai Elantra N TCR"
+    ],
+    "classes": [
+     "TCR"
+    ],
+    "daily": true,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "Fuzo Hyundai Elantra N TCR V1.2",
+      "url": "https://www.patreon.com/posts/114798224"
+     },
+     {
+      "name": "Fuzo Cupra Leon TCR 2024 V1.2",
+      "url": "https://www.patreon.com/posts/114798462"
+     },
+     {
+      "name": "Fuzo Audi RS3 LMS 2024 V0.9.2",
+      "url": "https://www.patreon.com/posts/114798756"
+     },
+     {
+      "name": "Hockenheim LFM",
+      "url": "https://mega.nz/file/kFMnFBQD#SjnawBzrcx0jvcMnAFuIujf20-leOL_Iz71Y8Op45t4"
+     }
+    ],
+    "durationMin": 34,
+    "format": "Q 12 min \u00b7 R 22 min",
+    "game": "ac",
+    "id": "ac-lfm-1108",
+    "league": "LFM",
+    "license": "Rookie, SR F",
+    "need": {
+     "cars": {
+      "classes": [
+       "TCR"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Hockenheim (noDRS)"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T21:40:00Z",
+     "2026-11-28T23:40:00Z",
+     "2026-11-29T01:40:00Z",
+     "2026-11-29T03:40:00Z"
+    ],
+    "title": "TCR Cup",
+    "track": "Hockenheim (noDRS)",
+    "url": "https://lowfuelmotorsport.com/series/ac-tcr-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Coyote Corvette Daytona Prototype",
+     "Dallara Corvette Daytona Prototype"
+    ],
+    "classes": [
+     "DP"
+    ],
+    "daily": true,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "IER Simulations DP Pack",
+      "url": "https://mega.nz/file/xuYHBaZZ#-77EmZpJOjmtqMSYR6jAGWxqDawI3RwncSFvozhyixA"
+     },
+     {
+      "name": "Silverstone GP LFM Rolling Start",
+      "url": "https://api.livery.lowfuelmotorsport.com/api/v1/content/lfm/1413/download"
+     }
+    ],
+    "durationMin": 32,
+    "format": "Q 10 min \u00b7 R 22 min",
+    "game": "ac",
+    "id": "ac-lfm-1109",
+    "league": "LFM",
+    "license": "Rookie, SR E3",
+    "need": {
+     "cars": {
+      "classes": [
+       "DP"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "Silverstone GP LFM Rolling Start"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-11-28T21:40:00Z",
+     "2026-11-28T23:40:00Z",
+     "2026-11-29T01:40:00Z",
+     "2026-11-29T03:40:00Z"
+    ],
+    "title": "Daytona Prototypes",
+    "track": "Silverstone GP LFM Rolling Start",
+    "url": "https://lowfuelmotorsport.com/series/ac-dp-s24",
+    "week": 7
+   },
+   {
+    "cars": [
+     "Nissan Primera BTCC 1999"
+    ],
+    "classes": [
+     "BTCC99"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "Nissan Primera 1999 BTCC",
+      "url": "https://drive.google.com/file/d/1iub-Ves1VRCaV-64xezVWjwV5HhEGwax/view?usp=sharing"
+     },
+     {
+      "name": "N\u00fcrgurgring LFM",
+      "url": "https://mega.nz/file/VMtSlQaT#dEMZvtpMaWooB1NiD2bnPjhSdsSzD8W0LMRbh2QxSmA"
+     }
+    ],
+    "durationMin": 45,
+    "format": "Q 15 min \u00b7 R 30 min",
+    "game": "ac",
+    "id": "ac-lfm-1110",
+    "league": "LFM",
+    "license": "Rookie, SR D3",
+    "need": {
+     "cars": {
+      "classes": [
+       "BTCC99"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [],
+      "free": true,
+      "name": "N\u00fcrburgring GT (noDRS)"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-05T16:00:00Z"
+    ],
+    "title": "Supertourers",
+    "track": "N\u00fcrburgring GT (noDRS)",
+    "url": "https://lowfuelmotorsport.com/series/ac-st-s24",
+    "week": 8
+   },
+   {
+    "cars": [
+     "Aston Martin Vantage GT3 Evo",
+     "Audi R8 LMS Evo II GT3",
+     "Audi RS3 LMS 2024",
+     "BMW M4 GT3",
+     "Bentley Continental GT3",
+     "Corvette Z06 GT3R",
+     "Cupra Leon TCR",
+     "Ferrari 296 GT3",
+     "Ford Mustang GT3",
+     "Honda NSX GT3 Evo",
+     "Hyundai Elantra N TCR",
+     "Lamborghini Huracan GT3 Evo II",
+     "Lexus RCF GT3",
+     "McLaren 720s GT3 Evo",
+     "Mercedes AMG GT3 Evo",
+     "Nissan GTR GT3",
+     "Porsche 992 GT3R"
+    ],
+    "classes": [
+     "TCR",
+     "ACF GT3"
+    ],
+    "daily": false,
+    "dlc": [
+     {
+      "name": "AC Content Manager"
+     },
+     {
+      "name": "Real Penalty - Client app v. 1.05.01",
+      "url": "https://www.patreon.com/collection/157721?view=expanded"
+     },
+     {
+      "name": "LFM Livery script for AC Replays v1.5"
+     },
+     {
+      "name": "Fuzo Hyundai Elantra N TCR V1.2",
+      "url": "https://www.patreon.com/posts/114798224"
+     },
+     {
+      "name": "Fuzo Cupra Leon TCR 2024 V1.2",
+      "url": "https://www.patreon.com/posts/114798462"
+     },
+     {
+      "name": "Fuzo Audi RS3 LMS 2024 V0.9.2",
+      "url": "https://www.patreon.com/posts/114798756"
+     },
+     {
+      "name": "ACF LFM GT3 Pack"
+     },
+     {
+      "name": "Dream Pack I",
+      "url": "https://store.steampowered.com/app/347990/Assetto_Corsa__Dream_Pack_1/"
+     },
+     {
+      "name": "N\u00fcrburgring 108 LFM",
+      "url": "https://mega.nz/file/0Zt0nQ4B#dWLNc48j5eCJE43ZiAdYZRe3uwfGQzDk1ajvwGPA2sg"
+     }
+    ],
+    "durationMin": 65,
+    "format": "Q 20 min \u00b7 R 45 min",
+    "game": "ac",
+    "id": "ac-lfm-1111",
+    "league": "LFM",
+    "license": "Iron, SR D3",
+    "need": {
+     "cars": {
+      "classes": [
+       "TCR",
+       "ACF GT3"
+      ],
+      "dlc": [],
+      "free": true
+     },
+     "track": {
+      "dlc": [
+       {
+        "appid": 347990,
+        "name": "Dream Pack I;N\u00fcrburgring 108 LFM",
+        "url": "https://store.steampowered.com/app/347990/Assetto_Corsa__Dream_Pack_1/;https://mega.nz/file/0Zt0nQ4B#dWLNc48j5eCJE43ZiAdYZRe3uwfGQzDk1ajvwGPA2sg"
+       }
+      ],
+      "free": false,
+      "name": "Nordschleife 24h LFM"
+     }
+    },
+    "source": "lfm",
+    "starts": [
+     "2026-12-01T19:00:00Z",
+     "2026-12-05T19:00:00Z"
+    ],
+    "title": "Green Hell Cup",
+    "track": "Nordschleife 24h LFM",
+    "url": "https://lowfuelmotorsport.com/series/ac-green-hell-s24",
+    "week": 8
+   }
+  ]
+ },
  "rrByTrack": true,
  "rrFeed": {
-  "feedUpdated": "2026-11-28T17:53:32Z",
-  "fetched": "2026-11-28T18:10:22Z",
+  "feedUpdated": "2026-11-28T19:53:36Z",
+  "fetched": "2026-11-28T20:25:30Z",
   "series": [
    {
     "anchors": [
@@ -3607,7 +5767,7 @@
   "Guia Circuit - Grand Prix": {
    "practiceMin": 15,
    "sec": 256,
-   "seen": "2026-11-28T18:40:41Z"
+   "seen": "2026-11-28T20:25:30Z"
   },
   "Hockenheimring - Modern - Grand Prix": {
    "practiceMin": 5,
@@ -3617,12 +5777,12 @@
   "N\u00fcrburgring - Nordschleife - NLS": {
    "practiceMin": 10,
    "sec": 248,
-   "seen": "2026-11-28T18:40:41Z"
+   "seen": "2026-11-28T20:25:30Z"
   },
   "Salzburgring - Grand Prix": {
    "practiceMin": 5,
    "sec": 256,
-   "seen": "2026-11-28T03:34:41Z"
+   "seen": "2026-11-28T20:25:30Z"
   },
   "Twin Ring Motegi - Road Course": {
    "practiceMin": 5,
@@ -3652,7 +5812,7 @@
    "game": "acevo",
    "id": "acevo-fanatec-eifel-trophy-nurburgring-24h",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:30:00Z",
@@ -3679,7 +5839,8 @@
     "2026-11-28T17:30:00Z",
     "2026-11-28T18:30:00Z",
     "2026-11-28T19:30:00Z",
-    "2026-11-28T20:30:00Z"
+    "2026-11-28T20:30:00Z",
+    "2026-11-28T21:30:00Z"
    ],
    "title": "Fanatec Eifel Trophy",
    "track": "Nurburgring - 24h",
@@ -3696,7 +5857,7 @@
    "game": "acevo",
    "id": "acevo-gt3-sprint-cup-suzuka-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
     "2026-11-27T16:50:00Z",
     "2026-11-27T17:30:00Z",
@@ -3723,7 +5884,9 @@
     "2026-11-28T17:30:00Z",
     "2026-11-28T18:10:00Z",
     "2026-11-28T18:50:00Z",
-    "2026-11-28T19:30:00Z"
+    "2026-11-28T19:30:00Z",
+    "2026-11-28T20:50:00Z",
+    "2026-11-28T21:30:00Z"
    ],
    "title": "GT3 Sprint Cup",
    "track": "Suzuka - GP",
@@ -3740,7 +5903,7 @@
    "game": "acevo",
    "id": "acevo-gt4-super-sprint-imola-gp",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
     "2026-11-27T16:40:00Z",
     "2026-11-27T17:20:00Z",
@@ -3767,7 +5930,9 @@
     "2026-11-28T18:00:00Z",
     "2026-11-28T18:40:00Z",
     "2026-11-28T19:20:00Z",
-    "2026-11-28T20:00:00Z"
+    "2026-11-28T20:00:00Z",
+    "2026-11-28T20:40:00Z",
+    "2026-11-28T21:20:00Z"
    ],
    "title": "GT4 Super Sprint",
    "track": "Imola - GP",
@@ -3784,7 +5949,7 @@
    "game": "acevo",
    "id": "acevo-roadster-challenge-laguna-seca-gp",
    "kind": "Championship",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
     "2026-11-27T16:15:00Z",
     "2026-11-27T16:45:00Z",
@@ -3814,7 +5979,9 @@
     "2026-11-28T17:45:00Z",
     "2026-11-28T18:15:00Z",
     "2026-11-28T18:45:00Z",
-    "2026-11-28T19:15:00Z"
+    "2026-11-28T19:15:00Z",
+    "2026-11-28T20:45:00Z",
+    "2026-11-28T21:15:00Z"
    ],
    "title": "Roadster Challenge",
    "track": "Laguna Seca - GP",
@@ -3831,7 +5998,7 @@
    "game": "acevo",
    "id": "acevo-vintage-trophy-watkins-glen-international-short",
    "kind": "Quick Race",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
     "2026-11-27T16:30:00Z",
     "2026-11-27T17:00:00Z",
@@ -3858,7 +6025,9 @@
     "2026-11-28T18:00:00Z",
     "2026-11-28T18:30:00Z",
     "2026-11-28T19:00:00Z",
-    "2026-11-28T19:30:00Z"
+    "2026-11-28T19:30:00Z",
+    "2026-11-28T20:30:00Z",
+    "2026-11-28T21:00:00Z"
    ],
    "title": "Vintage Trophy",
    "track": "Watkins Glen International - Short",
@@ -3869,9 +6038,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-elms-super-60-daytona",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T19:55:00Z",
     "2026-11-25T21:25:00Z",
     "2026-11-25T22:55:00Z",
     "2026-11-26T01:55:00Z",
@@ -3953,9 +6121,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-one-stint-sprint-spa-francorchamps",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T19:25:00Z",
     "2026-11-25T20:55:00Z",
     "2026-11-25T22:25:00Z",
     "2026-11-25T23:55:00Z",
@@ -4028,10 +6195,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-advanced-wec-xperience-paul-ricard-2025",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T18:55:00Z",
-    "2026-11-25T20:25:00Z",
     "2026-11-25T21:55:00Z",
     "2026-11-25T23:25:00Z",
     "2026-11-26T00:55:00Z",
@@ -4092,10 +6257,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmgt3-fixed-le-mans",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T19:00:00Z",
-    "2026-11-25T19:45:00Z",
     "2026-11-25T20:30:00Z",
     "2026-11-25T21:15:00Z",
     "2026-11-25T22:00:00Z",
@@ -4226,11 +6389,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-lmp3-fixed-spa-francorchamps",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T18:45:00Z",
-    "2026-11-25T19:30:00Z",
-    "2026-11-25T20:15:00Z",
     "2026-11-25T21:00:00Z",
     "2026-11-25T21:45:00Z",
     "2026-11-25T22:30:00Z",
@@ -4349,10 +6509,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-beginner-logitech-mclaren-g-challenge-winter-q4-portimao-wec-2023",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T19:15:00Z",
-    "2026-11-25T20:00:00Z",
     "2026-11-25T20:45:00Z",
     "2026-11-25T21:30:00Z",
     "2026-11-25T22:15:00Z",
@@ -4475,10 +6633,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-elms-sprint-trophy-sebring",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T18:50:00Z",
-    "2026-11-25T19:50:00Z",
     "2026-11-25T20:50:00Z",
     "2026-11-25T21:50:00Z",
     "2026-11-25T22:50:00Z",
@@ -4565,10 +6721,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-lmgt3-sprint-cup-circuit-de-barcelona-catalunya",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T19:10:00Z",
-    "2026-11-25T20:10:00Z",
     "2026-11-25T21:10:00Z",
     "2026-11-25T22:10:00Z",
     "2026-11-25T23:10:00Z",
@@ -4662,9 +6816,8 @@
    "firstSeen": "2026-11-24T11:00:32Z",
    "game": "lmu",
    "id": "lmu-intermediate-prototype-classic-laguna-seca",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "starts": [
-    "2026-11-25T19:30:00Z",
     "2026-11-25T20:30:00Z",
     "2026-11-25T21:30:00Z",
     "2026-11-25T22:30:00Z",
@@ -4975,7 +7128,6 @@
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-25T19:00:00Z",
     "2026-11-25T21:00:00Z",
     "2026-11-26T01:00:00Z",
     "2026-11-26T19:30:00Z",
@@ -5028,8 +7180,6 @@
    "practiceMin": 5,
    "servers": 1,
    "starts": [
-    "2026-11-25T18:45:00Z",
-    "2026-11-25T19:45:00Z",
     "2026-11-25T20:45:00Z",
     "2026-11-26T00:45:00Z",
     "2026-11-26T01:45:00Z",
@@ -5095,38 +7245,38 @@
    "firstSeen": "2026-11-28T08:10:09Z",
    "game": "rr",
    "id": "rr-guia-circuit-grand-prix",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "12319": "2026-11-28T18:40:41Z",
-     "12405": "2026-11-28T18:40:41Z",
-     "13572": "2026-11-28T18:40:41Z",
-     "13591": "2026-11-28T18:40:41Z",
-     "13594": "2026-11-28T18:40:41Z",
-     "13597": "2026-11-28T18:40:41Z",
-     "13603": "2026-11-28T18:40:41Z",
-     "13617": "2026-11-28T18:40:41Z",
-     "13620": "2026-11-28T18:40:41Z",
-     "9575": "2026-11-28T18:40:41Z",
-     "9603": "2026-11-28T18:40:41Z"
+     "12319": "2026-11-28T20:25:30Z",
+     "12405": "2026-11-28T20:25:30Z",
+     "13572": "2026-11-28T20:25:30Z",
+     "13591": "2026-11-28T20:25:30Z",
+     "13594": "2026-11-28T20:25:30Z",
+     "13597": "2026-11-28T20:25:30Z",
+     "13603": "2026-11-28T20:25:30Z",
+     "13617": "2026-11-28T20:25:30Z",
+     "13620": "2026-11-28T20:25:30Z",
+     "9575": "2026-11-28T20:25:30Z",
+     "9603": "2026-11-28T20:25:30Z"
     },
     "cars": {
-     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T18:40:41Z",
-     "Audi R8 LMS GT3 EVO II": "2026-11-28T18:40:41Z",
-     "BMW M4 GT3 EVO DTM": "2026-11-28T18:40:41Z",
-     "Ferrari 296 GT3": "2026-11-28T18:40:41Z",
-     "Ford Mustang GT3 EVO DTM": "2026-11-28T18:40:41Z",
-     "Lamborghini Temerario GT3 DTM": "2026-11-28T18:40:41Z",
-     "McLaren 720S GT3": "2026-11-28T18:40:41Z",
-     "McLaren 720S GT3 EVO DTM": "2026-11-28T18:40:41Z",
-     "Mercedes-AMG GT3 2020": "2026-11-28T18:40:41Z",
-     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T18:40:41Z",
-     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T18:40:41Z"
+     "Aston Martin Vantage AMR GT3 EVO DTM": "2026-11-28T20:25:30Z",
+     "Audi R8 LMS GT3 EVO II": "2026-11-28T20:25:30Z",
+     "BMW M4 GT3 EVO DTM": "2026-11-28T20:25:30Z",
+     "Ferrari 296 GT3": "2026-11-28T20:25:30Z",
+     "Ford Mustang GT3 EVO DTM": "2026-11-28T20:25:30Z",
+     "Lamborghini Temerario GT3 DTM": "2026-11-28T20:25:30Z",
+     "McLaren 720S GT3": "2026-11-28T20:25:30Z",
+     "McLaren 720S GT3 EVO DTM": "2026-11-28T20:25:30Z",
+     "Mercedes-AMG GT3 2020": "2026-11-28T20:25:30Z",
+     "Mercedes-AMG GT3 2020 DTM": "2026-11-28T20:25:30Z",
+     "Porsche 911 GT3 R (992.2) DTM": "2026-11-28T20:25:30Z"
     },
     "classes": {
-     "DTM 2026": "2026-11-28T18:40:41Z",
-     "GTR 3": "2026-11-28T18:40:41Z"
+     "DTM 2026": "2026-11-28T20:25:30Z",
+     "GTR 3": "2026-11-28T20:25:30Z"
     }
    },
    "practiceMin": 15,
@@ -5305,6 +7455,7 @@
     6623,
     7162,
     8053,
+    8201,
     8900,
     9644,
     10744,
@@ -5320,6 +7471,7 @@
     "Lotus Evora GT4",
     "McLaren 570s GT4",
     "Mercedes AMG GT4 2020",
+    "Porsche 718 Cayman GT4 Clubsport",
     "Porsche Cayman GT4 CS MR"
    ],
    "classes": [
@@ -5329,39 +7481,40 @@
    "firstSeen": "2026-11-17T02:29:47Z",
    "game": "rr",
    "id": "rr-n-rburgring-nordschleife-nls",
-   "lastSeen": "2026-11-28T18:40:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "leadSec": 248,
    "pool": {
     "carIds": {
-     "10744": "2026-11-28T18:40:41Z",
-     "12509": "2026-11-28T18:40:41Z",
-     "13398": "2026-11-28T18:40:41Z",
-     "5767": "2026-11-28T18:40:41Z",
-     "6623": "2026-11-28T18:40:41Z",
-     "7162": "2026-11-28T18:10:22Z",
-     "8053": "2026-11-28T18:40:41Z",
-     "8900": "2026-11-28T18:40:41Z",
-     "9644": "2026-11-28T18:40:41Z"
+     "10744": "2026-11-28T20:25:30Z",
+     "12509": "2026-11-28T20:25:30Z",
+     "13398": "2026-11-28T20:25:30Z",
+     "5767": "2026-11-28T20:25:30Z",
+     "6623": "2026-11-28T20:25:30Z",
+     "7162": "2026-11-28T20:25:30Z",
+     "8053": "2026-11-28T20:25:30Z",
+     "8201": "2026-11-28T20:25:30Z",
+     "8900": "2026-11-28T20:25:30Z",
+     "9644": "2026-11-28T20:25:30Z"
     },
     "cars": {
-     "Alpine A110 GT4+": "2026-11-28T18:40:41Z",
-     "Audi R8 LMS GT4 2020": "2026-11-28T18:40:41Z",
-     "BMW M4 GT4 (F82)": "2026-11-28T18:40:41Z",
-     "BMW M4 GT4 (G82)": "2026-11-28T18:40:41Z",
-     "KTM X-Bow GT4": "2026-11-28T18:40:41Z",
-     "Lotus Evora GT4": "2026-11-28T18:10:22Z",
-     "McLaren 570s GT4": "2026-11-28T18:40:41Z",
-     "Mercedes AMG GT4 2020": "2026-11-28T18:40:41Z",
-     "Porsche Cayman GT4 CS MR": "2026-11-28T18:40:41Z"
+     "Alpine A110 GT4+": "2026-11-28T20:25:30Z",
+     "Audi R8 LMS GT4 2020": "2026-11-28T20:25:30Z",
+     "BMW M4 GT4 (F82)": "2026-11-28T20:25:30Z",
+     "BMW M4 GT4 (G82)": "2026-11-28T20:25:30Z",
+     "KTM X-Bow GT4": "2026-11-28T20:25:30Z",
+     "Lotus Evora GT4": "2026-11-28T20:25:30Z",
+     "McLaren 570s GT4": "2026-11-28T20:25:30Z",
+     "Mercedes AMG GT4 2020": "2026-11-28T20:25:30Z",
+     "Porsche 718 Cayman GT4 Clubsport": "2026-11-28T20:25:30Z",
+     "Porsche Cayman GT4 CS MR": "2026-11-28T20:25:30Z"
     },
     "classes": {
-     "GTR 4": "2026-11-28T18:40:41Z"
+     "GTR 4": "2026-11-28T20:25:30Z"
     }
    },
    "practiceMin": 10,
-   "servers": 1,
+   "servers": 2,
    "starts": [
-    "2026-11-25T20:00:00Z",
     "2026-11-26T02:00:00Z",
     "2026-11-26T11:00:00Z",
     "2026-11-26T20:00:00Z",
@@ -5369,7 +7522,8 @@
     "2026-11-27T18:00:00Z",
     "2026-11-27T22:00:00Z",
     "2026-11-28T02:00:00Z",
-    "2026-11-28T18:00:00Z"
+    "2026-11-28T18:00:00Z",
+    "2026-11-28T20:00:00Z"
    ],
    "title": "GTR 4",
    "track": "N\u00fcrburgring - Nordschleife - NLS",
@@ -5448,42 +7602,40 @@
    "firstSeen": "2026-11-23T07:24:51Z",
    "game": "rr",
    "id": "rr-salzburgring-grand-prix",
-   "lastSeen": "2026-11-28T03:34:41Z",
+   "lastSeen": "2026-11-28T20:25:30Z",
    "leadSec": 256,
    "pool": {
     "carIds": {
-     "12556": "2026-11-28T03:34:41Z",
-     "12561": "2026-11-27T23:32:31Z",
-     "12652": "2026-11-27T23:32:31Z",
-     "12829": "2026-11-28T03:34:41Z",
-     "13049": "2026-11-28T03:34:41Z",
-     "13065": "2026-11-28T03:34:41Z",
-     "13183": "2026-11-27T23:32:31Z",
-     "13539": "2026-11-27T23:32:31Z",
-     "13548": "2026-11-28T03:34:41Z",
-     "8645": "2026-11-28T03:34:41Z"
+     "12556": "2026-11-28T20:25:30Z",
+     "12561": "2026-11-28T20:25:30Z",
+     "12652": "2026-11-28T20:25:30Z",
+     "12829": "2026-11-28T20:25:30Z",
+     "13049": "2026-11-28T20:25:30Z",
+     "13065": "2026-11-28T20:25:30Z",
+     "13183": "2026-11-28T20:25:30Z",
+     "13539": "2026-11-28T20:25:30Z",
+     "13548": "2026-11-28T20:25:30Z",
+     "8645": "2026-11-28T20:25:30Z"
     },
     "cars": {
-     "Alfa Romeo 156 Super Touring": "2026-11-28T03:34:41Z",
-     "Audi A4 Super Touring 1995": "2026-11-27T23:32:31Z",
-     "BMW 320i E36 Super Touring": "2026-11-28T03:34:41Z",
-     "Ford Mondeo Super Touring": "2026-11-28T03:34:41Z",
-     "Honda Accord Super Touring": "2026-11-28T03:34:41Z",
-     "Opel Vectra Super Touring": "2026-11-28T03:34:41Z",
-     "Peugeot 406 Super Touring 1998": "2026-11-27T23:32:31Z",
-     "Renault Laguna Super Touring": "2026-11-27T23:32:31Z",
-     "Volvo 850 Super Touring": "2026-11-27T23:32:31Z",
-     "Volvo S40 Super Touring": "2026-11-28T03:34:41Z"
+     "Alfa Romeo 156 Super Touring": "2026-11-28T20:25:30Z",
+     "Audi A4 Super Touring 1995": "2026-11-28T20:25:30Z",
+     "BMW 320i E36 Super Touring": "2026-11-28T20:25:30Z",
+     "Ford Mondeo Super Touring": "2026-11-28T20:25:30Z",
+     "Honda Accord Super Touring": "2026-11-28T20:25:30Z",
+     "Opel Vectra Super Touring": "2026-11-28T20:25:30Z",
+     "Peugeot 406 Super Touring 1998": "2026-11-28T20:25:30Z",
+     "Renault Laguna Super Touring": "2026-11-28T20:25:30Z",
+     "Volvo 850 Super Touring": "2026-11-28T20:25:30Z",
+     "Volvo S40 Super Touring": "2026-11-28T20:25:30Z"
     },
     "classes": {
-     "Super Touring": "2026-11-28T03:34:41Z"
+     "Super Touring": "2026-11-28T20:25:30Z"
     }
    },
    "practiceMin": 5,
-   "servers": 1,
+   "servers": 4,
    "starts": [
-    "2026-11-25T19:15:00Z",
-    "2026-11-25T20:15:00Z",
     "2026-11-25T21:15:00Z",
     "2026-11-26T00:15:00Z",
     "2026-11-26T01:15:00Z",
@@ -5505,7 +7657,8 @@
     "2026-11-27T16:15:00Z",
     "2026-11-27T22:15:00Z",
     "2026-11-27T23:15:00Z",
-    "2026-11-28T03:15:00Z"
+    "2026-11-28T03:15:00Z",
+    "2026-11-28T20:15:00Z"
    ],
    "title": "Super Touring",
    "track": "Salzburgring - Grand Prix",
@@ -5541,7 +7694,6 @@
    "practiceMin": 5,
    "servers": 9,
    "starts": [
-    "2026-11-25T19:30:00Z",
     "2026-11-26T01:30:00Z",
     "2026-11-26T03:30:00Z",
     "2026-11-26T05:30:00Z",
@@ -5685,8 +7837,6 @@
    "practiceMin": 5,
    "servers": 5,
    "starts": [
-    "2026-11-25T19:00:00Z",
-    "2026-11-25T20:00:00Z",
     "2026-11-25T21:00:00Z",
     "2026-11-26T01:00:00Z",
     "2026-11-26T02:00:00Z",
@@ -5843,36 +7993,42 @@
  },
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T18:40:41Z",
+   "checked": "2026-11-28T20:25:30Z",
    "found": 5,
-   "lastOk": "2026-11-28T18:40:41Z",
+   "lastOk": "2026-11-28T20:25:30Z",
    "ok": true
   },
   "ams2": {
-   "checked": "2026-11-28T18:10:22Z",
+   "checked": "2026-11-28T20:25:30Z",
    "found": 5,
-   "lastOk": "2026-11-28T18:10:22Z",
+   "lastOk": "2026-11-28T20:25:30Z",
+   "ok": true
+  },
+  "lfm": {
+   "checked": "2026-11-28T20:25:30Z",
+   "found": 39,
+   "lastOk": "2026-11-28T20:25:30Z",
    "ok": true
   },
   "lmu": {
-   "checked": "2026-11-28T18:40:41Z",
+   "checked": "2026-11-28T20:25:30Z",
    "found": 9,
-   "lastOk": "2026-11-28T18:40:41Z",
+   "lastOk": "2026-11-28T20:25:30Z",
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T18:45:47Z",
-   "feedUpdated": "2026-11-28T17:53:32Z",
+   "checked": "2026-11-28T20:25:30Z",
+   "feedUpdated": "2026-11-28T19:53:36Z",
    "found": 7,
-   "lastOk": "2026-11-28T18:45:47Z",
+   "lastOk": "2026-11-28T20:25:30Z",
    "ok": true,
    "serverCheck": {
-    "checked": "2026-11-28T18:40:41Z",
+    "checked": "2026-11-28T20:25:30Z",
     "found": 3,
     "leadSec": {
      "Guia Circuit - Grand Prix": 256,
-     "Hockenheimring - Modern - Grand Prix": 256,
-     "N\u00fcrburgring - Nordschleife - NLS": 248
+     "N\u00fcrburgring - Nordschleife - NLS": 248,
+     "Salzburgring - Grand Prix": 256
     },
     "mismatch": [
      "Guia Circuit - Grand Prix 18:00Z"
@@ -5881,6 +8037,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T18:45:47Z",
+ "updated": "2026-11-28T20:25:30Z",
  "version": 1
 }
