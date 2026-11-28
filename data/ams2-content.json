@@ -1,0 +1,245 @@
+{
+ "version": 1,
+ "game": "ams2",
+ "researched": "2026-11-28",
+ "_note": "Steam DLC for Automobilista 2. appid links LFM content links and JustRace DlcAppId to these ids. The two bundles' contents are from their Steam pages.",
+ "packs": [
+  {
+   "id": "premium-track-pack",
+   "name": "Premium Track Pack",
+   "type": "bundle",
+   "appid": 1392100,
+   "url": "https://store.steampowered.com/app/1392100/",
+   "includes": [
+    "hockenheim-pack",
+    "silverstone-pack",
+    "nurburgring-pack",
+    "spa-pack",
+    "monza-pack",
+    "catalunya"
+   ]
+  },
+  {
+   "id": "racin-usa-expansion",
+   "name": "Racin' USA Expansion Pack",
+   "type": "bundle",
+   "appid": 1648110,
+   "url": "https://store.steampowered.com/app/1648110/",
+   "includes": [
+    "racin-usa-pt1",
+    "racin-usa-pt2",
+    "racin-usa-pt3"
+   ]
+  },
+  {
+   "id": "hockenheim-pack",
+   "name": "Hockenheimring Pack",
+   "type": "pack",
+   "appid": 1377650,
+   "url": "https://store.steampowered.com/app/1377650/"
+  },
+  {
+   "id": "silverstone-pack",
+   "name": "Silverstone Pack",
+   "type": "pack",
+   "appid": 1386930,
+   "url": "https://store.steampowered.com/app/1386930/"
+  },
+  {
+   "id": "nurburgring-pack",
+   "name": "Nürburgring Pack",
+   "type": "pack",
+   "appid": 1386931,
+   "url": "https://store.steampowered.com/app/1386931/"
+  },
+  {
+   "id": "spa-pack",
+   "name": "Spa-Francorchamps Pack",
+   "type": "pack",
+   "appid": 1386932,
+   "url": "https://store.steampowered.com/app/1386932/"
+  },
+  {
+   "id": "monza-pack",
+   "name": "Monza Pack",
+   "type": "pack",
+   "appid": 1648060,
+   "url": "https://store.steampowered.com/app/1648060/"
+  },
+  {
+   "id": "catalunya",
+   "name": "Circuit de Barcelona-Catalunya",
+   "type": "pack",
+   "appid": 2461740,
+   "url": "https://store.steampowered.com/app/2461740/"
+  },
+  {
+   "id": "racin-usa-pt1",
+   "name": "Racin' USA Pack Pt1",
+   "type": "pack",
+   "appid": 1648061,
+   "url": "https://store.steampowered.com/app/1648061/"
+  },
+  {
+   "id": "racin-usa-pt2",
+   "name": "Racin' USA Pack Pt2",
+   "type": "pack",
+   "appid": 1648062,
+   "url": "https://store.steampowered.com/app/1648062/"
+  },
+  {
+   "id": "racin-usa-pt3",
+   "name": "Racin' USA Pack Pt3",
+   "type": "pack",
+   "appid": 1648063,
+   "url": "https://store.steampowered.com/app/1648063/"
+  },
+  {
+   "id": "le-mans",
+   "name": "Circuit des 24 Heures du Mans",
+   "type": "pack",
+   "appid": 2697790,
+   "url": "https://store.steampowered.com/app/2697790/"
+  },
+  {
+   "id": "imsa-track-pack",
+   "name": "IMSA Track Pack",
+   "type": "pack",
+   "appid": 3022980,
+   "url": "https://store.steampowered.com/app/3022980/"
+  },
+  {
+   "id": "nurburgring-2025",
+   "name": "Nürburgring 2025",
+   "type": "pack",
+   "appid": 3895690,
+   "url": "https://store.steampowered.com/app/3895690/"
+  },
+  {
+   "id": "hungaroring",
+   "name": "Hungaroring",
+   "type": "pack",
+   "appid": 4674620,
+   "url": "https://store.steampowered.com/app/4674620/"
+  },
+  {
+   "id": "historical-track-pack-pt1",
+   "name": "Historical Track Pack Pt1",
+   "type": "pack",
+   "appid": 1392090,
+   "url": "https://store.steampowered.com/app/1392090/"
+  },
+  {
+   "id": "historical-track-pack-pt2",
+   "name": "Historical Track Pack Pt2",
+   "type": "pack",
+   "appid": 2697770,
+   "url": "https://store.steampowered.com/app/2697770/"
+  },
+  {
+   "id": "historical-track-pack-pt3",
+   "name": "Historical Track Pack Pt3",
+   "type": "pack",
+   "appid": 4044670,
+   "url": "https://store.steampowered.com/app/4044670/"
+  },
+  {
+   "id": "historical-track-pack-pt4",
+   "name": "Historical Track Pack Pt4",
+   "type": "pack",
+   "appid": 4674610,
+   "url": "https://store.steampowered.com/app/4674610/"
+  },
+  {
+   "id": "endurance-pack-pt1",
+   "name": "Endurance Pack Pt1",
+   "type": "pack",
+   "appid": 2697800,
+   "url": "https://store.steampowered.com/app/2697800/"
+  },
+  {
+   "id": "endurance-pack-pt2",
+   "name": "Endurance Pack Pt2",
+   "type": "pack",
+   "appid": 3022990,
+   "url": "https://store.steampowered.com/app/3022990/"
+  },
+  {
+   "id": "endurance-pack-pt3",
+   "name": "Endurance Pack Pt3",
+   "type": "pack",
+   "appid": 3532160,
+   "url": "https://store.steampowered.com/app/3532160/"
+  },
+  {
+   "id": "historical-endurance-pack-pt1",
+   "name": "Historical Endurance Pack Pt1",
+   "type": "pack",
+   "appid": 4044660,
+   "url": "https://store.steampowered.com/app/4044660/"
+  },
+  {
+   "id": "historical-endurance-pack-pt2",
+   "name": "Historical Endurance Pack Pt2",
+   "type": "pack",
+   "appid": 4674630,
+   "url": "https://store.steampowered.com/app/4674630/"
+  },
+  {
+   "id": "lamborghini-dream-pack-pt1",
+   "name": "Lamborghini Dream Pack Pt1",
+   "type": "pack",
+   "appid": 3023000,
+   "url": "https://store.steampowered.com/app/3023000/"
+  },
+  {
+   "id": "lamborghini-dream-pack-pt2",
+   "name": "Lamborghini Dream Pack Pt2",
+   "type": "pack",
+   "appid": 3532180,
+   "url": "https://store.steampowered.com/app/3532180/"
+  },
+  {
+   "id": "adrenaline-pack-pt1",
+   "name": "Adrenaline Pack Pt1",
+   "type": "pack",
+   "appid": 2518750,
+   "url": "https://store.steampowered.com/app/2518750/"
+  },
+  {
+   "id": "adrenaline-pack-pt2",
+   "name": "Adrenaline Pack Pt2",
+   "type": "pack",
+   "appid": 2518760,
+   "url": "https://store.steampowered.com/app/2518760/"
+  },
+  {
+   "id": "supercars-pack-pt1",
+   "name": "Supercars Pack Pt1",
+   "type": "pack",
+   "appid": 1392091,
+   "url": "https://store.steampowered.com/app/1392091/"
+  },
+  {
+   "id": "supercars-pack-pt2",
+   "name": "Supercars Pack Pt2",
+   "type": "pack",
+   "appid": 4256590,
+   "url": "https://store.steampowered.com/app/4256590/"
+  },
+  {
+   "id": "brazilian-racing-legends",
+   "name": "Brazilian Racing Legends Pack",
+   "type": "pack",
+   "appid": 2238190,
+   "url": "https://store.steampowered.com/app/2238190/"
+  },
+  {
+   "id": "formula-hitech",
+   "name": "Formula HiTech",
+   "type": "pack",
+   "appid": 2697780,
+   "url": "https://store.steampowered.com/app/2697780/"
+  }
+ ]
+}

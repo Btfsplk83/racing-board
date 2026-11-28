@@ -408,7 +408,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     <li><b>LMU:</b> racecontrol.gg, checked every 15 min and right after the Tuesday reset.</li>
     <li><b>RaceRoom:</b> ranked timetable on r3e-leaderboards.info, checked hourly. Live ranked servers are checked every 30 min, and every 5 min if the timetable is down. Times shown are when servers open, a few minutes before the race slot.</li>
     <li><b>AC Evo:</b> acevo.gg daily races, checked every 15 min.</li>
-    <li><b>LFM:</b> official AMS2, RaceRoom, AC Evo and Assetto Corsa series on lowfuelmotorsport.com, checked every 30 min. LFM lists the next few races of each series for this week's track. The LFM chip hides or shows them all.</li>
+    <li><b>LFM:</b> official AMS2, RaceRoom, AC Evo and Assetto Corsa series on lowfuelmotorsport.com, checked every 30 min. LFM lists the next few races of each series for this week's track. The LFM chip hides or shows them all. AMS2 and AC races lock by the DLC LFM lists for the track and cars. Free AC mods don't lock a race.</li>
     <li><b>Chill Apex:</b> league calendar on JustRace, checked hourly. Shows races up to 15 days ahead.</li>
   </ul>
   <p class="note">Races more than 2 hours away, and locked races, show as one-line rows. Tap a row for details. Tap the status line at the top to see when each source was last checked.</p>
@@ -426,6 +426,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   var GAMENAME={lmu:"LMU",rr:"RaceRoom",acevo:"AC Evo",ams2:"AMS2",ac:"Assetto Corsa"};
   /* Steam app ids, for "Launch in Steam" links (checked 2026-11-28) */
   var STEAM={lmu:2399420,rr:211500,acevo:3058630,ams2:1066890,ac:244210};
+  /* Games with a content catalog: packs to tick in My content, and races that lock without them. */
+  var PACKGAMES=["lmu","rr","ams2","ac"];
   var PKEY="dailiesBoard.prefs.v3", OLDKEY="dailiesBoard.prefs.v2";
   var src=new URLSearchParams(location.search).get("src")||"schedule.json";
   var data=null, rows=[];
@@ -459,7 +461,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   if(RANKS.indexOf(p.rank)<0)p.rank="Bronze";
   function rankTiers(r){return TIERS.slice(0,Math.max(1,RANKS.indexOf(r)+1))}
   if(p.tiersManual!==true){p.tiersManual=false;p.tiers=rankTiers(p.rank)}
-  p.packs=obj(p.packs);p.packs.lmu=obj(p.packs.lmu);p.packs.rr=obj(p.packs.rr);
+  p.packs=obj(p.packs);PACKGAMES.forEach(function(g){p.packs[g]=obj(p.packs[g])});
   p.rrTracks=obj(p.rrTracks);p.rrClasses=obj(p.rrClasses);
   if(VIEWS.indexOf(p.view)<0)p.view="next";
   if(typeof p.favOnly!=="boolean")p.favOnly=false;
@@ -557,16 +559,17 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   }
 
   /* Ownership. own[g][id] is true for ticked packs and everything they include; via[g][id] marks the included ones. */
-  var own={lmu:{},rr:{}}, via={lmu:{},rr:{}}, idx={lmu:{},rr:{}};
+  function perGame(){var o={};PACKGAMES.forEach(function(g){o[g]={}});return o}
+  var own=perGame(), via=perGame(), idx=perGame();
   function hasPacks(){return !!(data&&data.packs&&typeof data.packs==="object")}
   function packList(g){var a=data&&data.packs&&data.packs[g];return Array.isArray(a)?a:[]}
   function buildIdx(){
-    idx={lmu:{},rr:{}};
-    ["lmu","rr"].forEach(function(g){packList(g).forEach(function(pk){if(pk&&pk.id)idx[g][pk.id]=pk})});
+    idx=perGame();
+    PACKGAMES.forEach(function(g){packList(g).forEach(function(pk){if(pk&&pk.id)idx[g][pk.id]=pk})});
   }
   function computeOwn(){
-    own={lmu:{},rr:{}};via={lmu:{},rr:{}};
-    ["lmu","rr"].forEach(function(g){
+    own=perGame();via=perGame();
+    PACKGAMES.forEach(function(g){
       Object.keys(p.packs[g]).forEach(function(id){
         if(!p.packs[g][id])return;
         own[g][id]=true;
@@ -804,6 +807,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     }
     packChips("lmu","LMU packs");
     packChips("rr","RaceRoom packs");
+    packChips("ams2","AMS2 DLC");
+    packChips("ac","Assetto Corsa DLC");
     var tr={},cl={};
     (data.series||[]).forEach(function(s){
       if(s.game!=="rr"||s.free||!s.access)return;
@@ -824,10 +829,11 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     }
     var line=el("div","sumline");
     var items=countTrue(p.rrTracks)+countTrue(p.rrClasses);
-    line.appendChild(el("span","note","LMU: "+plural(countTrue(p.packs.lmu),"pack")+" · RaceRoom: "+plural(countTrue(p.packs.rr),"pack")+", "+plural(items,"item")));
+    line.appendChild(el("span","note","LMU: "+plural(countTrue(p.packs.lmu),"pack")+" · RaceRoom: "+plural(countTrue(p.packs.rr),"pack")+", "+plural(items,"item")+
+      " · AMS2: "+countTrue(p.packs.ams2)+" · AC: "+countTrue(p.packs.ac)));
     var clr=el("button","linkbtn","Clear all");clr.type="button";
     /* Clears packs, tracks and classes only. Favorites are kept. */
-    clr.onclick=function(){p.packs={lmu:{},rr:{}};p.rrTracks={};p.rrClasses={};savePrefs();renderAll()};
+    clr.onclick=function(){p.packs=perGame();p.rrTracks={};p.rrClasses={};savePrefs();renderAll()};
     line.appendChild(clr);
     box.appendChild(line);
   }
@@ -993,6 +999,18 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(STEAM[s.game])box.appendChild(link("Launch "+(GAMENAME[s.game]||"game")+" in Steam","steam://rungameid/"+STEAM[s.game],"steamlink"));
     return box;
   }
+  /* What an AMS2 or AC race uses, owned or not: "Track: X · Cars: base game, or Y". */
+  function dlcText(s){
+    var a=s.access;if(!a)return "";
+    var g=s.game,nm=function(ids){return ids.map(function(id){return shortName(idx[g][id]?idx[g][id].name:id)})};
+    var out=[],t=a.track,c=a.cars;
+    if(t)out.push("Track: "+(t.free?"base game":nm(t.packs).join(" or ")));
+    if(c){
+      var cp=nm(c.packs||[]);
+      out.push("Cars: "+(c.free?"base game"+(cp.length?", or "+cp.join(", "):""):cp.join(" or ")));
+    }
+    return out.join(" · ");
+  }
   function fillDetail(det,x){
     var s=x.s;
     det.appendChild(el("div","dlabel",s.event?(x.u.next.length>1?"Next starts":"Start"):openLead(s)?"Server opens, next 24 hours":"Start times, next 24 hours"));
@@ -1012,8 +1030,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     }
     if(s.license)fact(f,"License",s.license);
     if(Array.isArray(s.dlc)&&s.dlc.length)linkFact(f,"Content",s.dlc);
+    if(s.game==="ams2"||s.game==="ac")fact(f,"DLC",dlcText(s));
     if(x.locked)fact(f,"Needs",x.locked.reasons.join(" · ")+(x.locked.unsure?" (unconfirmed)":""));
-    else if(s.access&&(s.game==="lmu"||s.game==="rr"))fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
+    else if(s.access)fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
     if(s.game==="acevo"&&s.source!=="lfm")fact(f,"Entry",s.free?"Free, open to all":"Check acevo.gg");
     det.appendChild(f);
     if(x.locked)linkFact(f,"Get it",storeLinks(s));

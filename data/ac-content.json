@@ -1,0 +1,104 @@
+{
+ "version": 1,
+ "game": "ac",
+ "researched": "2026-11-28",
+ "_note": "Paid Steam DLC for Assetto Corsa. Ultimate Edition is assumed to include all of them (check: true). Paid third-party mods that LFM races use are added by the poller from LFM's car list. Free mods never lock a race.",
+ "packs": [
+  {
+   "id": "ultimate-edition",
+   "name": "Ultimate Edition",
+   "type": "bundle",
+   "includes": [
+    "dream-pack-1",
+    "dream-pack-2",
+    "dream-pack-3",
+    "japanese-pack",
+    "red-pack",
+    "tripl3-pack",
+    "porsche-pack-1",
+    "porsche-pack-2",
+    "porsche-pack-3",
+    "ready-to-race",
+    "ferrari-70th"
+   ],
+   "check": true
+  },
+  {
+   "id": "dream-pack-1",
+   "name": "Dream Pack 1",
+   "type": "pack",
+   "appid": 347990,
+   "url": "https://store.steampowered.com/app/347990/"
+  },
+  {
+   "id": "dream-pack-2",
+   "name": "Dream Pack 2",
+   "type": "pack",
+   "appid": 404430,
+   "url": "https://store.steampowered.com/app/404430/"
+  },
+  {
+   "id": "dream-pack-3",
+   "name": "Dream Pack 3",
+   "type": "pack",
+   "appid": 423630,
+   "url": "https://store.steampowered.com/app/423630/"
+  },
+  {
+   "id": "japanese-pack",
+   "name": "Japanese Pack",
+   "type": "pack",
+   "appid": 467980,
+   "url": "https://store.steampowered.com/app/467980/"
+  },
+  {
+   "id": "red-pack",
+   "name": "Red Pack",
+   "type": "pack",
+   "appid": 493190,
+   "url": "https://store.steampowered.com/app/493190/"
+  },
+  {
+   "id": "tripl3-pack",
+   "name": "Tripl3 Pack",
+   "type": "pack",
+   "appid": 509350,
+   "url": "https://store.steampowered.com/app/509350/"
+  },
+  {
+   "id": "porsche-pack-1",
+   "name": "Porsche Pack I",
+   "type": "pack",
+   "appid": 526060,
+   "url": "https://store.steampowered.com/app/526060/"
+  },
+  {
+   "id": "porsche-pack-2",
+   "name": "Porsche Pack II",
+   "type": "pack",
+   "appid": 540710,
+   "url": "https://store.steampowered.com/app/540710/"
+  },
+  {
+   "id": "porsche-pack-3",
+   "name": "Porsche Pack III",
+   "type": "pack",
+   "appid": 540711,
+   "url": "https://store.steampowered.com/app/540711/"
+  },
+  {
+   "id": "ready-to-race",
+   "name": "Ready To Race Pack",
+   "type": "pack",
+   "appid": 619680,
+   "url": "https://store.steampowered.com/app/619680/"
+  },
+  {
+   "id": "ferrari-70th",
+   "name": "Ferrari 70th Anniversary Pack",
+   "type": "pack",
+   "appid": 675590,
+   "url": "https://store.steampowered.com/app/675590/"
+  }
+ ]
+}

@@ -42,6 +42,7 @@ JR_API = "https://www.justrace.net/apiv3"
 JR_GAMES = {4: "ams2"}                  # JustRace game ids the board shows
 LFM_API = "https://api3.lowfuelmotorsport.com/api"
 LFM_SIMS = {4: "ams2", 6: "rr", 8: "acevo", 3: "ac"}  # LFM sim id -> board game (ACC is 1, not shown)
+LFM_DLC = {4, 3}                        # sims whose races get an access check (AMS2, AC)
 
 LMU_EVERY = timedelta(minutes=15)       # racecontrol.gg lists ~6 h of starts, so this misses none
 RR_FEED_EVERY = timedelta(minutes=60)   # refetch the feed this often (it changes about daily)
@@ -482,14 +483,40 @@ def jr_iso(s):
 
 
 def jr_names(game):
-    """id -> display name for tracks and classes, AMS2 only so far."""
+    """Reference data, AMS2 only so far: id -> display name for tracks and classes, plus DLC.
+    Returns (tracks, classes, dlc) where dlc = {"track": {id: item}, "cls": {class value: [item or None per car]}}
+    and item = {"appid", "name"}. None means a base-game car."""
     if game != "ams2":
-        return {}, {}
-    tracks = {str(t["id"]): (t.get("extra_data") or {}).get("translated_name") or t.get("name", "")
-              for t in jr_call("/refdata/api/GetAms2Tracks")}
-    classes = {str(c["value"]): c.get("translated_name") or c.get("name", "")
-               for c in jr_call("/refdata/api/GetAms2Classes")}
-    return tracks, classes
+        return {}, {}, {}
+    tr = jr_call("/refdata/api/GetAms2Tracks")
+    cl = jr_call("/refdata/api/GetAms2Classes")
+    tracks = {str(t["id"]): (t.get("extra_data") or {}).get("translated_name") or t.get("name", "") for t in tr}
+    classes = {str(c["value"]): c.get("translated_name") or c.get("name", "") for c in cl}
+    dlc = {"track": {}, "cls": {}}
+    for t in tr:
+        e = t.get("extra_data") or {}
+        if e.get("DlcAppId"):
+            dlc["track"][str(t["id"])] = {"appid": e["DlcAppId"], "name": e.get("dlc") or ""}
+    by_name = {}
+    for c in jr_call("/refdata/api/GetAms2Cars"):
+        e = c.get("extra_data") or {}
+        item = {"appid": e["DlcAppId"], "name": e.get("dlc") or ""} if e.get("DlcAppId") else None
+        by_name.setdefault(c.get("class"), []).append(item)
+    for c in cl:  # cars name their class by its untranslated name
+        dlc["cls"][str(c["value"])] = by_name.get(c.get("name"), [])
+    return tracks, classes, dlc
+
+
+def need_cars(items, classes):
+    """Car requirement from one entry per allowed car (None = base game). Any one car is enough."""
+    if not items:
+        return None
+    out, seen = [], set()
+    for x in items:
+        if x and (x.get("appid") or x.get("name")) not in seen:
+            seen.add(x.get("appid") or x.get("name"))
+            out.append(x)
+    return {"free": any(x is None for x in items), "dlc": out, "classes": classes}
 
 
 def jr_league(league, when, names):
@@ -507,7 +534,7 @@ def jr_league(league, when, names):
             continue
         if game not in names:
             names[game] = jr_names(game)
-        tracks, classes = names[game]
+        tracks, classes, dlc = names[game]
         d = jr_call(f"/season/api/GetSeasonSchedules/{se['SeasonID']}/{se['GameId']}/false/false")
         sess = {}
         for x in d.get("ScheduleSessions", []):
@@ -524,7 +551,15 @@ def jr_league(league, when, names):
             if not (when - timedelta(hours=6) <= start <= when + JR_AHEAD):
                 continue
             tid = str(par.get("TrackName") or ss.get("TrackList") or "").split(",")[0]
-            cls = [classes.get(c, "") for c in str(par.get("CarClassList") or ss.get("ClassList") or "").split(",") if c]
+            cids = [c for c in str(par.get("CarClassList") or ss.get("ClassList") or "").split(",") if c]
+            cls = [classes.get(c, "") for c in cids]
+            need = {}
+            if dlc:
+                t = dlc["track"].get(tid)
+                need["track"] = {"name": tracks.get(tid, ""), "free": not t, "dlc": [t] if t else []}
+                cars = need_cars([x for c in cids for x in dlc["cls"].get(c, [])], [c for c in cls if c])
+                if cars:
+                    need["cars"] = cars
             timed = [x for x in parts if x.get("SessionDurationTypeName") == "Mins"]
             fmt = " · ".join(f"{x['SessionTypeName'][0]} {x['SessionDuration']} "
                              f"{'min' if x.get('SessionDurationTypeName') == 'Mins' else 'laps'}" for x in parts)
@@ -538,6 +573,7 @@ def jr_league(league, when, names):
                 "format": fmt,
                 "url": f"https://{sub}.justrace.net/en/events",
                 "starts": [iso(start)],
+                **({"need": need} if need else {}),
             })
     return rows
 
@@ -627,12 +663,35 @@ def lfm_link(x):
     return {"name": n, "url": u} if page else {"name": n}
 
 
+def lfm_dlc(rec):
+    """Paid content for a car or track record: {"appid"?, "name", "url"?}, or None for base game and free mods.
+    LFM's non_base_content: 0 base game, 1 paid DLC (Steam, or a paid mod store), 2 free download."""
+    if (rec or {}).get("non_base_content") != 1:
+        return None
+    link = str(rec.get("content_link") or "")
+    name = re.sub(r"\s+kaufen$", "", str(rec.get("content_link_name") or "").strip())
+    m = re.search(r"store\.steampowered\.com/app/(\d+)", link)
+    item = {"name": name}
+    if m:
+        item["appid"] = int(m[1])
+    if link.startswith("https://"):
+        item["url"] = link
+    return item
+
+
+def lfm_mod(rec):
+    """Free download for a car or track (AC mods), as a Content entry."""
+    if (rec or {}).get("non_base_content") != 2 or not rec.get("content_link_name"):
+        return None
+    return lfm_link({"name": rec["content_link_name"], "link": rec.get("content_link")})
+
+
 def poll_lfm(when):
     d = lfm_call("/seasons/getMinifiedSeasonBySim?sim=4")  # the response holds every sim, whatever is asked
     allsims = d.get("series") or {}
     cars = {}
     for c in lfm_call("/lists/getCars"):
-        cars[(c.get("sim_id"), c.get("car_id"))] = str(c.get("car_name") or "").strip()
+        cars[(c.get("sim_id"), c.get("car_id"))] = c
     names = {}
     rows = []
     for sim, game in LFM_SIMS.items():
@@ -655,12 +714,13 @@ def poll_lfm(when):
                 continue
             st = e.get("settings") or {}
             week = e.get("active_week")
-            classes, car_names = [], []
+            classes, car_recs = [], []
             for c in (st.get("championship_settings") or {}).get("car_classes") or []:
                 if week and c.get("season_weeks") and week not in c["season_weeks"]:
                     continue
                 classes.append(lfm_class(c.get("class", "")))
-                car_names += [cars[(sim, i)] for i in c.get("allowed_cars") or [] if cars.get((sim, i))]
+                car_recs += [cars[(sim, i)] for i in c.get("allowed_cars") or [] if cars.get((sim, i))]
+            car_names = [str(c.get("car_name") or "").strip() for c in car_recs]
             tr = e.get("active_track") or {}
             track = tr.get("track_name", "")
             if sim == 4:
@@ -676,6 +736,21 @@ def poll_lfm(when):
                     if item["name"] and item["name"] not in seen:
                         seen.add(item["name"])
                         content.append(item)
+            need = {}
+            if sim in LFM_DLC:
+                # Paid content locks a race; free mods (AC) are only listed under Content.
+                t = lfm_dlc(tr)
+                need["track"] = {"name": track, "free": not t, "dlc": [t] if t else []}
+                cars_need = need_cars([lfm_dlc(c) for c in car_recs], [c for c in classes if c])
+                if cars_need:
+                    need["cars"] = cars_need
+                for rec in [tr] + car_recs:
+                    m = lfm_mod(rec)
+                    if m and m["name"] not in seen:
+                        seen.add(m["name"])
+                        content.append(m)
+                if sim == 4:
+                    content = []  # AMS2 content is all paid DLC, shown exactly by the access check instead
             lic = str(e.get("min_license") or "").title()
             rows.append({
                 "game": game, "source": "lfm", "id": f"{game}-lfm-{e.get('event_id')}",
@@ -691,6 +766,7 @@ def poll_lfm(when):
                 "week": week,
                 "url": "https://lowfuelmotorsport.com/series/" + e["slug"],
                 "starts": starts,
+                **({"need": need} if need else {}),
             })
     if not rows:
         raise ValueError("no series in the LFM response")
@@ -920,13 +996,40 @@ def rr_access(s, cat):
     return acc
 
 
+def need_access(row, cat, extra):
+    """Turn a row's "need" (DLC by Steam app id or name) into the page's access format, using the catalog ids.
+    DLC missing from the catalog gets an id of its own and is added to extra, so My content can list it."""
+    by_app = {p["appid"]: p["id"] for p in (cat or {}).get("packs", []) if p.get("appid")}
+    game = row["game"]
+
+    def ids(items):
+        out = []
+        for x in items:
+            pid = by_app.get(x.get("appid")) or (f"steam-{x['appid']}" if x.get("appid") else f"{game}-{slug(x['name'])}")
+            if pid not in by_app.values() and pid not in extra:
+                extra[pid] = {"id": pid, "name": x.get("name") or pid, "type": "pack", "includes": []}
+                if str(x.get("url", "")).startswith("https://"):
+                    extra[pid]["url"] = x["url"]
+            if pid not in out:
+                out.append(pid)
+        return out
+
+    n, acc = row.get("need") or {}, {}
+    if "track" in n:
+        acc["track"] = {"name": n["track"].get("name", ""), "free": n["track"]["free"], "packs": ids(n["track"]["dlc"])}
+    if "cars" in n:
+        acc["cars"] = {"free": n["cars"]["free"], "packs": ids(n["cars"]["dlc"]), "classes": n["cars"].get("classes", [])}
+    return acc
+
+
 def build_schedule(state, when, sources, rr_rows, league_rows=()):
     """rr_rows: RaceRoom rows from the feed. When there are any, they replace the server-list series.
     league_rows: dated events. One row per league race (JustRace, single start), plus LFM series
     (a few known starts each, no interval)."""
     free = load_free()
     names = load_series_names()
-    cats = {g: load_catalog(g) for g in ("lmu", "rr")}
+    cats = {g: load_catalog(g) for g in ("lmu", "rr", "ams2", "ac")}
+    extra = {g: {} for g in cats}
     out = []
     for row in rr_rows:
         row = dict(row, lastSeen=iso(when))
@@ -965,9 +1068,13 @@ def build_schedule(state, when, sources, rr_rows, league_rows=()):
         row["lastSeen"] = s["lastSeen"]
         out.append(row)
     for row in league_rows:
-        out.append(dict(row, event=True, lastSeen=iso(when)))
+        row = dict(row, event=True, lastSeen=iso(when))
+        if row.get("need") and row["game"] in cats:
+            row["access"] = need_access(row, cats[row["game"]], extra[row["game"]])
+        row.pop("need", None)
+        out.append(row)
     out.sort(key=lambda r: (r["game"], r["title"], r["starts"][:1]))
-    packs = {g: public_packs(c) if c else [] for g, c in cats.items()}
+    packs = {g: (public_packs(c) if c else []) + list(extra[g].values()) for g, c in cats.items()}
     return {"version": 2, "updated": iso(when), "sources": sources, "packs": packs, "series": out}
 
 
