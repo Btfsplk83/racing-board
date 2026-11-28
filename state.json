@@ -8028,10 +8028,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T21:10:57Z",
+   "checked": "2026-11-28T21:16:00Z",
    "feedUpdated": "2026-11-28T19:53:36Z",
    "found": 7,
-   "lastOk": "2026-11-28T21:10:57Z",
+   "lastOk": "2026-11-28T21:16:00Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-28T20:55:51Z",
@@ -8047,6 +8047,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T21:10:57Z",
+ "updated": "2026-11-28T21:16:00Z",
  "version": 1
 }
