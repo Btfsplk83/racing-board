@@ -1,7 +1,7 @@
 {
  "jrFeed": {
-  "fetched": "2026-11-28T04:02:31Z",
-  "lastOk": "2026-11-28T04:02:31Z",
+  "fetched": "2026-11-28T05:03:07Z",
+  "lastOk": "2026-11-28T05:03:07Z",
   "rows": [
    {
     "classes": [
@@ -97,8 +97,8 @@
  },
  "rrByTrack": true,
  "rrFeed": {
-  "feedUpdated": "2026-11-28T03:53:05Z",
-  "fetched": "2026-11-28T04:02:31Z",
+  "feedUpdated": "2026-11-28T04:53:07Z",
+  "fetched": "2026-11-28T05:03:07Z",
   "series": [
    {
     "anchors": [
@@ -5841,9 +5841,9 @@
    "ok": true
   },
   "ams2": {
-   "checked": "2026-11-28T04:02:31Z",
+   "checked": "2026-11-28T05:03:07Z",
    "found": 5,
-   "lastOk": "2026-11-28T04:02:31Z",
+   "lastOk": "2026-11-28T05:03:07Z",
    "ok": true
   },
   "lmu": {
@@ -5853,10 +5853,10 @@
    "ok": true
   },
   "rr": {
-   "checked": "2026-11-28T04:58:03Z",
-   "feedUpdated": "2026-11-28T03:53:05Z",
+   "checked": "2026-11-28T05:03:07Z",
+   "feedUpdated": "2026-11-28T04:53:07Z",
    "found": 7,
-   "lastOk": "2026-11-28T04:58:03Z",
+   "lastOk": "2026-11-28T05:03:07Z",
    "ok": true,
    "serverCheck": {
     "checked": "2026-11-28T04:37:54Z",
@@ -5869,6 +5869,6 @@
    "via": "feed"
   }
  },
- "updated": "2026-11-28T04:58:03Z",
+ "updated": "2026-11-28T05:03:07Z",
  "version": 1
 }
