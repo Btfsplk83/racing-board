@@ -1189,11 +1189,13 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     m.appendChild(el("div","track",(s.hotlap?"Hot lap · ":"")+(s.league?s.league+" · ":"")+s.track));
     var w=el("div","when");
     var cd=null;
-    if(x.live){
+    if(x.live&&(s.hotlap||!x.t)){
       w.appendChild(el("div","at num",s.hotlap?"Open":"Running"));
       w.appendChild(el("div","incd num",s.hotlap?"until "+fmtAt(Date.parse(s.until)):"since "+fmtTime(x.started)));
     }else if(x.t){
-      w.appendChild(el("div","at num",x.timeOnly||x.day===0||x.day===1?fmtTime(x.t):fmtAt(x.t)));
+      /* A running race was missed, so its row shows when you can next join. */
+      var same=new Date(x.t).toDateString()===new Date().toDateString();
+      w.appendChild(el("div","at num",x.live?"Next "+(same?fmtTime(x.t):fmtAt(x.t)):x.timeOnly||x.day===0||x.day===1?fmtTime(x.t):fmtAt(x.t)));
       cd=el("div","incd num",fmtIn(x.t-Date.now()));w.appendChild(cd);
     }else w.appendChild(el("div","at num",x.lastRan?"Ran "+fmtTime(x.lastRan):s.hotlap?"Open":"Running"));
     head.appendChild(m);head.appendChild(w);
@@ -1210,8 +1212,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     lockSeen[x.key]=!!x.locked;runSeen[x.key]=false;
     enter(li,x.key);
     if(x.key===openKey)syncCard(li);
-    if(x.live)rows.push({cd:null,t:0,e:endOf(x)});
-    else if(x.t)rows.push({cd:cd,inc:true,t:x.t,p:x.locked||x.evt?0:x.t-SOON});
+    if(x.live&&!cd)rows.push({cd:null,t:0,e:endOf(x)});
+    else if(x.t)rows.push({cd:cd,inc:true,t:x.t,e:x.live?endOf(x):0,p:x.locked||x.evt||x.live?0:x.t-SOON});
     return li;
   }
   function buildBlock(x){
@@ -1274,14 +1276,22 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     /* Running, seen-once, and starts within SOON get full cards. Later ones become one-line rows under day headings,
        and locked races go last as one-line rows (except in favorites-only, where they keep their card). */
     var nowT=now.getTime(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()).getTime();
-    var soon=[],later=[],locked=[];
+    var soon=[],later=[],locked=[],running=[];
     items.forEach(function(x){
       if(x.locked&&!(p.favOnly&&x.fav)){x.compact=true;x.day=-1;locked.push(x);return}
-      if(x.live||!x.t||x.t-nowT<=SOON||x.hero){soon.push(x);return}
+      if(x.hero){soon.push(x);return}
+      /* Running races were missed: one-line rows that show the next start. */
+      if(x.live){x.compact=true;x.day=0;running.push(x);return}
+      if(!x.t||x.t-nowT<=SOON){soon.push(x);return}
       var d=new Date(x.t);d=new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime();
       x.compact=true;x.day=Math.round((d-today)/864e5);later.push(x);
     });
     soon.forEach(function(x){list.appendChild(buildCard(x))});
+    if(running.length){
+      running.sort(function(a,b){return (a.t||8e15)-(b.t||8e15)});
+      var rh=el("li","daygrp");rh.appendChild(el("h3","","Running now"));list.appendChild(rh);
+      running.forEach(function(x){list.appendChild(buildCard(x))});
+    }
     later.sort(function(a,b){return a.t-b.t});
     var lastG=null;
     later.concat(locked).forEach(function(x){
