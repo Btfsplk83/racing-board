@@ -14,6 +14,7 @@
   --plate:#f2f4f7; --ink:#12161f; --ink2:#4a5568; --plate-line:#c7ccd6; --tile:rgba(128,140,160,.2);
   --hatch-lmu:rgba(255,255,255,.5); --hatch-rr:rgba(18,22,31,.65); --shadow:rgba(0,0,0,.7);
   --evo:#2ec4b6; --evo-dk:#12726a; --evo-wash:#0e3836; --ams:#ff8a3d; --ams-dk:#a84a12; --ams-wash:#45230f;
+  --ac:#a58bff; --ac-dk:#5b3fc4; --ac-wash:#251d47;
   --sr-bronze:#cd8a4b; --sr-silver:#c3cad6; --sr-gold:#e6b422;
   --c-hy:#c4122f; --c-p2:#2f6bd8; --c-p3:#7a3fc4; --c-gt3:#1a7a42; --c-gte:#ee7d22; --c-x:#46526d;
   --ang:130deg;
@@ -202,28 +203,53 @@ h2.seclbl::before{height:22px}
 /* AC Evo (teal) and AMS2 league (orange): dark card, colour wash, outlined countdown */
 .row.skin-acevo,.sblock.skin-acevo{background:linear-gradient(var(--ang),var(--evo-wash) 0,var(--surface) 55%);--gc:var(--evo);--gd:var(--evo-dk)}
 .row.skin-ams2,.sblock.skin-ams2{background:linear-gradient(var(--ang),var(--ams-wash) 0,var(--surface) 55%);--gc:var(--ams);--gd:var(--ams-dk)}
-.row.skin-acevo .stripe,.row.skin-ams2 .stripe{background:var(--gc)}
-.row.skin-acevo .cdbox,.row.skin-ams2 .cdbox{border:2px solid var(--gc);padding:var(--s1) var(--s3);text-align:center}
-.row.skin-acevo .cd,.row.skin-ams2 .cd{color:var(--gc)}
-.row.skin-acevo .at,.row.skin-ams2 .at,.row.skin-acevo .livetag,.row.skin-ams2 .livetag{text-align:center}
-.sblock.skin-acevo,.sblock.skin-ams2{border-left-color:var(--gc)}
+.row.skin-ac,.sblock.skin-ac{background:linear-gradient(var(--ang),var(--ac-wash) 0,var(--surface) 55%);--gc:var(--ac);--gd:var(--ac-dk)}
+.skin-rr{--gd:var(--rr-dk)}.skin-lmu{--gd:var(--lmu-dk)}
+.row.skin-acevo .stripe,.row.skin-ams2 .stripe,.row.skin-ac .stripe{background:var(--gc)}
+.row.skin-acevo .cdbox,.row.skin-ams2 .cdbox,.row.skin-ac .cdbox{border:2px solid var(--gc);padding:var(--s1) var(--s3);text-align:center}
+.row.skin-acevo .cd,.row.skin-ams2 .cd,.row.skin-ac .cd{color:var(--gc)}
+.row.skin-acevo .at,.row.skin-ams2 .at,.row.skin-ac .at,.row.skin-acevo .livetag,.row.skin-ams2 .livetag,.row.skin-ac .livetag{text-align:center}
+.sblock.skin-acevo,.sblock.skin-ams2,.sblock.skin-ac{border-left-color:var(--gc)}
 /* Favorite: the card's own left stripe turns gold, so there is one edge, not two side by side */
 .row.row[data-fav="1"]:not(.hero) .stripe{background:var(--fav)}
 .row[data-fav="1"]:not(.hero) .favedge,.sblock .favedge{display:none}
 .sblock.sblock[data-fav="1"]{border-left-color:var(--fav)}
-.skin-acevo .tg[data-state="next"],.skin-ams2 .tg[data-state="next"]{border-color:var(--gc)}
-.skin-acevo .tg[data-state="running"],.skin-ams2 .tg[data-state="running"]{background:var(--gd);border-color:var(--gd)}
+.skin-acevo .tg[data-state="next"],.skin-ams2 .tg[data-state="next"],.skin-ac .tg[data-state="next"]{border-color:var(--gc)}
+.skin-acevo .tg[data-state="running"],.skin-ams2 .tg[data-state="running"],.skin-ac .tg[data-state="running"]{background:var(--gd);border-color:var(--gd)}
 .tgrid.dates{grid-template-columns:repeat(2,1fr)}
 .pill.gtag{background:var(--gd);color:var(--white);clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%)}
 .pill.gcls{border:1px solid var(--muted);padding:1px var(--s2)}
 .chip.evo[aria-pressed="true"]{background:var(--evo-dk);color:var(--white)}
 .chip.ams[aria-pressed="true"]{background:var(--ams-dk);color:var(--white)}
+.chip.ac[aria-pressed="true"]{background:var(--ac-dk);color:var(--white)}
+/* Links in an opened card. Steam launch links only work where Steam is installed, so phones don't get them. */
+.dlinks{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s4);margin:6px 0 var(--s2);font-size:var(--t-sm)}
+.dlinks a,.fact .v a{color:inherit}
+@media (pointer:coarse){.steamlink{display:none}}
 /* Text marks for games without a logo file */
 .gmark.txt{height:auto;padding:3px 6px;font-family:var(--f-head);font-style:italic;font-weight:700;font-size:var(--t-xs);letter-spacing:.06em;line-height:1;color:var(--white);background:var(--gd,var(--c-x));vertical-align:4px}
 /* Where each source comes from and how often it is checked */
 .srclist{display:flex;flex-direction:column;gap:var(--s1);margin:0;padding:0;list-style:none;font-size:var(--t-sm);color:var(--muted)}
 .srclist b{color:var(--fg);font-weight:600}
 .sblock.locked .track,.sblock.locked .meta,.sblock.locked .badges,.sblock.locked .tgrid{opacity:.75}
+/* NEXT: later starts as one-line rows under day headings */
+.daygrp{font-family:var(--f-head);font-style:italic;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  margin:var(--s3) 0 0;padding-bottom:2px;border-bottom:1px solid var(--line)}
+.daygrp h3{margin:0;font:inherit}
+.row.compact .head{padding:6px 14px 6px 0;gap:var(--s2);grid-template-columns:8px 1fr auto}
+.row.compact .title{font-size:17px;line-height:1.15}
+.row.compact .gmark{height:16px;margin-right:6px}
+.row.compact .gmark.txt{height:auto;padding:2px 5px;vertical-align:2px}
+.row.compact .titlerow{align-items:center}
+.row.compact .track{font-size:var(--t-sm);margin-top:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row.compact .star{width:36px;height:36px;margin:-8px -4px -8px 0;font-size:20px}
+.row.compact .when{background:none;margin:0;padding:0;border-radius:0;clip-path:none;align-self:center;display:block;color:inherit}
+.row.compact .at{margin:0;font-size:14px;color:inherit;font-weight:600;text-align:right}
+.row.compact .incd{font-size:var(--t-xs);color:var(--muted);text-align:right}
+.row.skin-rr.compact .incd{color:var(--ink2)}
+.row.compact.skin-lmu::after{display:none}
+.row.compact.locked::before{width:22px;height:22px}
+.row.compact .reason{font-size:var(--t-sm);padding:4px var(--s4) 4px var(--s5)}
 .empty{padding:18px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .links{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:var(--t-sm)}
 a{color:var(--fg)}
@@ -348,7 +374,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
       <button class="chip lmu" id="gLmu" type="button" aria-label="LMU">LMU</button>
       <button class="chip rr" id="gRr" type="button" aria-label="RaceRoom"><span class="tfull">RaceRoom</span><span class="tshort">RR</span></button>
       <button class="chip evo" id="gEvo" type="button" aria-label="AC Evo"><span class="tfull">AC Evo</span><span class="tshort">EVO</span></button>
-      <button class="chip ams" id="gAms" type="button" aria-label="Chill Apex Racing (AMS2 league)"><span class="tfull">Chill Apex</span><span class="tshort">AMS2</span></button>
+      <button class="chip ams" id="gAms" type="button" aria-label="Automobilista 2 (LFM and Chill Apex)">AMS2</button>
+      <button class="chip ac" id="gAc" type="button" aria-label="Assetto Corsa">AC</button>
+      <button class="chip cls" id="lfmBtn" type="button" aria-label="Show LFM races">LFM</button>
       <button class="chip fav" id="favBtn" type="button" aria-label="Favorites only">&#9733;<span class="tfull"> Favorites</span></button>
     </div>
     <div class="frow">
@@ -372,6 +400,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     <a href="https://racecontrol.gg/" target="_blank" rel="noopener">LMU on RaceControl</a>
     <a href="https://game.raceroom.com/multiplayer-rating/" target="_blank" rel="noopener">RaceRoom ranked</a>
     <a href="https://acevo.gg/daily-races" target="_blank" rel="noopener">AC Evo daily races</a>
+    <a href="https://lowfuelmotorsport.com/racing/official" target="_blank" rel="noopener">LFM official races</a>
     <a href="https://chillapexracing.justrace.net/en/events" target="_blank" rel="noopener">Chill Apex on JustRace</a>
   </div>
   <h2 class="seclbl">Sources</h2>
@@ -379,9 +408,10 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     <li><b>LMU:</b> racecontrol.gg, checked every 15 min and right after the Tuesday reset.</li>
     <li><b>RaceRoom:</b> ranked timetable on r3e-leaderboards.info, checked hourly. Live ranked servers are checked every 30 min, and every 5 min if the timetable is down. Times shown are when servers open, a few minutes before the race slot.</li>
     <li><b>AC Evo:</b> acevo.gg daily races, checked every 15 min.</li>
+    <li><b>LFM:</b> official AMS2, RaceRoom, AC Evo and Assetto Corsa series on lowfuelmotorsport.com, checked every 30 min. LFM lists the next few races of each series for this week's track. The LFM chip hides or shows them all.</li>
     <li><b>Chill Apex:</b> league calendar on JustRace, checked hourly. Shows races up to 15 days ahead.</li>
   </ul>
-  <p class="note">Tap the status line at the top to see when each source was last checked.</p>
+  <p class="note">Races more than 2 hours away, and locked races, show as one-line rows. Tap a row for details. Tap the status line at the top to see when each source was last checked.</p>
 </main>
 
 <script>
@@ -393,7 +423,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   var THEMES=["mixed","lmu","rr"];
   var FAVKINDS=["series","race","cls","track"];
   var FAVLABEL={series:"Series",race:"Race",cls:"Class",track:"Track"};
-  var GAMENAME={lmu:"LMU",rr:"RaceRoom",acevo:"AC Evo",ams2:"Chill Apex"};
+  var GAMENAME={lmu:"LMU",rr:"RaceRoom",acevo:"AC Evo",ams2:"AMS2",ac:"Assetto Corsa"};
+  /* Steam app ids, for "Launch in Steam" links (checked 2026-11-28) */
+  var STEAM={lmu:2399420,rr:211500,acevo:3058630,ams2:1066890,ac:244210};
   var PKEY="dailiesBoard.prefs.v3", OLDKEY="dailiesBoard.prefs.v2";
   var src=new URLSearchParams(location.search).get("src")||"schedule.json";
   var data=null, rows=[];
@@ -421,6 +453,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   if(typeof p.rr!=="boolean")p.rr=true;
   if(typeof p.acevo!=="boolean")p.acevo=true;
   if(typeof p.ams2!=="boolean")p.ams2=true;
+  if(typeof p.ac!=="boolean")p.ac=true;
+  if(typeof p.lfm!=="boolean")p.lfm=true;
   if(typeof p.hideLocked!=="boolean")p.hideLocked=false;
   if(RANKS.indexOf(p.rank)<0)p.rank="Bronze";
   function rankTiers(r){return TIERS.slice(0,Math.max(1,RANKS.indexOf(r)+1))}
@@ -490,6 +524,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   function runMs(s){return s.durationMin?(s.durationMin+(openLead(s)?s.practiceMin+2:0))*6e4:0}
   /* League events (one start each) show this far ahead. */
   var EVENT_DAYS=15;
+  /* NEXT shows full cards for starts this close; later ones as one-line rows. */
+  var SOON=2*36e5;
   /* Starts: observed ones first, then projected from the interval, up to 24 h ahead.
      past holds starts from the last 2 h (observed, plus projected between observed ones), oldest first. */
   function upcoming(s,now){
@@ -579,6 +615,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return reasons.length?{ok:false,reasons:reasons,unsure:a.unsure===true}:{ok:true};
   }
   function visible(s){
+    if(s.source==="lfm"&&!p.lfm)return false;
+    if(s.game==="ac")return p.ac;
     if(s.game==="lmu")return p.lmu&&p.tiers.indexOf(s.tier)>-1;
     if(s.game==="rr")return p.rr;
     if(s.game==="acevo")return p.acevo;
@@ -596,6 +634,11 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(h>=24)return Math.floor(h/24)+" D "+(h%24)+" H";
     var z=function(n){return n<10?"0"+n:""+n};
     return h?z(h)+" H "+z(m)+" MIN":z(m)+" MIN "+z(r)+" S";
+  }
+  /* Coarse countdown for one-line rows: minutes, no seconds. */
+  function fmtIn(ms){
+    var m=Math.max(1,Math.ceil(ms/6e4)),h=Math.floor(m/60);
+    return "in "+(h>=24?Math.floor(h/24)+"d "+(h%24)+"h":h?h+"h "+(m%60)+"m":m+" min");
   }
   function fmtTime(t){return new Date(t).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}
   function fmtAt(t){
@@ -638,7 +681,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     }
     txt.textContent="Updated "+ago(data.updated);
     var bad=[],msgs=[];
-    [["lmu","LMU"],["rr","RaceRoom"],["acevo","AC Evo"],["ams2","Chill Apex"]].forEach(function(g){
+    [["lmu","LMU"],["rr","RaceRoom"],["acevo","AC Evo"],["lfm","LFM"],["ams2","Chill Apex"]].forEach(function(g){
       var s=(data.sources||{})[g[0]];if(!s)return;
       if(s.ok)det.appendChild(el("span","",g[1]+" checked "+ago(s.checked||s.lastOk||data.updated)));
       else{
@@ -670,6 +713,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     $("gRr").setAttribute("aria-pressed",p.rr);
     $("gEvo").setAttribute("aria-pressed",p.acevo);
     $("gAms").setAttribute("aria-pressed",p.ams2);
+    $("gAc").setAttribute("aria-pressed",p.ac);
+    $("lfmBtn").setAttribute("aria-pressed",p.lfm);
     $("favBtn").setAttribute("aria-pressed",p.favOnly);
     $("hideBtn").setAttribute("aria-pressed",p.hideLocked);
     $("hideBtn").hidden=!hasPacks();
@@ -830,7 +875,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   }
   /* Official game logos, used only to label which game a race is */
   var MARKS={lmu:["marks/lmu.svg","Le Mans Ultimate",41],rr:["marks/rr.png","RaceRoom",37]};
-  var TEXTMARKS={acevo:["EVO","Assetto Corsa Evo"],ams2:["AMS2","Automobilista 2"]};
+  var TEXTMARKS={acevo:["EVO","Assetto Corsa Evo"],ams2:["AMS2","Automobilista 2"],ac:["AC","Assetto Corsa"]};
   function gameMark(g){
     if(TEXTMARKS[g]){var tm=el("span","gmark txt "+g,TEXTMARKS[g][0]);tm.title=TEXTMARKS[g][1];tm.setAttribute("aria-label",TEXTMARKS[g][1]);tm.setAttribute("role","img");return tm}
     var m=MARKS[g]||MARKS.lmu,i=el("img","gmark "+(MARKS[g]?g:"lmu"));
@@ -862,9 +907,9 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     return row.childNodes.length?row:null;
   }
   function metaRow(s){
-    if(s.game==="acevo"||s.game==="ams2"){
+    if(s.game==="acevo"||s.game==="ams2"||s.game==="ac"||s.source==="lfm"){
       var gm=el("div","meta");
-      if(s.game==="ams2"&&s.league)gm.appendChild(el("span","pill gtag",s.league+(s.round?" · Round "+s.round:"")));
+      if(s.league)gm.appendChild(el("span","pill gtag",s.league+(s.round?" · Round "+s.round:"")+(s.daily?" · Daily":"")));
       if(s.game==="acevo"&&s.kind)gm.appendChild(el("span","pill gtag",s.kind));
       (s.classes||[]).forEach(function(c){gm.appendChild(el("span","pill gcls",c))});
       return gm.childNodes.length?gm:null;
@@ -907,11 +952,52 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     if(!v)return;
     var r=el("div","fact");r.appendChild(el("span","k",k));r.appendChild(el("span","v",v));box.appendChild(r);
   }
+  function link(text,href,cls){
+    var a=el("a",cls||"",text);a.href=href;
+    if(/^https:/.test(href)){a.target="_blank";a.rel="noopener"}
+    return a;
+  }
+  /* A fact whose value is a list of {name,url}: names with https urls become links. */
+  function linkFact(box,k,items){
+    items=(items||[]).filter(function(i){return i&&(typeof i==="string"||i.name)});
+    if(!items.length)return;
+    var r=el("div","fact"),v=el("span","v");r.appendChild(el("span","k",k));
+    items.forEach(function(i,n){
+      if(n)v.appendChild(document.createTextNode(", "));
+      if(typeof i==="string")v.appendChild(document.createTextNode(i));
+      else if(/^https:\/\//.test(String(i.url||"")))v.appendChild(link(i.name,i.url));
+      else v.appendChild(document.createTextNode(i.name));
+    });
+    r.appendChild(v);box.appendChild(r);
+  }
+  /* Store pages for the packs a locked race needs and the viewer doesn't own (from the content catalogs). */
+  function storeLinks(s){
+    var a=s.access,g=s.game,out=[],seen={};
+    if(!a||!idx[g])return out;
+    [a.track,a.cars].forEach(function(t){
+      ((t&&!t.free&&t.packs)||[]).forEach(function(id){
+        var pk=idx[g][id];
+        if(seen[id]||own[g][id]||!pk||!pk.url)return;
+        seen[id]=true;out.push({name:shortName(pk.name),url:pk.url});
+      });
+    });
+    return out.slice(0,4);
+  }
+  /* Where to go for this race: its page on the source site, then Steam (desktop only). */
+  var SRCLINK={lmu:["Open RaceControl","https://racecontrol.gg/"],rr:["RaceRoom ranked","https://game.raceroom.com/multiplayer-rating/"]};
+  function links(s){
+    var box=el("div","dlinks");
+    var url=String(s.url||"");
+    if(/^https:\/\//.test(url))box.appendChild(link(s.source==="lfm"?"Sign up on LFM":s.league?"Sign up on JustRace":"Open on acevo.gg",url));
+    else if(SRCLINK[s.game])box.appendChild(link(SRCLINK[s.game][0],SRCLINK[s.game][1]));
+    if(STEAM[s.game])box.appendChild(link("Launch "+(GAMENAME[s.game]||"game")+" in Steam","steam://rungameid/"+STEAM[s.game],"steamlink"));
+    return box;
+  }
   function fillDetail(det,x){
     var s=x.s;
-    det.appendChild(el("div","dlabel",s.event?"Start":openLead(s)?"Server opens, next 24 hours":"Start times, next 24 hours"));
+    det.appendChild(el("div","dlabel",s.event?(x.u.next.length>1?"Next starts":"Start"):openLead(s)?"Server opens, next 24 hours":"Start times, next 24 hours"));
     if(x.u.next.length||x.u.running)det.appendChild(timeGrid([],x.u.running,x.u.next,!!s.event));
-    else det.appendChild(el("p","note","No more starts in the next 24 hours."));
+    else det.appendChild(el("p","note",s.event?"No upcoming start known.":"No more starts in the next 24 hours."));
     var f=el("div","facts");
     if(s.game==="lmu")fact(f,"Tier",s.tier);
     if(s.league)fact(f,"League",s.league+(s.round?", round "+s.round:""));
@@ -921,18 +1007,17 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     else fact(f,"Race length",s.durationMin?s.durationMin+" min":"");
     fact(f,"Interval",s.intervalMin?everyText(s.intervalMin):"");
     fact(f,"Classes",(s.classes||[]).join(", "));
-    if(s.game==="rr"&&Array.isArray(s.cars)){
+    if(Array.isArray(s.cars)&&s.cars.length){
       fact(f,"Cars",s.cars.map(function(c){return typeof c==="string"?c:(c&&c.name)||""}).filter(function(c){return c}).join(", "));
     }
+    if(s.license)fact(f,"License",s.license);
+    if(Array.isArray(s.dlc)&&s.dlc.length)linkFact(f,"Content",s.dlc);
     if(x.locked)fact(f,"Needs",x.locked.reasons.join(" · ")+(x.locked.unsure?" (unconfirmed)":""));
-    else if(s.game==="lmu"||s.game==="rr")fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
-    if(s.game==="acevo")fact(f,"Entry",s.free?"Free, open to all":"Check acevo.gg");
+    else if(s.access&&(s.game==="lmu"||s.game==="rr"))fact(f,"Access","You can run this"+(s.game==="rr"&&s.free?". Free this week.":""));
+    if(s.game==="acevo"&&s.source!=="lfm")fact(f,"Entry",s.free?"Free, open to all":"Check acevo.gg");
     det.appendChild(f);
-    if(/^https:\/\//.test(String(s.url||""))){
-      var lk=el("a","",s.game==="ams2"?"Sign up on JustRace":"Open on acevo.gg");
-      lk.href=s.url;lk.target="_blank";lk.rel="noopener";
-      var lp=el("p","note");lp.appendChild(lk);det.appendChild(lp);
-    }
+    if(x.locked)linkFact(f,"Get it",storeLinks(s));
+    det.appendChild(links(s));
     det.appendChild(el("div","dlabel","Favorites"));
     var fc=el("div","favchips");
     var tn=trackKey(s),k=x.key;
@@ -956,6 +1041,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     [prev,openKey].forEach(function(k){if(k&&cardEls[k])syncCard(cardEls[k],true)});
   }
   function buildCard(x){
+    if(x.compact)return buildCompact(x);
     var s=x.s,li=el("li","row "+skin(s.game)+(x.live?" live":"")+(x.hero?" hero":"")+(x.locked?" locked":""));
     li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
     if(x.fav){li.setAttribute("data-fav","1");li.appendChild(el("span","favedge"))}
@@ -1006,6 +1092,43 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     rows.push({box:x.locked?null:box,cd:x.locked?null:cd,t:x.t||0,e:endOf(x),hero:!!x.hero});
     return li;
   }
+  /* One-line row for races more than SOON away. Same detail as a card when opened. */
+  function buildCompact(x){
+    var s=x.s,li=el("li","row compact "+skin(s.game)+(x.locked?" locked":""));
+    li.setAttribute("data-game",s.game);li.setAttribute("data-state",x.state);li.setAttribute("data-key",x.key);
+    if(x.fav)li.setAttribute("data-fav","1");
+    var did="det"+(detSeq++);
+    var head=el("div","head");
+    head.setAttribute("role","button");head.tabIndex=0;
+    head.setAttribute("aria-expanded","false");head.setAttribute("aria-controls",did);
+    fid(head,"card:"+x.key);
+    head.appendChild(el("span","stripe"));
+    var m=el("div","main");
+    m.appendChild(titleRow(s,x.key));
+    m.appendChild(el("div","track",(s.league?s.league+" · ":"")+s.track));
+    var w=el("div","when");
+    var cd=null;
+    if(x.t){
+      w.appendChild(el("div","at num",x.day===0||x.day===1?fmtTime(x.t):fmtAt(x.t)));
+      cd=el("div","incd num",fmtIn(x.t-Date.now()));w.appendChild(cd);
+    }else w.appendChild(el("div","at num",x.lastRan?"Ran "+fmtTime(x.lastRan):"Running"));
+    head.appendChild(m);head.appendChild(w);
+    head.onclick=function(e){if(e.target.closest&&e.target.closest("button"))return;toggleCard(x.key)};
+    head.onkeydown=function(e){
+      if(e.target!==head)return;
+      if(e.key==="Enter"||e.key===" "||e.key==="Spacebar"){e.preventDefault();toggleCard(x.key)}
+    };
+    var det=el("div","detail");det.id=did;det.hidden=true;
+    li.appendChild(head);
+    if(x.locked)li.appendChild(reasonLine(x));
+    li.appendChild(det);
+    cardEls[x.key]=li;itemMap[x.key]=x;
+    lockSeen[x.key]=!!x.locked;runSeen[x.key]=false;
+    enter(li,x.key);
+    if(x.key===openKey)syncCard(li);
+    if(x.t)rows.push({cd:cd,inc:true,t:x.t,p:x.locked?0:x.t-SOON});
+    return li;
+  }
   function buildBlock(x){
     var s=x.s,li=el("li","sblock "+skin(s.game)+(x.locked?" locked":""));
     enter(li,x.key);
@@ -1024,7 +1147,7 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   var reduce=false;try{reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches}catch(e){}
   var shown={},lastSig="",animIdx=0,lockSeen={},runSeen={},busy=false,lastChip=null;
   function beginRender(){
-    var s=p.view+"|"+p.lmu+p.rr+p.acevo+p.ams2+p.favOnly+p.hideLocked;
+    var s=p.view+"|"+p.lmu+p.rr+p.acevo+p.ams2+p.ac+p.lfm+p.favOnly+p.hideLocked;
     if(s!==lastSig){lastSig=s;shown={}}
     animIdx=0;
   }
@@ -1061,9 +1184,26 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     var items=collect(now,false);
     if(!items.length){list.appendChild(el("li","empty",emptyMsg()));return}
     var hero=null;
-    items.forEach(function(x){if(x.s.game==="rr"&&!x.locked&&x.t&&(!hero||x.t<hero.t))hero=x});
+    items.forEach(function(x){if(x.s.game==="rr"&&!x.s.event&&!x.locked&&x.t&&(!hero||x.t<hero.t))hero=x});
     if(hero)hero.hero=true;
-    items.forEach(function(x){list.appendChild(buildCard(x))});
+    /* Running, seen-once, and starts within SOON get full cards. Later ones become one-line rows under day headings,
+       and locked races go last as one-line rows (except in favorites-only, where they keep their card). */
+    var nowT=now.getTime(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()).getTime();
+    var soon=[],later=[],locked=[];
+    items.forEach(function(x){
+      if(x.locked&&!(p.favOnly&&x.fav)){x.compact=true;x.day=-1;locked.push(x);return}
+      if(x.live||!x.t||x.t-nowT<=SOON||x.hero){soon.push(x);return}
+      var d=new Date(x.t);d=new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime();
+      x.compact=true;x.day=Math.round((d-today)/864e5);later.push(x);
+    });
+    soon.forEach(function(x){list.appendChild(buildCard(x))});
+    later.sort(function(a,b){return a.t-b.t});
+    var lastG=null;
+    later.concat(locked).forEach(function(x){
+      var g=x.locked?"Locked":x.day===0?"Later today":x.day===1?"Tomorrow":"Later";
+      if(g!==lastG){lastG=g;var h=el("li","daygrp");h.appendChild(el("h3","",g));list.appendChild(h)}
+      list.appendChild(buildCard(x));
+    });
     updateCd();
   }
   function renderSchedule(){
@@ -1081,11 +1221,12 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
     var now=Date.now(),stale=false;
     rows.forEach(function(r){
       if(r.t){var ms=r.t-now;if(ms<=0)stale=true;else{
-        if(r.cd)r.cd.textContent=r.hero?fmtHero(ms):fmtCd(ms);
+        if(r.cd)r.cd.textContent=r.inc?fmtIn(ms):r.hero?fmtHero(ms):fmtCd(ms);
         if(r.box&&!reduce&&r.prev>3e5&&ms<=3e5)r.box.classList.add("pulse");
         r.prev=ms;
       }}
       if(r.e&&r.e<=now)stale=true;
+      if(r.p&&r.p<=now)stale=true;
     });
     return stale;
   }
@@ -1100,6 +1241,8 @@ header::after{z-index:1;--fx:60px;--fy:0;animation:hpIn var(--d-hdr) var(--ease)
   $("gRr").onclick=function(){p.rr=!p.rr;savePrefs();renderAll()};
   $("gEvo").onclick=function(){p.acevo=!p.acevo;savePrefs();renderAll()};
   $("gAms").onclick=function(){p.ams2=!p.ams2;savePrefs();renderAll()};
+  $("gAc").onclick=function(){p.ac=!p.ac;savePrefs();renderAll()};
+  $("lfmBtn").onclick=function(){p.lfm=!p.lfm;savePrefs();renderAll()};
   $("favBtn").onclick=function(){p.favOnly=!p.favOnly;savePrefs();renderAll()};
   $("hideBtn").onclick=function(){p.hideLocked=!p.hideLocked;savePrefs();renderAll()};
   $("ownBtn").onclick=function(){

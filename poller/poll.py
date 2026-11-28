@@ -11,7 +11,8 @@ pass when the feed is unusable, and every RR_CHECK_EVERY otherwise as a cross-ch
 LMU is fetched every LMU_EVERY (and right after the Tuesday reset).
 AC Evo daily races come from acevo.gg every ACEVO_EVERY, the same way as LMU.
 League events (config.json "leagues") come from the JustRace API every JR_EVERY
-and are cached in state.json as jrFeed.
+and are cached in state.json as jrFeed. LFM official series (AMS2, RaceRoom, AC Evo,
+Assetto Corsa) come from the public LFM API every LFM_EVERY, cached as lfmFeed.
 LMU and the RaceRoom fallback only show races that are about to start or are
 running, so each run adds the starts it sees and the page projects the rest
 from the interval between them.
@@ -39,6 +40,8 @@ RR_FEED_URL = "https://r3e-leaderboards.info/cache/ranked_series.json.gz"
 ACEVO_URL = "https://acevo.gg/daily-races"
 JR_API = "https://www.justrace.net/apiv3"
 JR_GAMES = {4: "ams2"}                  # JustRace game ids the board shows
+LFM_API = "https://api3.lowfuelmotorsport.com/api"
+LFM_SIMS = {4: "ams2", 6: "rr", 8: "acevo", 3: "ac"}  # LFM sim id -> board game (ACC is 1, not shown)
 
 LMU_EVERY = timedelta(minutes=15)       # racecontrol.gg lists ~6 h of starts, so this misses none
 RR_FEED_EVERY = timedelta(minutes=60)   # refetch the feed this often (it changes about daily)
@@ -46,6 +49,7 @@ RR_CHECK_EVERY = timedelta(minutes=30)  # server-list cross-check while the feed
 ACEVO_EVERY = timedelta(minutes=15)     # acevo.gg shows the next two starts per series
 JR_EVERY = timedelta(minutes=60)        # league calendars change rarely
 JR_AHEAD = timedelta(days=35)           # league events this far ahead go into schedule.json
+LFM_EVERY = timedelta(minutes=30)       # LFM lists each series' next four starts
 PAST = timedelta(hours=2)               # feed rows: starts from this long before UTC midnight...
 AHEAD = timedelta(hours=24)             # ...to this long after the next one (the page shows 24 h)
 
@@ -568,6 +572,159 @@ def jr_rows(cache, when):
     return [r for r in cache.get("rows", []) if any(parse_iso(s) >= lo for s in r["starts"])]
 
 
+# ---------- LFM official series (Low Fuel Motorsport) ----------
+# The site needs a Steam login, but getMinifiedSeasonBySim is public. It returns every sim's series
+# (keyed by sim id) with the next four start times each. The payload also holds server passwords and
+# Discord webhooks, so only the fields below are copied.
+
+def lfm_call(path):
+    req = urllib.request.Request(LFM_API + path, headers={"User-Agent": UA, "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def lfm_names():
+    """Readable AMS2 track names keyed by internal name, from JustRace. Optional: LFM's own names are the fallback."""
+    try:
+        return {str(t.get("name", "")).lower(): (t.get("extra_data") or {}).get("translated_name") or ""
+                for t in jr_call("/refdata/api/GetAms2Tracks")}
+    except Exception as e:
+        print(f"lfm: track names unavailable ({e})", file=sys.stderr)
+        return {}
+
+
+def lfm_class(c):
+    return str(c).replace("_", " ").strip()
+
+
+def lfm_sessions(sim, dss):
+    """[(P|Q|R, minutes)] from a series' default server settings. Each sim stores them differently."""
+    dss = dss or {}
+    if sim == 4:
+        d = dss.get("default") or {}
+        raw = [("P", d.get("PracticeLength")), ("Q", d.get("QualifyLength")), ("R", d.get("RaceLength"))]
+    elif sim == 3:
+        raw = [(k, (dss.get(n) or {}).get("length")) for k, n in (("P", "practice"), ("Q", "qualifying"), ("R", "race"))]
+    elif sim == 6:
+        gs = (dss.get("GameSettings") or [{}])[0] or {}
+        ss = ((gs.get("TrackLayouts") or [{}])[0] or {}).get("Sessions") or {}
+        raw = [(k, (ss.get(n) or {}).get("Duration")) for k, n in (("P", "Practice"), ("Q", "Qualify"), ("R", "Race1"))]
+    elif sim == 8:
+        g = (dss.get("seasondef") or {}).get("game_config") or {}
+        raw = [(k, (g.get(n) or 0) / 60) for k, n in (("P", "practice_duration"), ("Q", "qualify_duration"),
+                                                       ("R", "race_duration"))]
+    else:
+        raw = []
+    return [(k, int(v)) for k, v in raw if isinstance(v, (int, float)) and v >= 1]
+
+
+def lfm_link(x):
+    """Content entry -> {name, url}. Only https links are kept; some names carry a German "kaufen" (buy)."""
+    n = re.sub(r"\s+kaufen$", "", str(x.get("name") or "").strip())
+    u = str(x.get("link") or "")
+    # Pages only: file downloads (mod archives, installers) are listed by name without a link.
+    page = u.startswith("https://") and not re.search(r"\.(zip|7z|rar|exe)([?#].*)?$|patreon\.com/file", u, re.I)
+    return {"name": n, "url": u} if page else {"name": n}
+
+
+def poll_lfm(when):
+    d = lfm_call("/seasons/getMinifiedSeasonBySim?sim=4")  # the response holds every sim, whatever is asked
+    allsims = d.get("series") or {}
+    cars = {}
+    for c in lfm_call("/lists/getCars"):
+        cars[(c.get("sim_id"), c.get("car_id"))] = str(c.get("car_name") or "").strip()
+    names = {}
+    rows = []
+    for sim, game in LFM_SIMS.items():
+        for e in (allsims.get(str(sim)) or {}).get("series") or []:
+            if e.get("team_event") or not e.get("slug"):
+                continue
+            # The track changes with the LFM week (Monday, LFM local time), and active_track is the next race's.
+            # So keep only starts in the same week as the first one; later weeks appear after the rollover.
+            starts, wk = [], None
+            for x in [e.get("next_race_date")] + list(e.get("next3_races") or []):
+                try:
+                    t = datetime.strptime(x, "%Y-%m-%dT%H:%M:%S%z")
+                except (TypeError, ValueError):
+                    continue
+                wk = wk or t.isocalendar()[:2]
+                u = t.astimezone(timezone.utc)
+                if t.isocalendar()[:2] == wk and u >= when - timedelta(hours=2) and iso(u) not in starts:
+                    starts.append(iso(u))
+            if not starts:
+                continue
+            st = e.get("settings") or {}
+            week = e.get("active_week")
+            classes, car_names = [], []
+            for c in (st.get("championship_settings") or {}).get("car_classes") or []:
+                if week and c.get("season_weeks") and week not in c["season_weeks"]:
+                    continue
+                classes.append(lfm_class(c.get("class", "")))
+                car_names += [cars[(sim, i)] for i in c.get("allowed_cars") or [] if cars.get((sim, i))]
+            tr = e.get("active_track") or {}
+            track = tr.get("track_name", "")
+            if sim == 4:
+                if "ams2" not in names:
+                    names["ams2"] = lfm_names()
+                track = names["ams2"].get(str(tr.get("acc_track_name", "")).lower()) or track
+            sess = lfm_sessions(sim, (st.get("season_event_settings") or {}).get("default_server_settings"))
+            content, seen = [], set()
+            cn = e.get("content_needed")
+            for group in cn.values() if isinstance(cn, dict) else []:
+                for x in group or []:
+                    item = lfm_link(x)
+                    if item["name"] and item["name"] not in seen:
+                        seen.add(item["name"])
+                        content.append(item)
+            lic = str(e.get("min_license") or "").title()
+            rows.append({
+                "game": game, "source": "lfm", "id": f"{game}-lfm-{e.get('event_id')}",
+                "title": e.get("series_name", ""), "league": "LFM",
+                "daily": e.get("event_style") == "daily",
+                "track": track,
+                "classes": [c for c in classes if c],
+                "cars": sorted(set(car_names)),
+                "durationMin": sum(v for _, v in sess) if len(sess) >= 2 else e.get("race_length"),
+                "format": " · ".join(f"{k} {v} min" for k, v in sess),
+                "dlc": content,
+                "license": lic + (f", SR {e['min_sr_lic']}" if e.get("min_sr_lic") else ""),
+                "week": week,
+                "url": "https://lowfuelmotorsport.com/series/" + e["slug"],
+                "starts": starts,
+            })
+    if not rows:
+        raise ValueError("no series in the LFM response")
+    return rows
+
+
+def lfm_refresh(state, when):
+    """Cached in state.json as lfmFeed, refreshed every LFM_EVERY. On failure the cache is kept."""
+    cache = state.get("lfmFeed") or {}
+    if cache.get("fetched") and when - parse_iso(cache["fetched"]) < LFM_EVERY - timedelta(minutes=2) \
+            and not cache.get("error"):
+        return cache
+    cache["fetched"] = iso(when)
+    try:
+        cache["rows"] = poll_lfm(when)
+        cache["lastOk"] = iso(when)
+        cache.pop("error", None)
+    except Exception as e:
+        cache["error"] = str(e)[:200]
+        print(f"lfm: FAILED {e}", file=sys.stderr)
+    state["lfmFeed"] = cache
+    return cache
+
+
+def lfm_rows(cache, when):
+    lo = when - timedelta(hours=2)
+    out = []
+    for r in cache.get("rows", []):
+        starts = [s for s in r["starts"] if parse_iso(s) >= lo]
+        if starts:
+            out.append(dict(r, starts=starts))
+    return out
+
+
 # ---------- merge + output ----------
 
 def infer_interval(starts):
@@ -645,8 +802,13 @@ def load_catalog(game):
 
 
 def public_packs(cat):
-    return [{"id": p.get("id"), "name": p.get("name"), "type": p.get("type", "pack"),
-             "includes": list(p.get("includes", []))} for p in cat.get("packs", [])]
+    out = []
+    for p in cat.get("packs", []):
+        row = {"id": p.get("id"), "name": p.get("name"), "type": p.get("type", "pack"), "includes": list(p.get("includes", []))}
+        if str(p.get("url", "")).startswith("https://"):
+            row["url"] = p["url"]
+        out.append(row)
+    return out
 
 
 def packs_unsure(cat, ids):
@@ -760,7 +922,8 @@ def rr_access(s, cat):
 
 def build_schedule(state, when, sources, rr_rows, league_rows=()):
     """rr_rows: RaceRoom rows from the feed. When there are any, they replace the server-list series.
-    league_rows: one row per league race (JustRace), each with a single start."""
+    league_rows: dated events. One row per league race (JustRace, single start), plus LFM series
+    (a few known starts each, no interval)."""
     free = load_free()
     names = load_series_names()
     cats = {g: load_catalog(g) for g in ("lmu", "rr")}
@@ -919,6 +1082,15 @@ def main():
         print(f"leagues: {len(league_rows)} upcoming races")
     else:
         sources.pop("ams2", None)
+
+    lfm = lfm_refresh(state, when)
+    lfm_list = lfm_rows(lfm, when)
+    sources["lfm"] = {"ok": not lfm.get("error"), "checked": lfm.get("fetched"), "lastOk": lfm.get("lastOk"),
+                      "found": len(lfm_list)}
+    if lfm.get("error"):
+        sources["lfm"]["error"] = lfm["error"]
+    print(f"lfm: {len(lfm_list)} series")
+    league_rows = league_rows + lfm_list
 
     state["sources"] = sources
     state["updated"] = iso(when)
