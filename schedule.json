@@ -1,12 +1,12 @@
 {
  "version": 2,
- "updated": "2026-11-28T20:30:43Z",
+ "updated": "2026-11-28T20:40:45Z",
  "sources": {
   "acevo": {
-   "checked": "2026-11-28T20:25:30Z",
-   "found": 5,
-   "lastOk": "2026-11-28T20:25:30Z",
-   "ok": true
+   "ok": true,
+   "checked": "2026-11-28T20:40:45Z",
+   "lastOk": "2026-11-28T20:40:45Z",
+   "found": 5
   },
   "ams2": {
    "ok": true,
@@ -21,18 +21,18 @@
    "found": 39
   },
   "lmu": {
-   "checked": "2026-11-28T20:25:30Z",
-   "found": 9,
-   "lastOk": "2026-11-28T20:25:30Z",
-   "ok": true
+   "ok": true,
+   "checked": "2026-11-28T20:40:45Z",
+   "lastOk": "2026-11-28T20:40:45Z",
+   "found": 9
   },
   "rr": {
    "ok": true,
    "via": "feed",
    "found": 7,
    "feedUpdated": "2026-11-28T19:53:36Z",
-   "checked": "2026-11-28T20:30:43Z",
-   "lastOk": "2026-11-28T20:30:43Z",
+   "checked": "2026-11-28T20:40:45Z",
+   "lastOk": "2026-11-28T20:40:45Z",
    "serverCheck": {
     "checked": "2026-11-28T20:25:30Z",
     "found": 3,
@@ -628,7 +628,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-daily-dash-ac",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Okayama GP",
@@ -691,7 +691,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-dp-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Silverstone GP LFM Rolling Start",
@@ -783,7 +783,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-green-hell-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Nordschleife 24h LFM",
@@ -847,7 +847,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-mazda-cup-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Autodrom Most (No Chicane)",
@@ -913,7 +913,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-f4-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Losail",
@@ -964,7 +964,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-pcup-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Estoril LFM",
@@ -1047,7 +1047,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-scs-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Silverstone GP LFM Rolling Start",
@@ -1107,7 +1107,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-st-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "N\u00fcrburgring GT (noDRS)",
@@ -1161,7 +1161,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-gt4supra-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Adelaide Street Circuit LFM",
@@ -1233,7 +1233,7 @@
    "url": "https://lowfuelmotorsport.com/series/ac-tcr-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Hockenheim (noDRS)",
@@ -1285,7 +1285,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-trabant-cup",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Lausitzring",
@@ -1326,9 +1326,10 @@
     "2026-11-28T18:30:00Z",
     "2026-11-28T19:30:00Z",
     "2026-11-28T20:30:00Z",
-    "2026-11-28T21:30:00Z"
+    "2026-11-28T21:30:00Z",
+    "2026-11-28T22:30:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "acevo",
@@ -1361,7 +1362,7 @@
     "2026-11-28T20:50:00Z",
     "2026-11-28T21:30:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -1394,7 +1395,7 @@
    "url": "https://lowfuelmotorsport.com/series/acevo-gt3-sprint-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "acevo",
@@ -1411,7 +1412,6 @@
    "url": "https://acevo.gg/events/27217",
    "intervalMin": 40,
    "starts": [
-    "2026-11-28T08:40:00Z",
     "2026-11-28T09:20:00Z",
     "2026-11-28T10:00:00Z",
     "2026-11-28T10:40:00Z",
@@ -1427,9 +1427,10 @@
     "2026-11-28T19:20:00Z",
     "2026-11-28T20:00:00Z",
     "2026-11-28T20:40:00Z",
-    "2026-11-28T21:20:00Z"
+    "2026-11-28T21:20:00Z",
+    "2026-11-28T22:00:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -1462,7 +1463,7 @@
    "url": "https://lowfuelmotorsport.com/series/acevo-gt4tcx-sprint-s24",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -1499,7 +1500,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-acevo-nos",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -1528,7 +1529,7 @@
    "url": "https://lowfuelmotorsport.com/series/acevo-Pcup-sprint-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "acevo",
@@ -1563,7 +1564,7 @@
     "2026-11-28T20:45:00Z",
     "2026-11-28T21:15:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -1595,7 +1596,7 @@
    "url": "https://lowfuelmotorsport.com/series/acevo-toss-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "acevo",
@@ -1628,9 +1629,10 @@
     "2026-11-28T19:00:00Z",
     "2026-11-28T19:30:00Z",
     "2026-11-28T20:30:00Z",
-    "2026-11-28T21:00:00Z"
+    "2026-11-28T21:00:00Z",
+    "2026-11-28T21:30:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "classes": [
@@ -1650,7 +1652,7 @@
    "track": "Circuit des 24 Heures du Mans",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Circuit des 24 Heures du Mans",
@@ -1686,7 +1688,7 @@
    "track": "Spa-Francorchamps 2022",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Spa-Francorchamps 2022",
@@ -1724,7 +1726,7 @@
    "track": "Silverstone Historic 1991",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Silverstone Historic 1991",
@@ -1771,7 +1773,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-daily-tin-top",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Cascavel",
@@ -1812,7 +1814,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2-formulav10gen2",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "N\u00fcrburgring GP 2020",
@@ -1856,7 +1858,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2-formulav10gen2-sprint",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "N\u00fcrburgring GP 2020",
@@ -1901,7 +1903,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2-f-trainer",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Hockenheim Short B",
@@ -1947,7 +1949,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2-gt1-endu",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Hockenheim Historic 1988",
@@ -1996,7 +1998,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2-gt1-sprint",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Hockenheim Historic 1988",
@@ -2045,7 +2047,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-gt3-endu-ams2",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Watkins Glen GP (Inner Loop)",
@@ -2102,7 +2104,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-gt3-sprint-ams2",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Watkins Glen GP (Inner Loop)",
@@ -2156,7 +2158,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2-gt12005",
    "week": 6,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Circuit des 24 Heures du Mans Historic 2005",
@@ -2209,7 +2211,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-gt3-lmp2-endu-ams2",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Cascais",
@@ -2266,7 +2268,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-gt3-lmp2-sprint-ams2",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Cascais",
@@ -2329,7 +2331,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams2nordschleife",
    "week": 5,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Nordschleife 24 Hour 2025",
@@ -2378,7 +2380,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-ams-brazil",
    "week": 4,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Campo Grande",
@@ -2412,7 +2414,7 @@
    "track": "Brands Hatch Indy",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Brands Hatch Indy",
@@ -2446,7 +2448,7 @@
    "track": "Kyalami Historic 1976",
    "url": "https://chillapexracing.justrace.net/en/events",
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "access": {
     "track": {
      "name": "Kyalami Historic 1976",
@@ -2511,7 +2513,7 @@
     "2026-11-28T22:50:00Z",
     "2026-11-28T23:50:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2558,7 +2560,7 @@
     "2026-11-28T21:25:00Z",
     "2026-11-28T22:55:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2609,7 +2611,7 @@
     "2026-11-28T22:45:00Z",
     "2026-11-28T23:30:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2657,7 +2659,7 @@
     "2026-11-28T22:10:00Z",
     "2026-11-28T23:10:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2707,7 +2709,7 @@
     "2026-11-28T22:30:00Z",
     "2026-11-28T23:15:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2759,7 +2761,7 @@
     "2026-11-28T23:00:00Z",
     "2026-11-28T23:45:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2803,7 +2805,7 @@
     "2026-11-28T22:25:00Z",
     "2026-11-28T23:55:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2847,7 +2849,7 @@
     "2026-11-28T22:30:00Z",
     "2026-11-28T23:30:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "lmu",
@@ -2892,7 +2894,7 @@
     "2026-11-28T21:55:00Z",
     "2026-11-28T23:25:00Z"
    ],
-   "lastSeen": "2026-11-28T20:25:30Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "rr",
@@ -2936,7 +2938,7 @@
     "2026-11-29T23:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": true,
    "access": {
     "track": {
@@ -3022,7 +3024,7 @@
     "2026-11-29T23:45:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": false,
    "access": {
     "track": {
@@ -3088,7 +3090,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -3133,7 +3135,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint-plus",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -3176,7 +3178,7 @@
    "url": "https://lowfuelmotorsport.com/series/r3e-endurance-cup",
    "week": 3,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -3222,7 +3224,7 @@
    "url": "https://lowfuelmotorsport.com/series/r3e-gt3-sprint-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "rr",
@@ -3336,7 +3338,7 @@
     "2026-11-29T23:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": false,
    "access": {
     "track": {
@@ -3403,7 +3405,7 @@
    "url": "https://lowfuelmotorsport.com/series/gt4-r3e-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "rr",
@@ -3442,7 +3444,7 @@
     "2026-11-29T22:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": false,
    "access": {
     "track": {
@@ -3504,7 +3506,7 @@
    "url": "https://lowfuelmotorsport.com/series/r3e-openwheel-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -3547,7 +3549,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint-retro",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -3588,7 +3590,7 @@
    "url": "https://lowfuelmotorsport.com/series/s24-r3e-nos-sprint-plus-retro",
    "week": 7,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "cars": [
@@ -3639,7 +3641,7 @@
    "url": "https://lowfuelmotorsport.com/series/r3e-retro-endurance-cup",
    "week": 4,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   },
   {
    "game": "rr",
@@ -3717,7 +3719,7 @@
     "2026-11-29T23:15:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": false,
    "access": {
     "track": {
@@ -3781,7 +3783,7 @@
     "2026-11-29T22:30:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": false,
    "access": {
     "track": {
@@ -3849,7 +3851,7 @@
     "2026-11-29T21:00:00Z"
    ],
    "until": "2026-11-30T07:00:00Z",
-   "lastSeen": "2026-11-28T20:30:43Z",
+   "lastSeen": "2026-11-28T20:40:45Z",
    "free": false,
    "access": {
     "track": {
@@ -3918,7 +3920,7 @@
    "url": "https://lowfuelmotorsport.com/series/stw-s24",
    "week": 8,
    "event": true,
-   "lastSeen": "2026-11-28T20:30:43Z"
+   "lastSeen": "2026-11-28T20:40:45Z"
   }
  ]
 }
